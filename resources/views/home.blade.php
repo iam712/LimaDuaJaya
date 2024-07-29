@@ -4,14 +4,14 @@
 
 @section('content')
 <!-- Banner -->
-<section class="banner d-flex align-items-center" style="background-color: #f8f9fa; height: 300px;">
+<section class="banner d-flex align-items-center" style="background-color: #f8f9fa; height: 500px;">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col">
                 <h1 class="display-4">Welcome to Our Website</h1>
                 <p class="lead">Your success is our mission</p>
             </div>
-            <div class="col-md-6 text-center">
+            <div class="col text-center">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
             </div>
         </div>
@@ -55,7 +55,7 @@
 <!-- Image -->
 <section class="single-image py-5">
     <div class="container">
-        <img src="{{ asset('images/featured-image.jpg') }}" alt="Featured" class="img-fluid w-100">
+        <img src="{{ asset('images/LOGO.png') }}" alt="Featured" class="img-fluid w-100">
     </div>
 </section>
 
