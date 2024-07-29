@@ -149,7 +149,7 @@
 
         .fade-section {
             opacity: 0;
-            transition: opacity 1.2s ease-out; /* Longer duration */
+            transition: opacity 0.6s ease-out;
         }
 
         .fade-section.visible {
@@ -158,7 +158,7 @@
 
         .fade-in-left {
             transform: translateX(-50px);
-            transition: transform 1.2s ease-out, opacity 1.2s ease-out; /* Longer duration */
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
         }
 
         .fade-in-left.visible {
@@ -167,7 +167,7 @@
 
         .fade-in-right {
             transform: translateX(50px);
-            transition: transform 1.2s ease-out, opacity 1.2s ease-out; /* Longer duration */
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
         }
 
         .fade-in-right.visible {
