@@ -13,7 +13,7 @@
         </div>
     </section>
 
-    <section id="aboutUsSection" class="py-5 fade-in">
+    <section id="aboutUsSection" class="py-5 fade-section">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
@@ -39,7 +39,7 @@
         <div style="width: 70%; height: 1px; background: #ddd;"></div>
     </div>
 
-    <section class="py-5">
+    <section id="visiSection" class="py-5 fade-section fade-in-left">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-5">
@@ -61,7 +61,7 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section id="misiSection" class="py-5 fade-section fade-in-right">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
@@ -147,15 +147,31 @@
             }
         }
 
-        .fade-in {
+        .fade-section {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition: opacity 1.2s ease-out; /* Longer duration */
         }
 
-        .fade-in.visible {
+        .fade-section.visible {
             opacity: 1;
-            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            transform: translateX(-50px);
+            transition: transform 1.2s ease-out, opacity 1.2s ease-out; /* Longer duration */
+        }
+
+        .fade-in-left.visible {
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            transform: translateX(50px);
+            transition: transform 1.2s ease-out, opacity 1.2s ease-out; /* Longer duration */
+        }
+
+        .fade-in-right.visible {
+            transform: translateX(0);
         }
 
         html {
@@ -165,20 +181,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const fadeInSection = document.querySelector('#aboutUsSection');
+            const sections = document.querySelectorAll('.fade-section');
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        fadeInSection.classList.add('visible');
+                        entry.target.classList.add('visible');
                     } else {
-                        fadeInSection.classList.remove('visible');
+                        entry.target.classList.remove('visible');
                     }
                 });
             }, {
                 threshold: 0.1 // Adjust as needed
             });
 
-            observer.observe(fadeInSection);
+            sections.forEach(section => {
+                observer.observe(section);
+            });
         });
     </script>
 @endsection
