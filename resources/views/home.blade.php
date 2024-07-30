@@ -92,7 +92,7 @@
             <div class="row">
                 <div class="col mt-4">
                     <p class="fs-4">Lima Dua Jaya Advertising</p>
-                    <p class="fs-2 fw-bold">Your success is our mission <span id="changingText"></span></p>
+                    <p class="fs-2 fw-bold">Kami Membuat <span id="changingText"></span></p>
                     <p class="fs-5 fst-italic fw-lighter">Supplier, Distributor, Advertising</p>
                 </div>
                 <div class="col mt-5 text-center">
@@ -204,7 +204,7 @@
 
     <!-- Inline JavaScript -->
     <script>
-        const texts = ["hi", "halo", "welcome", "greetings"];
+        const texts = ["Neon Box", "Branding Rak", "Roll Up Banner", "Letter Sign", "Spanduk", "Shop Sign", "Bill Board", "Car Branding", "Chiller Branding", "Papan Nama Toko"];
         let index = 0;
         let charIndex = 0;
         let currentText = "";
@@ -214,23 +214,29 @@
             const changingTextElement = document.getElementById("changingText");
             const fullText = texts[index];
 
-            if (isDeleting) {
-                currentText = fullText.substring(0, charIndex--);
-            } else {
+            if (!isDeleting) {
                 currentText = fullText.substring(0, charIndex++);
-            }
+                changingTextElement.textContent = currentText;
 
-            changingTextElement.textContent = `${currentText}`;
-
-            if (!isDeleting && charIndex === fullText.length) {
-                isDeleting = true;
-                setTimeout(typeText, 600); // Wait 0.7 second before deleting
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                index = (index + 1) % texts.length;
-                setTimeout(typeText, 1000); // Wait 0.5 seconds before typing next text
+                if (charIndex > fullText.length) {
+                    setTimeout(() => {
+                        isDeleting = true;
+                        typeText();
+                    }, 2000); // Wait 2 seconds before deleting
+                } else {
+                    setTimeout(typeText, 130); // Speed of typing
+                }
             } else {
-                setTimeout(typeText, isDeleting ? 100 : 130); // Adjust speed of typing and deleting
+                currentText = fullText.substring(0, charIndex--);
+                changingTextElement.textContent = currentText;
+
+                if (charIndex < 0) {
+                    isDeleting = false;
+                    index = (index + 1) % texts.length;
+                    setTimeout(typeText, 700); // Wait 0.7 seconds before typing next text
+                } else {
+                    setTimeout(typeText, 100); // Speed of deleting
+                }
             }
         }
 
@@ -238,4 +244,6 @@
             setTimeout(typeText, 1000); // Initial delay before typing starts
         });
     </script>
+
+
 @endsection
