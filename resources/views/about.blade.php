@@ -1,19 +1,36 @@
 @extends('layouts.app')
 
+@php
+    $color0 = '216, 174, 126'; // #d8ae7e
+    $color1 = '232, 186, 137'; // #e8ba89
+    $color2 = '248, 199, 148'; // #f8c794
+    $color3 = '251, 211, 164'; // #fbd3a4
+    $color4 = '255, 224, 181'; // #ffe0b5
+    $color5 = '255, 233, 198'; // #ffe9c6
+    $color6 = '255, 242, 215'; // #fff2d7
+    $color7 = '255, 248, 235'; // #fff8eb
+
+
+    // Command to use rgb color
+    // style="color: rgb({{ $color0 }});"
+    // style="background-color: rgb({{ $color1 }});"
+    // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
+@endphp
+
 @section('title', 'About Us')
 
 @section('content')
     <!-- Banner -->
-    <section class="banner d-flex align-items-center" style="background-color: #FFF2D7; height: 100vh; position: relative;">
+    <section class="banner d-flex align-items-center" style="background-color: rgb({{ $color1 }}); height: 100vh; position: relative;">
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
-            style="background-color: #FFE0B5; width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px;">
+            style="background-color: rgb({{ $color3 }}); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px;">
             <h2 class="text-center">Smaller Container</h2> <br>
             <p class="text-center">This is a smaller container inside the banner.</p>
-            <a href="#aboutUsSection" class="btn" style="background-color: #F8C794; width: auto;">Read more</a>
+            <a href="#aboutUsSection" class="btn" style="background-color: rgb({{ $color2 }}); width: auto;">Read more</a>
         </div>
     </section>
 
-    <section id="aboutUsSection" class="py-5 fade-section">
+    <section id="aboutUsSection" class="py-5 fade-section" style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color0 }}));">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
@@ -39,7 +56,7 @@
         <div style="width: 70%; height: 1px; background: #ddd;"></div>
     </div>
 
-    <section id="visiSection" class="py-5 fade-section fade-in-left">
+    <section id="visiSection" class="py-5 fade-section fade-in-left" style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color1 }}));">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-5">
@@ -61,7 +78,7 @@
         </div>
     </section>
 
-    <section id="misiSection" class="py-5 fade-section fade-in-right">
+    <section id="misiSection" class="py-5 fade-section fade-in-right" style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color2 }}));">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
@@ -93,7 +110,7 @@
     </div>
 
     <!-- Review Section -->
-    <section class="py-4 mb-2" style="background-color: #FFF2D7;">
+    <section class="py-4 mb-2" style="background: linear-gradient(to bottom, rgb({{ $color0 }}), rgb({{ $color3 }}));">
         <div class="container">
             <h1 class="text-center">Apa kata mereka?</h1>
         </div>
@@ -102,7 +119,7 @@
                 <div class="review-content d-flex">
                     <!-- Review Cards -->
                     @for ($i = 0; $i < 10; $i++)
-                        <div class="card mx-2" style="width: 18rem; flex-shrink: 0; background-color:#F8C794;">
+                        <div class="card mx-2" style="width: 18rem; flex-shrink: 0; background-color: rgb({{ $color2 }});">
                             <div class="card-body" style="overflow: hidden;">
                                 <p class="card-text">Will come back again!</p>
                                 <p class="card-text mb-2 text-muted">Emily Davis | <span>emily@example.com</span></p>
@@ -113,7 +130,7 @@
                 <div class="review-content d-flex">
                     <!-- Duplicate Review Cards for seamless scrolling -->
                     @for ($i = 0; $i < 10; $i++)
-                        <div class="card mx-2" style="width: 18rem; flex-shrink: 0; background-color:#F8C794;">
+                        <div class="card mx-2" style="width: 18rem; flex-shrink: 0; background-color: rgb({{ $color2 }});">
                             <div class="card-body" style="overflow: hidden;">
                                 <p class="card-text">Will come back again!</p>
                                 <p class="card-text mb-2 text-muted">Emily Davis | <span>emily@example.com</span></p>
