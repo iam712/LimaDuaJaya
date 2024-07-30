@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+{{-- Color library --}}
 @php
     $color0 = '216, 174, 126'; // #d8ae7e
     $color1 = '232, 186, 137'; // #e8ba89
@@ -30,7 +31,7 @@
         </div>
     </section>
 
-    <section id="aboutUsSection" class="py-5 fade-section" style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color0 }}));">
+    <section id="aboutUsSection" class="py-5 fade-section" style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color2 }}));">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
@@ -56,7 +57,7 @@
         <div style="width: 70%; height: 1px; background: #ddd;"></div>
     </div>
 
-    <section id="visiSection" class="py-5 fade-section fade-in-left" style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color1 }}));">
+    <section id="visiSection" class="py-5 fade-section fade-in-left" style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-5">
@@ -78,7 +79,7 @@
         </div>
     </section>
 
-    <section id="misiSection" class="py-5 fade-section fade-in-right" style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color2 }}));">
+    <section id="misiSection" class="py-5 fade-section fade-in-right" style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color4 }}));">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
@@ -110,7 +111,7 @@
     </div>
 
     <!-- Review Section -->
-    <section class="py-4 mb-2" style="background: linear-gradient(to bottom, rgb({{ $color0 }}), rgb({{ $color3 }}));">
+    <section class="py-4 mb-2" style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color6 }}));">
         <div class="container">
             <h1 class="text-center">Apa kata mereka?</h1>
         </div>
