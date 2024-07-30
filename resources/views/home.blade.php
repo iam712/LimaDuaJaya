@@ -1,22 +1,110 @@
 @extends('layouts.app')
+{{-- Color library --}}
+@php
+    $color0 = '216, 174, 126'; // #d8ae7e
+    $color1 = '232, 186, 137'; // #e8ba89
+    $color2 = '248, 199, 148'; // #f8c794
+    $color3 = '251, 211, 164'; // #fbd3a4
+    $color4 = '255, 224, 181'; // #ffe0b5
+    $color5 = '255, 233, 198'; // #ffe9c6
+    $color6 = '255, 242, 215'; // #fff2d7
+    $color7 = '255, 248, 235'; // #fff8eb
+    $color8 = '255, 255, 255'; // #hitam
+    $color9 = '0, 0, 0'; // #putih
 
+    // Command to use rgb color
+    // style="color: rgb({{ $color0 }});"
+    // style="background-color: rgb({{ $color1 }});"
+    // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
+
+@endphp
 @section('title', 'Home')
 
 @section('content')
+    <!-- Inline CSS -->
+    <style>
+        .banner {
+            background-color: rgb({{ $color1 }});
+            height: 800px;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+        }
+
+        #changingText {
+            display: inline-block;
+            border-right: 2px solid;
+            animation: blink-caret 1s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: black;
+            }
+        }
+
+        .about-us img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .our-services .img-fluid {
+            max-height: 150px;
+        }
+
+        .our-services .col-md-2 span {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .our-advantages p,
+        .location-map iframe,
+        .faq-section .accordion-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-section .accordion-item button {
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .image-frame {
+            border: 2px solid #;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb({{ $color2 }});
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+    </style>
+
     <!-- Banner -->
-    <section class="banner d-flex align-items-center" style="background-color: #f8f9fa; height: 500px;">
+    <section class="banner d-flex align-items-center">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h1 class="display-4">Welcome to Our Website</h1>
-                    <p class="lead">Your success is our mission</p>
+                <div class="col mt-4">
+                    <p class="fs-4">Lima Dua Jaya Advertising</p>
+                    <p class="fs-2 fw-bold">Your success is our mission <span id="changingText"></span></p>
+                    <p class="fs-5 fst-italic fw-lighter">Supplier, Distributor, Advertising</p>
                 </div>
-                <div class="col text-center">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
+                <div class="col mt-5 text-center">
+                    <div class="image-frame">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid"
+                            style="max-height: 300px;">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- About Us -->
     <section class="about-us py-5">
@@ -26,7 +114,7 @@
                     <img src="{{ asset('images/LOGO.png') }}" alt="About Us" class="img-fluid">
                 </div>
                 <div class="col-md-6">
-                    <h2>About Us</h2>
+                    <h2>About </h2>
                     <p>We are a company dedicated to providing the best service. Our team is experienced and highly skilled.
                     </p>
                 </div>
@@ -39,48 +127,12 @@
         <div class="container">
             <h2 class="text-center">Our Services</h2>
             <div class="d-flex row justify-content-center mt-5 text-center">
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center mt-5 text-center">
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
+                @for ($i = 0; $i < 10; $i++)
+                    <div class="col-md-2">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
+                        <span>service {{ $i + 1 }}</span>
+                    </div>
+                @endfor
             </div>
         </div>
     </section>
@@ -112,66 +164,25 @@
         <div class="container">
             <h2 class="text-center">Frequently Asked Questions</h2>
             <div class="accordion" id="faqAccordion">
-                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="border: none; border-bottom: 1px solid #ddd;">
-                            What is your main service?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Our main service is providing excellent customer support and IT solutions to help your business succeed.
+                @foreach (['One', 'Two', 'Three', 'Four', 'Five'] as $item)
+                    <div class="accordion-item" style="border: none; margin-bottom: 10px;">
+                        <h2 class="accordion-header" id="heading{{ $item }}">
+                            <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }}" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse{{ $item }}"
+                                aria-expanded="{{ $loop->first ? 'true' : 'false' }}"
+                                aria-controls="collapse{{ $item }}">
+                                Where are you located?
+                            </button>
+                        </h2>
+                        <div id="collapse{{ $item }}"
+                            class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}"
+                            aria-labelledby="heading{{ $item }}" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We are located in Surabaya, Indonesia.
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="border: none; border-bottom: 1px solid #ddd;">
-                            How can I contact you?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            You can contact us through our contact form on the website or by calling our support number.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="border: none; border-bottom: 1px solid #ddd;">
-                            Where are you located?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We are located in Surabaya, Indonesia.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="border: none; border-bottom: 1px solid #ddd;">
-                            Where are you located?
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We are located in Surabaya, Indonesia.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
-                    <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="border: none; border-bottom: 1px solid #ddd;">
-                            Where are you located?
-                        </button>
-                    </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We are located in Surabaya, Indonesia.
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -181,50 +192,50 @@
         <div class="container">
             <h2 class="text-center">Our Clients</h2>
             <div class="d-flex row justify-content-center mt-5 text-center">
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center mt-5 text-center">
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid" style="max-height: 150px;">
-                    <span>service 1</span>
-                </div>
+                @for ($i = 0; $i < 10; $i++)
+                    <div class="col-md-2">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
+                        <span>client {{ $i + 1 }}</span>
+                    </div>
+                @endfor
             </div>
         </div>
     </section>
 
+    <!-- Inline JavaScript -->
+    <script>
+        const texts = ["hi", "halo", "welcome", "greetings"];
+        let index = 0;
+        let charIndex = 0;
+        let currentText = "";
+        let isDeleting = false;
+
+        function typeText() {
+            const changingTextElement = document.getElementById("changingText");
+            const fullText = texts[index];
+
+            if (isDeleting) {
+                currentText = fullText.substring(0, charIndex--);
+            } else {
+                currentText = fullText.substring(0, charIndex++);
+            }
+
+            changingTextElement.textContent = `${currentText}`;
+
+            if (!isDeleting && charIndex === fullText.length) {
+                isDeleting = true;
+                setTimeout(typeText, 600); // Wait 0.7 second before deleting
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % texts.length;
+                setTimeout(typeText, 1000); // Wait 0.5 seconds before typing next text
+            } else {
+                setTimeout(typeText, isDeleting ? 100 : 130); // Adjust speed of typing and deleting
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(typeText, 1000); // Initial delay before typing starts
+        });
+    </script>
 @endsection

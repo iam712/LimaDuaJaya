@@ -10,7 +10,8 @@
     $color5 = '255, 233, 198'; // #ffe9c6
     $color6 = '255, 242, 215'; // #fff2d7
     $color7 = '255, 248, 235'; // #fff8eb
-
+    $color8 = '255, 255, 255'; // #hitam
+    $color9 = '0, 0, 0'; // #putih
 
     // Command to use rgb color
     // style="color: rgb({{ $color0 }});"
