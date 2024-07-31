@@ -26,6 +26,8 @@
         .banner {
             background-color: rgb({{ $color1 }});
             height: 800px;
+            position: relative;
+            overflow: hidden;
         }
 
         .banner h1 {
@@ -39,14 +41,31 @@
         }
 
         @keyframes blink-caret {
-
             from,
             to {
                 border-color: transparent;
             }
-
             50% {
                 border-color: black;
+            }
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            width: 200%;
+            height: 150px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxNTBweCIgdmlld0JveD0iMCAwIDY0MCAxNTAiIHZlcnNpb249IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMjhDMCAyOCwzMiwyOCwzMiwyOEM2NCwyOCw2NCwwLDk2LDBjMzIsMCwzMiw4LDY0LDhjMzIsMCwzMi0xNSw2NC0xNXMzMiw5LDY0LDlTNDE2LDAsNDQ4LDBjMzIsMCwzMiwyOCw2NCwyOGMzMiwwLDMyLTM2LDY0LTM2UzU2MCwwLDY0MCwwdjE1MEgwVjI4WiIgZmlsbD0icmdiKDIzMCwgMTY2LCAxMjApIi8+PHBhdGggZD0iTTAsMTA1YzAsMCwzMi0yNSw2NC0yNXMzMiwxNiw2NCwxNnMzMi0zNSw2NC0zNXMzMiwxNCw2NCwxNHMzMi00NCw2NC00NHMzMiw1MCw2NCw1MFYxNTBIMFYxMDVaIiBmaWxsPSJyZ2IoMjMwLCAxNjYsIDEyMCkiIG9wYWNpdHk9IjAuNTUiLz48L3N2Zz4=');
+            background-size: cover;
+            animation: wave-animation 6s infinite linear;
+        }
+
+        @keyframes wave-animation {
+            -50% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 640px 0;
             }
         }
 
@@ -178,6 +197,7 @@
 
     <!-- Banner -->
     <section class="banner d-flex align-items-center">
+        <div class="wave"></div>
         <div class="container">
             <div class="row">
                 <div class="col mt-4">
@@ -219,10 +239,10 @@
         <div class="container">
             <h2 class="text-center">Our Services</h2>
             <div class="d-flex row justify-content-center mt-5 text-center">
-                @for ($i = 0; $i < 10; $i++)
+                @for ($i = 0; $i < 12; $i++)
                     <div class="col-md-2">
                         <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                        <span>service {{ $i + 1 }}</span>
+                        <span class="mb-4">service {{ $i + 1 }}</span>
                     </div>
                 @endfor
             </div>
@@ -292,10 +312,10 @@
         <div class="container">
             <h2 class="text-center">Our Clients</h2>
             <div class="d-flex row justify-content-center mt-5 text-center">
-                @for ($i = 0; $i < 10; $i++)
+                @for ($i = 0; $i < 12; $i++)
                     <div class="col-md-2">
                         <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                        <span>client {{ $i + 1 }}</span>
+                        <span class="mb-4">client {{ $i + 1 }}</span>
                     </div>
                 @endfor
             </div>
