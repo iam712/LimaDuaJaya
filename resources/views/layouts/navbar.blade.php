@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar" style="background-color: rgba(255, 242, 215, 1);">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar" style="background-color: rgb({{ $color1 }});">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{{ asset('images/LOGO.png') }}" alt="Logo" style="max-height: 50px; width: auto;">

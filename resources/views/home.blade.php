@@ -95,7 +95,7 @@
                     <p class="fs-2 fw-bold">Kami Membuat <span id="changingText"></span></p>
                     <p class="fs-5 fst-italic fw-lighter">Supplier, Distributor, Advertising</p>
                 </div>
-                <div class="col mt-5 text-center">
+                <div class="col  text-center">
                     <div class="image-frame">
                         <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid"
                             style="max-height: 300px;">
