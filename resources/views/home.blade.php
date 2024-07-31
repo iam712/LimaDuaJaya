@@ -28,7 +28,7 @@
     <!-- Inline CSS -->
     <style>
         .banner {
-            background-color: rgb({{ $color1 }});
+            background-color: rgb({{ $color13 }});
             height: 800px;
             position: relative;
             overflow: hidden;
