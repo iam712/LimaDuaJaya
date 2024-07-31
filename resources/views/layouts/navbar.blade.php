@@ -1,23 +1,3 @@
-{{-- Color library --}}
-@php
-    $color0 = '216, 174, 126'; // #d8ae7e
-    $color1 = '232, 186, 137'; // #e8ba89
-    $color2 = '248, 199, 148'; // #f8c794
-    $color3 = '251, 211, 164'; // #fbd3a4
-    $color4 = '255, 224, 181'; // #ffe0b5
-    $color5 = '255, 233, 198'; // #ffe9c6
-    $color6 = '255, 242, 215'; // #fff2d7
-    $color7 = '255, 248, 235'; // #fff8eb
-    $color8 = '255, 255, 255'; // #hitam
-    $color9 = '0, 0, 0'; // #putih
-
-    // Command to use rgb color
-    // style="color: rgb({{ $color0 }});"
-    // style="background-color: rgb({{ $color1 }});"
-    // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
-
-@endphp
-
 <!-- resources/views/navbar.blade.php -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar" style="background-color: rgb({{ $color1 }});">
     <div class="container-fluid">
@@ -69,10 +49,17 @@
             navbar.style.backgroundColor = initialBgColor;
         }
     });
+
+    document.addEventListener('mousemove', function (e) {
+        const navbar = document.getElementById('navbar');
+        const x = e.clientX;
+        const y = e.clientY;
+        navbar.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.8) 10px, rgba(255, 242, 215, 0.8) 20px, rgb({{ $color1 }}) 40px)`;
+    });
 </script>
 
 <style>
     .navbar {
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, background 0.3s ease;
     }
 </style>
