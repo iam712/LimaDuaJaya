@@ -111,7 +111,56 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow to the image */
         }
 
+        /* Fixed menu bar */
+        .fixed-menu {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .fixed-menu button {
+            background: none;
+            border: none;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        .fixed-menu img {
+            max-width: 40px;
+            transition: transform 0.3s;
+        }
+
+        .fixed-menu img:hover {
+            transform: scale(1.2);
+        }
     </style>
+
+    <!-- Fixed Menu Bar -->
+    <div class="fixed-menu">
+        <button onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });">
+            <img src="{{ asset('images/logo-square.png') }}" alt="About Us">
+        </button>
+        <button onclick="document.getElementById('ourServicesSection').scrollIntoView({ behavior: 'smooth' });">
+            <img src="{{ asset('images/logo-square.png') }}" alt="Our Services">
+        </button>
+        <button onclick="document.getElementById('ourAdvantagesSection').scrollIntoView({ behavior: 'smooth' });">
+            <img src="{{ asset('images/logo-square.png') }}" alt="Our Advantages">
+        </button>
+        <button onclick="document.getElementById('locationMapSection').scrollIntoView({ behavior: 'smooth' });">
+            <img src="{{ asset('images/logo-square.png') }}" alt="Location Map">
+        </button>
+        <button onclick="document.getElementById('faqSection').scrollIntoView({ behavior: 'smooth' });">
+            <img src="{{ asset('images/logo-square.png') }}" alt="FAQ">
+        </button>
+        <button onclick="document.getElementById('ourClientsSection').scrollIntoView({ behavior: 'smooth' });">
+            <img src="{{ asset('images/logo-square.png') }}" alt="Our Clients">
+        </button>
+    </div>
 
     <!-- Banner -->
     <section class="banner d-flex align-items-center">
@@ -133,7 +182,6 @@
         </div>
     </section>
 
-
     <!-- About Us -->
     <section id="aboutUsSection" class="about-us py-5">
         <div class="container">
@@ -151,7 +199,7 @@
     </section>
 
     <!-- Our Services -->
-    <section class="our-services py-5">
+    <section id="ourServicesSection" class="our-services py-5">
         <div class="container">
             <h2 class="text-center">Our Services</h2>
             <div class="d-flex row justify-content-center mt-5 text-center">
@@ -166,7 +214,7 @@
     </section>
 
     <!-- Our Advantages -->
-    <section class="our-advantages py-5">
+    <section id="ourAdvantagesSection" class="our-advantages py-5">
         <div class="container">
             <h2 class="text-center">Our Advantages</h2>
             <p class="text-center">We provide unparalleled service and benefits that set us apart from the competition.</p>
@@ -174,7 +222,7 @@
     </section>
 
     <!-- Location Map -->
-    <section class="location-map py-5">
+    <section id="locationMapSection" class="location-map py-5">
         <div class="container">
             <h2 class="text-center">Our Location</h2>
             <div class="row justify-content-center">
@@ -188,7 +236,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="faq-section py-5">
+    <section id="faqSection" class="faq-section py-5">
         <div class="container">
             <h2 class="text-center">Frequently Asked Questions</h2>
             <div class="accordion" id="faqAccordion">
@@ -216,7 +264,7 @@
     </section>
 
     <!-- Our Clients -->
-    <section class="our-services py-5">
+    <section id="ourClientsSection" class="our-services py-5">
         <div class="container">
             <h2 class="text-center">Our Clients</h2>
             <div class="d-flex row justify-content-center mt-5 text-center">
@@ -272,6 +320,5 @@
             setTimeout(typeText, 1000); // Initial delay before typing starts
         });
     </script>
-
 
 @endsection
