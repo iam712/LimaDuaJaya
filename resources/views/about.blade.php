@@ -10,13 +10,18 @@
     $color5 = '255, 233, 198'; // #ffe9c6
     $color6 = '255, 242, 215'; // #fff2d7
     $color7 = '255, 248, 235'; // #fff8eb
-    $color8 = '255, 255, 255'; // #hitam
-    $color9 = '0, 0, 0'; // #putih
+    $color8 = '255, 255, 255'; // #000000
+    $color9 = '0, 0, 0'; // #ffffff
+    $color10 = '255, 0, 0'; // #ff0000
+    $colo11 = '163, 54, 54'; // #a33636
+    $color12 = '75, 12, 12'; // #4b0c0c
+    $color13 = '255, 184, 0'; // #ffb800
 
     // Command to use rgb color
     // style="color: rgb({{ $color0 }});"
     // style="background-color: rgb({{ $color1 }});"
     // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
+
 @endphp
 
 @section('title', 'About Us')
