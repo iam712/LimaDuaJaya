@@ -77,11 +77,38 @@
 
         .image-frame {
             border: 2px solid #;
-            padding: 30px;
+            padding: 40px;
             border-radius: 10px;
             background-color: rgb({{ $color2 }});
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: inline-block;
+        }
+
+        .btn-learn-more {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e94b3c; /* You can change the color to match your theme */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .image-frame {
+            border: 2px solid #;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgb({{ $color2 }});
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for a more attractive look */
+            display: inline-block;
+        }
+
+        .image-frame img {
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow to the image */
         }
 
     </style>
@@ -91,14 +118,15 @@
         <div class="container">
             <div class="row">
                 <div class="col mt-4">
-                    <p class="fs-4">Lima Dua Jaya Advertising</p>
-                    <p class="fs-2 fw-bold">Kami Membuat <span id="changingText"></span></p>
-                    <p class="fs-5 fst-italic fw-lighter">Supplier, Distributor, Advertising</p>
+                    <p class="fs-3">Lima Dua Jaya Advertising</p>
+                    <p class="fs-1 fw-bold">Kami Membuat <span id="changingText"></span></p>
+                    <p class="fs-4 fst-italic fw-lighter">Supplier, Distributor, Advertising</p>
+                    <button class="btn-learn-more" onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });">Pelajari Lebih Lanjut</button>
                 </div>
-                <div class="col  text-center">
+                <div class="col text-center">
                     <div class="image-frame">
                         <img src="{{ asset('images/logo-square.png') }}" alt="Logo" class="img-fluid"
-                            style="max-height: 300px;">
+                            style="max-height: 400px;">
                     </div>
                 </div>
             </div>
@@ -107,7 +135,7 @@
 
 
     <!-- About Us -->
-    <section class="about-us py-5">
+    <section id="aboutUsSection" class="about-us py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
