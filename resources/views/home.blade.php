@@ -212,7 +212,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col mt-4">
+                <div class="col py-5">
                     <p class="fs-3">Lima Dua Jaya Advertising</p>
                     <p class="fs-1 fw-bold">Kami Membuat <span id="changingText"></span></p>
                     <p class="fs-4 fst-italic fw-lighter">Supplier, Distributor, Advertising</p>
