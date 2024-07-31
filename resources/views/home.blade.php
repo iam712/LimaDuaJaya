@@ -114,13 +114,17 @@
         /* Fixed menu bar */
         .fixed-menu {
             position: fixed;
-            left: 0;
+            left: 20px; /* Add margin from the left */
             top: 50%;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             align-items: center;
             z-index: 1000;
+            background-color: rgba({{ $color6 }}, 0.6); /* Slightly transparent background */
+            padding: 10px;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Optional shadow for better visibility */
         }
 
         .fixed-menu button {
