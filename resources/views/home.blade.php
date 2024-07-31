@@ -77,7 +77,7 @@
 
         .image-frame {
             border: 2px solid #;
-            padding: 10px;
+            padding: 30px;
             border-radius: 10px;
             background-color: rgb({{ $color2 }});
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col  text-center">
                     <div class="image-frame">
-                        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid"
+                        <img src="{{ asset('images/logo-square.png') }}" alt="Logo" class="img-fluid"
                             style="max-height: 300px;">
                     </div>
                 </div>
