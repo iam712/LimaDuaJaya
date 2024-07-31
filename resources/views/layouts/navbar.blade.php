@@ -1,5 +1,5 @@
 <!-- resources/views/navbar.blade.php -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar" style="background-color: rgb({{ $color0 }});">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar" style="background-color: rgb({{ $color13 }});">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{{ asset('images/LOGO.png') }}" alt="Logo" style="max-height: 50px; width: auto;">
@@ -38,9 +38,9 @@
     document.addEventListener('scroll', function () {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgba({{ $color`11 }}, 0.8)';
+            navbar.style.backgroundColor = 'rgb({{ $color14 }}, 0.8)';
         } else {
-            navbar.style.backgroundColor = 'rgb({{ $color012}})';
+            navbar.style.backgroundColor = 'rgb({{ $color13}})';
         }
     });
 

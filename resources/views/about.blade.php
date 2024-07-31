@@ -16,6 +16,7 @@
     $colo11 = '163, 54, 54'; // #a33636
     $color12 = '75, 12, 12'; // #4b0c0c
     $color13 = '255, 184, 0'; // #ffb800
+    $color14 = '255, 214, 110'; // #FFD66E
 
     // Command to use rgb color
     // style="color: rgb({{ $color0 }});"

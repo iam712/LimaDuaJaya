@@ -15,6 +15,7 @@
     $colo11 = '163, 54, 54'; // #a33636
     $color12 = '75, 12, 12'; // #4b0c0c
     $color13 = '255, 184, 0'; // #ffb800
+    $color14 = '255, 214, 110'; // #FFD66E
 
     // Command to use rgb color
     // style="color: rgb({{ $color0 }});"
@@ -29,6 +30,13 @@
     <style>
         .banner {
             background-color: rgb({{ $color13 }});
+            height: 800px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banners {
+            background-color: rgb({{ $color14 }});
             height: 800px;
             position: relative;
             overflow: hidden;
@@ -60,6 +68,7 @@
             width: 100%;
             height: 150px;
             overflow: hidden;
+
         }
 
         .wave path {
@@ -113,20 +122,21 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #e94b3c;
+            background-color: rgb({{ $color12 }});
             /* You can change the color to match your theme */
             color: white;
             border: none;
             border-radius: 5px;
             text-align: center;
             cursor: pointer;
+
         }
 
         .image-frame {
             border: 2px solid #;
             padding: 30px;
             border-radius: 10px;
-            background-color: rgb({{ $color2 }});
+            background-color: rgb({{ $color14 }});
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             /* Added shadow for a more attractive look */
             display: inline-block;
