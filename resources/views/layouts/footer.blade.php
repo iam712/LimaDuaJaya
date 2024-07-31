@@ -8,8 +8,8 @@
             <div class="row">
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">
-                        Company name
+                    <h6 class="mb-4 font-weight-bold">
+                        Lima Dua Jaya
                     </h6>
                     <p>
                         Here you can use rows and columns to organize your footer
@@ -66,10 +66,10 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                    <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                    <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                    <p><i class="fas fa-home mr-3"></i> LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur 60215 Surabaya, Indonesia</p>
+                    <p><i class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +62 821 1598 3575</p>
+                    <p><i class="fas fa-print mr-3"></i> +01 234 567 89</p>
                 </div>
                 <!-- Grid column -->
             </div>

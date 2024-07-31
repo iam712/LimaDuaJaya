@@ -15,10 +15,10 @@
                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('product') ? 'active' : '' }}" href="#">Product</a>
+                    <a class="nav-link {{ request()->is('partner') ? 'active' : '' }}" href="#">Partner</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('partner') ? 'active' : '' }}" href="#">Partner</a>
+                    <a class="nav-link {{ request()->is('product') ? 'active' : '' }}" href="#">Product</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="/aboutus">About Us</a>

@@ -175,25 +175,25 @@
     <!-- Fixed Menu Bar -->
     <div class="fixed-menu">
         <button onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });">
-            <img src="{{ asset('images/logo-square.png') }}" alt="About Us">
+            <img src="{{ asset('images/aboutus.png') }}" alt="About Us">
         </button>
         <button onclick="document.getElementById('ourServicesSection').scrollIntoView({ behavior: 'smooth' });">
-            <img src="{{ asset('images/logo-square.png') }}" alt="Our Services">
+            <img src="{{ asset('images/service.png') }}" alt="Our Services">
         </button>
         <button onclick="document.getElementById('ourLiveProduct').scrollIntoView({ behavior: 'smooth' });">
-            <img src="{{ asset('images/logo-square.png') }}" alt="Our Services">
+            <img src="{{ asset('images/product.png') }}" alt="Our Product">
         </button>
         <button onclick="document.getElementById('ourAdvantagesSection').scrollIntoView({ behavior: 'smooth' });">
-            <img src="{{ asset('images/logo-square.png') }}" alt="Our Advantages">
+            <img src="{{ asset('images/advantage.png') }}" alt="Our Advantages">
         </button>
         <button onclick="document.getElementById('locationMapSection').scrollIntoView({ behavior: 'smooth' });">
-            <img src="{{ asset('images/logo-square.png') }}" alt="Location Map">
+            <img src="{{ asset('images/location.png') }}" alt="Location Map">
         </button>
         <button onclick="document.getElementById('faqSection').scrollIntoView({ behavior: 'smooth' });">
-            <img src="{{ asset('images/logo-square.png') }}" alt="FAQ">
+            <img src="{{ asset('images/faq.png') }}" alt="FAQ">
         </button>
         <button onclick="document.getElementById('ourClientsSection').scrollIntoView({ behavior: 'smooth' });">
-            <img src="{{ asset('images/logo-square.png') }}" alt="Our Clients">
+            <img src="{{ asset('images/client.png') }}" alt="Our Clients">
         </button>
     </div>
 
