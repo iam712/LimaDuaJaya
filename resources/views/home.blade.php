@@ -88,7 +88,8 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #e94b3c; /* You can change the color to match your theme */
+            background-color: #e94b3c;
+            /* You can change the color to match your theme */
             color: white;
             border: none;
             border-radius: 5px;
@@ -101,30 +102,36 @@
             padding: 30px;
             border-radius: 10px;
             background-color: rgb({{ $color2 }});
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for a more attractive look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Added shadow for a more attractive look */
             display: inline-block;
         }
 
         .image-frame img {
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow to the image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Added shadow to the image */
         }
 
         /* Fixed menu bar */
         .fixed-menu {
             position: fixed;
-            left: 20px; /* Add margin from the left */
+            left: 20px;
+            /* Add margin from the left */
             top: 50%;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             align-items: center;
             z-index: 1000;
-            background-color: rgba({{ $color6 }}, 0.6); /* Slightly transparent background */
+            background-color: rgba({{ $color6 }}, 0.6);
+            /* Slightly transparent background */
             padding: 10px;
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Optional shadow for better visibility */
+            border-radius: 15px;
+            /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            /* Optional shadow for better visibility */
         }
 
         .fixed-menu button {
@@ -152,6 +159,9 @@
         <button onclick="document.getElementById('ourServicesSection').scrollIntoView({ behavior: 'smooth' });">
             <img src="{{ asset('images/logo-square.png') }}" alt="Our Services">
         </button>
+        <button onclick="document.getElementById('ourLiveProduct').scrollIntoView({ behavior: 'smooth' });">
+            <img src="{{ asset('images/logo-square.png') }}" alt="Our Services">
+        </button>
         <button onclick="document.getElementById('ourAdvantagesSection').scrollIntoView({ behavior: 'smooth' });">
             <img src="{{ asset('images/logo-square.png') }}" alt="Our Advantages">
         </button>
@@ -174,7 +184,9 @@
                     <p class="fs-3">Lima Dua Jaya Advertising</p>
                     <p class="fs-1 fw-bold">Kami Membuat <span id="changingText"></span></p>
                     <p class="fs-4 fst-italic fw-lighter">Supplier, Distributor, Advertising</p>
-                    <button class="btn-learn-more" onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });">Pelajari Lebih Lanjut</button>
+                    <button class="btn-learn-more"
+                        onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });">Pelajari
+                        Lebih Lanjut</button>
                 </div>
                 <div class="col text-center">
                     <div class="image-frame">
@@ -214,6 +226,14 @@
                     </div>
                 @endfor
             </div>
+        </div>
+    </section>
+
+    <!-- Live 360 View -->
+    <section id="ourLiveProduct" class="our-advantages py-5">
+        <div class="container">
+            <h2 class="text-center">Our Product</h2>
+            <p class="text-center">Wcontoh produk jadi</p>
         </div>
     </section>
 
@@ -284,7 +304,9 @@
 
     <!-- Inline JavaScript -->
     <script>
-        const texts = ["Neon Box", "Branding Rak", "Roll Up Banner", "Letter Sign", "Spanduk", "Shop Sign", "Bill Board", "Car Branding", "Chiller Branding", "Papan Nama Toko"];
+        const texts = ["Neon Box", "Branding Rak", "Roll Up Banner", "Letter Sign", "Spanduk", "Shop Sign", "Bill Board",
+            "Car Branding", "Chiller Branding", "Papan Nama Toko"
+        ];
         let index = 0;
         let charIndex = 0;
         let currentText = "";
