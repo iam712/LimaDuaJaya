@@ -13,23 +13,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page"
-                        href="/">Home</a>
+                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/"
+                        style="font-family: 'LibreBaskerville', serif;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('partner') ? 'active' : '' }}" href="#">Partner</a>
+                    <a class="nav-link {{ request()->is('partner') ? 'active' : '' }}" href="#"
+                        style="font-family: 'LibreBaskerville', serif;">Partner</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('product') ? 'active' : '' }}" href="#">Product</a>
+                    <a class="nav-link {{ request()->is('product') ? 'active' : '' }}" href="#"
+                        style="font-family: 'LibreBaskerville', serif;">Product</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="/aboutus">About Us</a>
+                    <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="/aboutus"
+                        style="font-family: 'LibreBaskerville', serif;">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('admin') ? 'active' : '' }}" href="#">Admin</a>
+                    <a class="nav-link {{ request()->is('admin') ? 'active' : '' }}" href="#"
+                        style="font-family: 'LibreBaskerville', serif;">Admin</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+                        style="font-family: 'LibreBaskerville', serif;">Disabled</a>
                 </li>
             </ul>
         </div>

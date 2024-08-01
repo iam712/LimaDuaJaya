@@ -293,10 +293,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 py-5">
-                    <p class="fs-3">Lima Dua Jaya Advertising</p>
-                    <p class="fs-1 fw-bold">Kami Membuat <span id="changingText"></span></p>
-                    <p class="fs-4 fst-italic fw-lighter">Supplier, Distributor, Advertising</p>
-                    <button class="btn-learn-more" onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });">Pelajari Lebih Lanjut</button>
+                    <p class="fs-3" style="font-family: 'LibreBaskerville', serif;">Lima Dua Jaya Advertising</p>
+                    <p class="fs-1 fw-bold" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Kami Membuat <span id="changingText"></span></p>
+                    <p class="fs-4 fst-italic fw-lighter" style="font-family: 'LibreBaskerville', serif; font-style: italic;">Supplier, Distributor, Advertising</p>
+                    <button class="btn-learn-more" onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });" style="font-family: 'LibreBaskerville, serif;">Pelajari Lebih Lanjut</button>
                 </div>
                 <div class="col-md-6 text-center">
                     <div class="image-frame">
@@ -308,29 +308,29 @@
     </section>
 
     <!-- About Us -->
-    <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-2 mt-sm-2">
+    <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-3 mt-sm-3">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 mt-2 mt-sm-2">
                     <img src="{{ asset('images/LOGO.png') }}" alt="About Us" class="img-fluid">
                 </div>
                 <div class="col-sm-6 mt-1 mt-sm-1">
-                    <h2>About Us</h2>
-                    <p>We are a company dedicated to providing the best service. Our team is experienced and highly skilled.</p>
+                    <h2 style="font-family: 'LibreBaskerville', serif; font-weight: bold;">About Us</h2>
+                    <p style="font-family: 'LibreBaskerville', serif;">We are a company dedicated to providing the best service. Our team is experienced and highly skilled.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Our Services -->
-    <section id="ourServicesSection" class="our-services">
+    <section id="ourServicesSection" class="our-services mt-3 mt-sm-3">
         <div class="container">
-            <h2 class="text-center mb-4 mb-sm-4">Our Services</h2>
+            <h2 class="text-center mb-4 mb-sm-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our Services</h2>
             <div class="row justify-content-center text-center mt-2">
                 @for ($i = 0; $i < 12; $i++)
                     <div class="col-6 col-md-2 mb-2 mb-sm-2">
                         <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                        <span class="mt-3 mt-sm-3">service {{ $i + 1 }}</span>
+                        <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif;">service {{ $i + 1 }}</span>
                     </div>
                 @endfor
             </div>
@@ -340,15 +340,15 @@
     <!-- Live 360 View -->
     <section id="ourLiveProduct" class="our-advantages py-4 py-sm-4">
         <div class="container">
-            <h2 class="text-center">Our Product</h2>
-            <p class="text-center">Wcontoh produk jadi</p>
+            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our Product</h2>
+            <p class="text-center">contoh produk jadi</p>
         </div>
     </section>
 
     <!-- Our Advantages -->
     <section id="ourAdvantagesSection" class="our-advantages py-4 py-sm-4">
         <div class="container">
-            <h2 class="text-center">Our Advantages</h2>
+            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our Advantages</h2>
             <p class="text-center">We provide unparalleled service and benefits that set us apart from the competition.</p>
         </div>
     </section>
@@ -356,7 +356,7 @@
     <!-- Location Map -->
     <section id="locationMapSection" class="location-map py-4 py-sm-4"">
         <div class="container">
-            <h2 class="text-center">Our Location</h2>
+            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our Location</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <iframe src="https://maps.google.com/maps?q=surabaya&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
@@ -370,7 +370,7 @@
     <!-- FAQ -->
     <section id="faqSection" class="faq-section py-4 py-sm-4"">
         <div class="container">
-            <h2 class="text-center">Frequently Asked Questions</h2>
+            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Frequently Asked Questions</h2>
             <div class="accordion" id="faqAccordion">
                 @foreach (['One', 'Two', 'Three', 'Four', 'Five'] as $item)
                     <div class="accordion-item" style="border: none; margin-bottom: 10px;">
@@ -378,14 +378,14 @@
                             <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }}" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapse{{ $item }}"
                                 aria-expanded="{{ $loop->first ? 'true' : 'false' }}"
-                                aria-controls="collapse{{ $item }}">
+                                aria-controls="collapse{{ $item }}" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                                 Where are you located?
                             </button>
                         </h2>
                         <div id="collapse{{ $item }}"
                             class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}"
                             aria-labelledby="heading{{ $item }}" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
+                            <div class="accordion-body" style="font-family: 'LibreBaskerville', serif;">
                                 We are located in Surabaya, Indonesia.
                             </div>
                         </div>
@@ -398,12 +398,12 @@
     <!-- Our Clients -->
     <section id="ourClientsSection" class="our-services py-4 py-sm-4"">
         <div class="container">
-            <h2 class="text-center">Our Clients</h2>
+            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our Clients</h2>
             <div class="row justify-content-center mt-5 text-center">
                 @for ($i = 0; $i < 12; $i++)
                     <div class="col-6 col-md-2 mb-4">
                         <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                        <span class="mb-4">client {{ $i + 1 }}</span>
+                        <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">client {{ $i + 1 }}</span>
                     </div>
                 @endfor
             </div>
