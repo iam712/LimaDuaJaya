@@ -36,8 +36,9 @@
         style="background-color: rgb({{ $color13 }}); height: 100vh; position: relative;">
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
             style="background-color: rgb({{ $color14 }}); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px;">
-            <h2 class="text-center">Smaller Container</h2> <br>
-            <p class="text-center">This is a smaller container inside the banner.</p>
+            <h2 class="text-center">PT. Lima Dua Jaya</h2> <br>
+            <p class="text-center">Standar yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk
+                memberikan pelayanan yang bisa dibanggakan.</p>
             <a href="#aboutUsSection" class="btn text-light"
                 style="background-color: rgb({{ $color12 }}); width: auto;">Read more</a>
         </div>
@@ -56,10 +57,12 @@
                     <div class="ms-md-2 ms-lg-5">
                         <span class="text-muted">Our Story</span>
                         <h2 class="display-5 fw-bold">About Us</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                        <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <p class="lead">PT LIMA DUA JAYA sudah berdiri sejak bulan oktober tahun 2021 yang bergerak dalam
+                            bidang Advertising. Dimulai dari vending machine dan projek branding seperti car branding, media
+                            promosi melalui vending machine, billboard/baliho, produksi gondola, booth, papan nama toko,
+                            brand activation, dan lain-lain.</p>
+                        <p class="lead mb-0">PT LIMA DUA JAYA berdiri di tahun 2021 di Madiun dan pada tahun 2023 mendirikan
+                            kantor pusat di Surabaya. Di Tahun 2024 mendirikan kantor cabang Semarang.</p>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -79,8 +82,7 @@
 
     <div style="background: linear-gradient(to bottom, rgb({{ $color14 }}), rgb({{ $color15 }}));">
         <!-- Visi -->
-        <section id="visiSection" class="py-5 fade-section fade-in-left"
-            style="">
+        <section id="visiSection" class="py-5 fade-section fade-in-left" style="">
             <div class="container">
                 <div class="row align-items-center gx-4">
                     <div class="col-md-5">
@@ -92,10 +94,14 @@
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-muted">Visi</span>
                             <h2 class="display-5 fw-bold">Visi</h2>
-                            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <p class="">Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan
+                                dalam memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas
+                                Utama dan Kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
+                                kepercayaan klien melalui prinsip-prinsip yang jelas dan konsisten serta terus berinovasi
+                                untuk memenuhi dan melampaui harapan klien, menghadirkan solusi kreatif yang efektif dalam
+                                setiap kampanye periklanan.
+                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -104,26 +110,17 @@
 
 
         <!-- Misi -->
-        <section id="misiSection" class="py-5 fade-section fade-in-right"
-            style="">
+        <section id="misiSection" class="py-5 fade-section fade-in-right" style="">
             <div class="container">
                 <div class="row align-items-center gx-4">
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-muted">Misi</span>
                             <h2 class="display-5 fw-bold">Misi</h2>
-                            <p class=""><span>1. </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do
-                                eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                            <p class=""><span>2. </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do
-                                eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <p class="mb-0"><span>3. </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                do
-                                eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <p class=""><span>1. </span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
+                            <p class=""><span>2. </span>Menjunjung Tinggi Integeritas Pekerjaan.</p>
+                            <p class=""><span>3. </span>Berinovasi untuk Memenuhi Kebutuhan Klien.</p>
+                            <p class=""><span>3. </span>Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.</p>
                         </div>
                     </div>
                     <div class="col-md-5">
