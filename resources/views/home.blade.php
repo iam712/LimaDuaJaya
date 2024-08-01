@@ -174,8 +174,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             /* Optional shadow for better visibility */
             display: none;
+
             /* Initially hidden */
-            @media (min-width: 436px) {
+            @media (max-width: 436px) {
                 display: none
             }
         }
@@ -221,6 +222,12 @@
             .fixed-menu button {
                 margin: 0 5px;
             }
+
+            .service-description {
+                font-size: 0.60rem;
+                /* Even smaller font size for mobile */
+            }
+
         }
 
         /* Fade-in effect */
@@ -234,6 +241,15 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .service-description {
+            font-size: 0.75rem;
+            /* Smaller font size */
+            font-weight: 300;
+            /* Thin font weight */
+        }
+
+        /* Ensure responsiveness */
     </style>
 
     <!-- Fixed Menu Bar -->
@@ -396,70 +412,92 @@
             <h2 class="text-center mb-4 mb-sm-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Services</h2>
             <div class="row justify-content-center text-center mt-2">
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
+                <div class="col col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
                     <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
                         BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 1</p>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Dengan desain inovatif,
+                        pencahayaan yang menarik serta kualitas yang terjamin untuk memaksimalkan visibilitas & daya tarik
+                        merek anda</p>
                 </div>
                 <div class="col-6 col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 2</p>
+                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">BRANDING
+                        RAK</span>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Dengan kombinasi desain yang menawan dan material berkualitas tinggi, kami memastikan setiap rak
+                        toko menjadi elemen strategis dalam mencapai tujuan branding Anda.</p>
                 </div>
                 <div class="col-6 col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 3</p>
+                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">ROLL UP
+                        BANNER</span>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Dibuat dengan teknologi cetak terkini dan bahan yang tahan lama, banner ini memberikan kepraktisan
+                        dan daya tarik visual yang kuat di setiap kesempatan.
+                    </p>
                 </div>
                 <div class="col-6 col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 4</p>
+                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">LETTER
+                        SIGN</span>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Dengan pilihan material dan desain yang beragam, kami menyesuaikan setiap letter sign untuk
+                        mencerminkan nilai-nilai unik perusahaan Anda secara konsisten.</p>
                 </div>
                 <div class="col-6 col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 5</p>
+                    <span class="mt-3 mt-sm-3"
+                        style="font-family: 'LibreBaskerville', serif; font-weight: bold">SPANDUK</span>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Dengan pilihan ukuran, finishing, dan kemampuan tahan cuaca, spanduk ini menjadi investasi berharga
+                        dalam meningkatkan pengaruh pemasaran Anda di berbagai lokasi strategis.</p>
                 </div>
                 <div class="col-6 col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 6</p>
+                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">SHOP
+                        SIGN</span>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Anda, papan nama ini memadukan estetika yang menarik dengan daya tahan yang dapat diandalkan dalam
+                        berbagai kondisi lingkungan
+                    </p>
                 </div>
                 <div class="col-6 col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 7</p>
+                    <span class="mt-3 mt-sm-3"
+                        style="font-family: 'LibreBaskerville', serif; font-weight: bold">BILLBOARD</span>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Dengan teknologi cetak terkini dan material berkualitas tinggi, kami memastikan setiap iklan
+                        billboard memberikan dampak maksimal bagi keberhasilan kampanye pemasaran Anda.</p>
                 </div>
                 <div class="col-6 col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 8</p>
+                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">CAR
+                        BRANDING</span>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Dengan desain yang menarik dan aplikasi yang presisi, kami mengubah setiap kendaraan menjadi alat
+                        pemasaran yang kuat dan berkelanjutan.</p>
                 </div>
                 <div class="col-6 col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 9</p>
+                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">CHILLER
+                        BRANDING</span>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Dengan desain yang estetis dan pilihan material yang tahan lama, chiller branding kami memberikan
+                        nilai tambah bagi promosi produk Anda.</p>
                 </div>
                 <div class="col-6 col-md-2 mb-2 mb-sm-2">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p style="font-family: 'LibreBaskerville', serif;">Description 10</p>
+                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">PAPAN
+                        NAMA TOKO</span>
+                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                        Dengan pilihan desain yang fleksibel dan kemampuan untuk disesuaikan dengan identitas merek Anda,
+                        papan nama ini menjadi elemen penting dalam membangun citra toko yang kuat dan dikenang.</p>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Live 360 View -->
     <section id="ourLiveProduct" class="our-advantages py-4 py-sm-4">
