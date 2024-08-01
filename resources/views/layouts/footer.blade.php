@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start text-dark" style="background-color: #FFF2D7">
+<footer class="text-center text-lg-start text-dark" style="background-color: rgb({{ $color13 }});">
     <!-- Grid container -->
     <div class="container p-3">
         <!-- Section: Links -->

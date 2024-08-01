@@ -12,10 +12,13 @@
     $color8 = '255, 255, 255'; // #000000
     $color9 = '0, 0, 0'; // #ffffff
     $color10 = '255, 0, 0'; // #ff0000
-    $colo11 = '163, 54, 54'; // #a33636
+    $color11 = '163, 54, 54'; // #a33636
     $color12 = '75, 12, 12'; // #4b0c0c
     $color13 = '255, 184, 0'; // #ffb800
-    $color14 = '255, 214, 110'; // #FFD66E
+    $color14 = '255, 199, 55'; // #FFC737
+    $color15 = '255, 214, 110'; // #FFD66E
+    $color16 = '255, 229, 150'; // #FFE596
+    $color17 = '255, 239, 180'; // #FFEFB4
 
     // Command to use rgb color
     // style="color: rgb({{ $color0 }});"
@@ -36,7 +39,7 @@
         }
 
         .banners {
-            background-color: rgb({{ $color14 }});
+            background-color: rgb({{ $color15 }});
             height: 800px;
             position: relative;
             overflow: hidden;
@@ -136,7 +139,7 @@
             border: 2px solid #;
             padding: 30px;
             border-radius: 10px;
-            background-color: rgb({{ $color14 }});
+            background-color: rgb({{ $color15 }});
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             /* Added shadow for a more attractive look */
             display: inline-block;
