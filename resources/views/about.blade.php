@@ -30,17 +30,24 @@
 
 @section('title', 'About Us')
 
+
+{{-- style="font-family: 'LibreBaskerville', serif; font-weight: bold;"
+style="font-family: 'LibreBaskerville', serif;"
+style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
+
+
+
 @section('content')
     <!-- Banner -->
     <section class="banner d-flex align-items-center"
         style="background-color: rgb({{ $color13 }}); height: 100vh; position: relative;">
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
             style="background-color: rgb({{ $color14 }}); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px;">
-            <h2 class="text-center">PT. Lima Dua Jaya</h2> <br>
-            <p class="text-center">Standar yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk
+            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">PT. Lima Dua Jaya</h2> <br>
+            <p class="text-center" style="font-family: 'LibreBaskerville', serif; font-style: italic;">Standar yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk
                 memberikan pelayanan yang bisa dibanggakan.</p>
             <a href="#aboutUsSection" class="btn text-light"
-                style="background-color: rgb({{ $color12 }}); width: auto;">Read more</a>
+                style="background-color: rgb({{ $color12 }}); width: auto; font-family: 'LibreBaskerville', serif;">Read more</a>
         </div>
     </section>
 
@@ -55,13 +62,13 @@
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
                     <div class="ms-md-2 ms-lg-5">
-                        <span class="text-muted">Our Story</span>
-                        <h2 class="display-5 fw-bold">About Us</h2>
-                        <p class="lead">PT LIMA DUA JAYA sudah berdiri sejak bulan oktober tahun 2021 yang bergerak dalam
+                        <span class="text-muted" style="font-family: 'LibreBaskerville', serif; font-style: italic;">Our Story</span>
+                        <h2 class="display-5 fw-bold" style="font-family: 'LibreBaskerville', serif; font-weight: bold">About Us</h2>
+                        <p class="lead" style="font-family: 'LibreBaskerville', serif;">PT LIMA DUA JAYA sudah berdiri sejak bulan oktober tahun 2021 yang bergerak dalam
                             bidang Advertising. Dimulai dari vending machine dan projek branding seperti car branding, media
                             promosi melalui vending machine, billboard/baliho, produksi gondola, booth, papan nama toko,
                             brand activation, dan lain-lain.</p>
-                        <p class="lead mb-0">PT LIMA DUA JAYA berdiri di tahun 2021 di Madiun dan pada tahun 2023 mendirikan
+                        <p class="lead mb-0" style="font-family: 'LibreBaskerville', serif;">PT LIMA DUA JAYA berdiri di tahun 2021 di Madiun dan pada tahun 2023 mendirikan
                             kantor pusat di Surabaya. Di Tahun 2024 mendirikan kantor cabang Semarang.</p>
                     </div>
                 </div>
@@ -92,9 +99,9 @@
                     </div>
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
-                            <span class="text-muted">Visi</span>
-                            <h2 class="display-5 fw-bold">Visi</h2>
-                            <p class="">Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan
+                            <span class="text-muted" style="font-family: 'LibreBaskerville', serif; font-style: italic">Visi</span>
+                            <h2 class="display-5 fw-bold" style="font-family: 'LibreBaskerville', serif;">Visi</h2>
+                            <p class="" style="font-family: 'LibreBaskerville', serif;">Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan
                                 dalam memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas
                                 Utama dan Kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
                                 kepercayaan klien melalui prinsip-prinsip yang jelas dan konsisten serta terus berinovasi
@@ -115,12 +122,13 @@
                 <div class="row align-items-center gx-4">
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
-                            <span class="text-muted">Misi</span>
-                            <h2 class="display-5 fw-bold">Misi</h2>
-                            <p class=""><span>1. </span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
-                            <p class=""><span>2. </span>Menjunjung Tinggi Integeritas Pekerjaan.</p>
-                            <p class=""><span>3. </span>Berinovasi untuk Memenuhi Kebutuhan Klien.</p>
-                            <p class=""><span>3. </span>Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.</p>
+                            <span class="text-muted" style="font-family: 'LibreBaskerville', serif; font-style: italic">Misi</span>
+                            <h2 class="display-5 fw-bold" style="font-family: 'LibreBaskerville', serif;">Misi</h2>
+                            <p class="" style="font-family: 'LibreBaskerville', serif;"><span>1. </span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
+                            <p class="" style="font-family: 'LibreBaskerville', serif;"><span>2. </span>Menjunjung Tinggi Integeritas Pekerjaan.</p>
+                            <p class="" style="font-family: 'LibreBaskerville', serif;"><span>3. </span>Berinovasi untuk Memenuhi Kebutuhan Klien.</p>
+                            <p class="" style="font-family: 'LibreBaskerville', serif;"><span>3. </span>Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-5">
@@ -142,7 +150,7 @@
     <section class="py-4 mb-2"
         style="background: linear-gradient(to bottom, rgb({{ $color15 }}), rgb({{ $color16 }}));">
         <div class="container">
-            <h1 class="text-center">Apa kata mereka?</h1>
+            <h1 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold">Apa kata mereka?</h1>
         </div>
         <div class="container d-flex justify-content-center mt-5">
             <div class="review-wrapper d-flex align-items-center overflow-hidden">
@@ -152,8 +160,8 @@
                         <div class="card mx-2"
                             style="width: 18rem; flex-shrink: 0; background-color: rgb({{ $color12 }});">
                             <div class="card-body" style="overflow: hidden;">
-                                <p class="card-text text-light">Will come back again!</p>
-                                <p class="card-text mb-2 text-light">Emily Davis | <span>emily@example.com</span></p>
+                                <p class="card-text text-light" style="font-family: 'LibreBaskerville', serif;">Will come back again!</p>
+                                <p class="card-text mb-2 text-light" style="font-family: 'LibreBaskerville', serif; font-style: italic">Emily Davis | <span>emily@example.com</span></p>
                             </div>
                         </div>
                     @endfor

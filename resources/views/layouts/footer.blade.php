@@ -64,7 +64,7 @@
                 <hr class="w-100 clearfix d-md-none" />
 
                 <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <div class="col mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
                     <p><i class="fas fa-home mr-3"></i> LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur 60215 Surabaya, Indonesia</p>
                     <p><i class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
@@ -94,7 +94,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <div class="col ml-lg-0 text-center text-md-end">
                     <!-- Facebook -->
                     <a class="btn btn-outline-light btn-floating m-1" class="text-dark" role="button"><i
                             class="fab fa-facebook-f"></i></a>
