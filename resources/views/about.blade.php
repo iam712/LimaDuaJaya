@@ -42,7 +42,8 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
     <section class="banner d-flex align-items-center"
         style="background-color: rgb({{ $color13 }}); height: 100vh; position: relative;">
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
-            style="background-color: rgb({{ $color14 }}); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px;">
+            style="background-color: rgb({{ $color14 }}); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: 0 0 10px;
+            display: inline-block;">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">PT. Lima Dua Jaya</h2> <br>
             <p class="text-center" style="font-family: 'LibreBaskerville', serif; font-style: italic;">Standar yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk
                 memberikan pelayanan yang bisa dibanggakan.</p>
