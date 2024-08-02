@@ -419,8 +419,10 @@
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">NEON
                                 BOX</h5>
                             <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Dengan desain inovatif, pencahayaan yang menarik serta kualitas yang terjamin untuk
-                                memaksimalkan visibilitas & daya tarik merek anda
+                                Neonbox kreatif kami menawarkan pencahayaan neon yang menarik untuk memaksimalkan
+                                visibilitas dan daya tarik merek Anda di malam hari. Dengan desain yang inovatif dan
+                                kualitas yang terjamin, neonbox kami menjadi pilihan ideal untuk menonjolkan identitas
+                                visual bisnis Anda di tengah keramaian kota.
                             </p>
                         </div>
                     </div>
@@ -432,8 +434,10 @@
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                                 BRANDING RAK</h5>
                             <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Dengan kombinasi desain yang menawan dan material berkualitas tinggi, kami memastikan setiap
-                                rak toko menjadi elemen strategis dalam mencapai tujuan branding Anda.
+                                Kami menciptakan branding rak yang menonjol untuk menarik perhatian pelanggan dan
+                                meningkatkan penjualan produk Anda. Dengan kombinasi desain yang menawan dan material
+                                berkualitas tinggi, kami memastikan setiap rak toko menjadi elemen strategis dalam mencapai
+                                tujuan branding Anda.
                             </p>
                         </div>
                     </div>
@@ -445,8 +449,11 @@
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">ROLL
                                 UP BANNER</h5>
                             <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Dibuat dengan teknologi cetak terkini dan bahan yang tahan lama, banner ini memberikan
-                                kepraktisan dan daya tarik visual yang kuat di setiap kesempatan.
+                                Rollup banner kami menawarkan solusi promosi yang efektif dan mudah dipindahkan untuk acara,
+                                promosi produk, atau branding perusahaan Anda. Dibuat dengan teknologi cetak terkini dan
+                                bahan yang tahan lama, banner ini memberikan kepraktisan dan daya tarik visual yang kuat di
+                                setiap kesempatan.
+
                             </p>
                         </div>
                     </div>
@@ -458,8 +465,9 @@
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                                 LETTER SIGN</h5>
                             <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Dengan pilihan material dan desain yang beragam, kami menyesuaikan setiap letter sign untuk
-                                mencerminkan nilai-nilai unik perusahaan Anda secara konsisten.
+                                Letter sign kami memberikan identitas visual
+                                yang kuat dan menarik untuk bangunan Anda, memperkuat kesan profesional dan keberlanjutan merek Anda. Dengan pilihan material dan desain yang beragam, kami menyesuaikan setiap letter sign untuk mencerminkan nilai-nilai unik perusahaan Anda secara konsisten.
+
                             </p>
                         </div>
                     </div>
