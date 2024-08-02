@@ -572,9 +572,9 @@
                 border-top-right-radius: 15px;
                 margin: 15px;
                 /* Margin around the image */
-                max-width: 100%;
+                max-width: 80%;
                 /* Make the logo smaller */
-                max-height: 100px;
+                max-height: 80px;
                 /* Adjust height as needed */
             }
 
