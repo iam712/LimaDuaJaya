@@ -67,30 +67,6 @@
             }
         }
 
-        .wave {
-            position: absolute;
-            bottom: 0;
-            width: 200%;
-            height: 150px;
-            overflow: hidden;
-        }
-
-        .wave svg {
-            width: 100%;
-            height: 100%;
-            animation: wave-animation 15s infinite linear;
-        }
-
-        @keyframes wave-animation {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
         .about-us img {
             max-width: 100%;
             height: auto;
@@ -279,102 +255,24 @@
 
     <!-- Banner -->
     <section id="bannerSection" class="banner d-flex align-items-center">
-        <div class="wave">
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg"
-                class="transition duration-300 ease-in-out delay-150">
-                <style>
-                    .path-0 {
-                        animation: pathAnim-0 4s;
-                        animation-timing-function: linear;
-                        animation-iteration-count: infinite;
-                    }
-
-                    @keyframes pathAnim-0 {
-                        0% {
-                            d: path("M 0,500 L 0,125 C 63.78769268713775,130.0232087803675 127.5753853742755,135.04641756073497 178,136 C 228.4246146257245,136.95358243926503 265.48615119003574,133.83753853742755 318,120 C 370.51384880996426,106.16246146257245 438.48000986558145,81.60342828955481 501,69 C 563.5199901344185,56.39657171044519 620.5938093476384,55.748748304353185 665,85 C 709.4061906523616,114.25125169564681 741.1447527438647,173.40157849303245 787,166 C 832.8552472561353,158.59842150696755 892.8271796769022,84.64493772351707 949,68 C 1005.1728203230978,51.35506227648292 1057.5465285485263,92.01867061289926 1117,121 C 1176.4534714514737,149.98132938710074 1242.9867061289924,167.28037982488593 1298,166 C 1353.0132938710076,164.71962017511407 1396.5066469355038,144.85981008755704 1440,125 L 1440,500 L 0,500 Z");
-                        }
-
-                        25% {
-                            d: path("M 0,500 L 0,125 C 37.02439265014182,166.27744481440374 74.04878530028364,207.5548896288075 132,182 C 189.95121469971636,156.4451103711925 268.8292514490073,64.05788629917376 323,68 C 377.1707485509927,71.94211370082624 406.6342089036873,172.21356517449746 464,174 C 521.3657910963127,175.78643482550254 606.6339129362437,79.08785300283637 657,77 C 707.3660870637563,74.91214699716363 722.8301393513381,167.4350228141571 771,187 C 819.1698606486619,206.5649771858429 900.0455296584043,153.1720557405352 964,139 C 1027.9544703415957,124.82794425946479 1074.9877420150451,149.87675422370205 1129,165 C 1183.0122579849549,180.12324577629795 1244.0035022814156,185.32092736465654 1297,177 C 1353.0132938710076,168.67907263534346 1394.9982488592923,146.83953631767173 1440,125 L 1440,500 L 0,500 Z");
-                        }
-
-                        50% {
-                            d: path("M 0,500 L 0,125 C 60.185620915032686,124.05729436428659 120.37124183006537,123.11458872857318 169,117 C 217.62875816993463,110.88541127142682 254.70065359477127,99.59893944999382 300,107 C 345.29934640522873,114.40106055000618 398.82614379084964,140.4896534714515 458,132 C 517.1738562091504,123.51034652854851 581.99477124183,80.44244666420028 645,91 C 708.00522875817,101.55755333579972 769.1947712418302,165.74055987174742 815,180 C 860.8052287581698,194.25944012825258 891.2261437908497,158.59531384880995 944,142 C 996.7738562091503,125.40468615119003 1071.9006535947713,127.87818473301269 1132,140 C 1192.0993464052287,152.1218152669873 1237.1712418300654,173.8919472191392 1298,166 C 1353.0132938710076,164.71962017511407 1396.5066469355038,144.85981008755704 1440,125 L 1440,500 L 0,500 Z");
-                        }
-
-                        75% {
-                            d: path("M 0,500 L 0,125 C 57.22328277222839,154.63714391416943 114.44656554445677,184.27428782833888 166,182 C 217.55343445554323,179.72571217166112 263.4370205944013,145.5399926008139 308,126 C 352.5629794055987,106.4600073991861 395.80535207793815,101.56574176840547 453,119 C 510.19464792206185,136.43425823159453 581.3415710938464,176.1970403255642 638,184 C 694.6584289061536,191.8029596744358 736.8283635466764,167.64609692933777 789,141 C 841.1716364533236,114.35390307066221 903.3449747194476,85.2185719570847 956,101 C 1008.6550252805524,116.7814280429153 1051.7917375755333,177.47961524232338 1111,179 C 1170.2082624244667,180.52038475767662 1245.488074978419,122.86296707362189 1303,104 C 1360.511925021581,85.13703292637811 1400.2559625107906,105.06851646318906 1440,125 L 1440,500 L 0,500 Z");
-                        }
-
-                        100% {
-                            d: path("M 0,500 L 0,125 C 63.78769268713775,130.0232087803675 127.5753853742755,135.04641756073497 178,136 C 228.4246146257245,136.95358243926503 265.48615119003574,133.83753853742755 318,120 C 370.51384880996426,106.16246146257245 438.48000986558145,81.60342828955481 501,69 C 563.5199901344185,56.39657171044519 620.5938093476384,55.748748304353185 665,85 C 709.4061906523616,114.25125169564681 741.1447527438647,173.40157849303245 787,166 C 832.8552472561353,158.59842150696755 892.8271796769022,84.64493772351707 949,68 C 1005.1728203230978,51.35506227648292 1057.5465285485263,92.01867061289926 1117,121 C 1176.4534714514737,149.98132938710074 1242.9867061289924,167.28037982488593 1298,166 C 1353.0132938710076,164.71962017511407 1396.5066469355038,144.85981008755704 1440,125 L 1440,500 L 0,500 Z");
-                        }
-                    }
-                </style>
-                <defs>
-                    <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
-                        <stop offset="5%" stop-color="#ffb800"></stop>
-                        <stop offset="95%" stop-color="#ffd66e"></stop>
-                    </linearGradient>
-                </defs>
-                <path
-                    d="M 0,500 L 0,125 C 63.78769268713775,130.0232087803675 127.5753853742755,135.04641756073497 178,136 C 228.4246146257245,136.95358243926503 265.48615119003574,133.83753853742755 318,120 C 370.51384880996426,106.16246146257245 438.48000986558145,81.60342828955481 501,69 C 563.5199901344185,56.39657171044519 620.5938093476384,55.748748304353185 665,85 C 709.4061906523616,114.25125169564681 741.1447527438647,173.40157849303245 787,166 C 832.8552472561353,158.59842150696755 892.8271796769022,84.64493772351707 949,68 C 1005.1728203230978,51.35506227648292 1057.5465285485263,92.01867061289926 1117,121 C 1176.4534714514737,149.98132938710074 1242.9867061289924,167.28037982488593 1298,166 C 1353.0132938710076,164.71962017511407 1396.5066469355038,144.85981008755704 1440,125 L 1440,500 L 0,500 Z"
-                    stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53"
-                    class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
-                <style>
-                    .path-1 {
-                        animation: pathAnim-1 4s;
-                        animation-timing-function: linear;
-                        animation-iteration-count: infinite;
-                    }
-
-                    @keyframes pathAnim-1 {
-                        0% {
-                            d: path("M 0,500 L 0,291 C 64.37721050684425,297.3249722530522 128.7544210136885,303.64994450610436 175,292 C 221.2455789863115,280.35005549389564 249.35952645209028,250.7251942286348 295,255 C 340.6404735479097,259.2748057713652 403.8074731779503,297.4492785793563 466,302 C 528.1925268220497,306.5507214206437 589.4105808361081,277.47769145394005 646,276 C 702.5894191638919,274.52230854605995 754.5502034776174,300.6399556048835 809,301 C 863.4497965223826,301.3600443951165 920.3886052534223,275.962486126526 965,260 C 1009.6113947465777,244.03751387347398 1041.8953755086939,237.51009988901225 1090,243 C 1138.1046244913061,248.48990011098775 1202.0298927118015,265.9971143174251 1263,276 C 1323.9701072881985,286.0028856825749 1381.9850536440993,288.5014428412875 1440,291 L 1440,500 L 0,500 Z");
-                        }
-
-                        25% {
-                            d: path("M 0,500 L 0,291 C 53.31592058206931,292.4699223085461 106.63184116413862,293.93984461709215 167,297 C 227.36815883586138,300.06015538290785 294.78855592551486,304.71054384017754 342,307 C 389.21144407448514,309.28945615982246 416.213935133802,309.2179800221976 462,301 C 507.786064866198,292.7820199778024 572.3557035392773,276.41753607103215 625,271 C 677.6442964607227,265.58246392896785 718.3632507090886,271.1118756936737 781,265 C 843.6367492909114,258.8881243063263 928.191293624368,241.13496115427307 979,256 C 1029.808706375632,270.86503884572693 1046.8715747934393,318.3482796892342 1095,335 C 1143.1284252065607,351.6517203107658 1222.3224072018743,337.4719200887902 1285,325 C 1347.6775927981257,312.5280799112098 1393.8387963990629,301.76403995560486 1440,291 L 1440,500 L 0,500 Z");
-                        }
-
-                        50% {
-                            d: path("M 0,500 L 0,291 C 43.817289431495865,310.24498705142435 87.63457886299173,329.48997410284863 134,338 C 180.36542113700827,346.51002589715137 229.27897397952887,344.28509064002964 297,314 C 364.72102602047113,283.71490935997036 451.2495252188926,225.36966333703288 509,234 C 566.7504747811074,242.63033666296712 595.7229251449008,318.23625601183875 635,331 C 674.2770748550992,343.76374398816125 723.8587742015044,293.68531261561225 783,267 C 842.1412257984956,240.31468738438775 910.8419780490811,237.0224935257122 967,260 C 1023.1580219509189,282.9775064742878 1066.7733136021704,332.22471328153904 1121,340 C 1175.2266863978296,347.77528671846096 1240.0647675422367,314.0786533481317 1295,299 C 1349.9352324577633,283.9213466518683 1394.9676162288815,287.4606733259342 1440,291 L 1440,500 L 0,500 Z");
-                        }
-
-                        75% {
-                            d: path("M 0,500 L 0,291 C 71.12877050191148,326.2680231841164 142.25754100382295,361.5360463682328 188,346 C 233.74245899617705,330.4639536317672 254.09860648661976,264.12383771118505 294,237 C 333.90139351338024,209.87616228881492 393.34803304969785,221.96860278702678 459,229 C 524.6519669503022,236.03139721297322 596.5092613145888,238.00175114070785 647,244 C 697.4907386854112,249.99824885929215 726.6149216919472,260.0243926501418 782,256 C 837.3850783080528,251.9756073498582 919.0310519176223,233.90067825872484 984,257 C 1048.9689480823777,280.09932174127516 1097.2608706375631,344.3728943149587 1142,349 C 1186.7391293624369,353.6271056850413 1227.9254655321247,298.60774448144036 1277,279 C 1326.0745344678753,259.39225551855964 1383.0372672339377,275.1961277592798 1440,291 L 1440,500 L 0,500 Z");
-                        }
-
-                        100% {
-                            d: path("M 0,500 L 0,291 C 64.37721050684425,297.3249722530522 128.7544210136885,303.64994450610436 175,292 C 221.2455789863115,280.35005549389564 249.35952645209028,250.7251942286348 295,255 C 340.6404735479097,259.2748057713652 403.8074731779503,297.4492785793563 466,302 C 528.1925268220497,306.5507214206437 589.4105808361081,277.47769145394005 646,276 C 702.5894191638919,274.52230854605995 754.5502034776174,300.6399556048835 809,301 C 863.4497965223826,301.3600443951165 920.3886052534223,275.962486126526 965,260 C 1009.6113947465777,244.03751387347398 1041.8953755086939,237.51009988901225 1090,243 C 1138.1046244913061,248.48990011098775 1202.0298927118015,265.9971143174251 1263,276 C 1323.9701072881985,286.0028856825749 1381.9850536440993,288.5014428412875 1440,291 L 1440,500 L 0,500 Z");
-                        }
-                    }
-                </style>
-                <defs>
-                    <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
-                        <stop offset="5%" stop-color="#ffb800"></stop>
-                        <stop offset="95%" stop-color="#ffd66e"></stop>
-                    </linearGradient>
-                </defs>
-                <path
-                    d="M 0,500 L 0,291 C 64.37721050684425,297.3249722530522 128.7544210136885,303.64994450610436 175,292 C 221.2455789863115,280.35005549389564 249.35952645209028,250.7251942286348 295,255 C 340.6404735479097,259.2748057713652 403.8074731779503,297.4492785793563 466,302 C 528.1925268220497,306.5507214206437 589.4105808361081,277.47769145394005 646,276 C 702.5894191638919,274.52230854605995 754.5502034776174,300.6399556048835 809,301 C 863.4497965223826,301.3600443951165 920.3886052534223,275.962486126526 965,260 C 1009.6113947465777,244.03751387347398 1041.8953755086939,237.51009988901225 1090,243 C 1138.1046244913061,248.48990011098775 1202.0298927118015,265.9971143174251 1263,276 C 1323.9701072881985,286.0028856825749 1381.9850536440993,288.5014428412875 1440,291 L 1440,500 L 0,500 Z"
-                    stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
-                    class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
-            </svg>
-        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 py-5">
-                    <p class="fs-3" style="font-family: 'LibreBaskerville', serif;">Lima Dua Jaya Advertising</p>
-                    <p class="fs-1 fw-bold" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Kami Membuat
+                    <p class="fs-3" style="font-family: 'LibreBaskerville', serif; color: black;">
+                        Lima Dua Jaya Advertising
+                    </p>
+                    <p class="fs-1 fw-bold"
+                        style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: black;">
+                        Kami Membuat
                         <span id="changingText"></span>
                     </p>
                     <p class="fs-4 fst-italic fw-lighter"
-                        style="font-family: 'LibreBaskerville', serif; font-style: italic;">Supplier, Distributor,
-                        Advertising</p>
+                        style="font-family: 'LibreBaskerville', serif; font-style: italic; color: black;">
+                        Supplier, Distributor, Advertising
+                    </p>
                     <button class="btn-learn-more"
                         onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });"
-                        style="font-family: 'LibreBaskerville, serif;">Pelajari Lebih Lanjut</button>
+                        style="font-family: 'LibreBaskerville', serif;">Pelajari Lebih Lanjut</button>
                 </div>
                 <div class="col-md-6 text-center">
                     <div class="image-frame">
@@ -387,7 +285,76 @@
     </section>
 
     <!-- About Us -->
-    <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-us {
+            position: relative;
+            overflow: hidden;
+            /* Ensures blob does not overflow the section */
+            padding: 50px 0;
+            /* Optional padding for top and bottom */
+        }
+
+        .blob-container {
+            position: absolute;
+            width: 150vw;
+            /* Make the blob big enough to cover background */
+            height: 150vh;
+            top: -25vh;
+            /* Position blob centered vertically */
+            left: -25vw;
+            /* Position blob centered horizontally */
+            z-index: -1;
+            /* Ensure blob is behind text and images */
+            pointer-events: none;
+            /* Prevents interaction with the blob */
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        path {
+            transition: fill 0.3s ease;
+        }
+
+        path:hover {
+            fill: #FF8E53;
+            /* Change the color on hover */
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+
+    <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative">
+        <div class="blob-container">
+            <svg id="blob" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FF6B6B">
+                    <animate attributeName="d" dur="10s" repeatCount="indefinite"
+                        values="
+                    M32.6,-30.2C41.3,-21.6,46.5,-10.8,45.5,-0.2C44.4,10.3,37.1,20.5,28.5,26.5C19.9,32.5,9.9,34.3,1.8,31.8C-6.2,29.3,-12.5,22.5,-17.3,15.9C-22.2,9.3,-25.6,2.8,-28.1,-5.8C-30.6,-14.5,-32.1,-24.9,-26.8,-33.3C-21.6,-41.8,-10.8,-48.3,0.3,-48.6C11.4,-48.9,22.7,-42.8,32.6,-30.2Z;
+                    M31.3,-34.9C41.5,-25.6,48.4,-12.8,46.7,-1.7C45,9.4,34.6,18.8,24.4,26.7C14.1,34.5,4,40.8,-8.8,44.3C-21.5,47.7,-37.1,48.3,-42.7,39.6C-48.3,30.8,-43.8,12.9,-37.3,1.4C-30.8,-10,-22.2,-15.2,-15.9,-23.9C-9.7,-32.7,-4.8,-45.1,3.8,-49.8C12.5,-54.5,25.1,-51.3,31.3,-34.9Z;
+                    M23.9,-24.6C32.3,-16.8,38.8,-8.4,39.2,0.2C39.6,8.8,34,17.5,26.7,23.8C19.5,30,10.8,33.7,1.3,32.5C-8.1,31.4,-16.2,25.5,-23.4,18.9C-30.6,12.3,-36.9,5.2,-37.7,-3.3C-38.4,-11.8,-33.6,-21.6,-26.3,-29.7C-19,-37.8,-9.5,-44.2,0.6,-44.9C10.8,-45.6,21.6,-40.5,23.9,-24.6Z;
+                    M32.6,-30.2C41.3,-21.6,46.5,-10.8,45.5,-0.2C44.4,10.3,37.1,20.5,28.5,26.5C19.9,32.5,9.9,34.3,1.8,31.8C-6.2,29.3,-12.5,22.5,-17.3,15.9C-22.2,9.3,-25.6,2.8,-28.1,-5.8C-30.6,-14.5,-32.1,-24.9,-26.8,-33.3C-21.6,-41.8,-10.8,-48.3,0.3,-48.6C11.4,-48.9,22.7,-42.8,32.6,-30.2Z" />
+                </path>
+            </svg>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 mt-1 mt-sm-1 d-flex align-items-md-center">
@@ -395,16 +362,31 @@
                 </div>
                 <div class="col-sm-5 mt-1 mt-sm-1">
                     <h2 style="font-family: 'LibreBaskerville', serif; font-weight: bold;">About Us</h2>
-                    <p style="font-family: 'LibreBaskerville', serif;">PT Lima Dua Jaya berdiri di Madiun pada bulan Oktober
-                        tahun 2021 dan bergerak dalam bidang advertising, dimulai dari vending machine dan
-                        proyek branding seperti car branding, media promosi melalui vending machine, billboard/ baliho,
-                        produksi gondola, booth, papan nama toko, brand activation, dan lain lain. Pada tahun 2023
-                        kami melakukan ekspansi dengan mendirikan kantor pusat di Surabaya dan pada tahun 2024 mendirikan
-                        kantor cabang di semarang </p>
+                    <p style="font-family: 'LibreBaskerville', serif;">
+                        PT Lima Dua Jaya berdiri di Madiun pada bulan Oktober tahun 2021 dan bergerak dalam bidang
+                        advertising, dimulai dari vending machine dan proyek branding seperti car branding, media promosi
+                        melalui vending machine, billboard/ baliho, produksi gondola, booth, papan nama toko, brand
+                        activation,
+                        dan lain lain. Pada tahun 2023 kami melakukan ekspansi dengan mendirikan kantor pusat di Surabaya
+                        dan
+                        pada tahun 2024 mendirikan kantor cabang di semarang
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        const blob = document.querySelector('#blob path');
+
+        blob.addEventListener('mouseover', () => {
+            blob.style.animationDuration = '5s'; // Speed up the animation
+        });
+
+        blob.addEventListener('mouseout', () => {
+            blob.style.animationDuration = '10s'; // Reset to original speed
+        });
+    </script>
 
     <!-- Our Services -->
     <section id="ourServicesSection" class="our-services mt-3 mt-sm-3">
@@ -728,31 +710,105 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faqSection" class="faq-section py-4 py-sm-4"">
+    <section id="faqSection" class="faq-section py-4 py-sm-4">
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Frequently Asked
                 Questions</h2>
             <div class="accordion" id="faqAccordion">
-                @foreach (['One', 'Two', 'Three', 'Four', 'Five'] as $item)
-                    <div class="accordion-item" style="border: none; margin-bottom: 10px;">
-                        <h2 class="accordion-header" id="heading{{ $item }}">
-                            <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }}" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapse{{ $item }}"
-                                aria-expanded="{{ $loop->first ? 'true' : 'false' }}"
-                                aria-controls="collapse{{ $item }}"
-                                style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
-                                Where are you located?
-                            </button>
-                        </h2>
-                        <div id="collapse{{ $item }}"
-                            class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}"
-                            aria-labelledby="heading{{ $item }}" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body" style="font-family: 'LibreBaskerville', serif;">
-                                We are located in Surabaya, Indonesia.
-                            </div>
+                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            Bagaimana Anda bisa mewujudkan proyek kami dengan
+                            anggaran minimum?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                            Kami memastikan bahwa kami memahami kebutuhan Anda sejak awal dan berapa anggaran maksimum Anda
+                            untuk menyelesaikan proyek. Kami menghitung semua faktor dan mengurangi biaya untuk mencapai
+                            efisiensi kerja yang memungkinkan kami merealisasikan proyek Anda. Kami juga telah mengurangi
+                            waktu yang biasanya diperlukan untuk mendiskusikan suatu proyek.
                         </div>
                     </div>
-                @endforeach
+                </div>
+                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            Proyek seperti apa yang dapat Anda berikan kepada kami?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                            Kami adalah spesialis di luar rumah dengan pengalaman lebih dari 20 tahun . Kami dapat
+                            memberikan semua yang Anda butuhkan dalam proyek di luar rumah . Silakan periksa halaman
+                            "Layanan" di profil perusahaan kami untuk mempelajari lebih lanjut tentang jenis layanan yang
+                            kami sediakan .
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            Bagaimana jika anggaran kita tidak sesuai dengan proyek kita?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                            Kami yakin Anda profesional dalam merencanakan proyek dan menghitung anggaran Anda . Jika
+                            anggaran Anda tidak sesuai dengan proyek Anda, kami tidak akan mengecewakan Anda . Konsultan
+                            kami akan mencoba yang terbaik untuk memberi saran kepada Anda alternatif yang tersedia yang
+                            mungkin sesuai dengan anggaran Anda . Jadi, jangan khawatir anggaran Anda akan menghentikan
+                            proyek Anda untuk direalisasikan . Ada layanan lain yang mungkin sesuai dengan anggaran Anda .
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            Apakah Anda memiliki kebijakan privasi untuk menjaga kerahasiaan
+                            proyek kami?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                            Kami sangat menyadari kerahasiaan data mitra kami . Oleh karena itu, Anda dapat meminta
+                            perjanjian larangan pengungkapan rahasi dari kami untuk ditandatangani terlebih dahulu sebelum
+                            kami melanjutkan pembicaraan mendalam tentang proyek Anda . Kami menghargai privasi dan
+                            kerahasiaan .
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="border: none; margin-bottom: 10px;">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            Mengapa kita perlu menggunakan layanan khusus ini?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                            Anda akan mempercepat waktu untuk memutuskan apakah proyek Anda dapat dilakukan atau tidak . Di
+                            sisi lain, Anda dapat menghemat biaya karena cepat . Tidak ada kebingungan dan tidak ada
+                            keraguan untuk memulai proyek Anda dalam anggaran terbatas . Anda akan memulai proyek terlebih
+                            dahulu sementara pesaing Anda masih berusaha mencari tahu proyek terbaik untuk dilakukan dengan
+                            kebingungan dan keraguan
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
