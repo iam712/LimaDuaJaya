@@ -412,91 +412,166 @@
             <h2 class="text-center mb-4 mb-sm-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Services</h2>
             <div class="row justify-content-center text-center mt-2">
-                <div class="col col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">NEON
-                        BOX</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Dengan desain inovatif,
-                        pencahayaan yang menarik serta kualitas yang terjamin untuk memaksimalkan visibilitas & daya tarik
-                        merek anda</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="NEON BOX">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">NEON
+                                BOX</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Dengan desain inovatif, pencahayaan yang menarik serta kualitas yang terjamin untuk
+                                memaksimalkan visibilitas & daya tarik merek anda
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">BRANDING
-                        RAK</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Dengan kombinasi desain yang menawan dan material berkualitas tinggi, kami memastikan setiap rak
-                        toko menjadi elemen strategis dalam mencapai tujuan branding Anda.</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="BRANDING RAK">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                                BRANDING RAK</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Dengan kombinasi desain yang menawan dan material berkualitas tinggi, kami memastikan setiap
+                                rak toko menjadi elemen strategis dalam mencapai tujuan branding Anda.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">ROLL UP
-                        BANNER</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Dibuat dengan teknologi cetak terkini dan bahan yang tahan lama, banner ini memberikan kepraktisan
-                        dan daya tarik visual yang kuat di setiap kesempatan.
-                    </p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="ROLL UP BANNER">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">ROLL
+                                UP BANNER</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Dibuat dengan teknologi cetak terkini dan bahan yang tahan lama, banner ini memberikan
+                                kepraktisan dan daya tarik visual yang kuat di setiap kesempatan.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">LETTER
-                        SIGN</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Dengan pilihan material dan desain yang beragam, kami menyesuaikan setiap letter sign untuk
-                        mencerminkan nilai-nilai unik perusahaan Anda secara konsisten.</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="LETTER SIGN">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                                LETTER SIGN</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Dengan pilihan material dan desain yang beragam, kami menyesuaikan setiap letter sign untuk
+                                mencerminkan nilai-nilai unik perusahaan Anda secara konsisten.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3"
-                        style="font-family: 'LibreBaskerville', serif; font-weight: bold">SPANDUK</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Dengan pilihan ukuran, finishing, dan kemampuan tahan cuaca, spanduk ini menjadi investasi berharga
-                        dalam meningkatkan pengaruh pemasaran Anda di berbagai lokasi strategis.</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="SPANDUK">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                                SPANDUK</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Dengan pilihan ukuran, finishing, dan kemampuan tahan cuaca, spanduk ini menjadi investasi
+                                berharga dalam meningkatkan pengaruh pemasaran Anda di berbagai lokasi strategis.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">SHOP
-                        SIGN</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Anda, papan nama ini memadukan estetika yang menarik dengan daya tahan yang dapat diandalkan dalam
-                        berbagai kondisi lingkungan
-                    </p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="SHOP SIGN">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">SHOP
+                                SIGN</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Anda, papan nama ini memadukan estetika yang menarik dengan daya tahan yang dapat diandalkan
+                                dalam berbagai kondisi lingkungan.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3"
-                        style="font-family: 'LibreBaskerville', serif; font-weight: bold">BILLBOARD</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Dengan teknologi cetak terkini dan material berkualitas tinggi, kami memastikan setiap iklan
-                        billboard memberikan dampak maksimal bagi keberhasilan kampanye pemasaran Anda.</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="BILLBOARD">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                                BILLBOARD</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Dengan teknologi cetak terkini dan material berkualitas tinggi, kami memastikan setiap iklan
+                                billboard memberikan dampak maksimal bagi keberhasilan kampanye pemasaran Anda.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">CAR
-                        BRANDING</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Dengan desain yang menarik dan aplikasi yang presisi, kami mengubah setiap kendaraan menjadi alat
-                        pemasaran yang kuat dan berkelanjutan.</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="CAR BRANDING">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">CAR
+                                BRANDING</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Dengan desain yang menarik dan aplikasi yang presisi, kami mengubah setiap kendaraan menjadi
+                                alat pemasaran yang kuat dan berkelanjutan.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">CHILLER
-                        BRANDING</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Dengan desain yang estetis dan pilihan material yang tahan lama, chiller branding kami memberikan
-                        nilai tambah bagi promosi produk Anda.</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="CHILLER BRANDING">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                                CHILLER BRANDING</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Dengan desain yang estetis dan pilihan material yang tahan lama, chiller branding kami
+                                memberikan nilai tambah bagi promosi produk Anda.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-2 mb-2 mb-sm-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mt-3 mt-sm-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold">PAPAN
-                        NAMA TOKO</span>
-                    <p class="service-description" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                        Dengan pilihan desain yang fleksibel dan kemampuan untuk disesuaikan dengan identitas merek Anda,
-                        papan nama ini menjadi elemen penting dalam membangun citra toko yang kuat dan dikenang.</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="PAPAN NAMA TOKO">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                                PAPAN NAMA TOKO</h5>
+                            <p class="card-text" style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                Dengan pilihan desain yang fleksibel dan kemampuan untuk disesuaikan dengan identitas merek
+                                Anda, papan nama ini menjadi elemen penting dalam membangun citra toko yang kuat dan
+                                dikenang.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <style>
+            .card.custom-card {
+                border: none;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s;
+                border-radius: 15px;
+                /* Rounded corners */
+                background-color: rgb(255, 229, 150);
+                /* Background color */
+            }
+
+            .card.custom-card:hover {
+                transform: translateY(-10px);
+            }
+
+            .card.custom-card .card-body {
+                margin: 15px;
+                /* Margin inside the card */
+            }
+
+            .card.custom-card .card-img-top {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                margin: 15px;
+                /* Margin around the image */
+            }
+        </style>
     </section>
 
     <!-- Live 360 View -->
