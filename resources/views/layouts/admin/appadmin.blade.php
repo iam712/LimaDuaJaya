@@ -1,3 +1,4 @@
+<!-- resources/views/layouts/admin/appadmin.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,19 +15,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Libre Baskerville', serif;
+        }
+    </style>
+
 </head>
 
 <body>
-    <!-- Navbar -->
-    @include('layouts.navbar')
 
-    <!-- Content -->
+    @include('layouts.admin.navbaradmin')
+
+
     <div class="content">
         @yield('content')
     </div>
-
-    <!-- Footer -->
-    @include('layouts.footer')
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
