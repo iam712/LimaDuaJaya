@@ -412,9 +412,9 @@
             <h2 class="text-center mb-4 mb-sm-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Services</h2>
             <div class="row justify-content-center text-center mt-2">
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="NEON BOX">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="NEON BOX">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">NEON
                                 BOX</h5>
@@ -425,9 +425,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="BRANDING RAK">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BRANDING RAK">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                                 BRANDING RAK</h5>
@@ -438,9 +438,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="ROLL UP BANNER">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="ROLL UP BANNER">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">ROLL
                                 UP BANNER</h5>
@@ -451,9 +451,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="LETTER SIGN">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="LETTER SIGN">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                                 LETTER SIGN</h5>
@@ -464,9 +464,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="SPANDUK">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SPANDUK">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                                 SPANDUK</h5>
@@ -477,9 +477,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="SHOP SIGN">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SHOP SIGN">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">SHOP
                                 SIGN</h5>
@@ -490,9 +490,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="BILLBOARD">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BILLBOARD">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                                 BILLBOARD</h5>
@@ -503,9 +503,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="CAR BRANDING">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="CAR BRANDING">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">CAR
                                 BRANDING</h5>
@@ -516,9 +516,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="CHILLER BRANDING">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo"
+                            alt="CHILLER BRANDING">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                                 CHILLER BRANDING</h5>
@@ -529,9 +530,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div class="col-6 col-md-2 mb-4">
                     <div class="card custom-card">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top" alt="PAPAN NAMA TOKO">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo"
+                            alt="PAPAN NAMA TOKO">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                                 PAPAN NAMA TOKO</h5>
@@ -570,6 +572,24 @@
                 border-top-right-radius: 15px;
                 margin: 15px;
                 /* Margin around the image */
+                max-width: 100%;
+                /* Make the logo smaller */
+                max-height: 100px;
+                /* Adjust height as needed */
+            }
+
+            @media (max-width: 768px) {
+                .col-md-2 {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .col-md-2 {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
             }
         </style>
     </section>
