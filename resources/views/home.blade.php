@@ -412,7 +412,7 @@
             <h2 class="text-center mb-4 mb-sm-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Services</h2>
             <div class="row justify-content-center text-center mt-2">
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="NEON BOX">
                         <div class="card-body">
@@ -425,7 +425,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BRANDING RAK">
                         <div class="card-body">
@@ -438,7 +438,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="ROLL UP BANNER">
                         <div class="card-body">
@@ -451,7 +451,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="LETTER SIGN">
                         <div class="card-body">
@@ -464,7 +464,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SPANDUK">
                         <div class="card-body">
@@ -477,7 +477,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SHOP SIGN">
                         <div class="card-body">
@@ -490,7 +490,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BILLBOARD">
                         <div class="card-body">
@@ -503,7 +503,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="CAR BRANDING">
                         <div class="card-body">
@@ -516,7 +516,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo"
                             alt="CHILLER BRANDING">
@@ -530,7 +530,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-2 mb-4">
+                <div class="col-6 col-lg-2 mb-4">
                     <div class="card custom-card">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo"
                             alt="PAPAN NAMA TOKO">
@@ -572,27 +572,35 @@
                 border-top-right-radius: 15px;
                 margin: 15px;
                 /* Margin around the image */
-                max-width: 80%;
+                max-width: 100%;
                 /* Make the logo smaller */
                 max-height: 80px;
                 /* Adjust height as needed */
             }
 
+            @media (max-width: 1200px) {
+                .col-lg-2 {
+                    flex: 0 0 20%;
+                    max-width: 20%;
+                }
+            }
+
             @media (max-width: 768px) {
-                .col-md-2 {
+                .col-lg-2 {
                     flex: 0 0 50%;
                     max-width: 50%;
                 }
             }
 
             @media (max-width: 576px) {
-                .col-md-2 {
+                .col-lg-2 {
                     flex: 0 0 100%;
                     max-width: 100%;
                 }
             }
         </style>
     </section>
+
 
     <!-- Live 360 View -->
     <section id="ourLiveProduct" class="our-advantages py-4 py-sm-4">
