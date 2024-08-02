@@ -67,6 +67,7 @@
             }
         }
 
+
         .about-us img {
             max-width: 100%;
             height: auto;
@@ -192,11 +193,19 @@
                 bottom: 20px;
                 transform: none;
                 flex-direction: row;
+                /* justify-content: center; */
                 justify-content: center;
+                width: auto;
+                height: auto;
             }
 
             .fixed-menu button {
                 margin: 0 5px;
+            }
+
+            .fixed-menu img {
+                width: 30px;
+                /* Smaller size for mobile screens */
             }
 
             .service-description {
@@ -284,7 +293,7 @@
         </div>
     </section>
 
-    <!-- About Us -->
+
 
     <style>
         body {
@@ -342,6 +351,8 @@
         }
     </style>
 
+    <!-- About Us -->
+
     <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative">
         <div class="blob-container">
             <svg id="blob" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -389,9 +400,10 @@
     </script>
 
     <!-- Our Services -->
-    <section id="ourServicesSection" class="our-services mt-3 mt-sm-3">
+    <section id="ourServicesSection" class="our-services mt-3 mt-sm-3"
+        style="background: linear-gradient(to bottom, rgb({{ $color13 }}), rgb({{ $color14 }}));">
         <div class="container">
-            <h2 class="text-center mb-4 mb-sm-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
+            <h2 class="text-center mb-4 mb-sm-4 mt-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Services</h2>
             <div class="row justify-content-center text-center mt-2">
                 <!-- Service Cards -->
@@ -408,7 +420,8 @@
                                 kualitas yang terjamin, neonbox kami menjadi pilihan ideal untuk menonjolkan identitas
                                 visual bisnis Anda di tengah keramaian kota.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }})";>Read More</button>
                         </div>
                     </div>
                 </div>
@@ -428,7 +441,8 @@
                                 berkualitas tinggi, kami memastikan setiap rak toko menjadi elemen strategis dalam mencapai
                                 tujuan branding Anda.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -447,7 +461,8 @@
                                 bahan yang tahan lama, banner ini memberikan kepraktisan dan daya tarik visual yang kuat di
                                 setiap kesempatan.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -466,7 +481,8 @@
                                 desain yang beragam, kami menyesuaikan setiap letter sign untuk mencerminkan nilai-nilai
                                 unik perusahaan Anda secara konsisten.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -485,7 +501,8 @@
                                 kemampuan tahan cuaca, spanduk ini menjadi investasi berharga dalam meningkatkan pengaruh
                                 pemasaran Anda di berbagai lokasi strategis.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }});">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -504,7 +521,8 @@
                                 memadukan estetika yang menarik dengan daya tahan yang dapat diandalkan dalam berbagai
                                 kondisi lingkungan.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -523,7 +541,8 @@
                                 tinggi, kami memastikan setiap iklan billboard memberikan dampak maksimal bagi keberhasilan
                                 kampanye pemasaran Anda.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -542,7 +561,8 @@
                                 desain yang menarik dan aplikasi yang presisi, kami mengubah setiap kendaraan menjadi alat
                                 pemasaran yang kuat dan berkelanjutan.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -562,7 +582,8 @@
                                 supermarket. Dengan desain yang estetis dan pilihan material yang tahan lama, chiller
                                 branding kami memberikan nilai tambah bagi promosi produk Anda.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -582,7 +603,8 @@
                                 fleksibel dan kemampuan untuk disesuaikan dengan identitas merek Anda, papan nama ini
                                 menjadi elemen penting dalam membangun citra toko yang kuat dan dikenang.
                             </p>
-                            <button class="btn btn-primary read-more-btn">Read More</button>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color12 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -593,7 +615,7 @@
                 border: none;
                 transition: transform 0.3s, box-shadow 0.3s;
                 border-radius: 15px;
-                background-color: rgb(255, 229, 150);
+                background-color: rgb({{ $color16 }});
                 height: 300px;
                 overflow: hidden;
             }
@@ -688,7 +710,8 @@
     </section>
 
     <!-- Our Advantages -->
-    <section id="ourAdvantagesSection" class="our-advantages py-4 py-sm-4">
+    <section id="ourAdvantagesSection" class="our-advantages py-4 py-sm-4"
+        style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));">
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our Advantages</h2>
             <p class="text-center">We provide unparalleled service and benefits that set us apart from the competition.</p>
@@ -710,7 +733,8 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faqSection" class="faq-section py-4 py-sm-4">
+    <section id="faqSection" class="faq-section py-4 py-sm-4"
+        style="background: linear-gradient(to bottom, rgb({{ $color14 }}), rgb({{ $color15 }}));">
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Frequently Asked
                 Questions</h2>
