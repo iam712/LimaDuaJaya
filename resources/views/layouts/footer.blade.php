@@ -8,10 +8,10 @@
             <div class="row">
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="mb-4 font-weight-bold">
+                    <h6 class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                         Lima Dua Jaya
                     </h6>
-                    <p>
+                    <p style="font-family: 'LibreBaskerville', serif;">
                         Here you can use rows and columns to organize your footer
                         content. Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit.
@@ -23,18 +23,18 @@
 
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                    <h6 class="text-uppercase mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold">Products</h6>
                     <p>
-                        <a class="text-dark">MDBootstrap</a>
+                        <a class="text-dark" style="font-family: 'LibreBaskerville', serif;">MDBootstrap</a>
                     </p>
                     <p>
-                        <a class="text-dark">MDWordPress</a>
+                        <a class="text-dark" style="font-family: 'LibreBaskerville', serif;">MDWordPress</a>
                     </p>
                     <p>
-                        <a class="text-dark">BrandFlow</a>
+                        <a class="text-dark" style="font-family: 'LibreBaskerville', serif;">BrandFlow</a>
                     </p>
                     <p>
-                        <a class="text-dark">Bootstrap Angular</a>
+                        <a class="text-dark" style="font-family: 'LibreBaskerville', serif;">Bootstrap Angular</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -43,19 +43,19 @@
 
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">
+                    <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
                         Useful links
                     </h6>
-                    <p>
+                    <p style="font-family: 'LibreBaskerville', serif;">
                         <a class="text-dark">Your Account</a>
                     </p>
-                    <p>
+                    <p style="font-family: 'LibreBaskerville', serif;">
                         <a class="text-dark">Become an Affiliate</a>
                     </p>
-                    <p>
+                    <p style="font-family: 'LibreBaskerville', serif;">
                         <a class="text-dark">Shipping Rates</a>
                     </p>
-                    <p>
+                    <p style="font-family: 'LibreBaskerville', serif;">
                         <a class="text-dark">Help</a>
                     </p>
                 </div>
@@ -65,11 +65,11 @@
 
                 <!-- Grid column -->
                 <div class="col mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                    <p><i class="fas fa-home mr-3"></i> LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur 60215 Surabaya, Indonesia</p>
-                    <p><i class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> +62 821 1598 3575</p>
-                    <p><i class="fas fa-print mr-3"></i> +01 234 567 89</p>
+                    <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'LibreBaskerville', serif;">Contact</h6>
+                    <p style="font-family: 'LibreBaskerville', serif;"><i class="fas fa-home mr-3"></i> LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur 60215 Surabaya, Indonesia</p>
+                    <p style="font-family: 'LibreBaskerville', serif;"><i class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
+                    <p style="font-family: 'LibreBaskerville', serif;"><i class="fas fa-phone mr-3"></i> +62 821 1598 3575</p>
+                    <p style="font-family: 'LibreBaskerville', serif;"><i class="fas fa-print mr-3"></i> +01 234 567 89</p>
                 </div>
                 <!-- Grid column -->
             </div>
@@ -85,7 +85,7 @@
                 <!-- Grid column -->
                 <div class="text-center">
                     <!-- Copyright -->
-                    <div class="p-3">
+                    <div class="p-3" style="font-family: 'LibreBaskerville', serif;">
                         © 2024 Copyright:
                         <a class="text-dark" href="/">Lima Dua Jaya</a>
                     </div>
