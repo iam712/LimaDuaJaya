@@ -38,13 +38,6 @@
             overflow: hidden;
         }
 
-        .banners {
-            background-color: rgb({{ $color15 }});
-            height: 800px;
-            position: relative;
-            overflow: hidden;
-        }
-
         .banner h1 {
             font-size: 2.5rem;
         }
@@ -66,7 +59,6 @@
                 border-color: black;
             }
         }
-
 
         .about-us img {
             max-width: 100%;
@@ -98,7 +90,6 @@
             margin-top: 20px;
             padding: 10px 20px;
             background-color: rgb({{ $color12 }});
-            /* You can change the color to match your theme */
             color: white;
             border: none;
             border-radius: 5px;
@@ -106,11 +97,9 @@
             cursor: pointer;
         }
 
-        /* Fixed menu bar */
         .fixed-menu {
             position: fixed;
             left: 20px;
-            /* Add margin from the left */
             top: 50%;
             transform: translateY(-50%);
             display: flex;
@@ -118,17 +107,13 @@
             align-items: center;
             z-index: 1000;
             background-color: rgba({{ $color14 }}, 0.6);
-            /* Slightly transparent background */
             padding: 10px;
             border-radius: 15px;
-            /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            /* Optional shadow for better visibility */
             display: none;
 
-            /* Initially hidden */
             @media (max-width: 436px) {
-                display: none
+                display: none;
             }
         }
 
@@ -167,7 +152,6 @@
                 bottom: 20px;
                 transform: none;
                 flex-direction: row;
-                /* justify-content: center; */
                 justify-content: center;
                 width: auto;
                 height: auto;
@@ -179,17 +163,13 @@
 
             .fixed-menu img {
                 width: 30px;
-                /* Smaller size for mobile screens */
             }
 
             .service-description {
                 font-size: 0.60rem;
-                /* Even smaller font size for mobile */
             }
-
         }
 
-        /* Fade-in effect */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -203,12 +183,8 @@
 
         .service-description {
             font-size: 0.75rem;
-            /* Smaller font size */
             font-weight: 300;
-            /* Thin font weight */
         }
-
-        /* Ensure responsiveness */
 
         body {
             font-family: Arial, sans-serif;
@@ -220,24 +196,17 @@
         .about-us {
             position: relative;
             overflow: hidden;
-            /* Ensures blob does not overflow the section */
             padding: 50px 0;
-            /* Optional padding for top and bottom */
         }
 
         .blob-container {
             position: absolute;
             width: 150vw;
-            /* Make the blob big enough to cover background */
             height: 150vh;
             top: -25vh;
-            /* Position blob centered vertically */
             left: -25vw;
-            /* Position blob centered horizontally */
             z-index: -1;
-            /* Ensure blob is behind text and images */
             pointer-events: none;
-            /* Prevents interaction with the blob */
         }
 
         svg {
@@ -251,7 +220,6 @@
 
         path:hover {
             fill: #FF8E53;
-            /* Change the color on hover */
         }
 
         h2 {
@@ -263,7 +231,6 @@
             color: #555;
             line-height: 1.6;
         }
-
 
         .card.custom-card {
             border: none;
@@ -304,7 +271,6 @@
 
         .card.custom-card.expanded .card-description {
             max-height: none;
-            /* Allow full height */
         }
 
         .read-more-btn {
@@ -333,35 +299,37 @@
         }
 
         .wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
 
-    .boxblob {
-        background-image: url('{{ asset('images/logo-square.png') }}'), radial-gradient(#ffc737, #ffefb4);
-        background-size: 70%, cover;
-        background-position: center center, center center;
-        background-repeat: no-repeat, no-repeat;
-        height: 500px;
-        width: 500px;
-        box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
-        animation: animate 5s ease-in-out infinite;
-        transition: all 1s ease-in-out;
-    }
+        .boxblob {
+            background-image: url('{{ asset('images/logo-square.png') }}'), radial-gradient(#ffc737, #ffefb4);
+            background-size: 70%, cover;
+            background-position: center center, center center;
+            background-repeat: no-repeat, no-repeat;
+            height: 500px;
+            width: 500px;
+            box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
+            animation: animate 5s ease-in-out infinite;
+            transition: all 1s ease-in-out;
+        }
 
-    @keyframes animate {
-        0% {
-            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        @keyframes animate {
+            0% {
+                border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+            }
+
+            50% {
+                border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+            }
+
+            100% {
+                border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+            }
         }
-        50% {
-            border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-        }
-        100% {
-            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-        }
-    }
     </style>
 
     <!-- Fixed Menu Bar -->
@@ -392,8 +360,13 @@
     <!-- Banner -->
     <section id="bannerSection" class="banner d-flex align-items-center">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center d-md-none">
+                    <div class="wrapper">
+                        <div class="boxblob"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 py-5 text-center text-md-start">
                     <p class="fs-3" style="font-family: 'LibreBaskerville', serif; color: black;">
                         Lima Dua Jaya Advertising
                     </p>
@@ -410,7 +383,7 @@
                         onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });"
                         style="font-family: 'LibreBaskerville', serif;">Pelajari Lebih Lanjut</button>
                 </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center d-none d-md-block">
                     <div class="wrapper">
                         <div class="boxblob"></div>
                     </div>
@@ -420,7 +393,6 @@
     </section>
 
     <!-- About Us -->
-
     <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative">
         <div class="blob-container">
             <svg id="blob" viewBox="-30 -10 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -455,7 +427,6 @@
         </div>
     </section>
 
-    <!-- Our Services -->
     <!-- Our Services -->
     <section id="ourServicesSection" class="our-services mt-3 mt-sm-3"
         style="background: linear-gradient(to bottom, rgb({{ $color13 }}), rgb({{ $color14 }}));">
@@ -714,7 +685,7 @@
     </section>
 
     <!-- Location Map -->
-    <section id="locationMapSection" class="location-map py-4 py-sm-4"">
+    <section id="locationMapSection" class="location-map py-4 py-sm-4">
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Location</h2>
@@ -910,7 +881,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Inline JavaScript -->
     <script>
