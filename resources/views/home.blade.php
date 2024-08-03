@@ -29,8 +29,26 @@
 @section('title', 'Home')
 
 @section('content')
-    <!-- Inline CSS -->
     <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Banner Styles */
         .banner {
             background-color: rgb({{ $color13 }});
             height: 800px;
@@ -42,6 +60,7 @@
             font-size: 2.5rem;
         }
 
+        /* Changing Text Animation */
         #changingText {
             display: inline-block;
             border-right: 2px solid;
@@ -60,145 +79,19 @@
             }
         }
 
-        .about-us img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .our-services .img-fluid {
-            max-height: 150px;
-        }
-
-        .our-services .col-md-2 span {
-            display: block;
-            margin-top: 10px;
-        }
-
-        .our-advantages p,
-        .location-map iframe,
-        .faq-section .accordion-item {
-            margin-bottom: 20px;
-        }
-
-        .faq-section .accordion-item button {
-            border: none;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .btn-learn-more {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: rgb({{ $color12 }});
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .fixed-menu {
-            position: fixed;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            z-index: 1000;
-            background-color: rgba({{ $color14 }}, 0.6);
-            padding: 10px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            display: none;
-
-            @media (max-width: 436px) {
-                display: none;
-            }
-        }
-
-        .fixed-menu button {
-            background: none;
-            border: none;
-            margin: 5px 0;
-            cursor: pointer;
-        }
-
-        .fixed-menu img {
-            max-width: 40px;
-            transition: transform 0.3s;
-        }
-
-        .fixed-menu img:hover {
-            transform: scale(1.2);
-        }
-
-        @media (max-width: 768px) {
-            .banner {
-                height: 600px;
-            }
-
-            .banner h1 {
-                font-size: 2rem;
-            }
-
-            .btn-learn-more {
-                padding: 8px 16px;
-            }
-
-            .fixed-menu {
-                left: 10px;
-                top: auto;
-                bottom: 20px;
-                transform: none;
-                flex-direction: row;
-                justify-content: center;
-                width: auto;
-                height: auto;
-            }
-
-            .fixed-menu button {
-                margin: 0 5px;
-            }
-
-            .fixed-menu img {
-                width: 30px;
-            }
-
-            .service-description {
-                font-size: 0.60rem;
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .service-description {
-            font-size: 0.75rem;
-            font-weight: 300;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* About Us Section */
         .about-us {
             position: relative;
             overflow: hidden;
             padding: 50px 0;
         }
 
+        .about-us img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Blob Container */
         .blob-container {
             position: absolute;
             width: 150vw;
@@ -222,16 +115,93 @@
             fill: #FF8E53;
         }
 
-        h2 {
-            color: #333;
+        /* Our Services Section */
+        .our-services .img-fluid {
+            max-height: 150px;
+        }
+
+        .our-services .col-md-2 span {
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Our Advantages Section */
+        .our-advantages p,
+        .location-map iframe,
+        .faq-section .accordion-item {
             margin-bottom: 20px;
         }
 
-        p {
-            color: #555;
-            line-height: 1.6;
+        /* FAQ Section */
+        .faq-section .accordion-item button {
+            border: none;
+            border-bottom: 1px solid #ddd;
         }
 
+        /* Learn More Button */
+        .btn-learn-more {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgb({{ $color12 }});
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* Fixed Menu */
+        .fixed-menu {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1000;
+            background-color: rgba({{ $color14 }}, 0.6);
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .fixed-menu button {
+            background: none;
+            border: none;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        .fixed-menu img {
+            max-width: 40px;
+            transition: transform 0.3s;
+        }
+
+        .fixed-menu img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Service Description */
+        .service-description {
+            font-size: 0.75rem;
+            font-weight: 300;
+        }
+
+        /* Card Styles */
         .card.custom-card {
             border: none;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -277,6 +247,12 @@
             margin-top: 10px;
         }
 
+        /* Responsive Columns */
+        .col-md-4 {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+        }
+
         @media (max-width: 1200px) {
             .col-md-4 {
                 flex: 0 0 33.3333%;
@@ -289,6 +265,14 @@
                 flex: 0 0 50%;
                 max-width: 50%;
             }
+
+            .btn-learn-more {
+                padding: 8px 16px;
+            }
+
+            .service-description {
+                font-size: 0.60rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -296,8 +280,18 @@
                 flex: 0 0 100%;
                 max-width: 100%;
             }
+
+            .boxblob {
+                height: 300px;
+                /* Adjust height as needed */
+                width: 300px;
+                /* Adjust width as needed */
+                background-size: 50%, cover;
+                /* Adjust background size as needed */
+            }
         }
 
+        /* Blob Box */
         .wrapper {
             display: flex;
             align-items: center;
@@ -331,6 +325,7 @@
             }
         }
     </style>
+
 
     <!-- Fixed Menu Bar -->
     <div class="fixed-menu" id="sideMenu">
