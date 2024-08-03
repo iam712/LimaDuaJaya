@@ -117,7 +117,16 @@
 
         /* Our Services Section */
         .our-services .img-fluid {
-            max-height: 150px;
+            max-height: 60px;
+            /* Keep the max height */
+            width: auto;
+            /* Adjust width to maintain aspect ratio */
+            object-fit: contain;
+            /* Ensure image fits within the set height without distortion */
+            display: block;
+            /* Remove any extra space below the image */
+            margin: 0 auto;
+            /* Center the image horizontally */
         }
 
         .our-services .col-md-2 span {
@@ -288,6 +297,34 @@
                 /* Adjust width as needed */
                 background-size: 50%, cover;
                 /* Adjust background size as needed */
+            }
+
+            .fixed-menu {
+                top: auto;
+                /* Remove top positioning */
+                bottom: 0;
+                /* Position at the bottom */
+                left: 0;
+                width: 100%;
+                /* Full width on mobile */
+                height: auto;
+                /* Adjust height to fit content */
+                flex-direction: row;
+                /* Align items horizontally */
+                justify-content: space-around;
+                /* Space out buttons evenly */
+                padding: 10px 0;
+                /* Padding to ensure some space around buttons */
+            }
+
+            .fixed-menu button {
+                padding: 0;
+                /* Remove padding around buttons on mobile */
+            }
+
+            .fixed-menu img {
+                width: 24px;
+                /* Smaller icon size for mobile */
             }
         }
 
@@ -826,53 +863,63 @@
                 Clients</h2>
             <div class="row justify-content-center mt-5 text-center">
                 <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 1</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 2</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 3</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 4</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 5</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
+                    <img src="{{ asset('images/clients/blastoz.png') }}" alt="Logo" class="img-fluid">
                     <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 6</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
+                    <img src="{{ asset('images/clients/formula.png') }}" alt="Logo" class="img-fluid">
                     <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 7</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
+                    <img src="{{ asset('images/clients/fruittea.png') }}" alt="Logo" class="img-fluid">
                     <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 8</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
+                    <img src="{{ asset('images/clients/fruzz.png') }}" alt="Logo" class="img-fluid">
                     <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 9</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
+                    <img src="{{ asset('images/clients/imperialcreme.png') }}" alt="Logo" class="img-fluid">
                     <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 10</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
+                    <img src="{{ asset('images/clients/inlite.png') }}" alt="Logo" class="img-fluid">
                     <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 11</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid">
+                    <img src="{{ asset('images/clients/macito.png') }}" alt="Logo" class="img-fluid">
                     <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 12</span>
                 </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="{{ asset('images/clients/orios.png') }}" alt="Logo" class="img-fluid">
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 13</span>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="{{ asset('images/clients/prima.png') }}" alt="Logo" class="img-fluid">
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 14</span>
+                </div>
+
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="{{ asset('images/clients/tebs.png') }}" alt="Logo" class="img-fluid">
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 5</span>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="{{ asset('images/clients/Sosro.png') }}" alt="Logo" class="img-fluid">
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 2</span>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="{{ asset('images/clients/stee.png') }}" alt="Logo" class="img-fluid">
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 3</span>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="{{ asset('images/clients/tango.png') }}" alt="Logo" class="img-fluid">
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 4</span>
+                </div>
+                <div class="col-6 col-md-2 mb-4">
+                    <img src="{{ asset('images/clients/raywhite.png') }}" alt="Logo" class="img-fluid">
+                    <span class="mb-4 mt-3 mt-lg-3" style="font-family: 'LibreBaskerville', serif;">Client 1</span>
+                </div>
+
             </div>
         </div>
     </section>
