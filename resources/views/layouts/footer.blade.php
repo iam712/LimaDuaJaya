@@ -86,8 +86,8 @@
                 <div class="text-center">
                     <!-- Copyright -->
                     <div class="p-3">
-                        © 2020 Copyright:
-                        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                        © 2024 Copyright:
+                        <a class="text-dark" href="/">Lima Dua Jaya</a>
                     </div>
                     <!-- Copyright -->
                 </div>
