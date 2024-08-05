@@ -1,6 +1,6 @@
 <!-- resources/views/navbar.blade.php -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar"
-    style="background-color: rgb({{ $color13 }});">
+    style="background-color: rgb({{ $color4 }});">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
             <img src="{{ asset('images/LOGO.png') }}" alt="Logo" style="max-height: 50px; width: auto;">
@@ -18,7 +18,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('partner') ? 'active' : '' }}" href="#"
-                        style="font-family: 'LibreBaskerville', serif;">Partner</a>
+                        style="font-family: 'LibreBaskerville', serif; font-style: semi-bold;">Partner</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('product') ? 'active' : '' }}" href="#"
@@ -45,9 +45,9 @@
     document.addEventListener('scroll', function() {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgb({{ $color14 }}, 0.8)';
+            navbar.style.backgroundColor = 'rgb({{ $color4 }}, 0.6)';
         } else {
-            navbar.style.backgroundColor = 'rgb({{ $color13 }})';
+            navbar.style.backgroundColor = 'rgb({{ $color4 }})';
         }
     });
 
@@ -57,9 +57,9 @@
         const y = e.clientY;
         if (window.scrollY > 50) {
             navbar.style.background =
-                `radial-gradient(circle at ${x}px ${y}px, rgba(255, 158, 205, 0.8) 10px, rgba(255, 210, 110, 0.8) 20px, rgba({{ $color14 }}, 0.8) 40px)`;
+                `radial-gradient(circle at ${x}px ${y}px, rgba(237, 50, 55, 0.8) 10px, rgba(255, 222, 223, 0.8) 20px, rgba({{ $color4 }}, 0.8) 40px)`;
         } else {
-            navbar.style.background = 'rgb({{ $color13 }})';
+            navbar.style.background = 'rgb({{ $color4 }})';
         }
     });
 </script>

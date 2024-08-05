@@ -15,6 +15,10 @@ Route::get('/admin', function () {
     return view('admin.dashboardadmin');
 });
 
+Route::get('/workshop', function () {
+    return view('workshop');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -1,30 +1,18 @@
 @extends('layouts.app')
 {{-- Color library --}}
 @php
-    $color0 = '216, 174, 126'; // #d8ae7e
-    $color1 = '232, 186, 137'; // #e8ba89
-    $color2 = '248, 199, 148'; // #f8c794
-    $color3 = '251, 211, 164'; // #fbd3a4
-    $color4 = '255, 224, 181'; // #ffe0b5
-    $color5 = '255, 233, 198'; // #ffe9c6
-    $color6 = '255, 242, 215'; // #fff2d7
-    $color7 = '255, 248, 235'; // #fff8eb
-    $color8 = '255, 255, 255'; // #000000
-    $color9 = '0, 0, 0'; // #ffffff
-    $color10 = '255, 0, 0'; // #ff0000
-    $color11 = '163, 54, 54'; // #a33636
-    $color12 = '75, 12, 12'; // #4b0c0c
-    $color13 = '255, 184, 0'; // #ffb800
-    $color14 = '255, 199, 55'; // #FFC737
-    $color15 = '255, 214, 110'; // #FFD66E
-    $color16 = '255, 229, 150'; // #FFE596
-    $color17 = '255, 239, 180'; // #FFEFB4
+
+    $color1 = '255, 255, 255'; // #ffffff
+    $color2 = '0, 0, 0'; // #000000
+    $color3 = '125, 20, 19'; //#7d141d
+    $color4 = '238, 63, 72';//#EE3F48
+    $color5 = '255, 222, 223'; //#ffdedf
+    $color6 = '246, 232, 214'; //#F6E8D6
 
     // Command to use rgb color
     // style="color: rgb({{ $color0 }});"
     // style="background-color: rgb({{ $color1 }});"
     // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
-
 @endphp
 @section('title', 'Home')
 
@@ -50,7 +38,7 @@
 
         /* Banner Styles */
         .banner {
-            background-color: rgb({{ $color13 }});
+            background-color: rgb({{ $color4 }});
             height: 800px;
             position: relative;
             overflow: hidden;
@@ -112,7 +100,7 @@
         }
 
         path:hover {
-            fill: #FF8E53;
+            fill: ;
         }
 
         /* Our Services Section */
@@ -152,7 +140,7 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: rgb({{ $color12 }});
+            background-color: rgb({{ $color2 }});
             color: white;
             border: none;
             border-radius: 5px;
@@ -170,7 +158,7 @@
             flex-direction: column;
             align-items: center;
             z-index: 1000;
-            background-color: rgba({{ $color14 }}, 0.6);
+            background-color: rgba({{ $color6}}, 0.6);
             padding: 10px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -215,7 +203,7 @@
             border: none;
             transition: transform 0.3s, box-shadow 0.3s;
             border-radius: 15px;
-            background-color: rgb({{ $color16 }});
+            background-color: rgb({{ $color6 }});
             height: 300px;
             overflow: hidden;
         }
@@ -337,7 +325,7 @@
         }
 
         .boxblob {
-            background-image: url('{{ asset('images/logo-square.png') }}'), radial-gradient(#ffc737, #ffefb4);
+            background-image: url('{{ asset('images/logo-square.png') }}'), radial-gradient(#f4efea, #ffdedf);
             background-size: 70%, cover;
             background-position: center center, center center;
             background-repeat: no-repeat, no-repeat;
@@ -461,11 +449,12 @@
 
     <!-- Our Services -->
     <section id="ourServicesSection" class="our-services mt-3 mt-sm-3"
-        style="background: linear-gradient(to bottom, rgb({{ $color13 }}), rgb({{ $color14 }}));">
+        style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }}));">
         <div class="container">
-            <h2 class="text-center mb-3 mb-sm-3 py-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
+            <h2 class="text-center mb-3 mb-sm-3 py-3"
+                style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white">Our
                 Services</h2>
-            <div class="row justify-content-center text-center mt-2">
+            <div class="row d-flex justify-content-center text-center mt-2">
                 <!-- Service Cards -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
@@ -479,7 +468,7 @@
                                 memaksimalkan visibilitas dan daya tarik merek Anda di malam hari...
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -502,7 +491,7 @@
                                 tujuan branding Anda.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -525,7 +514,7 @@
                                 setiap kesempatan.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -548,7 +537,7 @@
                                 unik perusahaan Anda secara konsisten.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -571,7 +560,7 @@
                                 pemasaran Anda di berbagai lokasi strategis.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }});">Read More</button>
+                                style="background-color: rgb({{ $color2 }});">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -594,7 +583,7 @@
                                 kondisi lingkungan.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -617,7 +606,7 @@
                                 kampanye pemasaran Anda.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -640,7 +629,7 @@
                                 pemasaran yang kuat dan berkelanjutan.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -664,7 +653,7 @@
                                 branding kami memberikan nilai tambah bagi promosi produk Anda.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -688,7 +677,7 @@
                                 menjadi elemen penting dalam membangun citra toko yang kuat dan dikenang.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color12 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -706,12 +695,12 @@
     </section>
 
     <!-- Our Advantages -->
-    <section id="ourAdvantagesSection" class="our-advantages py-4 py-sm-4"
-        style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));">
+    <section id="ourAdvantagesSection" class="our-advantages py-4 p5-sm-4"
+        style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color4 }}));">
         <div class="container">
-            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
+            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
                 Advantages</h2>
-            <p class="text-center">We provide unparalleled service and benefits that set us apart from the
+            <p class="text-center text-light">We provide unparalleled service and benefits that set us apart from the
                 competition.</p>
         </div>
     </section>
@@ -733,9 +722,9 @@
 
     <!-- FAQ -->
     <section id="faqSection" class="faq-section py-4 py-sm-4"
-        style="background: linear-gradient(to bottom, rgb({{ $color14 }}), rgb({{ $color15 }}));">
+        style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }}));">
         <div class="container">
-            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color:white;">
                 Frequently Asked
                 Questions</h2>
             <div class="accordion" id="faqAccordion">
@@ -864,60 +853,60 @@
             <div class="row justify-content-center mt-5 text-center">
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/blastoz.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 6</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">BLASTOZ</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/formula.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 7</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Formula</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/fruittea.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 8</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">FRUIT TEA</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/fruzz.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 9</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Fruzz</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/imperialcreme.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 10</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Imperial <br> creme</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/inlite.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 11</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">in lite</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/macito.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 12</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">MA CITO</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/orios.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 13</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">ORIOS</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/prima.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 14</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">prima</span>
                 </div>
 
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/tebs.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 5</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">TEBS</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/Sosro.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 2</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">SOSRO</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/stee.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 3</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">S-tee</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/tango.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif;">Client 4</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Tango</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/raywhite.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4 mt-3 mt-lg-3" style="font-family: 'LibreBaskerville', serif;">Client 1</span>
+                    <span class="mb-4 mt-3 mt-lg-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Ray White</span>
                 </div>
 
             </div>
