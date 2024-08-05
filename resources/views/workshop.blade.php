@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 {{-- Color library --}}
 @php
 
@@ -15,60 +16,49 @@
     // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
 
 @endphp
+
 @section('title', 'Workshop')
 
 @section('content')
-
-    <section>
+    <!-- Workshop Lima Dua -->
+    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5">
         <div class="container">
-            <h3>Jancok Ronald</h3>
-            <div class="row d-flex justify-content-center">
-                <div class="col-2 col-md-3 col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h3 class="text-start mt-5 mt-md-3 mt-lg-3">Workshop Lima Dua Jaya</h3>
+            <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
+                @foreach (range(1, 4) as $index)
+                    <div class="col-6 col-md-4 col-lg-3 mb-4">
+                        <div class="card h-100" style="background-color: rgb({{ $color1 }});">
+                            <img src="your-image-path-{{ $index }}.jpg" class="card-img-top"
+                                alt="Image {{ $index }}">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title {{ $index }}</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of
+                                    the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-2 col-md-3 col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                @endforeach
+            </div>
+            <h3 class="text-start mt-5 mt-md-3 mt-lg-3">Workshop Partnership</h3>
+            <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
+                @foreach (range(1, 8) as $index)
+                    <div class="col-6 col-md-4 col-lg-3 mb-4">
+                        <div class="card h-100" style="background-color: rgb({{ $color1 }});">
+                            <img src="your-image-path-{{ $index }}.jpg" class="card-img-top"
+                                alt="Image {{ $index }}">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title {{ $index }}</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of
+                                    the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-2 col-md-3 col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2 col-md-3 col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
-
 @endsection
