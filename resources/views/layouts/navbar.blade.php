@@ -17,12 +17,12 @@
                         style="font-family: 'LibreBaskerville', serif;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('partner') ? 'active' : '' }}" href="#"
-                        style="font-family: 'LibreBaskerville', serif; font-style: semi-bold;">Partner</a>
+                    <a class="nav-link {{ request()->is('workshop') ? 'active' : '' }}" href="/workshop"
+                        style="font-family: 'LibreBaskerville', serif; font-style: semi-bold;">Workshop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('product') ? 'active' : '' }}" href="#"
-                        style="font-family: 'LibreBaskerville', serif;">Product</a>
+                    <a class="nav-link {{ request()->is('project') ? 'active' : '' }}" href="/project"
+                        style="font-family: 'LibreBaskerville', serif;">Project</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="/aboutus"

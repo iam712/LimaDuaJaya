@@ -19,6 +19,10 @@ Route::get('/workshop', function () {
     return view('workshop');
 });
 
+Route::get('/project', function () {
+    return view('project');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
