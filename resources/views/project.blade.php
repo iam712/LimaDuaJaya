@@ -17,7 +17,7 @@
 
 @endphp
 
-@section('title', 'Workshop')
+@section('title', 'Project')
 
 @section('content')
     <!-- Project Lima Dua Jaya Surabaya -->

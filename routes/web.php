@@ -23,6 +23,11 @@ Route::get('/project', function () {
     return view('project');
 });
 
+Route::get('/review', function () {
+    return view('review');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

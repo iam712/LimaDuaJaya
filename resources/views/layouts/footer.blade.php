@@ -47,7 +47,7 @@
                         Useful links
                     </h6>
                     <p style="font-family: 'LibreBaskerville', serif;">
-                        <a class="text-light">Your Account</a>
+                        <a class="text-light" href="/review">Send us a feedback!</a>
                     </p>
                     <p style="font-family: 'LibreBaskerville', serif;">
                         <a class="text-light">Become an Affiliate</a>
