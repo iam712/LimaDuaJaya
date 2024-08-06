@@ -26,31 +26,32 @@
             <h3 class="text-start mt-5 mt-md-3 mt-lg-3">Workshop Lima Dua Jaya</h3>
             <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)
-                    <div class="col-6 col-md-4 col-lg-3 mb-4">
-                        <div class="card h-100 p-3" style="background-color: rgb({{ $color6 }});">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
-                                alt="Image {{ $index }}">
-                            <div class="card-body">
-                                <h5 class="">Nama Workshop {{ $index }}</h5>
-                                <p class="card-text"><i class="fas fa-location-dot location-icon"></i> Location </p>
-                                <a href="#" class="btn btn-dark w-auto">Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            <!-- Workshop Partnership -->
-            <h3 class="text-start mt-5 mt-md-3 mt-lg-3">Workshop Partnership</h3>
-            <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
-                @foreach (range(1, 8) as $index)
-                    <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                         <div class="card h-100 p-3" style="background-color: rgb({{ $color6 }});">
                             <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
                                 alt="Image {{ $index }}">
                             <div class="card-body">
                                 <h5 class="card-title">Nama Workshop {{ $index }}</h5>
                                 <p class="card-text"><i class="fas fa-location-dot location-icon"></i> Location </p>
-                                <a href="#" class="btn btn-dark w-auto">Detail</a>
+                                <a href="#" class="btn btn-dark w-100">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <!-- Workshop Partnership -->
+            <h3 class="text-start mt-5 mt-md-3 mt-lg-3">Workshop Partnership</h3>
+            <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
+                @foreach (range(1, 8) as $index)
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="card h-100 p-3" style="background-color: rgb({{ $color6 }});">
+                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
+                                alt="Image {{ $index }}">
+                            <div class="card-body">
+                                <h5 class="card-title">Nama Workshop {{ $index }}</h5>
+                                <p class="card-text"><i class="fas fa-location-dot location-icon"></i> Location </p>
+                                <a href="#" class="btn btn-dark w-100">Detail</a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +64,7 @@
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1">
         <div class="container" style="background-color: rgb({{ $color4 }}); border-radius: 10px; padding: 30px;">
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-12 col-lg-7 mb-4 mb-lg-0">
                     <h2 class="fw-bold mb-4">Workshop Partnership Program</h2>
                     <h5 class="fw-bold">Requirements :</h5>
                     <ul class="list-unstyled">
@@ -81,7 +82,7 @@
                             labore et dolore magna aliqua.</li>
                     </ul>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-12 col-lg-5">
                     <form action="/submit-form" method="POST" enctype="multipart/form-data">
                         @csrf <!-- Laravel CSRF Token -->
                         <div class="mb-3">
@@ -110,5 +111,4 @@
             </div>
         </div>
     </section>
-
 @endsection
