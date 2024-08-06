@@ -45,7 +45,7 @@
     document.addEventListener('scroll', function() {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgb({{ $color4 }}, 0.6)';
+            navbar.style.backgroundColor = 'rgb({{ $color1 }}, 0.6)';
         } else {
             navbar.style.backgroundColor = 'rgb({{ $color4 }})';
         }
@@ -57,7 +57,7 @@
         const y = e.clientY;
         if (window.scrollY > 50) {
             navbar.style.background =
-                `radial-gradient(circle at ${x}px ${y}px, rgba(237, 50, 55, 0.8) 10px, rgba(255, 222, 223, 0.8) 20px, rgba({{ $color4 }}, 0.8) 40px)`;
+                `radial-gradient(circle at ${x}px ${y}px, rgba(237, 50, 55, 0.8) 10px, rgba(255, 222, 223, 0.8) 20px, rgba({{ $color1 }}, 0.8) 40px)`;
         } else {
             navbar.style.background = 'rgb({{ $color4 }})';
         }
