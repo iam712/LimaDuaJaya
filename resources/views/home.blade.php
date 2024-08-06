@@ -353,6 +353,39 @@
                 border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
             }
         }
+
+        /* Popup container styles */
+        .client-logo {
+            position: relative;
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.2);
+            /* Slight zoom effect on hover */
+        }
+
+        .popup {
+            position: absolute;
+            bottom: 100%;
+            /* Position above the logo */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            padding: 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            font-family: 'LibreBaskerville', serif;
+        }
     </style>
 
 
@@ -900,74 +933,23 @@
         </div>
     </section>
 
-
     <!-- Our Clients -->
     <section id="ourClientsSection" class="our-services py-4 py-sm-4">
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Clients</h2>
             <div class="row justify-content-center mt-5 text-center">
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/blastoz.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">BLASTOZ</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/formula.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Formula</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/fruittea.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">FRUIT
-                        TEA</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/fruzz.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Fruzz</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/imperialcreme.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Imperial <br>
-                        creme</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/inlite.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">in lite</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/macito.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">MA CITO</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/orios.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">ORIOS</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/prima.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">prima</span>
-                </div>
+                @foreach (['blastoz', 'formula', 'fruittea', 'fruzz', 'imperialcreme', 'inlite', 'macito', 'orios', 'prima', 'tebs', 'Sosro', 'stee', 'tango', 'raywhite'] as $client)
+                    <div class="col-6 col-md-2 mb-4 client-logo">
+                        <div class="logo-container">
+                            <img src="{{ asset('images/clients/' . $client . '.png') }}" alt="Logo"
+                                class="img-fluid">
+                            <div class="popup">
 
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/tebs.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">TEBS</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/Sosro.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">SOSRO</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/stee.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">S-tee</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/tango.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Tango</span>
-                </div>
-                <div class="col-6 col-md-2 mb-4">
-                    <img src="{{ asset('images/clients/raywhite.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4 mt-3 mt-lg-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Ray
-                        White</span>
-                </div>
-
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
