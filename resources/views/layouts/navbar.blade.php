@@ -18,7 +18,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('workshop') ? 'active' : '' }}" href="/workshop"
-                        style="font-family: 'LibreBaskerville', serif; font-style: semi-bold;">Workshop</a>
+                        style="font-family: 'LibreBaskerville', serif;">Workshop</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('project') ? 'active' : '' }}" href="/project"
@@ -69,10 +69,17 @@
         transition: background-color 0.3s ease, background 0.3s ease;
     }
 
+    .nav-link {
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: rgba(255, 255, 255, 0.9); /* Lighten color on hover */
+        transform: scale(1.1); /* Slightly scale up the link */
+    }
+
     .nav-link.active {
         font-weight: bold;
-        border: 3px;
-        border-style: outset;
-        border-radius: 10px;
+        /* Remove border styling if preferred */
     }
 </style>
