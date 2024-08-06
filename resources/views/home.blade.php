@@ -453,26 +453,39 @@
 
     <!-- Our Services -->
     <section id="ourServicesSection" class="our-services mt-3 mt-sm-3"
-        style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }}));">
+        style="
+            background-image: url('{{ asset('images/workshop/workshopbg1.png') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            padding-top: 20px;
+            padding-bottom: 20px;
+">
         <div class="container">
             <h2 class="text-center mb-3 mb-sm-3 py-3"
-                style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white">Our
-                Services</h2>
+                style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white">
+                Our Services
+            </h2>
             <div class="row d-flex justify-content-center text-center mt-2">
                 <!-- Service Cards -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="NEON BOX">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">NEON
-                                BOX</h5>
+                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                                NEON BOX
+                            </h5>
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Neonbox kreatif kami menawarkan pencahayaan neon yang menarik untuk
-                                memaksimalkan visibilitas dan daya tarik merek Anda di malam hari...
+                                Neonbox kreatif kami menawarkan pencahayaan neon yang menarik untuk memaksimalkan
+                                visibilitas dan daya tarik merek Anda di malam hari...
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -483,19 +496,18 @@
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BRANDING RAK">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
-                                BRANDING RAK</h5>
+                                BRANDING RAK
+                            </h5>
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Kami menciptakan branding rak yang menonjol untuk menarik perhatian pelanggan
-                                dan
-                                meningkatkan penjualan produk Anda. Dengan kombinasi desain yang menawan dan
-                                material
-                                berkualitas tinggi, kami memastikan setiap rak toko menjadi elemen strategis
-                                dalam mencapai
+                                Kami menciptakan branding rak yang menonjol untuk menarik perhatian pelanggan dan
+                                meningkatkan penjualan produk Anda. Dengan kombinasi desain yang menawan dan material
+                                berkualitas tinggi, kami memastikan setiap rak toko menjadi elemen strategis dalam mencapai
                                 tujuan branding Anda.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -510,15 +522,13 @@
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
                                 Rollup banner kami menawarkan solusi promosi yang efektif dan mudah dipindahkan
-                                untuk acara,
-                                promosi produk, atau branding perusahaan Anda. Dibuat dengan teknologi cetak
-                                terkini dan
-                                bahan yang tahan lama, banner ini memberikan kepraktisan dan daya tarik visual
-                                yang kuat di
-                                setiap kesempatan.
+                                untuk acara, promosi produk, atau branding perusahaan Anda. Dibuat dengan teknologi cetak
+                                terkini dan bahan yang tahan lama, banner ini memberikan kepraktisan dan daya tarik visual
+                                yang kuat di setiap kesempatan.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -529,19 +539,18 @@
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="LETTER SIGN">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
-                                LETTER SIGN</h5>
+                                LETTER SIGN
+                            </h5>
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Letter sign kami memberikan identitas visual yang kuat dan menarik untuk
-                                bangunan Anda,
-                                memperkuat kesan profesional dan keberlanjutan merek Anda. Dengan pilihan
-                                material dan
-                                desain yang beragam, kami menyesuaikan setiap letter sign untuk mencerminkan
-                                nilai-nilai
+                                Letter sign kami memberikan identitas visual yang kuat dan menarik untuk bangunan Anda,
+                                memperkuat kesan profesional dan keberlanjutan merek Anda. Dengan pilihan material dan
+                                desain yang beragam, kami menyesuaikan setiap letter sign untuk mencerminkan nilai-nilai
                                 unik perusahaan Anda secara konsisten.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -552,19 +561,18 @@
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SPANDUK">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
-                                SPANDUK</h5>
+                                SPANDUK
+                            </h5>
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Spanduk kami dirancang dengan detail yang presisi untuk memastikan pesan promosi
-                                Anda jelas
-                                terlihat dan menarik bagi audiens di luar ruangan. Dengan pilihan ukuran,
-                                finishing, dan
+                                Spanduk kami dirancang dengan detail yang presisi untuk memastikan pesan promosi Anda jelas
+                                terlihat dan menarik bagi audiens di luar ruangan. Dengan pilihan ukuran, finishing, dan
                                 kemampuan tahan cuaca, spanduk ini menjadi investasi berharga dalam meningkatkan
-                                pengaruh
-                                pemasaran Anda di berbagai lokasi strategis.
+                                pengaruh pemasaran Anda di berbagai lokasi strategis.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }});">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -578,16 +586,14 @@
                                 SIGN</h5>
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Shop sign kami menciptakan kesan pertama yang berkesan dan memudahkan pelanggan
-                                menemukan
-                                toko Anda di tengah keramaian. Didesain untuk meningkatkan citra toko Anda,
-                                papan nama ini
-                                memadukan estetika yang menarik dengan daya tahan yang dapat diandalkan dalam
-                                berbagai
+                                Shop sign kami menciptakan kesan pertama yang berkesan dan memudahkan pelanggan menemukan
+                                toko Anda di tengah keramaian. Didesain untuk meningkatkan citra toko Anda, papan nama ini
+                                memadukan estetika yang menarik dengan daya tahan yang dapat diandalkan dalam berbagai
                                 kondisi lingkungan.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -598,19 +604,18 @@
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BILLBOARD">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
-                                BILLBOARD</h5>
+                                BILLBOARD
+                            </h5>
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Billboard kami menawarkan ruang iklan yang besar dan strategis untuk mencapai
-                                audiens luas
-                                dengan pesan yang kuat dan menarik. Dengan teknologi cetak terkini dan material
-                                berkualitas
-                                tinggi, kami memastikan setiap iklan billboard memberikan dampak maksimal bagi
-                                keberhasilan
+                                Billboard kami menawarkan ruang iklan yang besar dan strategis untuk mencapai audiens luas
+                                dengan pesan yang kuat dan menarik. Dengan teknologi cetak terkini dan material berkualitas
+                                tinggi, kami memastikan setiap iklan billboard memberikan dampak maksimal bagi keberhasilan
                                 kampanye pemasaran Anda.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -624,16 +629,14 @@
                                 BRANDING</h5>
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Car branding kami memberikan promosi bergerak yang efektif, menjadikan kendaraan
-                                Anda
-                                sebagai papan iklan bergerak untuk meningkatkan kesadaran merek di mana pun
-                                pergi. Dengan
-                                desain yang menarik dan aplikasi yang presisi, kami mengubah setiap kendaraan
-                                menjadi alat
+                                Car branding kami memberikan promosi bergerak yang efektif, menjadikan kendaraan Anda
+                                sebagai papan iklan bergerak untuk meningkatkan kesadaran merek di mana pun pergi. Dengan
+                                desain yang menarik dan aplikasi yang presisi, kami mengubah setiap kendaraan menjadi alat
                                 pemasaran yang kuat dan berkelanjutan.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -648,16 +651,14 @@
                                 CHILLER BRANDING</h5>
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Chiller branding kami menawarkan solusi kreatif untuk mempromosikan produk Anda
-                                dengan
-                                menambahkan branding pada lemari pendingin, menarik perhatian pelanggan di toko
-                                atau
-                                supermarket. Dengan desain yang estetis dan pilihan material yang tahan lama,
-                                chiller
+                                Chiller branding kami menawarkan solusi kreatif untuk mempromosikan produk Anda dengan
+                                menambahkan branding pada lemari pendingin, menarik perhatian pelanggan di toko atau
+                                supermarket. Dengan desain yang estetis dan pilihan material yang tahan lama, chiller
                                 branding kami memberikan nilai tambah bagi promosi produk Anda.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -669,38 +670,29 @@
                             alt="PAPAN NAMA TOKO">
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
-                                PAPAN NAMA TOKO</h5>
+                                PAPAN NAMA TOKO
+                            </h5>
                             <p class="card-text card-description"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic;">
-                                Papan nama toko kami memberikan penandaan yang jelas dan profesional untuk
-                                membantu
-                                pelanggan menemukan dan mengenali toko Anda dengan mudah. Dengan pilihan desain
-                                yang
-                                fleksibel dan kemampuan untuk disesuaikan dengan identitas merek Anda, papan
-                                nama ini
+                                Papan nama toko kami memberikan penandaan yang jelas dan profesional untuk membantu
+                                pelanggan menemukan dan mengenali toko Anda dengan mudah. Dengan pilihan desain yang
+                                fleksibel dan kemampuan untuk disesuaikan dengan identitas merek Anda, papan nama ini
                                 menjadi elemen penting dalam membangun citra toko yang kuat dan dikenang.
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More</button>
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <br>
+        <!-- Horizontal Line -->
+        <hr style="border: 2px solid #ffdedf; margin: 35px 0; ">
+        <br>
 
-    <!-- Live 360 View -->
-    <section id="ourLiveProduct" class="our-advantages py-4 py-sm-4">
-        <div class="container">
-            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
-                Product</h2>
-            <p class="text-center">contoh produk jadi</p>
-        </div>
-    </section>
-
-    <!-- Our Advantages -->
-    <section id="ourAdvantagesSection" class="our-advantages py-4 p5-sm-4"
-        style="background-image: url('{{ asset('images/banner/backgroundbanner4.png') }}');">
+        {{-- Our Advantages --}}
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
                 Advantages</h2>
