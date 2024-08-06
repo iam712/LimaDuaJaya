@@ -24,7 +24,7 @@
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5">
         <h1 class="text-center mt-5 mt-md-3 mt-lg-3">Our Latest Projects</h1>
         <div class="container">
-            <h3 class="text-start mt-2 mt-md-3 mt-lg-3">cok</h3>
+            <h3 class="text-start mt-2 mt-md-3 mt-lg-3">1</h3>
             <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)
                     <div class="col-6 col-md-4 col-lg-3">
@@ -35,7 +35,7 @@
                     </div>
                 @endforeach
             </div>
-            <h3 class="text-start mt-4 mt-md-5 mt-lg-5">cok</h3>
+            <h3 class="text-start mt-4 mt-md-5 mt-lg-5">2</h3>
             <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)
                     <div class="col-6 col-md-4 col-lg-3">
@@ -46,7 +46,7 @@
                     </div>
                 @endforeach
             </div>
-            <h3 class="text-start mt-4 mt-md-5 mt-lg-5">cok</h3>
+            <h3 class="text-start mt-4 mt-md-5 mt-lg-5">3</h3>
             <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)
                     <div class="col-6 col-md-4 col-lg-3">
@@ -57,7 +57,7 @@
                     </div>
                 @endforeach
             </div>
-            <h3 class="text-start mt-4 mt-md-5 mt-lg-5">cok</h3>
+            <h3 class="text-start mt-4 mt-md-5 mt-lg-5">4</h3>
             <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)
                     <div class="col-6 col-md-4 col-lg-3">

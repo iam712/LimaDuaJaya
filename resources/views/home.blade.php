@@ -704,8 +704,73 @@
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
                 Advantages</h2>
-            <p class="text-center text-light">We provide unparalleled service and benefits that set us apart from the
-                competition.</p>
+            <div class="row mt-4">
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                    <div class="advantage-box">
+                        <img src="{{ asset('images/LOGO.png') }}" alt="Tailored Solution" class="img-fluid mb-3">
+                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">1</h4>
+                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Tailored
+                            Solution</h5>
+                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">At our company, we understand that one size does not fit all. Our tailored
+                            solutions ensure that every aspect of our service is customized to meet your unique business
+                            needs and goals.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                    <div class="advantage-box">
+                        <img src="{{ asset('images/LOGO.png') }}" alt="Creative Excellence" class="img-fluid mb-3">
+                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">2</h4>
+                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Creative
+                            Excellence</h5>
+                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">Creativity is at the heart of everything we do. Our team of talented
+                            professionals brings fresh ideas and innovative approaches to every project, ensuring that your
+                            brand stands out in a crowded market.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center">
+                    <div class="advantage-box">
+                        <img src="{{ asset('images/LOGO.png') }}" alt="Strategic Partnerships" class="img-fluid mb-3">
+                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">3</h4>
+                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Strategic
+                            Partnerships</h5>
+                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">We don't just see ourselves as service providers; we're strategic partners
+                            invested in your success. Together, we collaborate closely to devise strategies and implement
+                            solutions tailored to your enduring objectives.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center mt-4">
+                    <div class="advantage-box">
+                        <img src="{{ asset('images/LOGO.png') }}" alt="Innovative Solutions" class="img-fluid mb-3">
+                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">4</h4>
+                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Innovative
+                            Solutions</h5>
+                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">We pride ourselves on offering innovative solutions that push the boundaries
+                            of
+                            what is possible, ensuring that your business stays ahead of the curve.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center mt-4">
+                    <div class="advantage-box">
+                        <img src="{{ asset('images/LOGO.png') }}" alt="Expert Team" class="img-fluid mb-3">
+                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">5</h4>
+                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Expert Team
+                        </h5>
+                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">Our team consists of industry experts with extensive experience and
+                            knowledge,
+                            ready to provide you with the highest level of service and support.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center mt-4">
+                    <div class="advantage-box">
+                        <img src="{{ asset('images/LOGO.png') }}" alt="Customer Focus" class="img-fluid mb-3">
+                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">6</h4>
+                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Customer Focus
+                        </h5>
+                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">Our customers are at the center of everything we do. We strive to understand
+                            your needs and exceed your expectations with every interaction.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
