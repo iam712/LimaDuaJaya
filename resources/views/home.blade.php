@@ -5,7 +5,7 @@
     $color1 = '255, 255, 255'; // #ffffff
     $color2 = '0, 0, 0'; // #000000
     $color3 = '125, 20, 19'; //#7d141d
-    $color4 = '238, 63, 72';//#EE3F48
+    $color4 = '238, 63, 72'; //#EE3F48
     $color5 = '255, 222, 223'; //#ffdedf
     $color6 = '246, 232, 214'; //#F6E8D6
 
@@ -13,6 +13,7 @@
     // style="color: rgb({{ $color0 }});"
     // style="background-color: rgb({{ $color1 }});"
     // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
+
 @endphp
 @section('title', 'Home')
 
@@ -38,11 +39,14 @@
 
         /* Banner Styles */
         .banner {
-            background-color: rgb({{ $color4 }});
+            background-image: url('{{ asset('images/banner/backgroundbanner1.png') }}');
+            background-size: cover;
+            background-position: center;
             height: 800px;
             position: relative;
             overflow: hidden;
         }
+
 
         .banner h1 {
             font-size: 2.5rem;
@@ -158,7 +162,7 @@
             flex-direction: column;
             align-items: center;
             z-index: 1000;
-            background-color: rgba({{ $color6}}, 0.6);
+            background-color: rgba({{ $color6 }}, 0.6);
             padding: 10px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -861,7 +865,8 @@
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/fruittea.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">FRUIT TEA</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">FRUIT
+                        TEA</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/fruzz.png') }}" alt="Logo" class="img-fluid">
@@ -869,7 +874,8 @@
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/imperialcreme.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Imperial <br> creme</span>
+                    <span class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Imperial <br>
+                        creme</span>
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/inlite.png') }}" alt="Logo" class="img-fluid">
@@ -906,7 +912,8 @@
                 </div>
                 <div class="col-6 col-md-2 mb-4">
                     <img src="{{ asset('images/clients/raywhite.png') }}" alt="Logo" class="img-fluid">
-                    <span class="mb-4 mt-3 mt-lg-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Ray White</span>
+                    <span class="mb-4 mt-3 mt-lg-3" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Ray
+                        White</span>
                 </div>
 
             </div>
