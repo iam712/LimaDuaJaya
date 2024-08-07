@@ -22,6 +22,6 @@
 @section('content')
     <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
         <h1>Welcome to Admin Dashboard</h1>
-        <p>This is the main content area for the dashboard.</p>
+        <p>Hello <span>user123</span> !</p>
     </section>
 @endsection
