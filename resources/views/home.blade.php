@@ -801,9 +801,10 @@
                 Location</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <iframe src="https://maps.google.com/maps?q=surabaya&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                        aria-hidden="false" tabindex="0"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831.9045290247577!2d112.67742386941619!3d-7.328366686111562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fd3243363f3b%3A0x4affd245467bd83b!2sKarya%20Satria%20Surabaya!5e0!3m2!1sid!2sid!4v1723000605673!5m2!1sid!2sid"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
