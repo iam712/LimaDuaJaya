@@ -38,7 +38,7 @@
                 style="
             color: white;
             font-size: 2rem;
-        ">
+       ">
                 Workshop Lima Dua Jaya
             </h3>
             <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
@@ -154,7 +154,8 @@
 
     <!-- Review Form -->
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1">
-        <div class="container" style="background-image: url('{{ asset('images/workshop/workshopbg2.png') }}'); border-radius: 10px; padding: 30px;">
+        <div class="container"
+            style="background-image: url('{{ asset('images/workshop/workshopbg2.png') }}'); border-radius: 10px; padding: 30px;">
             <div class="row">
                 <div class="col-12 col-lg-7 mb-4 mb-lg-0">
                     <h2 class="fw-bold mb-4">Workshop Partnership Program</h2>
