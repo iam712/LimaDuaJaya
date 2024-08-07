@@ -6,7 +6,7 @@
     $color1 = '255, 255, 255'; // #ffffff
     $color2 = '0, 0, 0'; // #000000
     $color3 = '125, 20, 19'; //#7d141d
-    $color4 = '238, 63, 72';//#EE3F48
+    $color4 = '238, 63, 72'; //#EE3F48
     $color5 = '255, 222, 223'; //#ffdedf
     $color6 = '246, 232, 214'; //#F6E8D6
 
@@ -14,6 +14,7 @@
     // style="color: rgb({{ $color0 }});"
     // style="background-color: rgb({{ $color1 }});"
     // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
+
 @endphp
 
 @section('title', 'About Us')
@@ -28,15 +29,15 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
 @section('content')
     <!-- Banner -->
     <section class="banner d-flex align-items-center"
-        style="background-color: rgb({{ $color4 }}); height: 100vh; position: relative;">
+        style="background-image: url('{{ asset('images/banner/imagebg1.jpeg') }}'); background-size: cover; background-position: center; height: 100vh; position: relative;">
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
-            style="background-color: rgb({{ $color3 }}); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: 0 0 10px;
-            display: inline-block;">
+            style="background-color: rgba({{ $color4 }}, 0.8); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: 0 0 10px; display: inline-block;">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">PT. Lima
-                Dua Jaya</h2> <br>
+                Dua Jaya</h2>
+            <br>
             <p class="text-center" style="font-family: 'LibreBaskerville', serif; font-style: italic; color: white;">Standar
-                yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk
-                memberikan pelayanan yang bisa dibanggakan.</p>
+                yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk memberikan pelayanan yang bisa
+                dibanggakan.</p>
             <a href="#aboutUsSection" class="btn text-light"
                 style="background-color: rgb({{ $color2 }}); width: auto; font-family: 'LibreBaskerville', serif;">Read
                 more</a>
@@ -49,7 +50,7 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
 
     <!-- About Us -->
     <section id="aboutUsSection" class="py-5 py-sm-5 fade-section"
-        style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color1 }}));">
+        style="background: linear-gradient(to bottom, rgba({{ $color1 }}, 0.8), rgba({{ $color1 }}, 0.8)), url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center;">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
@@ -76,6 +77,7 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
             </div>
         </div>
     </section>
+
 
 
     <div class="d-flex justify-content-center my-4">
