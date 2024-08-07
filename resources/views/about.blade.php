@@ -50,7 +50,7 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
 
     <!-- About Us -->
     <section id="aboutUsSection" class="py-5 py-sm-5 fade-section"
-        style="background: linear-gradient(to bottom, rgba({{ $color1 }}, 0.8), rgba({{ $color1 }}, 0.8)), url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center;">
+        style="background: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center;">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
@@ -71,7 +71,7 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
                 </div>
                 <div class="col-md-5">
                     <div class="ms-md-2 ms-lg-5">
-                        <img class="img-fluid rounded-3" src="{{ asset('images/logo.png') }}" alt="Company Logo">
+                        <img class="img-fluid rounded-3" src="{{ asset('images/logo-square.png') }}" alt="Company Logo">
                     </div>
                 </div>
             </div>

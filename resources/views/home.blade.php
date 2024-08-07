@@ -487,7 +487,7 @@
     <!-- Our Services -->
     <section id="ourServicesSection" class="our-services mt-3 mt-sm-3"
         style="
-            background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
+            background-image: linear-gradient(to bottom, rgba({{ $color5 }}, 0.05), rgba({{ $color5 }}, 0.05)), url('{{ asset('images/workshop/workshopbg2.png') }}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
