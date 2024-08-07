@@ -11,9 +11,7 @@ Route::get('/aboutus', function () {
     return view('about');
 });
 
-Route::get('/admin', function () {
-    return view('admin.dashboardadmin');
-});
+
 
 Route::get('/workshop', function () {
     return view('workshop');
@@ -25,6 +23,26 @@ Route::get('/project', function () {
 
 Route::get('/review', function () {
     return view('review');
+});
+
+Route::get('/admin', function () {
+    return view('admin.dashboardadmin');
+});
+
+Route::get('/admin-workshop', function () {
+    return view('admin.workshop.workshop');
+});
+
+Route::get('/admin-project', function () {
+    return view('admin.project.project');
+});
+
+Route::get('/admin-user', function () {
+    return view('admin.user.user');
+});
+
+Route::get('/admin-review', function () {
+    return view('admin.review.review');
 });
 
 

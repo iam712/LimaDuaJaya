@@ -1,4 +1,3 @@
-<!-- resources/views/layouts/admin/appadmin.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,12 +14,67 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <style>
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px; /* Adjust width as needed */
+            background-color: rgb({{ $color4 }});
+            transition: background-color 0.3s ease, background 0.3s ease;
+            overflow-y: auto;
+            z-index: 1000;
+            padding: 1rem;
+        }
+
+        .sidebar-brand {
+            display: flex;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-bottom: 1rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: rgba(255, 255, 255, 0.9); /* Lighten color on hover */
+            transform: scale(1.05); /* Slightly scale up the link */
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+        }
+
+        .content {
+            margin-left: 250px; /* Same as sidebar width */
+            padding: 1rem;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Sidebar -->
+    @include('layouts.admin.sidebar')
 
-    @include('layouts.admin.navbaradmin')
-
+    <!-- Content -->
     <div class="content">
         @yield('content')
     </div>
@@ -32,6 +86,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
+    <!-- Include Particle.js library -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
