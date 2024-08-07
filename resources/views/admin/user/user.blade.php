@@ -56,7 +56,7 @@
 
             <!-- CRUD Button at the bottom right -->
             <div class="text-end mt-3">
-                <a href="#" class="btn btn-primary">Add New User</a>
+                <a href="#" class="btn btn-success">Add New User</a>
             </div>
         </div>
     </section>

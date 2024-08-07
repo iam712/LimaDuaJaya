@@ -50,7 +50,7 @@
 
             <!-- CRUD Button at the bottom right -->
             <div class="text-end mt-3">
-                <a href="#" class="btn btn-primary">Add New Workshop</a>
+                <a href="#" class="btn btn-success">Add New Project</a>
             </div>
         </div>
     </section>
