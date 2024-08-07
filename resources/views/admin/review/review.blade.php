@@ -43,6 +43,8 @@
                     <tr>
                         <td>1</td>
                         <td>halo</td>
+                        <td>123@gmail.com</td>
+                        <td>halo</td>
                         <td>
                             <a href="#" class="btn btn-warning btn-sm">Edit</a>
                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
