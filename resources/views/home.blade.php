@@ -366,7 +366,7 @@
         }
 
         .logo-container:hover {
-            transform: scale(1.2);
+            transform: scale(1.8);
             /* Slight zoom effect on hover */
         }
 
