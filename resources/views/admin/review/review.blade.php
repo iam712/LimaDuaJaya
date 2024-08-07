@@ -1,4 +1,3 @@
-<!-- resources/views/admin/dashboard.blade.php -->
 @extends('layouts.admin.appadmin')
 
 {{-- Color library --}}
@@ -9,12 +8,6 @@
     $color4 = '238, 63, 72'; //#EE3F48
     $color5 = '255, 222, 223'; //#ffdedf
     $color6 = '246, 232, 214'; //#F6E8D6
-
-    // Command to use rgb color
-    // style="color: rgb({{ $color0 }});"
-    // style="background-color: rgb({{ $color1 }});"
-    // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
-
 @endphp
 
 @section('title', 'Review-Admin')
@@ -23,5 +16,46 @@
     <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
         <h1>Welcome to Admin Review</h1>
         <p>This is the main content area for the dashboard.</p>
+    </section>
+    <section>
+        <div class="container table-responsive py-5">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Comment</th>
+                        <th scope="col">Actions</th> <!-- New column for actions -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>halo</td>
+                        <td>123@gmail.com</td>
+                        <td>halo</td>
+                        <td>
+                            <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>halo</td>
+                        <td>
+                            <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                    <!-- Repeat for other rows -->
+                </tbody>
+            </table>
+
+            <!-- CRUD Button at the bottom right -->
+            <div class="text-end mt-3">
+                <a href="#" class="btn btn-primary">Add New Workshop</a>
+            </div>
+        </div>
     </section>
 @endsection

@@ -45,6 +45,10 @@ Route::get('/admin-review', function () {
     return view('admin.review.review');
 });
 
+Route::get('/signin', function () {
+    return view('signin');
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
