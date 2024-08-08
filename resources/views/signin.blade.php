@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-{{-- Color library --}}
 @php
     $color1 = '255, 255, 255'; // #ffffff
     $color2 = '0, 0, 0'; // #000000
@@ -8,12 +7,6 @@
     $color4 = '238, 63, 72'; //#EE3F48
     $color5 = '255, 222, 223'; //#ffdedf
     $color6 = '246, 232, 214'; //#F6E8D6
-
-    // Command to use rgb color
-    // style="color: rgb({{ $color0 }});"
-    // style="background-color: rgb({{ $color1 }});"
-    // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
-
 @endphp
 
 @section('title', 'Sign In')
@@ -25,74 +18,62 @@
             text-decoration: none;
         }
 
-        .login-page {
+        .signin-page {
             width: 100%;
             height: 100vh;
-            display: inline-block;
             display: flex;
             align-items: center;
+            background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color4 }}));
         }
 
-        .form-right i {
-            font-size: 100px;
+        .btn-primary {
+            background-color: rgb({{ $color4 }});
+            border: none;
         }
     </style>
-    <div class="login-page bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <h3 class="mb-3">Login Now</h3>
-                    <div class="bg-white shadow rounded">
-                        <div class="row">
-                            <div class="col-md-7 pe-0">
-                                <div class="form-left h-100 py-5 px-5">
-                                    <form action="" class="row g-4">
-                                        <div class="col-12">
-                                            <label>Username<span class="text-danger">*</span></label>
-                                            <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
-                                                <input type="text" class="form-control" placeholder="Enter Username">
+
+    <section>
+        <div class="signin-page">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 col-12">
+                        <h3 class="mb-4 text-light mt-5">Sign In Now</h3>
+                        <div class="bg-white shadow rounded-3 p-4 p-md-5">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                                    <div class="form-left">
+                                        <form action="" class="row g-3">
+                                            <div class="col-12">
+                                                <label for="email" class="form-label">Email</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
+                                                    <input type="email" id="email" class="form-control" placeholder="Enter Email">
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="col-12">
-                                            <label>Password<span class="text-danger">*</span></label>
-                                            <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
-                                                <input type="text" class="form-control" placeholder="Enter Password">
+                                            <div class="col-12">
+                                                <label for="password" class="form-label">Password</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
+                                                    <input type="password" id="password" class="form-control" placeholder="Enter Password">
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="col-sm-6">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-                                                <label class="form-check-label" for="inlineFormCheck">Remember me</label>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-danger  w-100 mt-3">Sign In</button>
                                             </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <a href="#" class="float-end text-primary">Forgot Password?</a>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <button type="submit"
-                                                class="btn btn-primary px-4 float-end mt-4">login</button>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-5 ps-0 d-none d-md-block">
-                                <div class="form-right h-100 bg-primary text-white text-center pt-5">
-                                    <i class="bi bi-bootstrap"></i>
-                                    <h2 class="fs-1">Welcome Back!!!</h2>
+                                <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center text-center">
+                                    <img src="{{ asset('images/logo-square.png') }}" alt="Logo" class="img-fluid">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <p class="text-end text-secondary mt-3">Bootstrap 5 Login Page Design</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 @endsection

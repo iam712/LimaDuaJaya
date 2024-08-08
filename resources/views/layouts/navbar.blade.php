@@ -28,10 +28,8 @@
                         style="font-family: 'LibreBaskerville', serif;">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <button class="btn btn-primary" type="button">
                         <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}" href="/signin"
                             style="font-family: 'LibreBaskerville', serif;">Sign In</a>
-                    </button>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
