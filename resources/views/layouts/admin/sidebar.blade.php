@@ -1,3 +1,20 @@
+{{-- Color library --}}
+@php
+
+    $color1 = '255, 255, 255'; // #ffffff
+    $color2 = '0, 0, 0'; // #000000
+    $color3 = '125, 20, 19'; //#7d141d
+    $color4 = '238, 63, 72'; //#EE3F48
+    $color5 = '255, 222, 223'; //#ffdedf
+    $color6 = '246, 232, 214'; //#F6E8D6
+
+    // Command to use rgb color
+    // style="color: rgb({{ $color0 }});"
+    // style="background-color: rgb({{ $color1 }});"
+    // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
+
+@endphp
+
 <div class="sidebar"
     style="position: fixed; top: 0; left: 0; height: 100%;
         width: 250px; /* Adjust width as needed */
@@ -63,7 +80,7 @@
     }
 
     .nav-link {
-        color: #fff;
+        color: rgb({{ $color6 }});
         text-decoration: none;
         display: block;
         padding: 0.5rem 1rem;
@@ -72,7 +89,7 @@
     }
 
     .nav-link:hover {
-        color: rgba(255, 255, 255, 0.9);
+        color: rgb({{ $color6 }});
         /* Lighten color on hover */
         transform: scale(1.05);
         /* Slightly scale up the link */
