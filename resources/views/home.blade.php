@@ -1,7 +1,7 @@
 @extends('layouts.app')
+
 {{-- Color library --}}
 @php
-
     $color1 = '255, 255, 255'; // #ffffff
     $color2 = '0, 0, 0'; // #000000
     $color3 = '125, 20, 19'; //#7d141d
@@ -15,6 +15,7 @@
     // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
 
 @endphp
+
 @section('title', 'Home')
 
 @section('content')
@@ -46,7 +47,6 @@
             position: relative;
             overflow: hidden;
         }
-
 
         .banner h1 {
             font-size: 2.5rem;
@@ -386,8 +386,37 @@
             transition: opacity 0.3s ease, visibility 0.3s ease;
             font-family: 'LibreBaskerville', serif;
         }
-    </style>
 
+        /* 360 Project */
+        .scroll-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .scroll-bottom-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .scroll-image-container {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .scroll-image-container img {
+            width: 100%;
+        }
+
+        .scroll-lock {
+            overflow: hidden;
+            height: 100vh;
+        }
+    </style>
 
     <!-- Fixed Menu Bar -->
     <div class="fixed-menu" id="sideMenu">
@@ -456,10 +485,10 @@
                 <path fill="#FF6B6B">
                     <animate attributeName="d" dur="30s" repeatCount="indefinite"
                         values="
-                    M32.6,-30.2C41.3,-21.6,46.5,-10.8,45.5,-0.2C44.4,10.3,37.1,20.5,28.5,26.5C19.9,32.5,9.9,34.3,1.8,31.8C-6.2,29.3,-12.5,22.5,-17.3,15.9C-22.2,9.3,-25.6,2.8,-28.1,-5.8C-30.6,-14.5,-32.1,-24.9,-26.8,-33.3C-21.6,-41.8,-10.8,-48.3,0.3,-48.6C11.4,-48.9,22.7,-42.8,32.6,-30.2Z;
-                    M31.3,-34.9C41.5,-25.6,48.4,-12.8,46.7,-1.7C45,9.4,34.6,18.8,24.4,26.7C14.1,34.5,4,40.8,-8.8,44.3C-21.5,47.7,-37.1,48.3,-42.7,39.6C-48.3,30.8,-43.8,12.9,-37.3,1.4C-30.8,-10,-22.2,-15.2,-15.9,-23.9C-9.7,-32.7,-4.8,-45.1,3.8,-49.8C12.5,-54.5,25.1,-51.3,31.3,-34.9Z;
-                    M23.9,-24.6C32.3,-16.8,38.8,-8.4,39.2,0.2C39.6,8.8,34,17.5,26.7,23.8C19.5,30,10.8,33.7,1.3,32.5C-8.1,31.4,-16.2,25.5,-23.4,18.9C-30.6,12.3,-36.9,5.2,-37.7,-3.3C-38.4,-11.8,-33.6,-21.6,-26.3,-29.7C-19,-37.8,-9.5,-44.2,0.6,-44.9C10.8,-45.6,21.6,-40.5,23.9,-24.6Z;
-                    M32.6,-30.2C41.3,-21.6,46.5,-10.8,45.5,-0.2C44.4,10.3,37.1,20.5,28.5,26.5C19.9,32.5,9.9,34.3,1.8,31.8C-6.2,29.3,-12.5,22.5,-17.3,15.9C-22.2,9.3,-25.6,2.8,-28.1,-5.8C-30.6,-14.5,-32.1,-24.9,-26.8,-33.3C-21.6,-41.8,-10.8,-48.3,0.3,-48.6C11.4,-48.9,22.7,-42.8,32.6,-30.2Z" />
+                M32.6,-30.2C41.3,-21.6,46.5,-10.8,45.5,-0.2C44.4,10.3,37.1,20.5,28.5,26.5C19.9,32.5,9.9,34.3,1.8,31.8C-6.2,29.3,-12.5,22.5,-17.3,15.9C-22.2,9.3,-25.6,2.8,-28.1,-5.8C-30.6,-14.5,-32.1,-24.9,-26.8,-33.3C-21.6,-41.8,-10.8,-48.3,0.3,-48.6C11.4,-48.9,22.7,-42.8,32.6,-30.2Z;
+                M31.3,-34.9C41.5,-25.6,48.4,-12.8,46.7,-1.7C45,9.4,34.6,18.8,24.4,26.7C14.1,34.5,4,40.8,-8.8,44.3C-21.5,47.7,-37.1,48.3,-42.7,39.6C-48.3,30.8,-43.8,12.9,-37.3,1.4C-30.8,-10,-22.2,-15.2,-15.9,-23.9C-9.7,-32.7,-4.8,-45.1,3.8,-49.8C12.5,-54.5,25.1,-51.3,31.3,-34.9Z;
+                M23.9,-24.6C32.3,-16.8,38.8,-8.4,39.2,0.2C39.6,8.8,34,17.5,26.7,23.8C19.5,30,10.8,33.7,1.3,32.5C-8.1,31.4,-16.2,25.5,-23.4,18.9C-30.6,12.3,-36.9,5.2,-37.7,-3.3C-38.4,-11.8,-33.6,-21.6,-26.3,-29.7C-19,-37.8,-9.5,-44.2,0.6,-44.9C10.8,-45.6,21.6,-40.5,23.9,-24.6Z;
+                M32.6,-30.2C41.3,-21.6,46.5,-10.8,45.5,-0.2C44.4,10.3,37.1,20.5,28.5,26.5C19.9,32.5,9.9,34.3,1.8,31.8C-6.2,29.3,-12.5,22.5,-17.3,15.9C-22.2,9.3,-25.6,2.8,-28.1,-5.8C-30.6,-14.5,-32.1,-24.9,-26.8,-33.3C-21.6,-41.8,-10.8,-48.3,0.3,-48.6C11.4,-48.9,22.7,-42.8,32.6,-30.2Z" />
                 </path>
             </svg>
         </div>
@@ -487,15 +516,15 @@
     <!-- Our Services -->
     <section id="ourServicesSection" class="our-services mt-3 mt-sm-3"
         style="
-            background-image: linear-gradient(to bottom, rgba({{ $color5 }}, 0.05), rgba({{ $color5 }}, 0.05)), url('{{ asset('images/workshop/workshopbg2.png') }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
-            padding-top: 20px;
-            padding-bottom: 20px;
+        background-image: linear-gradient(to bottom, rgba({{ $color5 }}, 0.05), rgba({{ $color5 }}, 0.05)), url('{{ asset('images/workshop/workshopbg2.png') }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+        padding-top: 20px;
+        padding-bottom: 20px;
 ">
         <div class="container">
             <h2 class="text-center mb-3 mb-sm-3 py-3"
@@ -795,144 +824,13 @@
     </section>
 
     <!-- 360 Project -->
-    <section>
-        <style>
-            .scroll-container {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-            }
-
-            .scroll-bottom-section {
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .scroll-image-container {
-                max-width: 100%;
-                max-height: 100%;
-            }
-
-            .scroll-image-container img {
-                width: 100%;
-            }
-
-            @keyframes scroll-left {
-                from {
-                    transform: translateX(0);
-                }
-
-                to {
-                    transform: translateX(-50%);
-                }
-            }
-        </style>
-
-        <div class="scroll-container">
-            <!-- 360 image -->
-            <div class="scroll-bottom-section">
-                <div class="scroll-image-container">
-                    <img id="image360" src="360-1.jpg" alt="360 Image" class="img-fluid" />
-                </div>
+    <section id="project360Section" class="scroll-container">
+        <div class="scroll-bottom-section">
+            <div class="scroll-image-container">
+                <img id="image360" src="{{ asset('images/360project/project1.jpg') }}" alt="360 Image"
+                    class="img-fluid" />
             </div>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            integrity="sha384-IQsoLXlHHjL5/0kLOMFy2dFes5CZIL3yt1ZjDKH2DZIB9VVgJ1voRxTSoF5aa5+8" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-            integrity="sha384-cVKIPhGmYWTvYOR7K+2kL0Hhb5gFPQIV1YWzt4aIk9I2F0VRt3wGcz+22fZBwg5S" crossorigin="anonymous">
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const container = document.getElementById("servicesContainer");
-                const content = document.getElementById("servicesContent");
-                let isDown = false;
-                let startX;
-                let scrollLeft;
-
-                container.addEventListener("mousedown", (e) => {
-                    isDown = true;
-                    startX = e.pageX - container.offsetLeft;
-                    scrollLeft = container.scrollLeft;
-                    container.classList.remove("auto-scroll");
-                    content.style.animation = "none";
-                });
-
-                container.addEventListener("mouseleave", () => {
-                    isDown = false;
-                    container.classList.add("auto-scroll");
-                    content.style.animation = "scroll-left 20s linear infinite";
-                });
-
-                container.addEventListener("mouseup", () => {
-                    isDown = false;
-                    container.classList.add("auto-scroll");
-                    content.style.animation = "scroll-left 20s linear infinite";
-                });
-
-                container.addEventListener("mousemove", (e) => {
-                    if (!isDown) return;
-                    e.preventDefault();
-                    const x = e.pageX - container.offsetLeft;
-                    const walk = (x - startX) * 3;
-                    container.scrollLeft = scrollLeft - walk;
-                });
-            });
-        </script>
-
-        <script>
-            // Array of image sources
-            const images = [
-                "{{ asset('images/360project/project1.jpg') }}",
-                "{{ asset('images/360project/project2.jpg') }}",
-                "{{ asset('images/360project/project3.jpg') }}",
-                "{{ asset('images/360project/project4.jpg') }}",
-                "{{ asset('images/360project/project5.jpg') }}",
-                "{{ asset('images/360project/project6.jpg') }}",
-                "{{ asset('images/360project/project7.jpg') }}",
-                "{{ asset('images/360project/project8.jpg') }}",
-                "{{ asset('images/360project/project9.jpg') }}",
-                "{{ asset('images/360project/project10.jpg') }}",
-                "{{ asset('images/360project/project11.jpg') }}",
-                "{{ asset('images/360project/project12.jpg') }}",
-                "{{ asset('images/360project/project13.jpg') }}",
-                "{{ asset('images/360project/project14.jpg') }}",
-                "{{ asset('images/360project/project15.jpg') }}",
-                "{{ asset('images/360project/project16.jpg') }}",
-                "{{ asset('images/360project/project17.jpg') }}",
-                "{{ asset('images/360project/project18.jpg') }}",
-                "{{ asset('images/360project/project19.jpg') }}",
-                "{{ asset('images/360project/project20.jpg') }}",
-                "{{ asset('images/360project/project21.jpg') }}",
-                "{{ asset('images/360project/project22.jpg') }}",
-                "{{ asset('images/360project/project23.jpg') }}",
-                "{{ asset('images/360project/project24.jpg') }}",
-                "{{ asset('images/360project/project25.jpg') }}",
-                "{{ asset('images/360project/project26.jpg') }}",
-                "{{ asset('images/360project/project27.jpg') }}",
-                "{{ asset('images/360project/project28.jpg') }}",
-                "{{ asset('images/360project/project29.jpg') }}",
-                "{{ asset('images/360project/project30.jpg') }}",
-            ];
-
-            const totalImages = images.length;
-            const imageElement = document.getElementById("image360");
-
-            window.addEventListener("scroll", () => {
-                const scrollTop = window.scrollY;
-                const maxScroll = document.body.scrollHeight - window.innerHeight;
-                const scrollFraction = scrollTop / maxScroll;
-                const imageIndex = Math.min(
-                    totalImages - 1,
-                    Math.floor(scrollFraction * totalImages)
-                );
-                imageElement.src = images[imageIndex];
-            });
-        </script>
-
     </section>
 
     <!-- Location Map -->
@@ -1185,7 +1083,6 @@
             blob.style.animationDuration = '10s'; // Reset to original speed
         });
 
-
         document.addEventListener("DOMContentLoaded", function() {
             const readMoreButtons = document.querySelectorAll('.read-more-btn');
 
@@ -1200,6 +1097,120 @@
                     }
                 });
             });
+        });
+
+        // 360 Project Scroll Control
+        document.addEventListener('DOMContentLoaded', function() {
+            const project360Section = document.getElementById('project360Section');
+            const images = [
+                "{{ asset('images/360project/project1.jpg') }}",
+                "{{ asset('images/360project/project2.jpg') }}",
+                "{{ asset('images/360project/project3.jpg') }}",
+                "{{ asset('images/360project/project4.jpg') }}",
+                "{{ asset('images/360project/project5.jpg') }}",
+                "{{ asset('images/360project/project6.jpg') }}",
+                "{{ asset('images/360project/project7.jpg') }}",
+                "{{ asset('images/360project/project8.jpg') }}",
+                "{{ asset('images/360project/project9.jpg') }}",
+                "{{ asset('images/360project/project10.jpg') }}",
+                "{{ asset('images/360project/project11.jpg') }}",
+                "{{ asset('images/360project/project12.jpg') }}",
+                "{{ asset('images/360project/project13.jpg') }}",
+                "{{ asset('images/360project/project14.jpg') }}",
+                "{{ asset('images/360project/project15.jpg') }}",
+                "{{ asset('images/360project/project16.jpg') }}",
+                "{{ asset('images/360project/project17.jpg') }}",
+                "{{ asset('images/360project/project18.jpg') }}",
+                "{{ asset('images/360project/project19.jpg') }}",
+                "{{ asset('images/360project/project20.jpg') }}",
+                "{{ asset('images/360project/project21.jpg') }}",
+                "{{ asset('images/360project/project22.jpg') }}",
+                "{{ asset('images/360project/project23.jpg') }}",
+                "{{ asset('images/360project/project24.jpg') }}",
+                "{{ asset('images/360project/project25.jpg') }}",
+                "{{ asset('images/360project/project26.jpg') }}",
+                "{{ asset('images/360project/project27.jpg') }}",
+                "{{ asset('images/360project/project28.jpg') }}",
+                "{{ asset('images/360project/project29.jpg') }}",
+                "{{ asset('images/360project/project30.jpg') }}"
+            ];
+
+            const totalImages = images.length;
+            const imageElement = document.getElementById("image360");
+            let currentImageIndex = 0;
+
+            const preventScroll = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            };
+
+            const enableScroll = () => {
+                document.removeEventListener('wheel', preventScroll);
+                document.removeEventListener('touchmove', preventScroll);
+            };
+
+            const disableScroll = () => {
+                document.addEventListener('wheel', preventScroll, {
+                    passive: false
+                });
+                document.addEventListener('touchmove', preventScroll, {
+                    passive: false
+                });
+            };
+
+            const updateImage = () => {
+                if (currentImageIndex < 0) currentImageIndex = 0;
+                if (currentImageIndex >= totalImages) currentImageIndex = totalImages - 1;
+                imageElement.src = images[currentImageIndex];
+            };
+
+            const onScroll = (event) => {
+                const deltaY = event.deltaY || event.detail || event.wheelDelta;
+                if (deltaY > 0 && currentImageIndex < totalImages - 1) {
+                    currentImageIndex++;
+                } else if (deltaY < 0 && currentImageIndex > 0) {
+                    currentImageIndex--;
+                }
+                updateImage();
+                if (currentImageIndex === 0 || currentImageIndex === totalImages - 1) {
+                    enableScroll();
+                } else {
+                    disableScroll();
+                }
+            };
+
+            project360Section.addEventListener('wheel', onScroll);
+            project360Section.addEventListener('touchstart', (e) => {
+                const startY = e.touches[0].clientY;
+                project360Section.addEventListener('touchmove', (e) => {
+                    const endY = e.touches[0].clientY;
+                    const deltaY = startY - endY;
+                    onScroll({
+                        deltaY
+                    });
+                }, {
+                    once: true
+                });
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        disableScroll();
+                    } else {
+                        enableScroll();
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(project360Section);
         });
     </script>
 
