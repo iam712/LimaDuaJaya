@@ -754,6 +754,154 @@
         <hr style="border: 2px solid #ffdedf; margin: 35px 0; ">
         <br>
 
+        {{-- cube anination --}}
+        <style>
+            .container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 50px;
+            }
+
+            .cube {
+                width: 200px;
+                height: 200px;
+                position: relative;
+                transform-style: preserve-3d;
+                animation: rotate 5s infinite linear;
+            }
+
+            .cube div {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                background: rgba(255, 255, 255, 0.9);
+                border: 2px solid #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .cube .front {
+                transform: translateZ(100px);
+            }
+
+            .cube .back {
+                transform: rotateY(180deg) translateZ(100px);
+            }
+
+            .cube .right {
+                transform: rotateY(90deg) translateZ(100px);
+            }
+
+            .cube .left {
+                transform: rotateY(-90deg) translateZ(100px);
+            }
+
+            .cube .top {
+                transform: rotateX(90deg) translateZ(100px);
+            }
+
+            .cube .bottom {
+                transform: rotateX(-90deg) translateZ(100px);
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotateY(0);
+                }
+
+                to {
+                    transform: rotateY(360deg);
+                }
+            }
+        </style>
+
+        <div class="container">
+            <div class="cube">
+                <div class="front">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Front Image" class="img-fluid">
+                </div>
+                <div class="back">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Back Image" class="img-fluid">
+                </div>
+                <div class="right">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Right Image" class="img-fluid">
+                </div>
+                <div class="left">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
+                </div>
+                <div class="top">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Top Image" class="img-fluid">
+                </div>
+                <div class="bottom">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Bottom Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="cube">
+                <div class="front">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Front Image" class="img-fluid">
+                </div>
+                <div class="back">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Back Image" class="img-fluid">
+                </div>
+                <div class="right">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Right Image" class="img-fluid">
+                </div>
+                <div class="left">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
+                </div>
+                <div class="top">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Top Image" class="img-fluid">
+                </div>
+                <div class="bottom">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Bottom Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="cube">
+                <div class="front">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Front Image" class="img-fluid">
+                </div>
+                <div class="back">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Back Image" class="img-fluid">
+                </div>
+                <div class="right">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Right Image" class="img-fluid">
+                </div>
+                <div class="left">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
+                </div>
+                <div class="top">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Top Image" class="img-fluid">
+                </div>
+                <div class="bottom">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Bottom Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="cube">
+                <div class="front">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Front Image" class="img-fluid">
+                </div>
+                <div class="back">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Back Image" class="img-fluid">
+                </div>
+                <div class="right">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Right Image" class="img-fluid">
+                </div>
+                <div class="left">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
+                </div>
+                <div class="top">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Top Image" class="img-fluid">
+                </div>
+                <div class="bottom">
+                    <img src="{{ asset('images/LOGO.png') }}" alt="Bottom Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+
+
         {{-- Our Advantages --}}
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
