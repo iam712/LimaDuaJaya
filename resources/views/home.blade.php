@@ -756,7 +756,7 @@
 
         {{-- cube anination --}}
         <style>
-            .container {
+            .cube-container {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -768,7 +768,7 @@
                 height: 200px;
                 position: relative;
                 transform-style: preserve-3d;
-                animation: rotate 5s infinite linear;
+                animation: rotate 10s infinite linear;
             }
 
             .cube div {
@@ -817,7 +817,7 @@
             }
         </style>
 
-        <div class="container">
+        <div class="cube-container">
             <div class="cube">
                 <div class="front">
                     <img src="{{ asset('images/LOGO.png') }}" alt="Front Image" class="img-fluid">
@@ -899,8 +899,6 @@
                 </div>
             </div>
         </div>
-
-
 
         {{-- Our Advantages --}}
         <div class="container">
@@ -1121,6 +1119,10 @@
         </div>
     </section>
 
+    {{-- Test Effect / Animation --}}
+
+
+    
     <!-- Our Clients -->
     <section id="ourClientsSection" class="our-services py-4 py-sm-4">
         <div class="container">
