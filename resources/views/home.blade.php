@@ -758,7 +758,7 @@
         <style>
             .cube-container {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-around ;
                 align-items: center;
                 margin-top: 50px;
             }
@@ -1122,7 +1122,7 @@
     {{-- Test Effect / Animation --}}
 
 
-    
+
     <!-- Our Clients -->
     <section id="ourClientsSection" class="our-services py-4 py-sm-4">
         <div class="container">
@@ -1248,6 +1248,8 @@
                 });
             });
         });
+
+        
 
         // 360 Project Scroll Control
         document.addEventListener('DOMContentLoaded', function() {
