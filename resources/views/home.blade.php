@@ -794,6 +794,147 @@
         </div>
     </section>
 
+    <!-- 360 Project -->
+    <section>
+        <style>
+            .scroll-container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .scroll-bottom-section {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .scroll-image-container {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .scroll-image-container img {
+                width: 100%;
+            }
+
+            @keyframes scroll-left {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+        </style>
+
+        <div class="scroll-container">
+            <!-- 360 image -->
+            <div class="scroll-bottom-section">
+                <div class="scroll-image-container">
+                    <img id="image360" src="360-1.jpg" alt="360 Image" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXlHHjL5/0kLOMFy2dFes5CZIL3yt1ZjDKH2DZIB9VVgJ1voRxTSoF5aa5+8" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGmYWTvYOR7K+2kL0Hhb5gFPQIV1YWzt4aIk9I2F0VRt3wGcz+22fZBwg5S" crossorigin="anonymous">
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const container = document.getElementById("servicesContainer");
+                const content = document.getElementById("servicesContent");
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                container.addEventListener("mousedown", (e) => {
+                    isDown = true;
+                    startX = e.pageX - container.offsetLeft;
+                    scrollLeft = container.scrollLeft;
+                    container.classList.remove("auto-scroll");
+                    content.style.animation = "none";
+                });
+
+                container.addEventListener("mouseleave", () => {
+                    isDown = false;
+                    container.classList.add("auto-scroll");
+                    content.style.animation = "scroll-left 20s linear infinite";
+                });
+
+                container.addEventListener("mouseup", () => {
+                    isDown = false;
+                    container.classList.add("auto-scroll");
+                    content.style.animation = "scroll-left 20s linear infinite";
+                });
+
+                container.addEventListener("mousemove", (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - container.offsetLeft;
+                    const walk = (x - startX) * 3;
+                    container.scrollLeft = scrollLeft - walk;
+                });
+            });
+        </script>
+
+        <script>
+            // Array of image sources
+            const images = [
+                "{{ asset('images/360project/project1.jpg') }}",
+                "{{ asset('images/360project/project2.jpg') }}",
+                "{{ asset('images/360project/project3.jpg') }}",
+                "{{ asset('images/360project/project4.jpg') }}",
+                "{{ asset('images/360project/project5.jpg') }}",
+                "{{ asset('images/360project/project6.jpg') }}",
+                "{{ asset('images/360project/project7.jpg') }}",
+                "{{ asset('images/360project/project8.jpg') }}",
+                "{{ asset('images/360project/project9.jpg') }}",
+                "{{ asset('images/360project/project10.jpg') }}",
+                "{{ asset('images/360project/project11.jpg') }}",
+                "{{ asset('images/360project/project12.jpg') }}",
+                "{{ asset('images/360project/project13.jpg') }}",
+                "{{ asset('images/360project/project14.jpg') }}",
+                "{{ asset('images/360project/project15.jpg') }}",
+                "{{ asset('images/360project/project16.jpg') }}",
+                "{{ asset('images/360project/project17.jpg') }}",
+                "{{ asset('images/360project/project18.jpg') }}",
+                "{{ asset('images/360project/project19.jpg') }}",
+                "{{ asset('images/360project/project20.jpg') }}",
+                "{{ asset('images/360project/project21.jpg') }}",
+                "{{ asset('images/360project/project22.jpg') }}",
+                "{{ asset('images/360project/project23.jpg') }}",
+                "{{ asset('images/360project/project24.jpg') }}",
+                "{{ asset('images/360project/project25.jpg') }}",
+                "{{ asset('images/360project/project26.jpg') }}",
+                "{{ asset('images/360project/project27.jpg') }}",
+                "{{ asset('images/360project/project28.jpg') }}",
+                "{{ asset('images/360project/project29.jpg') }}",
+                "{{ asset('images/360project/project30.jpg') }}",
+            ];
+
+            const totalImages = images.length;
+            const imageElement = document.getElementById("image360");
+
+            window.addEventListener("scroll", () => {
+                const scrollTop = window.scrollY;
+                const maxScroll = document.body.scrollHeight - window.innerHeight;
+                const scrollFraction = scrollTop / maxScroll;
+                const imageIndex = Math.min(
+                    totalImages - 1,
+                    Math.floor(scrollFraction * totalImages)
+                );
+                imageElement.src = images[imageIndex];
+            });
+        </script>
+
+    </section>
+
     <!-- Location Map -->
     <section id="locationMapSection" class="location-map py-4 py-sm-4">
         <div class="container">
