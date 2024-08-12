@@ -750,7 +750,7 @@
             </div>
         </div>
         <br>
-        
+
         <!-- Horizontal Line -->
         <hr style="border: 2px solid #ffdedf; margin: 35px 0; ">
         <br>
@@ -1257,6 +1257,7 @@
         // 360 Project Scroll Control
         document.addEventListener('DOMContentLoaded', function() {
             const project360Section = document.getElementById('project360Section');
+            const imageElement = document.getElementById("image360");
             const images = [
                 "{{ asset('images/360project/project1.jpg') }}",
                 "{{ asset('images/360project/project2.jpg') }}",
@@ -1291,7 +1292,6 @@
             ];
 
             const totalImages = images.length;
-            const imageElement = document.getElementById("image360");
             let currentImageIndex = 0;
 
             const preventScroll = (e) => {
@@ -1352,12 +1352,17 @@
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.1
+                threshold: 1.0 // Trigger when the whole image is fully visible
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
+                    const imageRect = entry.boundingClientRect;
+                    const imageCenter = imageRect.top + imageRect.height / 2;
+                    const viewportCenter = window.innerHeight / 2;
+
+                    if (entry.isIntersecting && Math.abs(imageCenter - viewportCenter) <= imageRect
+                        .height / 2) {
                         disableScroll();
                     } else {
                         enableScroll();
@@ -1365,7 +1370,7 @@
                 });
             }, observerOptions);
 
-            observer.observe(project360Section);
+            observer.observe(imageElement);
         });
     </script>
 
