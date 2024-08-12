@@ -754,11 +754,13 @@
         <hr style="border: 2px solid #ffdedf; margin: 35px 0; ">
         <br>
 
+        {{-- Test Code --}}
+
         {{-- rotating cube anination --}}
         <style>
             .cube-container {
                 display: flex;
-                justify-content: space-around ;
+                justify-content: space-around;
                 align-items: center;
                 margin-top: 50px;
             }
@@ -1120,9 +1122,6 @@
             </div>
         </div>
     </section>
-
-    {{-- Test Effect / Animation --}}
-
 
 
     <!-- Our Clients -->
