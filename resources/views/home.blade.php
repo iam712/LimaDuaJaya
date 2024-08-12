@@ -754,7 +754,7 @@
         <hr style="border: 2px solid #ffdedf; margin: 35px 0; ">
         <br>
 
-        {{-- cube anination --}}
+        {{-- rotating cube anination --}}
         <style>
             .cube-container {
                 display: flex;
@@ -816,6 +816,8 @@
                 }
             }
         </style>
+
+        {{-- Rotating Cube --}}
 
         <div class="cube-container">
             <div class="cube">
@@ -1249,7 +1251,7 @@
             });
         });
 
-        
+
 
         // 360 Project Scroll Control
         document.addEventListener('DOMContentLoaded', function() {

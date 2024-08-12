@@ -47,6 +47,7 @@
             0% {
                 transform: translate3d(var(--left-ini), 0, 0);
             }
+
             100% {
                 transform: translate3d(var(--left-end), 110vh, 0);
             }
@@ -75,6 +76,112 @@
             @endif
         @endfor
 
+        /* Cube Styles */
+        .cube-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .cube {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 10s infinite linear;
+        }
+
+        .cube div {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cube .front {
+            transform: translateZ(75px);
+        }
+
+        .cube .back {
+            transform: rotateY(180deg) translateZ(75px);
+        }
+
+        .cube .right {
+            transform: rotateY(90deg) translateZ(75px);
+        }
+
+        .cube .left {
+            transform: rotateY(-90deg) translateZ(75px);
+        }
+
+        .cube .top {
+            transform: rotateX(90deg) translateZ(75px);
+        }
+
+        .cube .bottom {
+            transform: rotateX(-90deg) translateZ(75px);
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateY(0);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .signin-page {
+                height: auto;
+                padding: 20px 0;
+            }
+
+            .cube-container {
+                margin-top: 20px;
+            }
+
+            .cube {
+                width: 100px;
+                height: 100px;
+            }
+
+            .cube div {
+                width: 100px;
+                height: 100px;
+            }
+
+            h3 {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .signin-page {
+                height: auto;
+                padding: 10px 0;
+            }
+
+            .cube-container {
+                margin-top: 15px;
+            }
+
+            .cube {
+                width: 80px;
+                height: 80px;
+            }
+
+            .cube div {
+                width: 80px;
+                height: 80px;
+            }
+        }
     </style>
 
     <section>
@@ -88,17 +195,18 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 col-12">
-                        <h3 class="mb-4 text-light mt-5">Sign In Now</h3>
                         <div class="bg-white shadow rounded-3 p-4 p-md-5">
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-6">
+                                    <h3 class="mb-4 text-light">Sign In Now</h3>
                                     <div class="form">
                                         <form action="" method="" class="row g-3">
                                             <div class="col-12">
                                                 <label for="email" class="form-label">Email</label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
-                                                    <input type="email" id="email" class="form-control" placeholder="Enter Email">
+                                                    <input type="email" id="email" class="form-control"
+                                                        placeholder="Enter Email">
                                                 </div>
                                             </div>
 
@@ -106,7 +214,8 @@
                                                 <label for="password" class="form-label">Password</label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
-                                                    <input type="password" id="password" class="form-control" placeholder="Enter Password">
+                                                    <input type="password" id="password" class="form-control"
+                                                        placeholder="Enter Password">
                                                 </div>
                                             </div>
 
@@ -116,9 +225,39 @@
                                         </form>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 col-lg-6">
-                                    <img src="{{ asset('images/logo-square.png') }}" alt="Logo" class="img-fluid">
+
+                                <!-- Rotating Cube -->
+                                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center mt-4 mt-md-0">
+                                    <div class="cube-container">
+                                        <div class="cube">
+                                            <div class="front">
+                                                <img src="{{ asset('images/logo-square.png') }}" alt="Front Image"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="back">
+                                                <img src="{{ asset('images/logo-square.png') }}" alt="Back Image"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="right">
+                                                <img src="{{ asset('images/logo-square.png') }}" alt="Right Image"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="left">
+                                                <img src="{{ asset('images/logo-square.png') }}" alt="Left Image"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="top">
+                                                <img src="{{ asset('images/logo-square.png') }}" alt="Top Image"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="bottom">
+                                                <img src="{{ asset('images/logo-square.png') }}" alt="Bottom Image"
+                                                    class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- End of Rotating Cube -->
                             </div>
                         </div>
                     </div>
