@@ -1,13 +1,5 @@
 <div class="sidebar"
-    style="position: fixed; top: 0; left: -250px; height: 100%;
-        width: 250px; /* Adjust width as needed */
-        background-color: rgb({{ $color4 }});
-        transition: left 0.3s ease, background-color 0.3s ease, background 0.3s ease;
-        overflow-y: auto;
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;"
+    style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; background-color: rgb({{ $color4 }}); transition: transform 0.3s ease, background-color 0.3s ease, background 0.3s ease; overflow-y: auto; z-index: 1000; display: flex; flex-direction: column; padding: 1rem;"
     id="sidebar">
     <div class="sidebar-content" style="flex: 1">
         <ul class="sidebar-nav" style="list-style: none; padding: 0;">
@@ -47,6 +39,7 @@
                     <i class="fas fa-home"></i> Main Website
                 </a>
             </li>
+
         </ul>
     </div>
     <div class="sidebar-brand" style="margin-top: auto; display: flex; justify-content: center; padding: 1rem;">
@@ -56,10 +49,10 @@
     </div>
 </div>
 
-<!-- Button to toggle sidebar -->
+<!-- toggle for responsive sidebar -->
 <button id="sidebarToggle"
     style="position: fixed; top: 10px; left: 10px; z-index: 1100; background-color: rgba({{ $color4 }}, 1); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-    Open
+    toggle
 </button>
 
 <style>
@@ -78,28 +71,58 @@
 
     .nav-link:hover {
         color: rgb({{ $color6 }});
-        /* Lighten color on hover */
         transform: scale(1.05);
-        /* Slightly scale up the link */
     }
 
     .nav-link.active {
         font-weight: bold;
     }
+
+    @media (max-width: 768px) {
+        .sidebar {
+            transform: translateX(-250px);
+        }
+
+        .content {
+            margin-left: 0;
+            padding: 1rem;
+        }
+
+        #sidebarToggle {
+            top: 50px;
+            left: 50px;
+            position: fixed;
+            display: block;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .sidebar {
+            transform: translateX(0);
+        }
+
+        .content {
+            margin-left: 250px;
+        }
+
+        #sidebarToggle {
+            display: none;
+        }
+    }
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const sidebar = document.getElementById('sidebar');
         const toggleButton = document.getElementById('sidebarToggle');
 
-        toggleButton.addEventListener('click', function() {
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px';
-                toggleButton.innerText = 'Open';
+        toggleButton.addEventListener('click', function () {
+            if (sidebar.style.transform === 'translateX(0px)') {
+                sidebar.style.transform = 'translateX(-250px)';
+                toggleButton.innerText = 'Open Sidebar';
             } else {
-                sidebar.style.left = '0px';
-                toggleButton.innerText = 'Close';
+                sidebar.style.transform = 'translateX(0px)';
+                toggleButton.innerText = 'Close Sidebar';
             }
         });
     });

@@ -21,7 +21,7 @@
     @include('layouts.admin.sidebar')
 
     <!-- Content -->
-    <div class="content" style="margin-left: 250px; padding: 1rem;">
+    <div class="content">
         @yield('content')
     </div>
 
