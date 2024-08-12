@@ -52,8 +52,9 @@
 <!-- toggle for responsive sidebar -->
 <button id="sidebarToggle"
     style="position: fixed; top: 10px; left: 10px; z-index: 1100; background-color: rgba({{ $color4 }}, 1); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-    toggle
+    <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
 </button>
+
 
 <style>
     .nav-item {
@@ -89,10 +90,20 @@
         }
 
         #sidebarToggle {
-            top: 50px;
+            background-color: transparent;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            /* top: 50px;
             left: 50px;
             position: fixed;
-            display: block;
+            display: block; */
+        }
+
+        #sidebarToggle .navbar-toggler-icon {
+            width: 24px;
+            height: 24px;
+            /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28155, 155, 155, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); */
         }
     }
 
@@ -112,17 +123,17 @@
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.getElementById('sidebar');
         const toggleButton = document.getElementById('sidebarToggle');
 
-        toggleButton.addEventListener('click', function () {
+        toggleButton.addEventListener('click', function() {
             if (sidebar.style.transform === 'translateX(0px)') {
                 sidebar.style.transform = 'translateX(-250px)';
-                toggleButton.innerText = 'Open Sidebar';
+                //toggleButton.innerText = 'Open Sidebar';
             } else {
                 sidebar.style.transform = 'translateX(0px)';
-                toggleButton.innerText = 'Close Sidebar';
+                //toggleButton.innerText = 'Close Sidebar';
             }
         });
     });
