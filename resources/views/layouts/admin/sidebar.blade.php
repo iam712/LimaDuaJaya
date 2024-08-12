@@ -1,13 +1,13 @@
 <div class="sidebar"
-    style="position: fixed; top: 0; left: 0; height: 100%;
+    style="position: fixed; top: 0; left: -250px; height: 100%;
         width: 250px; /* Adjust width as needed */
         background-color: rgb({{ $color4 }});
-        transition: background-color 0.3s ease, background 0.3s ease;
+        transition: left 0.3s ease, background-color 0.3s ease, background 0.3s ease;
         overflow-y: auto;
         z-index: 1000;
         display: flex;
         flex-direction: column;
-        padding: 1rem; "
+        padding: 1rem;"
     id="sidebar">
     <div class="sidebar-content" style="flex: 1">
         <ul class="sidebar-nav" style="list-style: none; padding: 0;">
@@ -56,6 +56,11 @@
     </div>
 </div>
 
+<!-- Button to toggle sidebar -->
+<button id="sidebarToggle"
+    style="position: fixed; top: 10px; left: 10px; z-index: 1100; background-color: rgba({{ $color4 }}, 1); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+    Open
+</button>
 
 <style>
     .nav-item {
@@ -81,7 +86,21 @@
     .nav-link.active {
         font-weight: bold;
     }
-
-
-
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sidebar = document.getElementById('sidebar');
+        const toggleButton = document.getElementById('sidebarToggle');
+
+        toggleButton.addEventListener('click', function() {
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px';
+                toggleButton.innerText = 'Open';
+            } else {
+                sidebar.style.left = '0px';
+                toggleButton.innerText = 'Close';
+            }
+        });
+    });
+</script>
