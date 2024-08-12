@@ -137,6 +137,19 @@
             }
         }
 
+        /* Background and Text Color Styles */
+        .bg-custom {
+            background-color: rgb({{ $color6 }});
+            color: rgb({{ $color2 }});
+        }
+
+        .bg-custom .form-label,
+        .bg-custom .input-group-text,
+        .bg-custom h3,
+        .bg-custom button {
+            color: rgb({{ $color2 }});
+        }
+
         @media (max-width: 768px) {
             .signin-page {
                 height: auto;
@@ -195,10 +208,14 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 col-12">
-                        <div class="bg-white shadow rounded-3 p-4 p-md-5">
+                        <div class="bg-custom shadow rounded-3 p-4 p-md-5">
                             <div class="row align-items-center">
+                                <div class="col-12">
+                                    <!-- Title Above Form and Cube -->
+                                    <h3 class="text-center mb-4">Please Sign In</h3>
+                                </div>
+
                                 <div class="col-12 col-md-6">
-                                    <h3 class="mb-4 text-light">Sign In Now</h3>
                                     <div class="form">
                                         <form action="" method="" class="row g-3">
                                             <div class="col-12">
