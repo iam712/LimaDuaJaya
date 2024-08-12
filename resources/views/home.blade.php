@@ -826,22 +826,16 @@
         <div class="cube-container">
             <div class="cube">
                 <div class="front">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Front Image" class="img-fluid">
+                    <img src="{{ asset('images/clients/blastoz.png') }}" alt="Front Image" class="img-fluid">
                 </div>
                 <div class="back">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Back Image" class="img-fluid">
+                    <img src="{{ asset('images/clients/formula.png') }}" alt="Back Image" class="img-fluid">
                 </div>
                 <div class="right">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Right Image" class="img-fluid">
+                    <img src="{{ asset('images/clients/fruittea.png') }}" alt="Right Image" class="img-fluid">
                 </div>
                 <div class="left">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
-                </div>
-                <div class="top">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Top Image" class="img-fluid">
-                </div>
-                <div class="bottom">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Bottom Image" class="img-fluid">
+                    <img src="{{ asset('images/clients/fruzz.png') }}" alt="Left Image" class="img-fluid">
                 </div>
             </div>
             <div class="cube">
@@ -857,12 +851,6 @@
                 <div class="left">
                     <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
                 </div>
-                <div class="top">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Top Image" class="img-fluid">
-                </div>
-                <div class="bottom">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Bottom Image" class="img-fluid">
-                </div>
             </div>
             <div class="cube">
                 <div class="front">
@@ -877,12 +865,6 @@
                 <div class="left">
                     <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
                 </div>
-                <div class="top">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Top Image" class="img-fluid">
-                </div>
-                <div class="bottom">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Bottom Image" class="img-fluid">
-                </div>
             </div>
             <div class="cube">
                 <div class="front">
@@ -896,12 +878,6 @@
                 </div>
                 <div class="left">
                     <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
-                </div>
-                <div class="top">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Top Image" class="img-fluid">
-                </div>
-                <div class="bottom">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Bottom Image" class="img-fluid">
                 </div>
             </div>
         </div>
