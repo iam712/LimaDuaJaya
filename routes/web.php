@@ -17,12 +17,20 @@ Route::get('/workshop', function () {
     return view('workshop');
 });
 
+Route::get('/detail', function () {
+    return view('detail');
+});
+
 Route::get('/project', function () {
     return view('project');
 });
 
 Route::get('/review', function () {
     return view('review');
+});
+
+Route::get('/signin', function () {
+    return view('signin');
 });
 
 Route::get('/admin', function () {
@@ -45,9 +53,7 @@ Route::get('/admin-review', function () {
     return view('admin.review.review');
 });
 
-Route::get('/signin', function () {
-    return view('signin');
-});
+
 
 
 Route::get('/dashboard', function () {

@@ -85,7 +85,7 @@
                                     <i class="fas fa-location-dot location-icon" style="margin-right: 5px;"></i>
                                     Location
                                 </p>
-                                <a href="#" class="btn btn-dark w-100"
+                                <a href="/detail" class="btn btn-dark w-100"
                                     style="
                             background-color: #333;
                             border: none;
@@ -143,7 +143,7 @@
                                     <i class="fas fa-location-dot location-icon" style="margin-right: 5px;"></i>
                                     Location
                                 </p>
-                                <a href="#" class="btn btn-dark w-100"
+                                <a href="/detail" class="btn btn-dark w-100"
                                     style="
                             background-color: #333;
                             border: none;
