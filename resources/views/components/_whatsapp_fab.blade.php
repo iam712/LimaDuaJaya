@@ -1,7 +1,7 @@
 <!-- resources/views/components/_whatsapp_fab.blade.php -->
 
 <div class="whatsapp-fab">
-    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
+    <a href="https://wa.me/6282115983575" target="_blank" class="whatsapp-button">
         <i class="fab fa-whatsapp"></i> <!-- Font Awesome icon for WhatsApp -->
     </a>
 </div>
