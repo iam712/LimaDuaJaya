@@ -129,8 +129,8 @@
                     <thead>
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Photo</th> <!-- Moved Photo column before Name -->
-                            <th scope="col">Name</th> <!-- Moved Name column after Photo -->
+                            <th scope="col">Photo</th>
+                            <th scope="col">Name</th>
                             <th scope="col">Location</th>
                             <th scope="col">Description</th>
                             <th scope="col">is Lima Dua Jaya?</th>
@@ -140,26 +140,26 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>image</td> <!-- Photo column -->
-                            <td>Workshop 1</td> <!-- Name column -->
+                            <td>image</td>
+                            <td>Workshop 1</td>
                             <td>Surabaya</td>
                             <td>halo</td>
                             <td>Yes</td>
                             <td>
-                                <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                                <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editWorkshopModal">Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteWorkshopModal">Delete</button>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>image</td> <!-- Photo column -->
-                            <td>Workshop 2</td> <!-- Name column -->
+                            <td>image</td>
+                            <td>Workshop 2</td>
                             <td>Surabaya</td>
                             <td>halo</td>
                             <td>Yes</td>
                             <td>
-                                <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                                <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editWorkshopModal">Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteWorkshopModal">Delete</button>
                             </td>
                         </tr>
                         <!-- Repeat for other rows -->
@@ -167,9 +167,108 @@
                 </table>
 
                 <div class="text-end mt-3">
-                    <a href="#" class="btn btn-success">Add New Workshop</a>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addWorkshopModal">Add New Workshop</button>
                 </div>
             </div>
         </section>
+    </div>
+
+    <!-- Add Workshop Modal -->
+    <div class="modal fade" id="addWorkshopModal" tabindex="-1" aria-labelledby="addWorkshopModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addWorkshopModalLabel">Add New Workshop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="workshopPhoto" class="form-label">Workshop Photo</label>
+                            <input type="file" class="form-control" id="workshopPhoto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="workshopName" class="form-label">Workshop Name</label>
+                            <input type="text" class="form-control" id="workshopName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="workshopLocation" class="form-label">Workshop Location</label>
+                            <input type="text" class="form-control" id="workshopLocation">
+                        </div>
+                        <div class="mb-3">
+                            <label for="workshopDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="workshopDescription"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="isLimaDua">
+                            <label class="form-check-label" for="isLimaDua">Is the workshop from LimaDua?</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Workshop Modal -->
+    <div class="modal fade" id="editWorkshopModal" tabindex="-1" aria-labelledby="editWorkshopModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editWorkshopModalLabel">Edit Workshop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="editWorkshopPhoto" class="form-label">Workshop Photo</label>
+                            <input type="file" class="form-control" id="editWorkshopPhoto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editWorkshopName" class="form-label">Workshop Name</label>
+                            <input type="text" class="form-control" id="editWorkshopName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editWorkshopLocation" class="form-label">Workshop Location</label>
+                            <input type="text" class="form-control" id="editWorkshopLocation">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editWorkshopDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="editWorkshopDescription"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="editIsLimaDua">
+                            <label class="form-check-label" for="editIsLimaDua">Is the workshop from LimaDua?</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Workshop Modal -->
+    <div class="modal fade" id="deleteWorkshopModal" tabindex="-1" aria-labelledby="deleteWorkshopModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteWorkshopModalLabel">Delete Workshop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this workshop?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
