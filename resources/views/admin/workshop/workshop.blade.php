@@ -129,7 +129,8 @@
                     <thead>
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Photo</th>
+                            <th scope="col">Photo</th> <!-- Moved Photo column before Name -->
+                            <th scope="col">Name</th> <!-- Moved Name column after Photo -->
                             <th scope="col">Location</th>
                             <th scope="col">Description</th>
                             <th scope="col">is Lima Dua Jaya?</th>
@@ -139,7 +140,8 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>image</td>
+                            <td>image</td> <!-- Photo column -->
+                            <td>Workshop 1</td> <!-- Name column -->
                             <td>Surabaya</td>
                             <td>halo</td>
                             <td>Yes</td>
@@ -148,7 +150,19 @@
                                 <a href="#" class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
-                        <!-- Additional rows as needed -->
+                        <tr>
+                            <td>2</td>
+                            <td>image</td> <!-- Photo column -->
+                            <td>Workshop 2</td> <!-- Name column -->
+                            <td>Surabaya</td>
+                            <td>halo</td>
+                            <td>Yes</td>
+                            <td>
+                                <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                        <!-- Repeat for other rows -->
                     </tbody>
                 </table>
 
