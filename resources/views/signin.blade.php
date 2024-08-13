@@ -212,14 +212,14 @@
                             <div class="row align-items-center">
                                 <div class="col-12">
                                     <!-- Title Above Form and Cube -->
-                                    <h3 class="text-center mb-4">Please Sign In</h3>
+                                    <h3 class="text-center mb-4" style="font-family: 'LibreBaskerville', serif;">Please Sign In</h3>
                                 </div>
 
                                 <div class="col-12 col-md-6">
                                     <div class="form">
                                         <form action="" method="" class="row g-3">
                                             <div class="col-12">
-                                                <label for="email" class="form-label">Email</label>
+                                                <label for="email" class="form-label" style="font-family: 'LibreBaskerville', serif;">Email</label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
                                                     <input type="email" id="email" class="form-control"
@@ -228,7 +228,7 @@
                                             </div>
 
                                             <div class="col-12">
-                                                <label for="password" class="form-label">Password</label>
+                                                <label for="password" class="form-label" style="font-family: 'LibreBaskerville', serif;">Password</label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
                                                     <input type="password" id="password" class="form-control"
@@ -237,7 +237,7 @@
                                             </div>
 
                                             <div class="col-12">
-                                                <button type="submit" class="btn btn-danger w-100 mt-3">Sign In</button>
+                                                <button type="submit" class="btn btn-danger w-100 mt-3" style="font-family: 'LibreBaskerville', serif;">Sign In</button>
                                             </div>
                                         </form>
                                     </div>
