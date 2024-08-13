@@ -24,7 +24,7 @@
     <div class="content">
         @yield('content')
     </div>
-
+    @include('components._whatsapp_fab') <!-- Include the WhatsApp FAB partial -->
     <!-- Footer -->
     @include('layouts.footer')
 
