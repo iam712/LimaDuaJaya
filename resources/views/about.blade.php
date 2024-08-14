@@ -86,10 +86,68 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
 
 
     <div style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }}));">
-        <!-- Visi -->
-        <section id="visiSection" class="py-5 fade-section fade-in-left" style="">
-            <div class="container">
-                <div class="row align-items-center gx-4">
+        <!-- Visi dan Misi -->
+        <section id="visiMisiSection" class="py-5 fade-section fade-in-left position-relative"
+            style="overflow: hidden; background-color: rgb({{ $color1 }});">
+            <div id="bg-wrap" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
+                            <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                            <stop offset="0%" stop-color="rgba({{ $color3 }}, 1)"></stop>
+                            <stop offset="100%" stop-color="rgba({{ $color3 }}, 0)"></stop>
+                        </radialGradient>
+                        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
+                            <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                            <stop offset="0%" stop-color="rgba({{ $color4 }}, 1)"></stop>
+                            <stop offset="100%" stop-color="rgba({{ $color4 }}, 0)"></stop>
+                        </radialGradient>
+                        <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
+                            <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                            <stop offset="0%" stop-color="rgba({{ $color5 }}, 1)"></stop>
+                            <stop offset="100%" stop-color="rgba({{ $color5 }}, 0)"></stop>
+                        </radialGradient>
+                        <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5">
+                            <animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                            <stop offset="0%" stop-color="rgba({{ $color6 }}, 1)"></stop>
+                            <stop offset="100%" stop-color="rgba({{ $color6 }}, 0)"></stop>
+                        </radialGradient>
+                    </defs>
+                    <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)"
+                        transform="rotate(334.41 50 50)">
+                        <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite">
+                        </animate>
+                        <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50"
+                            dur="7s" repeatCount="indefinite"></animateTransform>
+                    </rect>
+                    <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)"
+                        transform="rotate(255.072 50 50)">
+                        <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite">
+                        </animate>
+                        <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate>
+                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50"
+                            dur="12s" repeatCount="indefinite"></animateTransform>
+                    </rect>
+                    <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)"
+                        transform="rotate(139.903 50 50)">
+                        <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                        <animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                        <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50"
+                            dur="9s" repeatCount="indefinite"></animateTransform>
+                    </rect>
+                    <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient4)"
+                        transform="rotate(255.072 50 50)">
+                        <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite">
+                        </animate>
+                        <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate>
+                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50"
+                            dur="12s" repeatCount="indefinite"></animateTransform>
+                    </rect>
+                </svg>
+            </div>
+            <div class="container position-relative" style="z-index: 2;">
+                <div class="row align-items-center gx-4 mb-5">
                     <div class="col-md-5">
                         <div class="ms-md-2 ms-lg-5">
                             <img class="img-fluid rounded-3" src="{{ asset('images/logo.png') }}" alt="Company Logo">
@@ -99,7 +157,8 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-dark"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic">Visi</span>
-                            <h2 class="display-5 fw-bold" style="font-family: 'LibreBaskerville', serif; color: white;">Visi
+                            <h2 class="display-5 fw-bold" style="font-family: 'LibreBaskerville', serif; color: white;">
+                                Visi
                             </h2>
                             <p class="" style="font-family: 'LibreBaskerville', serif; color: white;">Menjadi mitra
                                 periklanan terdepan di Indonesia yang dikenal karena keunggulan
@@ -109,23 +168,16 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
                                 untuk memenuhi dan melampaui harapan klien, menghadirkan solusi kreatif yang efektif dalam
                                 setiap kampanye periklanan.
                             </p>
-
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-
-        <!-- Misi -->
-        <section id="misiSection" class="py-5 fade-section fade-in-right" style="">
-            <div class="container">
                 <div class="row align-items-center gx-4">
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-dark"
                                 style="font-family: 'LibreBaskerville', serif; font-style: italic">Misi</span>
-                            <h2 class="display-5 fw-bold" style="font-family: 'LibreBaskerville', serif; color: white;">Misi
+                            <h2 class="display-5 fw-bold" style="font-family: 'LibreBaskerville', serif; color: white;">
+                                Misi
                             </h2>
                             <p class="" style="font-family: 'LibreBaskerville', serif; color: white;"><span>1.
                                 </span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
@@ -146,6 +198,9 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
                 </div>
             </div>
         </section>
+
+
+
 
     </div>
 
