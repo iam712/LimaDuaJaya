@@ -56,7 +56,8 @@
                                 border-radius: 8px;
                                 overflow: hidden;
                             ">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top" alt="Image {{ $index }}"
+                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
+                                alt="Image {{ $index }}"
                                 style="
                                     max-height: 200px;
                                     object-fit: cover;
@@ -116,7 +117,8 @@
                                 border-radius: 8px;
                                 overflow: hidden;
                             ">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top" alt="Image {{ $index }}"
+                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
+                                alt="Image {{ $index }}"
                                 style="
                                     max-height: 200px;
                                     object-fit: cover;
@@ -185,8 +187,11 @@
                     </ul>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <form action="/submit-form" method="POST" enctype="multipart/form-data">
-                        @csrf <!-- Laravel CSRF Token -->
+                    <form id="emailForm" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
                         <div class="mb-3">
                             <label for="workshopName" class="form-label">Workshop Name</label>
                             <input type="text" class="form-control" id="workshopName" name="workshopName" required>
@@ -196,21 +201,37 @@
                             <input type="text" class="form-control" id="location" name="location" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
                             <input type="text" class="form-control" id="phone" name="phone" required>
                         </div>
                         <div class="mb-3">
                             <label for="resume" class="form-label">Attach your resume // portfolio here</label>
                             <input type="file" class="form-control" id="resume" name="resume">
+                            <small class="form-text text-light">Remember to attach your resume.</small>
                         </div>
-                        <button type="submit" class="btn btn-dark w-100">Submit</button>
+                        <button type="button" class="btn btn-dark w-100" onclick="sendEmail()">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        function sendEmail() {
+            // get form values
+            var subject = document.getElementById('subject').value;
+            var workshopName = document.getElementById('workshopName').value;
+            var location = document.getElementById('location').value;
+            var phone = document.getElementById('phone').value;
+
+            // construct email body
+            var body = `Workshop Name: ${workshopName}%0ALocation: ${location}%0APhone: ${phone}`;
+
+            // construct the mailto link
+            var mailtoLink =
+                `mailto:williamwongge@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // open the email client
+            window.location.href = mailtoLink;
+        }
+    </script>
 @endsection
