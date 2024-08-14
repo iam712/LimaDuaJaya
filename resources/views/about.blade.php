@@ -209,7 +209,6 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
     </div>
 
     <!-- Review Section -->
-    <!-- Review Section -->
     <section class="py-4 mb-2"
         style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color1 }}));">
         <div class="container">
@@ -222,16 +221,17 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
                     <!-- Review Cards -->
                     @foreach ($reviews as $review)
                         <div class="card mx-2"
-                            style="width: 18rem; flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }}));">
-                            <div class="card-body" style="overflow: hidden;">
+                            style="width: 100%; max-width: 30rem; flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div class="card-body" style="overflow: hidden; height: auto; flex-grow: 1;">
                                 <p class="card-text text-dark"
-                                    style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                                    style="font-family: 'LibreBaskerville', serif; font-weight: bold; white-space: normal; word-wrap: break-word;">
                                     {{ $review->comment }}
                                 </p>
+                            </div>
+                            <div class="card-footer text-end" style="background: none; border-top: none;">
                                 <p class="card-text mb-2 text-dark"
-                                    style="font-family: 'LibreBaskerville', serif; font-style: italic">{{ $review->name }}
-                                    |
-                                    <span>{{ $review->email }}</span>
+                                    style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                    {{ $review->name }} | <span>{{ $review->email }}</span>
                                 </p>
                             </div>
                         </div>
@@ -240,6 +240,8 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
             </div>
         </div>
     </section>
+
+
 
 
     <style>
