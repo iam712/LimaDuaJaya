@@ -10,12 +10,6 @@ Route::get('/', function () {
 
 Route::get('/aboutus', [ReviewController::class, 'index'])->name('aboutus');
 
-Route::get('/review', function () {
-    return view('review');
-});
-
-Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
-
 Route::get('/workshop', function () {
     return view('workshop');
 });
@@ -31,6 +25,8 @@ Route::get('/project', function () {
 Route::get('/review', function () {
     return view('review');
 });
+
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 Route::get('/signin', function () {
     return view('signin');
