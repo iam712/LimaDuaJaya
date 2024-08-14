@@ -36,14 +36,10 @@
             overflow: hidden;
             padding-top: 20px;
             padding-bottom: 20px;
+            font-family: 'LibreBaskerville', serif;
         ">
         <div class="container">
-            <h3 class="text-start mt-5 mt-md-3 mt-lg-3 text-light"
-                style="
-                    font-family: 'LibreBaskerville', serif;
-                    color: white;
-                    font-size: 2rem;
-                ">
+            <h3 class="text-start mt-5 mt-md-3 mt-lg-3 text-light text text-lg">
                 Workshop Lima Dua Jaya
             </h3>
             <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
@@ -68,7 +64,6 @@
                                         color: #333;
                                         font-size: 1.2rem;
                                         margin-top: 10px;
-                                        font-family: 'LibreBaskerville', serif;
                                     ">
                                     Nama Workshop {{ $index }}
                                 </h5>
@@ -77,7 +72,6 @@
                                         color: #666;
                                         font-size: 1rem;
                                         margin-bottom: 15px;
-                                        font-family: 'LibreBaskerville', serif;
                                     ">
                                     <i class="fas fa-location-dot location-icon" style="margin-right: 5px;"></i>
                                     Location
@@ -88,8 +82,6 @@
                                         border: none;
                                         padding: 10px;
                                         border-radius: 5px;
-                                        text-transform: uppercase;
-                                        font-family: 'LibreBaskerville', serif;
                                     ">
                                     Detail
                                 </a>
@@ -147,7 +139,6 @@
                                         border: none;
                                         padding: 10px;
                                         border-radius: 5px;
-                                        text-transform: uppercase;
                                     ">
                                     Detail
                                 </a>
@@ -160,7 +151,7 @@
     </section>
 
     <!-- Review Form -->
-    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1">
+    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1" style="font-family: 'LibreBaskerville', serif;">
         <div class="container"
             style="
                 background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
@@ -190,23 +181,27 @@
                     <form id="emailForm" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" name="subject" required>
+                            <input type="text" class="form-control" id="subject" name="subject"
+                                placeholder="Enter subject" required>
                         </div>
                         <div class="mb-3">
                             <label for="workshopName" class="form-label">Workshop Name</label>
-                            <input type="text" class="form-control" id="workshopName" name="workshopName" required>
+                            <input type="text" class="form-control" id="workshopName" name="workshopName"
+                                placeholder="Enter subject" required>
                         </div>
                         <div class="mb-3">
                             <label for="location" class="form-label">Location</label>
-                            <input type="text" class="form-control" id="location" name="location" required>
+                            <input type="text" class="form-control" id="location" name="location"
+                                placeholder="Enter subject" required>
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="text" class="form-control" id="phone" name="phone" required>
+                            <input type="text" class="form-control" id="phone" name="phone"
+                                placeholder="Enter subject" required>
                         </div>
                         <div class="mb-3">
-                            <label for="resume" class="form-label">Attach your resume // portfolio here</label>
-                            <input type="file" class="form-control" id="resume" name="resume">
+                            {{-- <label for="resume" class="form-label">Attach your resume // portfolio here</label>
+                            <input type="file" class="form-control" id="resume" name="resume"> --}}
                             <small class="form-text text-light">Remember to attach your resume.</small>
                         </div>
                         <button type="button" class="btn btn-dark w-100" onclick="sendEmail()">Submit</button>

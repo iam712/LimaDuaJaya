@@ -426,11 +426,11 @@
         <button onclick="document.getElementById('ourServicesSection').scrollIntoView({ behavior: 'smooth' });">
             <img src="{{ asset('images/service.png') }}" alt="Our Services">
         </button>
-        <button onclick="document.getElementById('ourLiveProduct').scrollIntoView({ behavior: 'smooth' });">
-            <img src="{{ asset('images/product.png') }}" alt="Our Product">
-        </button>
         <button onclick="document.getElementById('ourAdvantagesSection').scrollIntoView({ behavior: 'smooth' });">
             <img src="{{ asset('images/advantage.png') }}" alt="Our Advantages">
+        </button>
+        <button onclick="document.getElementById('ourLiveProduct').scrollIntoView({ behavior: 'smooth' });">
+            <img src="{{ asset('images/product.png') }}" alt="Our Product">
         </button>
         <button onclick="document.getElementById('locationMapSection').scrollIntoView({ behavior: 'smooth' });">
             <img src="{{ asset('images/location.png') }}" alt="Location Map">
@@ -883,7 +883,7 @@
         </div>
 
         {{-- Our Advantages --}}
-        <div class="container">
+        <div class="container" id="ourAdvantagesSection">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
                 Advantages</h2>
             <div class="row mt-4 d-flex justify-content-center">
