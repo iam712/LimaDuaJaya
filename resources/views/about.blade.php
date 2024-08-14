@@ -198,10 +198,6 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
                 </div>
             </div>
         </section>
-
-
-
-
     </div>
 
     <div class="d-flex justify-content-center my-4">
@@ -209,10 +205,10 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
     </div>
 
     <!-- Review Section -->
-    <section class="py-4 mb-2"
+    <section class="py-4 mb-2 font-family: 'LibreBaskerville', serif;"
         style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color1 }}));">
         <div class="container">
-            <h1 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: black;">Apa
+            <h1 class="text-center" style="font-weight: bold; color: black;">Apa
                 kata mereka?</h1>
         </div>
         <div class="container d-flex justify-content-center mt-5">
@@ -220,17 +216,16 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
                 <div class="review-content d-flex">
                     <!-- Review Cards -->
                     @foreach ($reviews as $review)
-                        <div class="card mx-2"
-                            style="width: 100%; max-width: 30rem; flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div class="card mx-2 d-flex justify-content-around w-100"
+                            style="max-width: 30rem; flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column;">
                             <div class="card-body" style="overflow: hidden; height: auto; flex-grow: 1;">
-                                <p class="card-text text-dark"
-                                    style="font-family: 'LibreBaskerville', serif; font-weight: bold; white-space: normal; word-wrap: break-word;">
+                                <p class="card-text text-dark fw-bold"
+                                    style="white-space: normal; word-wrap: break-word;">
                                     {{ $review->comment }}
                                 </p>
                             </div>
                             <div class="card-footer text-end" style="background: none; border-top: none;">
-                                <p class="card-text mb-2 text-dark"
-                                    style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                                <p class="card-text mb-2 text-dark fst-italic text-muted">
                                     {{ $review->name }} | <span>{{ $review->email }}</span>
                                 </p>
                             </div>
@@ -253,7 +248,7 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
 
         .review-content {
             display: flex;
-            animation: marquee 30s linear infinite;
+            animation: marquee 10s linear infinite;
         }
 
         @keyframes marquee {
