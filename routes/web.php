@@ -22,6 +22,8 @@ Route::get('/project', function () {
     return view('project');
 });
 
+// admin user
+
 Route::get('/review', function () {
     return view('review');
 });
@@ -48,7 +50,10 @@ Route::get('/admin-user', function () {
     return view('admin.user.user');
 });
 
+//admin review
+
 Route::get('/admin/reviews', [ReviewController::class, 'adminIndex'])->name('admin.reviews.index');
+
 Route::delete('/admin/reviews/{id}', [ReviewController::class, 'destroy'])->name('admin.reviews.destroy');
 
 

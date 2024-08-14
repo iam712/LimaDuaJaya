@@ -177,12 +177,12 @@
                         <div class="card border-light shadow-sm h-100">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="{{ url('/admin-review') }}" class="text-decoration-none">
+                                    <a href="{{ url('/admin/reviews') }}" class="text-decoration-none">
                                         Review
                                     </a>
                                 </h5>
                                 <p class="card-text">Moderate and respond to user reviews and feedback.</p>
-                                <a href="{{ url('/admin-review') }}" class="btn btn-primary">Go to Reviews</a>
+                                <a href="{{ url('/admin/reviews') }}" class="btn btn-primary">Go to Reviews</a>
                             </div>
                         </div>
                     </div>
