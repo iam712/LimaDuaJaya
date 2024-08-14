@@ -1,5 +1,6 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start text-dark" style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color4 }}));">
+<footer class="text-center text-lg-start text-dark"
+    style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color4 }}));">
     <!-- Grid container -->
     <div class="container p-3">
         <!-- Section: Links -->
@@ -12,9 +13,10 @@
                         Lima Dua Jaya
                     </h6>
                     <p style="font-family: 'LibreBaskerville', serif; color: white;">
-                        Here you can use rows and columns to organize your footer
-                        content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit.
+                        Standar yang diberikan oleh Lima Dua Jaya adalah
+                        yang Terbaik.
+                        Kami berfokus untuk memberikan pelayanan yang
+                        bisa dibanggakan
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -23,7 +25,8 @@
 
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Products</h6>
+                    <h6 class="text-uppercase mb-4"
+                        style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Products</h6>
                     <p>
                         <a class="text-light" style="font-family: 'LibreBaskerville', serif;">MDBootstrap</a>
                     </p>
@@ -43,7 +46,8 @@
 
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">
+                    <h6 class="text-uppercase mb-4 font-weight-bold"
+                        style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">
                         Useful links
                     </h6>
                     <p style="font-family: 'LibreBaskerville', serif;">
@@ -65,11 +69,17 @@
 
                 <!-- Grid column -->
                 <div class="col mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'LibreBaskerville', serif; color: white;">Contact</h6>
-                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-home mr-3"></i> LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur 60215 Surabaya, Indonesia</p>
-                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
-                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-phone mr-3"></i> +62 821 1598 3575</p>
-                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-print mr-3"></i> +01 234 567 89</p>
+                    <h6 class="text-uppercase mb-4 font-weight-bold"
+                        style="font-family: 'LibreBaskerville', serif; color: white;">Contact</h6>
+                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-home mr-3"></i>
+                        LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur 60215
+                        Surabaya, Indonesia</p>
+                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i
+                            class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
+                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-phone mr-3"></i>
+                        +62 821 1598 3575</p>
+                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-print mr-3"></i>
+                        +01 234 567 89</p>
                 </div>
                 <!-- Grid column -->
             </div>
