@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -7,11 +8,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/aboutus', function () {
-    return view('about');
+Route::get('/aboutus', [ReviewController::class, 'index'])->name('aboutus');
+
+Route::get('/review', function () {
+    return view('review');
 });
 
-
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 Route::get('/workshop', function () {
     return view('workshop');
@@ -49,11 +52,8 @@ Route::get('/admin-user', function () {
     return view('admin.user.user');
 });
 
-Route::get('/admin-review', function () {
-    return view('admin.review.review');
-});
-
-
+Route::get('/admin/reviews', [ReviewController::class, 'adminIndex'])->name('admin.reviews.index');
+Route::delete('/admin/reviews/{id}', [ReviewController::class, 'destroy'])->name('admin.reviews.destroy');
 
 
 Route::get('/dashboard', function () {
@@ -66,4 +66,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

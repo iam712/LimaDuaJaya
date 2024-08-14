@@ -7,39 +7,44 @@ use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
+    // Display reviews on the About Us page
     public function index()
     {
-        // Fetch and list all reviews
+        $reviews = Review::all();
+        return view('about', compact('reviews'));
     }
 
-    public function create()
-    {
-        // Show the form to create a new review
-    }
-
+    // Store a newly created review in storage
     public function store(Request $request)
     {
-        // Store a newly created review in storage
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'comments' => 'required|string',
+        ]);
+
+        Review::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'comment' => $request->comments,
+        ]);
+
+        return redirect()->back()->with('success', 'Thank you for your review!');
     }
 
-    public function show($id)
+    // Display the reviews for the admin
+    public function adminIndex()
     {
-        // Display a specific review by ID
+        $reviews = Review::all();
+        return view('admin.review.review', compact('reviews'));
     }
 
-    public function edit($id)
-    {
-        // Show the form to edit a specific review by ID
-    }
-
-    public function update(Request $request, $id)
-    {
-        // Update the specified review in storage
-    }
-
+    // Delete a specific review
     public function destroy($id)
     {
-        // Delete a specific review by ID
+        $review = Review::findOrFail($id);
+        $review->delete();
+
+        return redirect()->route('admin.reviews.index')->with('success', 'Review deleted successfully');
     }
 }
-

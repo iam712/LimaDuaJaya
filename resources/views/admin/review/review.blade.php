@@ -121,7 +121,7 @@
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
             <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Review</h1>
             <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class="font-weight-bold"
-                    style="color: rgba({{ $color2 }}, 1);">user123</span>!</p>
+                    style="color: rgba({{ $color2 }}, 1);">Admin</span>!</p>
         </section>
 
         <section>
@@ -137,39 +137,52 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>halo</td>
-                            <td>123@gmail.com</td>
-                            <td>halo</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal">Delete</button>
-                            </td>
-                        </tr>
-                        <!-- Repeat for other rows -->
+                        @foreach ($reviews as $review)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $review->name }}</td>
+                                <td>{{ $review->email }}</td>
+                                <td>{{ $review->comment }}</td>
+                                <td>
+                                    <!-- Trigger the modal with a button -->
+                                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal{{ $review->id }}">
+                                        Delete
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="deleteModal{{ $review->id }}" tabindex="-1"
+                                        aria-labelledby="deleteModalLabel{{ $review->id }}" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deleteModalLabel{{ $review->id }}">Delete
+                                                        Review</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete this review by {{ $review->name }}?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cancel</button>
+                                                    <form action="{{ route('admin.reviews.destroy', $review->id) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger">Delete Review</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
         </section>
-    </div>
-
-    <!-- Delete Review Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete Review</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to delete this review?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-danger">Delete Review</button>
-                </div>
-            </div>
-        </div>
     </div>
 @endsection

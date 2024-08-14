@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('admin-review') ? 'active' : '' }}" href="/admin-review"
+                <a class="nav-link {{ request()->is('admin/reviews') ? 'active' : '' }}" href="/admin/reviews"
                     style="font-family: 'LibreBaskerville', serif;">
                     <i class="fas fa-star"></i> Manage Review
                 </a>

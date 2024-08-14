@@ -154,6 +154,7 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
     </div>
 
     <!-- Review Section -->
+    <!-- Review Section -->
     <section class="py-4 mb-2"
         style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color1 }}));">
         <div class="container">
@@ -164,25 +165,27 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
             <div class="review-wrapper d-flex align-items-center overflow-hidden">
                 <div class="review-content d-flex">
                     <!-- Review Cards -->
-                    @for ($i = 0; $i < 10; $i++)
+                    @foreach ($reviews as $review)
                         <div class="card mx-2"
                             style="width: 18rem; flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }}));">
                             <div class="card-body" style="overflow: hidden;">
                                 <p class="card-text text-dark"
-                                    style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Will come back again!
+                                    style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                                    {{ $review->comment }}
                                 </p>
                                 <p class="card-text mb-2 text-dark"
-                                    style="font-family: 'LibreBaskerville', serif; font-style: italic">Emily Davis |
-                                    <span>emily@example.com</span>
+                                    style="font-family: 'LibreBaskerville', serif; font-style: italic">{{ $review->name }}
+                                    |
+                                    <span>{{ $review->email }}</span>
                                 </p>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
-
             </div>
         </div>
     </section>
+
 
     <style>
         .review-wrapper {

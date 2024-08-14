@@ -10,7 +10,7 @@
     $color6 = '246, 232, 214'; // #F6E8D6
 @endphp
 
-@section('title', 'Workshop')
+@section('title', 'Review')
 
 @section('content')
 
@@ -35,7 +35,7 @@
 <section class="banner d-flex justify-content-center align-items-center py-5" style="background-color: rgb({{ $color6 }});">
     <div class="rounded rounded-3 p-4" style="background-color: rgb({{ $color5 }}); width: 60%; max-width: 600px; box-shadow: 0 0 10px rgb({{ $color2 }});">
         <h3 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: rgb({{ $color3 }});">Submit Your Review</h3>
-        <form action="" method="POST">
+        <form action="{{ route('reviews.store') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label" style="font-family: 'LibreBaskerville', serif; color: rgb({{ $color2 }});">Name</label>
