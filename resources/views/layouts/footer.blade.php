@@ -1,18 +1,18 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start text-dark"
-    style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color4 }}));">
+    style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color4 }})); font-family: 'LibreBaskerville', serif;">
     <!-- Grid container -->
     <div class="container p-3">
         <!-- Section: Links -->
-        <section class="">
+        <section>
             <!--Grid row-->
             <div class="row">
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="mb-4" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white">
+                    <h6 class="mb-4 text-light fw-bold">
                         Lima Dua Jaya
                     </h6>
-                    <p style="font-family: 'LibreBaskerville', serif; color: white;">
+                    <p class="text-light">
                         Standar yang diberikan oleh Lima Dua Jaya adalah
                         yang Terbaik.
                         Kami berfokus untuk memberikan pelayanan yang
@@ -25,19 +25,18 @@
 
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4"
-                        style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Products</h6>
+                    <h6 class="text-uppercase text-light fw-bold mb-4">Products</h6>
                     <p>
-                        <a class="text-light" style="font-family: 'LibreBaskerville', serif;">MDBootstrap</a>
+                        <a class="text-light">MDBootstrap</a>
                     </p>
                     <p>
-                        <a class="text-light" style="font-family: 'LibreBaskerville', serif;">MDWordPress</a>
+                        <a class="text-light">MDWordPress</a>
                     </p>
                     <p>
-                        <a class="text-light" style="font-family: 'LibreBaskerville', serif;">BrandFlow</a>
+                        <a class="text-light">BrandFlow</a>
                     </p>
                     <p>
-                        <a class="text-light" style="font-family: 'LibreBaskerville', serif;">Bootstrap Angular</a>
+                        <a class="text-light">Bootstrap Angular</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -46,20 +45,19 @@
 
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold"
-                        style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">
+                    <h6 class="text-uppercase text-light mb-4 fw-bold">
                         Useful links
                     </h6>
-                    <p style="font-family: 'LibreBaskerville', serif;">
+                    <p>
                         <a class="text-light" href="/review">Send us a feedback!</a>
                     </p>
-                    <p style="font-family: 'LibreBaskerville', serif;">
+                    <p>
                         <a class="text-light">Become an Affiliate</a>
                     </p>
-                    <p style="font-family: 'LibreBaskerville', serif;">
+                    <p>
                         <a class="text-light">Shipping Rates</a>
                     </p>
-                    <p style="font-family: 'LibreBaskerville', serif;">
+                    <p>
                         <a class="text-light">Help</a>
                     </p>
                 </div>
@@ -69,16 +67,14 @@
 
                 <!-- Grid column -->
                 <div class="col mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold"
-                        style="font-family: 'LibreBaskerville', serif; color: white;">Contact</h6>
-                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-home mr-3"></i>
+                    <h6 class="text-uppercase text-light mb-4 fw-bold">Contact</h6>
+                    <p class="text-light"><i class="fas fa-home mr-3"></i>
                         LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur 60215
                         Surabaya, Indonesia</p>
-                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i
-                            class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
-                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-phone mr-3"></i>
+                    <p class="text-light"><i class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
+                    <p class="text-light"><i class="fas fa-phone mr-3"></i>
                         +62 821 1598 3575</p>
-                    <p style="font-family: 'LibreBaskerville', serif; color: white;"><i class="fas fa-print mr-3"></i>
+                    <p class="text-light"><i class="fas fa-print mr-3"></i>
                         +01 234 567 89</p>
                 </div>
                 <!-- Grid column -->
@@ -95,9 +91,9 @@
                 <!-- Grid column -->
                 <div class="text-center">
                     <!-- Copyright -->
-                    <div class="p-3" style="font-family: 'LibreBaskerville', serif; color: white;">
+                    <div class="p-3 text-light">
                         © 2024 Copyright:
-                        <a class="text-light" href="/">Lima Dua Jaya</a>
+                        <a href="/" class="text-light">Lima Dua Jaya</a>
                     </div>
                     <!-- Copyright -->
                 </div>
@@ -118,8 +114,10 @@
                             class="fab fa-google"></i></a>
 
                     <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" class="text-light" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1"
+                        href="https://www.instagram.com/limaduajaya/" role="button"><i
                             class="fab fa-instagram"></i></a>
+
                 </div>
                 <!-- Grid column -->
             </div>

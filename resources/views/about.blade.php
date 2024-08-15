@@ -19,27 +19,19 @@
 
 @section('title', 'About Us')
 
-
-{{-- style="font-family: 'LibreBaskerville', serif; font-weight: bold;"
-style="font-family: 'LibreBaskerville', serif;"
-style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
-
-
-
 @section('content')
     <!-- Banner -->
     <section class="banner d-flex align-items-center"
-        style="background-image: url('{{ asset('images/banner/imagebg1.jpeg') }}'); background-size: cover; background-position: center; height: 100vh; position: relative;">
+        style="background-image: url('{{ asset('images/banner/imagebg1.jpeg') }}'); background-size: cover; background-position: center; height: 100vh; position: relative; font-family: 'LibreBaskerville', serif;">
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
             style="background-color: rgba({{ $color4 }}, 0.8); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: 0 0 10px; display: inline-block;">
-            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">PT. Lima
+            <h2 class="text-center text-light fw-bold">PT. Lima
                 Dua Jaya</h2>
             <br>
-            <p class="text-center" style="font-family: 'LibreBaskerville', serif; font-style: italic; color: white;">Standar
+            <p class="text-center text-light fst-italic">Standar
                 yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk memberikan pelayanan yang bisa
                 dibanggakan.</p>
-            <a href="#aboutUsSection" class="btn text-light"
-                style="background-color: rgb({{ $color2 }}); width: auto; font-family: 'LibreBaskerville', serif;">Read
+            <a href="#aboutUsSection" class="btn text-light w-auto" style="background-color: rgb({{ $color2 }});">Read
                 more</a>
         </div>
     </section>
@@ -50,21 +42,20 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
 
     <!-- About Us -->
     <section id="aboutUsSection" class="py-5 py-sm-5 fade-section"
-        style="background: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center;">
+        style="background: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; font-family: 'LibreBaskerville', serif;">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
                     <div class="ms-md-2 ms-lg-5">
-                        <span class="text-dark" style="font-family: 'LibreBaskerville', serif; font-style: italic;">Our
+                        <span class="text-darkf fst-italic">Our
                             Story</span>
-                        <h2 class="display-5 fw-bold"
-                            style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: black;">About Us</h2>
-                        <p class="lead" style="font-family: 'LibreBaskerville', serif; color: black;">PT LIMA DUA JAYA
+                        <h2 class="display-5 fw-bold text-dark">About Us</h2>
+                        <p class="lead">PT LIMA DUA JAYA
                             sudah berdiri sejak bulan oktober tahun 2021 yang bergerak dalam
                             bidang Advertising. Dimulai dari vending machine dan projek branding seperti car branding, media
                             promosi melalui vending machine, billboard/baliho, produksi gondola, booth, papan nama toko,
                             brand activation, dan lain-lain.</p>
-                        <p class="lead mb-0" style="font-family: 'LibreBaskerville', serif; color: black;">PT LIMA DUA JAYA
+                        <p class="lead mb-0 text-dark">PT LIMA DUA JAYA
                             berdiri di tahun 2021 di Madiun dan pada tahun 2023 mendirikan
                             kantor pusat di Surabaya. Di Tahun 2024 mendirikan kantor cabang Semarang.</p>
                     </div>
@@ -85,7 +76,7 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
     </div>
 
 
-    <div style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }}));">
+    <div style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }})); font-family: 'LibreBaskerville', serif;">
         <!-- Visi dan Misi -->
         <section id="visiMisiSection" class="py-5 fade-section fade-in-left position-relative"
             style="overflow: hidden; background-color: rgb({{ $color1 }});">
@@ -155,12 +146,11 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
                     </div>
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
-                            <span class="text-dark"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic">Visi</span>
-                            <h2 class="display-5 fw-bold" style="font-family: 'LibreBaskerville', serif; color: white;">
+                            <span class="text-dark fst-italic">Visi</span>
+                            <h2 class="display-5 fw-bold text-light">
                                 Visi
                             </h2>
-                            <p class="" style="font-family: 'LibreBaskerville', serif; color: white;">Menjadi mitra
+                            <p class="text-light">Menjadi mitra
                                 periklanan terdepan di Indonesia yang dikenal karena keunggulan
                                 dalam memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas
                                 Utama dan Kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
@@ -174,18 +164,18 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
                 <div class="row align-items-center gx-4">
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
-                            <span class="text-dark"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic">Misi</span>
-                            <h2 class="display-5 fw-bold" style="font-family: 'LibreBaskerville', serif; color: white;">
+                            <span class="text-dark fst-italic"
+                                >Misi</span>
+                            <h2 class="display-5 fw-bold text-light" >
                                 Misi
                             </h2>
-                            <p class="" style="font-family: 'LibreBaskerville', serif; color: white;"><span>1.
+                            <p class="text-light"><span>1.
                                 </span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
-                            <p class="" style="font-family: 'LibreBaskerville', serif; color: white;"><span>2.
+                            <p class="text-light"><span>2.
                                 </span>Menjunjung Tinggi Integeritas Pekerjaan.</p>
-                            <p class="" style="font-family: 'LibreBaskerville', serif; color: white;"><span>3.
+                            <p class="text-light"><span>3.
                                 </span>Berinovasi untuk Memenuhi Kebutuhan Klien.</p>
-                            <p class="" style="font-family: 'LibreBaskerville', serif; color: white;"><span>3.
+                            <p class="text-light"><span>3.
                                 </span>Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.
                             </p>
                         </div>
@@ -235,8 +225,6 @@ style="font-family: 'LibreBaskerville', serif; font-style: italic;" --}}
             </div>
         </div>
     </section>
-
-
 
 
     <style>

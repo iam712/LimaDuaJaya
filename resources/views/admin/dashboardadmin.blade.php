@@ -83,38 +83,13 @@
         }
 
         /* Hide the sidebar toggle button on medium and larger screens */
-        .sidebar-toggle {
-            display: none;
-        }
-
-        /* Display the toggle button only on mobile screens */
-        @media (max-width: 767.98px) {
-            .sidebar-toggle {
-                display: inline-block;
-                position: fixed;
-                top: 20px;
-                left: 20px;
-                z-index: 1000;
-            }
-
-            /* Initially hide the sidebar on mobile */
-            .sidebar-closed .sidebar {
-                display: none;
-            }
-        }
-
-        /* Keep the sidebar always open on larger screens */
-        @media (min-width: 768px) {
-            .sidebar {
-                display: block !important;
-            }
-        }
+        /*  */
     </style>
 
     <!-- Sidebar Toggle Button (only visible on mobile) -->
-    <button class="btn btn-primary sidebar-toggle d-md-none" id="sidebarToggle" type="button">
+    {{-- <button class="btn btn-primary sidebar-toggle d-md-none" id="sidebarToggle" type="button">
         Toggle Sidebar
-    </button>
+    </button> --}}
 
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2"

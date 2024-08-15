@@ -88,19 +88,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        th,
-        td {
-            color: rgba({{ $color3 }}, 1);
-        }
-
-        th {
-            background-color: rgba({{ $color7 }}, 1);
-        }
-
-        td {
-            background-color: rgba({{ $color5 }}, 0.5);
-        }
-
         .btn-warning {
             background-color: rgba({{ $color4 }}, 1);
             color: rgba({{ $color1 }}, 1);
@@ -120,13 +107,13 @@
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
             <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Review</h1>
-            <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class="font-weight-bold"
+            <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class="fw-bold"
                     style="color: rgba({{ $color2 }}, 1);">Admin</span>!</p>
         </section>
 
         <section>
             <div class="container table-responsive py-5">
-                <table class="table table-bordered table-hover">
+                <table class="table table-borderless table-hover">
                     <thead>
                         <tr>
                             <th scope="col">No</th>

@@ -87,19 +87,6 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-
-        th, td {
-            color: rgba({{ $color3 }}, 1);
-        }
-
-        th {
-            background-color: rgba({{ $color7 }}, 1);
-        }
-
-        td {
-            background-color: rgba({{ $color5 }}, 0.5);
-        }
-
         .btn-warning {
             background-color: rgba({{ $color4 }}, 1);
             color: rgba({{ $color1 }}, 1);
@@ -119,13 +106,13 @@
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
             <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Workshop</h1>
-            <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class="font-weight-bold"
+            <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class="fw-bold"
                     style="color: rgba({{ $color2 }}, 1);">user123</span>!</p>
         </section>
 
         <section>
             <div class="container table-responsive py-5">
-                <table class="table table-bordered table-hover">
+                <table class="table table-hover table-borderless">
                     <thead>
                         <tr>
                             <th scope="col">No</th>
@@ -146,8 +133,10 @@
                             <td>halo</td>
                             <td>Yes</td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editWorkshopModal">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteWorkshopModal">Delete</button>
+                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#editWorkshopModal">Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#deleteWorkshopModal">Delete</button>
                             </td>
                         </tr>
                         <tr>
@@ -158,8 +147,10 @@
                             <td>halo</td>
                             <td>Yes</td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editWorkshopModal">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteWorkshopModal">Delete</button>
+                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#editWorkshopModal">Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#deleteWorkshopModal">Delete</button>
                             </td>
                         </tr>
                         <!-- Repeat for other rows -->
@@ -167,7 +158,8 @@
                 </table>
 
                 <div class="text-end mt-3">
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addWorkshopModal">Add New Workshop</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#addWorkshopModal">Add New Workshop</button>
                 </div>
             </div>
         </section>
@@ -214,7 +206,8 @@
     </div>
 
     <!-- Edit Workshop Modal -->
-    <div class="modal fade" id="editWorkshopModal" tabindex="-1" aria-labelledby="editWorkshopModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editWorkshopModal" tabindex="-1" aria-labelledby="editWorkshopModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -254,7 +247,8 @@
     </div>
 
     <!-- Delete Workshop Modal -->
-    <div class="modal fade" id="deleteWorkshopModal" tabindex="-1" aria-labelledby="deleteWorkshopModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deleteWorkshopModal" tabindex="-1" aria-labelledby="deleteWorkshopModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
