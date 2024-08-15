@@ -52,7 +52,7 @@
                         <a class="text-light" href="/review">Send us a feedback!</a>
                     </p>
                     <p>
-                        <a href="/workshop#workshopPartnershipProgram" class="btn btn-light">Become an
+                        <a href="/workshop#workshopPartnershipProgram" class="text-light">Become an
                             Affiliate</a>
                     </p>
                     <p>
