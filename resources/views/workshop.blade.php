@@ -22,6 +22,10 @@
             transform: scale(1.05);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 
     <!-- Workshop Lima Dua Jaya -->
@@ -151,7 +155,7 @@
     </section>
 
     <!-- Review Form -->
-    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1" style="font-family: 'LibreBaskerville', serif;">
+    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1" style="font-family: 'LibreBaskerville', serif;" id="workshopPartnershipProgram">
         <div class="container"
             style="
                 background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');

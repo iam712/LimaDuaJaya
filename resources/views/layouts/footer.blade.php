@@ -52,7 +52,8 @@
                         <a class="text-light" href="/review">Send us a feedback!</a>
                     </p>
                     <p>
-                        <a class="text-light">Become an Affiliate</a>
+                        <a href="/workshop#workshopPartnershipProgram" class="btn btn-light">Become an
+                            Affiliate</a>
                     </p>
                     <p>
                         <a class="text-light">Shipping Rates</a>
@@ -114,9 +115,8 @@
                             class="fab fa-google"></i></a>
 
                     <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1"
-                        href="https://www.instagram.com/limaduajaya/" role="button"><i
-                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/limaduajaya/"
+                        role="button"><i class="fab fa-instagram"></i></a>
 
                 </div>
                 <!-- Grid column -->
