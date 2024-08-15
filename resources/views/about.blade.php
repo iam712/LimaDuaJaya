@@ -76,7 +76,8 @@
     </div>
 
 
-    <div style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }})); font-family: 'LibreBaskerville', serif;">
+    <div
+        style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }})); font-family: 'LibreBaskerville', serif;">
         <!-- Visi dan Misi -->
         <section id="visiMisiSection" class="py-5 fade-section fade-in-left position-relative"
             style="overflow: hidden; background-color: rgb({{ $color1 }});">
@@ -164,9 +165,8 @@
                 <div class="row align-items-center gx-4">
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
-                            <span class="text-dark fst-italic"
-                                >Misi</span>
-                            <h2 class="display-5 fw-bold text-light" >
+                            <span class="text-dark fst-italic">Misi</span>
+                            <h2 class="display-5 fw-bold text-light">
                                 Misi
                             </h2>
                             <p class="text-light"><span>1.
@@ -195,20 +195,19 @@
     </div>
 
     <!-- Review Section -->
-    <section class="py-4 mb-2 font-family: 'LibreBaskerville', serif;"
+    <section class="py-4 mb-2"
         style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color1 }}));">
         <div class="container">
-            <h1 class="text-center" style="font-weight: bold; color: black;">Apa
-                kata mereka?</h1>
+            <h1 class="text-center" style="font-weight: bold; color: black;">Apa kata mereka?</h1>
         </div>
-        <div class="container d-flex justify-content-center mt-5">
-            <div class="review-wrapper d-flex align-items-center overflow-hidden">
-                <div class="review-content d-flex">
+        <div class="container mt-5">
+            <div class="review-wrapper">
+                <div class="review-content">
                     <!-- Review Cards -->
                     @foreach ($reviews as $review)
-                        <div class="card mx-2 d-flex justify-content-around w-100"
-                            style="max-width: 30rem; flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column;">
-                            <div class="card-body" style="overflow: hidden; height: auto; flex-grow: 1;">
+                        <div class="card mx-2 d-flex justify-content-around"
+                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                            <div class="card-body" style="overflow: hidden; flex-grow: 1;">
                                 <p class="card-text text-dark fw-bold"
                                     style="white-space: normal; word-wrap: break-word;">
                                     {{ $review->comment }}
@@ -220,11 +219,13 @@
                                 </p>
                             </div>
                         </div>
+                        
                     @endforeach
                 </div>
             </div>
         </div>
     </section>
+
 
 
     <style>
@@ -235,8 +236,13 @@
         }
 
         .review-content {
-            display: flex;
-            animation: marquee 10s linear infinite;
+            display: inline-flex;
+            animation: marquee 15s linear infinite;
+        }
+
+        .review-content {
+            display: inline-flex;
+            animation: marquee 15s linear infinite;
         }
 
         @keyframes marquee {
@@ -245,7 +251,34 @@
             }
 
             100% {
-                transform: translateX(-50%);
+                transform: translateX(-100%);
+            }
+        }
+
+        .card {
+            margin: 10px;
+            flex: 1 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .review-content {
+                animation-duration: 20s;
+            }
+
+            .card {
+                width: 90%;
+                max-width: none;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1200px) {
+            .review-content {
+                animation-duration: 25s;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 25rem;
             }
         }
 
