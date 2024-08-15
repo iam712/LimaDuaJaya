@@ -69,12 +69,9 @@
         </div>
     </section>
 
-
-
     <div class="d-flex justify-content-center my-4">
         <div style="width: 70%; height: 1px; background-color: rgb({{ $color3 }});"></div>
     </div>
-
 
     <div
         style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }})); font-family: 'LibreBaskerville', serif;">
@@ -194,6 +191,19 @@
         <div style="width: 70%; height: 1px; background-color: rgb({{ $color3 }});"></div>
     </div>
 
+    {{-- Complex Background View --}}
+    <div class="mainbackgroundview">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div class="d4"></div>
+    </div>
+    {{-- End of Complex Background View --}}
+
+    <div class="d-flex justify-content-center my-4">
+        <div style="width: 70%; height: 1px; background-color: rgb({{ $color3 }});"></div>
+    </div>
+
     <!-- Review Section -->
     <section class="py-4 mb-2"
         style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color1 }}));">
@@ -219,14 +229,11 @@
                                 </p>
                             </div>
                         </div>
-                        
                     @endforeach
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <style>
         .review-wrapper {
@@ -311,6 +318,123 @@
 
         html {
             scroll-behavior: smooth;
+        }
+
+        .mainbackgroundview {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        .d1 {
+            position: absolute;
+            background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+            background-size: 2700px 1500px;
+            height: 30vh;
+            width: 15vw;
+            background-position: 0 50%;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            animation: dd1 10s infinite, dd12 10s infinite;
+            animation-delay: 4s, 14s;
+        }
+
+        .d2 {
+            position: absolute;
+            background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+            background-size: 2700px 1500px;
+            height: 50vh;
+            width: 25vw;
+            background-position: -10vw 50%;
+            left: 10vw;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            animation: dd2 10s 2;
+            animation-delay: 4s;
+        }
+
+        .d3 {
+            position: absolute;
+            background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+            background-size: 2700px 1500px;
+            overflow: hidden;
+            height: 100vh;
+            width: 40vw;
+            left: 25vw;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+            background-position: -35vw 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            animation: dd3 10s 2;
+            animation-delay: 4s;
+        }
+
+        .d4 {
+            position: absolute;
+            overflow: hidden;
+            background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+            background-size: 2700px 1500px;
+            height: 80vh;
+            width: 25vw;
+            left: 60vw;
+            background-position: -70vw 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            animation: dd4 10s 2;
+            animation-delay: 4s;
+        }
+
+        @keyframes dd1 {
+
+            0%,
+            100% {
+                width: 15vw;
+            }
+
+            50% {
+                width: 95vw;
+            }
+        }
+
+        @keyframes dd12 {
+
+            0%,
+            100% {
+                background-position: 0 50%;
+            }
+
+            50% {
+                background-position: Calc(0vw - 40px) 50%;
+            }
+        }
+
+        @keyframes dd2 {
+            0% {}
+
+            50% {
+                background-position: Calc(-10vw - 40px) 50%;
+            }
+        }
+
+        @keyframes dd3 {
+            0% {}
+
+            50% {
+                background-position: Calc(-35vw - 40px) 50%;
+            }
+        }
+
+        @keyframes dd4 {
+            0% {}
+
+            50% {
+                background-position: Calc(-70vw - 40px) 50%;
+            }
         }
     </style>
 
