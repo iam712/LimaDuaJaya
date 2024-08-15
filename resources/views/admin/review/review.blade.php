@@ -102,6 +102,18 @@
             background-color: rgba({{ $color7 }}, 1);
             color: rgba({{ $color1 }}, 1);
         }
+
+        /* Ensures long comments wrap to the next line */
+        .table td {
+            /* Preserves whitespace and line breaks */
+            word-wrap: break-word;
+            /* Breaks long words */
+            max-width: 250px;
+            /* Adjust this value as needed */
+            overflow-wrap: break-word;
+            /* Breaks long words in modern browsers */
+        }
+
     </style>
 
     <div class="animated-bg">

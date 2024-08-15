@@ -191,17 +191,17 @@
                         <div class="mb-3">
                             <label for="workshopName" class="form-label">Workshop Name</label>
                             <input type="text" class="form-control" id="workshopName" name="workshopName"
-                                placeholder="Enter subject" required>
+                                placeholder="Enter your workshop name" required>
                         </div>
                         <div class="mb-3">
                             <label for="location" class="form-label">Location</label>
                             <input type="text" class="form-control" id="location" name="location"
-                                placeholder="Enter subject" required>
+                                placeholder="Enter your workshop location" required>
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
                             <input type="text" class="form-control" id="phone" name="phone"
-                                placeholder="Enter subject" required>
+                                placeholder="Enter your contact number" required>
                         </div>
                         <div class="mb-3">
                             {{-- <label for="resume" class="form-label">Attach your resume // portfolio here</label>
