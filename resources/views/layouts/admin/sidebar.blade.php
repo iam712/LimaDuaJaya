@@ -19,7 +19,9 @@
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
-                <a class="nav-link {{ request()->is('admin-user') ? 'active' : '' }}" href="/admin-user">
+                <!-- Correctly linked Manage User -->
+                <a class="nav-link {{ request()->is('admin/users*') ? 'active' : '' }}"
+                    href="{{ route('admin.users.index') }}">
                     <i class="fas fa-users"></i> Manage User
                 </a>
             </li>
@@ -29,8 +31,28 @@
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
+                <a class="nav-link {{ request()->is('admin-portoproject') ? 'active' : '' }}"
+                    href="/admin-portoproject">
+                    <i class="fas fa-star"></i> Manage Project Portoflio
+                </a>
+            </li>
+            <li class="nav-item mb-2 mb-md-2 mb-lg-2">
+                <a class="nav-link {{ request()->is('admin-portoworkshop') ? 'active' : '' }}"
+                    href="/admin-portoworkshop">
+                    <i class="fas fa-star"></i> Manage Workshop Portfolio
+                </a>
+            </li>
+            <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">
                     <i class="fas fa-home"></i> Main Website
+                </a>
+            </li>
+            <li class="nav-item mb-2 mb-md-2 mb-lg-2">
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
             </li>
         </ul>

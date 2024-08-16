@@ -113,6 +113,7 @@
 
         <section>
             <div class="container table-responsive py-5">
+                <!-- Success Notification -->
                 <table class="table table-borderless table-hover">
                     <thead>
                         <tr>
@@ -124,21 +125,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>123@gmail.com</td>
-                            <td>halo123</td>
-                            <td>Yes</td>
-                            <td>
-                                <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#editModal">Edit</button>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal">Delete</button>
-                            </td>
-                        </tr>
-                        <!-- Repeat for other rows -->
+                        @foreach ($users as $user)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>*******</td> <!-- Passwords should never be displayed in plaintext -->
+                                <td>{{ $user->isAdmin ? 'Yes' : 'No' }}</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#editModal{{ $user->id }}">Edit</button>
+                                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal{{ $user->id }}">Delete</button>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
+
 
                 <div class="text-end mt-3">
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New User</button>
@@ -151,82 +154,101 @@
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Add New User</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
+                <form action="{{ route('admin.users.store') }}" method="POST">
+                    @csrf <!-- CSRF token for form security -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addModalLabel">Add New User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
                         <div class="mb-3">
                             <label for="userEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="userEmail">
+                            <input type="email" class="form-control" id="userEmail" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="userPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="userPassword">
+                            <input type="password" class="form-control" id="userPassword" name="password" required>
                         </div>
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="isAdmin">
+                            <input type="checkbox" class="form-check-input" id="isAdmin" name="isAdmin">
                             <label class="form-check-label" for="isAdmin">Is Admin?</label>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save User</button>
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save User</button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
 
-    <!-- Edit User Modal -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editModalLabel">Edit User</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="editUserEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="editUserEmail" value="123@gmail.com">
+
+    @foreach ($users as $user)
+        <!-- Edit User Modal -->
+        <div class="modal fade" id="editModal{{ $user->id }}" tabindex="-1"
+            aria-labelledby="editModalLabel{{ $user->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="{{ route('admin.users.update', $user->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editModalLabel{{ $user->id }}">Edit User</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="mb-3">
-                            <label for="editUserPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="editUserPassword" value="halo123">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="editUserEmail{{ $user->id }}" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="editUserEmail{{ $user->id }}"
+                                       name="email" value="{{ $user->email }}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editUserPassword{{ $user->id }}" class="form-label">Password (leave blank
+                                    to keep current password)</label>
+                                <input type="password" class="form-control" id="editUserPassword{{ $user->id }}"
+                                       name="password">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="editIsAdmin{{ $user->id }}"
+                                       name="isAdmin" {{ $user->isAdmin ? 'checked' : '' }}>
+                                <label class="form-check-label" for="editIsAdmin{{ $user->id }}">Is Admin?</label>
+                            </div>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="editIsAdmin" checked>
-                            <label class="form-check-label" for="editIsAdmin">Is Admin?</label>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save Changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Delete User Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete User</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to delete this user?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-danger">Delete User</button>
                 </div>
             </div>
         </div>
-    </div>
-@endsection
+
+        <!-- Delete User Modal -->
+        <div class="modal fade" id="deleteModal{{ $user->id }}" tabindex="-1"
+            aria-labelledby="deleteModalLabel{{ $user->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel{{ $user->id }}">Delete User</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this user?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Delete User</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    @endsection

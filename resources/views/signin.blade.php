@@ -217,13 +217,15 @@
 
                                 <div class="col-12 col-md-6">
                                     <div class="form">
-                                        <form action="" method="" class="row g-3">
+                                        <form action="{{ route('signin') }}" method="POST" class="row g-3">
+                                            @csrf
                                             <div class="col-12">
-                                                <label for="email" class="form-label" style="font-family: 'LibreBaskerville', serif;">Email</label>
+                                                <label for="email" class="form-label"
+                                                    style="font-family: 'LibreBaskerville', serif;">Email</label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
-                                                    <input type="email" id="email" class="form-control"
-                                                        placeholder="Enter Email">
+                                                    <input type="email" id="email" name="email" class="form-control"
+                                                        placeholder="Enter Email" required>
                                                 </div>
                                             </div>
 
@@ -231,8 +233,8 @@
                                                 <label for="password" class="form-label">Password</label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
-                                                    <input type="password" id="password" class="form-control"
-                                                        placeholder="Enter Password">
+                                                    <input type="password" id="password" name="password"
+                                                        class="form-control" placeholder="Enter Password" required>
                                                 </div>
                                             </div>
 
@@ -240,6 +242,7 @@
                                                 <button type="submit" class="btn btn-danger w-100 mt-3">Sign In</button>
                                             </div>
                                         </form>
+
                                     </div>
                                 </div>
 

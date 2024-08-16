@@ -112,4 +112,8 @@ return [
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
+    // Add custom redirect path for the login route
+    'login_redirect' => '/signin',
+
+
 ];
