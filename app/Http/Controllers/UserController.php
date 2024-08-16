@@ -23,13 +23,14 @@ class UserController extends Controller
             'password' => 'required|min:6',
         ]);
 
-        $validated['password'] = Hash::make($validated['password']);
-        $validated['isAdmin'] = $request->has('isAdmin');
+        $validated['password'] = $request->password; // Store the password in plain text
+        $validated['isAdmin'] = true; // Automatically set new users as admin
 
         User::create($validated);
 
-        return redirect()->route('admin.users.index')->with('success', 'User created successfully');
+        return redirect()->route('admin.users.index')->with('success', 'User created successfully and set as admin by default.');
     }
+
 
 
     public function show($id)
@@ -77,16 +78,27 @@ class UserController extends Controller
 
     // handle user login
 
+
     public function signin(Request $request)
     {
         $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
+        // Find the user by email
+        $user = User::where('email', $credentials['email'])->first();
+
+        // Check if the user exists and the password matches
+        if ($user && $user->password === $credentials['password']) {
+            // Log the user in manually
+            Auth::login($user);
+
             return redirect()->intended(route('admin.dashboard')); // Redirect to the admin dashboard
         }
 
+        // If the credentials don't match, redirect back with an error
         return redirect()->back()->withErrors('Invalid credentials');
     }
+
+
 
     public function logout(Request $request)
     {

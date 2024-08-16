@@ -37,6 +37,10 @@ Route::get('/signin', function () {
     return view('signin');
 })->name('signin');
 
+Route::get('/login', function () {
+    return redirect()->route('signin');
+});
+
 Route::post('/signin', [UserController::class, 'signin'])->name('signin');
 
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
@@ -81,9 +85,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

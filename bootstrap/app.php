@@ -12,9 +12,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // Here you don't need to use register method, just reference your middleware
-        $middleware->alias(['admin', AdminMiddleware::class]);
+        $middleware->alias([
+            'admin' => AdminMiddleware::class, // Use 'admin' as key and class as value
+        ]);
     })
+
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
