@@ -205,18 +205,51 @@
     </div>
 
     <!-- Review Section -->
-    <section class="py-4 mb-2 position-relative" style="overflow: hidden;">
-
-        <div class="container position-relative" style="z-index: 2;">
-            <h1 class="text-center" style="font-weight: bold; color: white;">Apa kata mereka?</h1>
+    <section class="py-4 mb-2"
+        style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color1 }}));">
+        <div class="container">
+            <h1 class="text-center" style="font-weight: bold; color: black;">Apa kata mereka?</h1>
         </div>
-        <div class="container mt-5 position-relative" style="z-index: 2;">
+        <div class="container mt-5">
             <div class="review-wrapper">
                 <div class="review-content">
-                    <!-- Review Cards -->
                     @foreach ($reviews as $review)
                         <div class="card mx-2 d-flex justify-content-around"
-                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(246, 232, 214, 0.7)); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                            <div class="card-body" style="overflow: hidden; flex-grow: 1;">
+                                <p class="card-text text-dark fw-bold"
+                                    style="white-space: normal; word-wrap: break-word;">
+                                    {{ $review->comment }}
+                                </p>
+                            </div>
+                            <div class="card-footer text-end" style="background: none; border-top: none;">
+                                <p class="card-text mb-2 text-dark fst-italic text-muted">
+                                    {{ $review->name }} | <span>{{ $review->email }}</span>
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
+
+                    @foreach ($reviews as $review)
+                        <div class="card mx-2 d-flex justify-content-around"
+                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                            <div class="card-body" style="overflow: hidden; flex-grow: 1;">
+                                <p class="card-text text-dark fw-bold"
+                                    style="white-space: normal; word-wrap: break-word;">
+                                    {{ $review->comment }}
+                                </p>
+                            </div>
+                            <div class="card-footer text-end" style="background: none; border-top: none;">
+                                <p class="card-text mb-2 text-dark fst-italic text-muted">
+                                    {{ $review->name }} | <span>{{ $review->email }}</span>
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
+
+                    @foreach ($reviews as $review)
+                        <div class="card mx-2 d-flex justify-content-around"
+                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
                             <div class="card-body" style="overflow: hidden; flex-grow: 1;">
                                 <p class="card-text text-dark fw-bold"
                                     style="white-space: normal; word-wrap: break-word;">
@@ -235,6 +268,7 @@
         </div>
     </section>
 
+
     <style>
         .review-wrapper {
             position: relative;
@@ -244,7 +278,7 @@
 
         .review-content {
             display: inline-flex;
-            animation: marquee 15s linear infinite;
+            animation: marquee 60s linear infinite;
         }
 
         @keyframes marquee {
@@ -253,7 +287,7 @@
             }
 
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-80%);
             }
         }
 
@@ -264,7 +298,7 @@
 
         @media (max-width: 768px) {
             .review-content {
-                animation-duration: 20s;
+                animation-duration: 30s;
             }
 
             .card {
@@ -275,7 +309,7 @@
 
         @media (min-width: 768px) and (max-width: 1200px) {
             .review-content {
-                animation-duration: 25s;
+                animation-duration: 40s;
             }
 
             .card {
