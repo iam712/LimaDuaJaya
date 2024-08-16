@@ -86,6 +86,7 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+           
         }
 
         .btn-warning {

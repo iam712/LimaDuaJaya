@@ -77,4 +77,5 @@
         font-weight: bold;
         /* Remove border styling if preferred */
     }
+
 </style>

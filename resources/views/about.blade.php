@@ -205,18 +205,18 @@
     </div>
 
     <!-- Review Section -->
-    <section class="py-4 mb-2"
-        style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color1 }}));">
-        <div class="container">
-            <h1 class="text-center" style="font-weight: bold; color: black;">Apa kata mereka?</h1>
+    <section class="py-4 mb-2 position-relative" style="overflow: hidden;">
+
+        <div class="container position-relative" style="z-index: 2;">
+            <h1 class="text-center" style="font-weight: bold; color: white;">Apa kata mereka?</h1>
         </div>
-        <div class="container mt-5">
+        <div class="container mt-5 position-relative" style="z-index: 2;">
             <div class="review-wrapper">
                 <div class="review-content">
                     <!-- Review Cards -->
                     @foreach ($reviews as $review)
                         <div class="card mx-2 d-flex justify-content-around"
-                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(246, 232, 214, 0.7)); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
                             <div class="card-body" style="overflow: hidden; flex-grow: 1;">
                                 <p class="card-text text-dark fw-bold"
                                     style="white-space: normal; word-wrap: break-word;">
@@ -240,11 +240,6 @@
             position: relative;
             overflow: hidden;
             white-space: nowrap;
-        }
-
-        .review-content {
-            display: inline-flex;
-            animation: marquee 15s linear infinite;
         }
 
         .review-content {
@@ -286,154 +281,6 @@
             .card {
                 width: 100%;
                 max-width: 25rem;
-            }
-        }
-
-        .fade-section {
-            opacity: 0;
-            transition: opacity 0.6s ease-out;
-        }
-
-        .fade-section.visible {
-            opacity: 1;
-        }
-
-        .fade-in-left {
-            transform: translateX(-50px);
-            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-        }
-
-        .fade-in-left.visible {
-            transform: translateX(0);
-        }
-
-        .fade-in-right {
-            transform: translateX(50px);
-            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-        }
-
-        .fade-in-right.visible {
-            transform: translateX(0);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .mainbackgroundview {
-            height: 100vh;
-            width: 100vw;
-            position: relative;
-        }
-
-        .d1 {
-            position: absolute;
-            background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-            background-size: 2700px 1500px;
-            height: 30vh;
-            width: 15vw;
-            background-position: 0 50%;
-            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-            animation: dd1 10s infinite, dd12 10s infinite;
-            animation-delay: 4s, 14s;
-        }
-
-        .d2 {
-            position: absolute;
-            background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-            background-size: 2700px 1500px;
-            height: 50vh;
-            width: 25vw;
-            background-position: -10vw 50%;
-            left: 10vw;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
-            animation: dd2 10s 2;
-            animation-delay: 4s;
-        }
-
-        .d3 {
-            position: absolute;
-            background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-            background-size: 2700px 1500px;
-            overflow: hidden;
-            height: 100vh;
-            width: 40vw;
-            left: 25vw;
-            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
-            background-position: -35vw 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 3;
-            animation: dd3 10s 2;
-            animation-delay: 4s;
-        }
-
-        .d4 {
-            position: absolute;
-            overflow: hidden;
-            background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-            background-size: 2700px 1500px;
-            height: 80vh;
-            width: 25vw;
-            left: 60vw;
-            background-position: -70vw 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
-            animation: dd4 10s 2;
-            animation-delay: 4s;
-        }
-
-        @keyframes dd1 {
-
-            0%,
-            100% {
-                width: 15vw;
-            }
-
-            50% {
-                width: 95vw;
-            }
-        }
-
-        @keyframes dd12 {
-
-            0%,
-            100% {
-                background-position: 0 50%;
-            }
-
-            50% {
-                background-position: Calc(0vw - 40px) 50%;
-            }
-        }
-
-        @keyframes dd2 {
-            0% {}
-
-            50% {
-                background-position: Calc(-10vw - 40px) 50%;
-            }
-        }
-
-        @keyframes dd3 {
-            0% {}
-
-            50% {
-                background-position: Calc(-35vw - 40px) 50%;
-            }
-        }
-
-        @keyframes dd4 {
-            0% {}
-
-            50% {
-                background-position: Calc(-70vw - 40px) 50%;
             }
         }
     </style>
