@@ -95,8 +95,8 @@
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2"
             style="background-color: transparent;">
             <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Dashboard</h1>
-            <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class="font-weight-bold"
-                    style="color: rgba({{ $color2 }}, 1);">user123</span>!</p>
+            <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class=""
+                    style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
 
         <section>
@@ -142,7 +142,7 @@
                                     </a>
                                 </h5>
                                 <p class="card-text">Manage user profiles and permissions.</p>
-                                <a href="{{ url('/admin-user') }}" class="btn btn-primary">Go to User Management</a>
+                                <a href="{{ url('/admin/users') }}" class="btn btn-primary">Go to User Management</a>
                             </div>
                         </div>
                     </div>
