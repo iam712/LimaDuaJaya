@@ -40,3 +40,9 @@
 </body>
 
 </html>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>

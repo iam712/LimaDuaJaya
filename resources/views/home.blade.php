@@ -46,11 +46,20 @@
             height: 800px;
             position: relative;
             overflow: hidden;
+            transition: background-position 0.2s ease-out;
         }
 
         .banner h1 {
             font-size: 2.5rem;
         }
+
+        /* Mouse Move Effect on Banner */
+        document.addEventListener('mousemove', (e) => {
+            const banner = document.querySelector('.banner');
+            const moveX = (e.pageX - window.innerWidth / 2) * 0.05;
+            const moveY = (e.pageY - window.innerHeight / 2) * 0.05;
+            banner.style.backgroundPosition = `${50 + moveX}% ${50 + moveY}%`;
+        });
 
         /* Changing Text Animation */
         #changingText {
@@ -105,6 +114,29 @@
 
         path:hover {
             fill: ;
+        }
+
+        /* Scroll Reveal Animation */
+        @keyframes scrollReveal {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Our Services Section */
@@ -231,7 +263,7 @@
         }
 
         .card.custom-card:hover {
-            transform: scale(1.05);
+            transform: scale(1.01) rotate(1deg);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
@@ -1366,6 +1398,19 @@
 
             observer.observe(imageElement);
         });
+
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
     </script>
 
 @endsection
