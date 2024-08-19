@@ -95,10 +95,8 @@ class UserController extends Controller
         }
 
         // If the credentials don't match, redirect back with an error
-        return redirect()->back()->withErrors('Invalid credentials');
+        return redirect()->back()->withErrors(['login_error' => 'Incorrect Username or Password'])->withInput();
     }
-
-
 
     public function logout(Request $request)
     {

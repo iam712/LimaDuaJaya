@@ -217,6 +217,14 @@
 
                                 <div class="col-12 col-md-6">
                                     <div class="form">
+
+                                        <!-- Display error message -->
+                                        @if($errors->has('login_error'))
+                                            <div class="alert alert-danger">
+                                                {{ $errors->first('login_error') }}
+                                            </div>
+                                        @endif
+
                                         <form action="{{ route('signin') }}" method="POST" class="row g-3">
                                             @csrf
                                             <div class="col-12">
@@ -225,7 +233,7 @@
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
                                                     <input type="email" id="email" name="email" class="form-control"
-                                                        placeholder="Enter Email" required>
+                                                        placeholder="Enter Email" value="{{ old('email') }}" required>
                                                 </div>
                                             </div>
 
