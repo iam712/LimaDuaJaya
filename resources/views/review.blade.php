@@ -25,9 +25,6 @@
         <p class="text-center" style="font-family: 'LibreBaskerville', serif; font-style: italic; color: white;">Standar
             yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk
             memberikan pelayanan yang bisa dibanggakan.</p>
-        {{-- <a href="#aboutUsSection" class="btn text-light" --}}
-            {{-- style="background-color: rgb({{ $color2 }}); width: auto; font-family: 'LibreBaskerville', serif;">Read --}}
-            {{-- more</a> --}}
     </div>
 </section>
 
