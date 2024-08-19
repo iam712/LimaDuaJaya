@@ -19,6 +19,7 @@
 @section('title', 'About Us')
 
 @section('content')
+
     <!-- Banner -->
     <section class="banner d-flex align-items-center parallax"
         style="background-image: url('{{ asset('images/banner/imagebg1.jpeg') }}'); background-size: cover; background-position: center; background-attachment: fixed; height: 100vh; position: relative; font-family: 'LibreBaskerville', serif;">
@@ -190,8 +191,8 @@
     </div>
 
     <!-- Review Section -->
-    <section class="py-4 mb-2"
-        style="background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color1 }}));">
+    <section id="aboutUsSection" class="py-5 py-sm-5 fade-section parallax"
+        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: 'LibreBaskerville', serif;">
         <div class="container">
             <h1 class="text-center" style="font-weight: bold; color: black;">Apa kata mereka?</h1>
         </div>
@@ -255,57 +256,58 @@
 @endsection
 
 <style>
+    .review-wrapper {
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 
-.review-wrapper {
-            position: relative;
-            overflow: hidden;
-            white-space: nowrap;
+    .review-content {
+        display: inline-flex;
+        animation: marquee 60s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
         }
 
+        100% {
+            transform: translateX(-80%);
+        }
+    }
+
+    .card {
+        margin: 10px;
+        flex: 1 0 auto;
+    }
+
+    @media (max-width: 768px) {
         .review-content {
-            display: inline-flex;
-            animation: marquee 60s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-80%);
-            }
+            animation-duration: 30s;
         }
 
         .card {
-            margin: 10px;
-            flex: 1 0 auto;
+            width: 90%;
+            max-width: none;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+        .review-content {
+            animation-duration: 40s;
         }
 
-        @media (max-width: 768px) {
-            .review-content {
-                animation-duration: 30s;
-            }
-
-            .card {
-                width: 90%;
-                max-width: none;
-            }
+        .card {
+            width: 100%;
+            max-width: 25rem;
         }
-
-        @media (min-width: 768px) and (max-width: 1200px) {
-            .review-content {
-                animation-duration: 40s;
-            }
-
-            .card {
-                width: 100%;
-                max-width: 25rem;
-            }
-        }
+    }
 
     .parallax {
         background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
     }
 
     .fade-section {
