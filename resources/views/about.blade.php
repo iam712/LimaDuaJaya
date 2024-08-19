@@ -2,7 +2,6 @@
 
 {{-- Color library --}}
 @php
-
     $color1 = '255, 255, 255'; // #ffffff
     $color2 = '0, 0, 0'; // #000000
     $color3 = '125, 20, 19'; //#7d141d
@@ -21,12 +20,11 @@
 
 @section('content')
     <!-- Banner -->
-    <section class="banner d-flex align-items-center"
-        style="background-image: url('{{ asset('images/banner/imagebg1.jpeg') }}'); background-size: cover; background-position: center; height: 100vh; position: relative; font-family: 'LibreBaskerville', serif;">
+    <section class="banner d-flex align-items-center parallax"
+        style="background-image: url('{{ asset('images/banner/imagebg1.jpeg') }}'); background-size: cover; background-position: center; background-attachment: fixed; height: 100vh; position: relative; font-family: 'LibreBaskerville', serif;">
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
             style="background-color: rgba({{ $color4 }}, 0.8); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: 0 0 10px; display: inline-block;">
-            <h2 class="text-center text-light fw-bold">PT. Lima
-                Dua Jaya</h2>
+            <h2 class="text-center text-light fw-bold">PT. Lima Dua Jaya</h2>
             <br>
             <p class="text-center text-light fst-italic">Standar
                 yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk memberikan pelayanan yang bisa
@@ -41,13 +39,13 @@
     </div>
 
     <!-- About Us -->
-    <section id="aboutUsSection" class="py-5 py-sm-5 fade-section"
-        style="background: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; font-family: 'LibreBaskerville', serif;">
+    <section id="aboutUsSection" class="py-5 py-sm-5 fade-section parallax"
+        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: 'LibreBaskerville', serif;">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
                     <div class="ms-md-2 ms-lg-5">
-                        <span class="text-darkf fst-italic">Our
+                        <span class="text-dark fst-italic">Our
                             Story</span>
                         <h2 class="display-5 fw-bold text-dark">About Us</h2>
                         <p class="lead">PT LIMA DUA JAYA
@@ -73,11 +71,11 @@
         <div style="width: 70%; height: 1px; background-color: rgb({{ $color3 }});"></div>
     </div>
 
-    <div
-        style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }})); font-family: 'LibreBaskerville', serif;">
+    <div class="parallax"
+        style="background-image: url('{{ asset('images/banner/imagebg2.jpeg') }}'); background-attachment: fixed; background-size: cover; background-position: center; font-family: 'LibreBaskerville', serif;">
         <!-- Visi dan Misi -->
         <section id="visiMisiSection" class="py-5 fade-section fade-in-left position-relative"
-            style="overflow: hidden; background-color: rgb({{ $color1 }});">
+            style="overflow: hidden; background-color: rgba({{ $color1 }}, 0.9);">
             <div id="bg-wrap" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;">
                 <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                     <defs>
@@ -151,7 +149,7 @@
                             <p class="text-light">Menjadi mitra
                                 periklanan terdepan di Indonesia yang dikenal karena keunggulan
                                 dalam memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas
-                                Utama dan Kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
+                                utama dan kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
                                 kepercayaan klien melalui prinsip-prinsip yang jelas dan konsisten serta terus berinovasi
                                 untuk memenuhi dan melampaui harapan klien, menghadirkan solusi kreatif yang efektif dalam
                                 setiap kampanye periklanan.
@@ -172,7 +170,7 @@
                                 </span>Menjunjung Tinggi Integeritas Pekerjaan.</p>
                             <p class="text-light"><span>3.
                                 </span>Berinovasi untuk Memenuhi Kebutuhan Klien.</p>
-                            <p class="text-light"><span>3.
+                            <p class="text-light"><span>4.
                                 </span>Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.
                             </p>
                         </div>
@@ -186,19 +184,6 @@
             </div>
         </section>
     </div>
-
-    <div class="d-flex justify-content-center my-4">
-        <div style="width: 70%; height: 1px; background-color: rgb({{ $color3 }});"></div>
-    </div>
-
-    {{-- Complex Background View --}}
-    <div class="mainbackgroundview">
-        <div class="d1"></div>
-        <div class="d2"></div>
-        <div class="d3"></div>
-        <div class="d4"></div>
-    </div>
-    {{-- End of Complex Background View --}}
 
     <div class="d-flex justify-content-center my-4">
         <div style="width: 70%; height: 1px; background-color: rgb({{ $color3 }});"></div>
@@ -267,10 +252,11 @@
             </div>
         </div>
     </section>
+@endsection
 
+<style>
 
-    <style>
-        .review-wrapper {
+.review-wrapper {
             position: relative;
             overflow: hidden;
             white-space: nowrap;
@@ -317,26 +303,58 @@
                 max-width: 25rem;
             }
         }
-    </style>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.fade-section');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    } else {
-                        entry.target.classList.remove('visible');
-                    }
-                });
-            }, {
-                threshold: 0.1 // Adjust as needed
-            });
+    .parallax {
+        background-attachment: fixed;
+    }
 
-            sections.forEach(section => {
-                observer.observe(section);
+    .fade-section {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .fade-section.visible {
+        opacity: 1;
+    }
+
+    /* Additional styles */
+    .card {
+        margin: 10px;
+        flex: 1 0 auto;
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            width: 90%;
+            max-width: none;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+        .card {
+            width: 100%;
+            max-width: 25rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.fade-section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
             });
+        }, {
+            threshold: 0.1
         });
-    </script>
-@endsection
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
