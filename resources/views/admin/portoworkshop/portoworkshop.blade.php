@@ -163,7 +163,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="workshopName" class="form-label">Workshop Name</label>
-                            <input type="text" class="form-control" id="workshopName">
+                            <select class="form-control" id="workshopName">
+                                <option value="" disabled selected>Select a workshop</option>
+                                <option value="workshop1">Workshop 1</option>
+                                <option value="workshop2">Workshop 2</option>
+                                <option value="workshop3">Workshop 3</option>
+                                <!-- Add more options as needed -->
+                            </select>
                         </div>
                     </form>
                 </div>
@@ -191,7 +197,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="editWorkshopName" class="form-label">Workshop Name</label>
-                            <input type="text" class="form-control" id="editWorkshopName" value="Workshop Name">
+                            <select class="form-control" id="editWorkshopName">
+                                <option value="" disabled selected>Select a workshop</option>
+                                <option value="workshop1">Workshop 1</option>
+                                <option value="workshop2">Workshop 2</option>
+                                <option value="workshop3">Workshop 3</option>
+                                <!-- Add more options as needed -->
+                            </select>
                         </div>
                     </form>
                 </div>

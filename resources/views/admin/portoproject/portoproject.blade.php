@@ -163,7 +163,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="projectName" class="form-label">Project Name</label>
-                            <input type="text" class="form-control" id="projectName">
+                            <select class="form-control" id="projectName">
+                                <option value="" disabled selected>Select a project</option>
+                                <option value="project1">Project 1</option>
+                                <option value="project2">Project 2</option>
+                                <option value="project3">Project 3</option>
+                                <!-- Add more options as needed -->
+                            </select>
                         </div>
                     </form>
                 </div>
@@ -191,7 +197,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="editProjectName" class="form-label">Project Name</label>
-                            <input type="text" class="form-control" id="editProjectName" value="Project Name">
+                            <select class="form-control" id="editProjectName">
+                                <option value="" disabled selected>Select a project</option>
+                                <option value="project1">Project 1</option>
+                                <option value="project2">Project 2</option>
+                                <option value="project3">Project 3</option>
+                                <!-- Add more options as needed -->
+                            </select>
                         </div>
                     </form>
                 </div>
