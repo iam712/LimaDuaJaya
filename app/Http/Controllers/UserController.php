@@ -13,7 +13,7 @@ class UserController extends Controller
     {
         // Fetch and list all users
         $users = User::all();
-        return view('admin.user.index', compact('users'));
+        return view('admin.user.user', compact('users'));
     }
 
     public function store(Request $request)

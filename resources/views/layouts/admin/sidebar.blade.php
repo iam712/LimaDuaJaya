@@ -20,7 +20,7 @@
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <!-- Correctly linked Manage User -->
-                <a class="nav-link {{ request()->is('admin/users*') ? 'active' : '' }}"
+                <a class="nav-link {{ request()->is('admin/users') ? 'active' : '' }}"
                     href="{{ route('admin.users.index') }}">
                     <i class="fas fa-users"></i> Manage User
                 </a>
