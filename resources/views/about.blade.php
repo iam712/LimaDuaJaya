@@ -82,23 +82,23 @@
                     <defs>
                         <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
                             <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate>
-                            <stop offset="0%" stop-color="rgba({{ $color3 }}, 1)"></stop>
+                            <stop offset="30%" stop-color="rgba({{ $color3 }}, 1)"></stop>
                             <stop offset="100%" stop-color="rgba({{ $color3 }}, 0)"></stop>
                         </radialGradient>
                         <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
                             <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
-                            <stop offset="0%" stop-color="rgba({{ $color4 }}, 1)"></stop>
+                            <stop offset="30%" stop-color="rgba({{ $color4 }}, 1)"></stop>
                             <stop offset="100%" stop-color="rgba({{ $color4 }}, 0)"></stop>
                         </radialGradient>
                         <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
                             <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
-                            <stop offset="0%" stop-color="rgba({{ $color5 }}, 1)"></stop>
-                            <stop offset="100%" stop-color="rgba({{ $color5 }}, 0)"></stop>
+                            <stop offset="30%" stop-color="rgba({{ $color4 }}, 1)"></stop>
+                            <stop offset="100%" stop-color="rgba({{ $color4 }}, 0)"></stop>
                         </radialGradient>
                         <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5">
                             <animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate>
-                            <stop offset="0%" stop-color="rgba({{ $color6 }}, 1)"></stop>
-                            <stop offset="100%" stop-color="rgba({{ $color6 }}, 0)"></stop>
+                            <stop offset="30%" stop-color="rgba({{ $color3 }}, 1)"></stop>
+                            <stop offset="100%" stop-color="rgba({{ $color3 }}, 0)"></stop>
                         </radialGradient>
                     </defs>
                     <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)"
