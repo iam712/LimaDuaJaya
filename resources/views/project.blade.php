@@ -28,7 +28,43 @@
             transform: scale(1.05);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
+
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fade-section {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+        }
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.fade-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 
     <!-- Project Lima Dua Jaya Surabaya -->
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5"
