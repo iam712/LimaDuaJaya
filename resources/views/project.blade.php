@@ -67,9 +67,9 @@
     </script>
 
     <!-- Project Lima Dua Jaya Surabaya -->
-    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5"
+    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5 parallax"
         style="
-    background-image: url('{{ asset('images/banner/aboutusbg3.png') }}');
+    background-image: url('{{ asset('images/banner/aboutusbg1.png') }}');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
