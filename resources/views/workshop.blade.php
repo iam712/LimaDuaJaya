@@ -26,6 +26,33 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .review-form-container {
+            position: relative;
+            border-radius: 10px;
+            padding: 30px;
+            overflow: hidden;
+        }
+
+        .review-form-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8; /* Transparansi 80% */
+            z-index: 1;
+        }
+
+        .review-form-container .row {
+            position: relative;
+            z-index: 2;
+            opacity: 1;
+        }
     </style>
 
     <!-- Workshop Lima Dua Jaya -->
@@ -156,13 +183,7 @@
 
     <!-- Review Form -->
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1" style="font-family: 'LibreBaskerville', serif;" id="workshopPartnershipProgram">
-        <div class="container"
-            style="
-                background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
-                border-radius: 10px;
-                padding: 30px;
-                opacity: 0.80;
-            ">
+        <div class="container review-form-container">
             <div class="row" style="opacity: 1;">
                 <div class="col-12 col-lg-7 mb-4 mb-lg-0">
                     <h2 class="fw-bold mb-4">Workshop Partnership Program</h2>
