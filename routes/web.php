@@ -5,8 +5,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/toggle-language', [App\Http\Controllers\LanguageController::class, 'toggleLanguage'])->name('toggle.language');
-
 Route::get('/', function () {
     return view('home');
 });
