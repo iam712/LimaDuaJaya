@@ -161,12 +161,13 @@
                 background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
                 border-radius: 10px;
                 padding: 30px;
+                opacity: 0.80;
             ">
-            <div class="row">
+            <div class="row" style="opacity: 1;">
                 <div class="col-12 col-lg-7 mb-4 mb-lg-0">
                     <h2 class="fw-bold mb-4">Workshop Partnership Program</h2>
-                    <h5 class="fw-bold">Requirements :</h5>
-                    <ul class="list-unstyled">
+                    <h5 class="fw-bold fs-3">Requirements :</h5>
+                    <ul class="list-unstyled fs-4">
                         <li>1. Memiliki Workshop Lokal</li>
                         <li>2. Lampirkan KTP & NPWP (jika ada)</li>
                         <li>3. Bersedia menandatangani surat kerja sama</li>
