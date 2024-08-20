@@ -44,7 +44,8 @@
             background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
             background-size: cover;
             background-position: center;
-            opacity: 0.8; /* Transparansi 80% */
+            opacity: 0.9;
+            /* Transparansi 80% */
             z-index: 1;
         }
 
@@ -56,9 +57,9 @@
     </style>
 
     <!-- Workshop Lima Dua Jaya -->
-    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5"
+    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5 parallax"
         style="
-            background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
+            background-image: url('{{ asset('images/banner/aboutusbg2.png') }}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -69,7 +70,7 @@
             padding-bottom: 20px;
             font-family: 'LibreBaskerville', serif;
         ">
-        <div class="container">
+        <div class="container fade-section">
             <h3 class="text-start mt-5 mt-md-3 mt-lg-3 text-light text text-lg">
                 Workshop Lima Dua Jaya
             </h3>
@@ -182,8 +183,21 @@
     </section>
 
     <!-- Review Form -->
-    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1" style="font-family: 'LibreBaskerville', serif;" id="workshopPartnershipProgram">
-        <div class="container review-form-container">
+    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1 parallax"
+        style="
+            background-image: url('{{ asset('images/banner/aboutusbg1.png') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: 'LibreBaskerville', serif;
+        "
+        id="workshopPartnershipProgram">
+        <div class="container review-form-container fade-section">
             <div class="row" style="opacity: 1;">
                 <div class="col-12 col-lg-7 mb-4 mb-lg-0">
                     <h2 class="fw-bold mb-4">Workshop Partnership Program</h2>
@@ -229,6 +243,22 @@
             </div>
         </div>
     </section>
+    <style>
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fade-section {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+        }
+    </style>
     <script>
         function sendEmail() {
             // get form values
@@ -247,5 +277,23 @@
             // open the email client
             window.location.href = mailtoLink;
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.fade-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
     </script>
 @endsection

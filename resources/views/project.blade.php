@@ -13,32 +13,47 @@
     // style="color: rgb({{ $color0 }});"
     // style="background-color: rgb({{ $color1 }});"
     // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
+
 @endphp
 
 @section('title', 'Project')
 
 @section('content')
-<style>
-    .card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    <style>
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    }
-</style>
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 
     <!-- Project Lima Dua Jaya Surabaya -->
-    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5" style="font-family: 'LibreBaskerville', serif;">
+    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5"
+        style="
+    background-image: url('{{ asset('images/banner/aboutusbg3.png') }}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'LibreBaskerville', serif;
+">
         <h1 class="text-center mt-5 mt-md-3 mt-lg-3 fw-bold">Our Latest Projects</h1>
         <div class="container">
             <h3 class="text-start mt-2 mt-md-3 mt-lg-3">1</h3>
             <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)
                     <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card h-100" style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top" alt="Image {{ $index }}">
+                        <div class="card h-100"
+                            style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
+                                alt="Image {{ $index }}">
                         </div>
                     </div>
                 @endforeach
@@ -47,8 +62,10 @@
             <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)
                     <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card h-100" style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top" alt="Image {{ $index }}">
+                        <div class="card h-100"
+                            style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
+                                alt="Image {{ $index }}">
                         </div>
                     </div>
                 @endforeach
@@ -57,8 +74,10 @@
             <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)
                     <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card h-100" style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top" alt="Image {{ $index }}">
+                        <div class="card h-100"
+                            style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
+                                alt="Image {{ $index }}">
                         </div>
                     </div>
                 @endforeach
@@ -67,8 +86,10 @@
             <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)
                     <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card h-100" style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top" alt="Image {{ $index }}">
+                        <div class="card h-100"
+                            style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
+                                alt="Image {{ $index }}">
                         </div>
                     </div>
                 @endforeach
