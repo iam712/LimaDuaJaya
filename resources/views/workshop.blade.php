@@ -167,18 +167,11 @@
                     <h2 class="fw-bold mb-4">Workshop Partnership Program</h2>
                     <h5 class="fw-bold">Requirements :</h5>
                     <ul class="list-unstyled">
-                        <li>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</li>
-                        <li>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</li>
-                        <li>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</li>
-                        <li>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</li>
-                        <li>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</li>
-                        <li>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</li>
+                        <li>1. Memiliki Workshop Lokal</li>
+                        <li>2. Lampirkan KTP & NPWP (jika ada)</li>
+                        <li>3. Bersedia menandatangani surat kerja sama</li>
+                        <li>4. Melampirkan jumlah pekerja.</li>
+                        <li>5. Lampirkan hasil contoh perngerjaan/ portofolio.</li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-5">
