@@ -589,7 +589,7 @@
     </section>
 
     <!-- Our Services -->
-    <section id="ourServicesSection" class="our-services mt-3 mt-sm-3"
+    <section id="ourServicesSection" class="our-services mt-3 mt-sm-3 parallax"
         style="
         background-image: url('{{ asset('images/banner/backgroundbanner6.png') }}');
         background-size: cover;
@@ -602,11 +602,11 @@
         padding-bottom: 20px;
 ">
         <div class="container">
-            <h2 class="text-center mb-3 mb-sm-3 py-3"
+            <h2 class="text-center mb-3 mb-sm-3 py-3 fade-section"
                 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white">
                 Our Services
             </h2>
-            <div class="row d-flex justify-content-center text-center mt-2">
+            <div class="row d-flex justify-content-center text-center mt-2 fade-section">
                 <!-- Service Cards -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
@@ -827,7 +827,7 @@
         <br>
 
         <!-- Horizontal Line -->
-        <hr style="border: 2px solid #ffdedf; margin: 35px 0; ">
+        <hr style="border: 2px solid #ffdedf; margin: 35px 0; fade-section">
         <br>
 
         {{-- Test Code --}}
@@ -958,10 +958,10 @@
         </div> --}}
 
         {{-- Our Advantages --}}
-        <div class="container" id="ourAdvantagesSection">
-            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
+        <div class="container fade-section" id="ourAdvantagesSection">
+            <h2 class="text-center fade-section" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
                 Advantages</h2>
-            <div class="row mt-4 d-flex justify-content-center">
+            <div class="row mt-4 d-flex justify-content-center fade-section">
                 <div class="col-6 col-md-4 col-lg-3 text-center">
                     <div class="advantage-box">
                         <img src="{{ asset('images/LOGO.png') }}" alt="Tailored Solution" class="img-fluid mb-3">
@@ -1037,8 +1037,19 @@
     </section>
 
     <!-- Location Map -->
-    <section id="locationMapSection" class="location-map py-4 py-sm-4">
-        <div class="container">
+    <section id="locationMapSection" class="location-map py-4 py-sm-4 parallax"
+        style="
+        background-image: url('{{ asset('images/banner/backgroundbanner6.png') }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+        padding-top: 20px;
+        padding-bottom: 20px;
+">
+        <div class="container fade-section">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Location</h2>
             <div class="row justify-content-center">
