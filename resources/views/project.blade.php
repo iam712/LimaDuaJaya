@@ -80,8 +80,8 @@
     padding-bottom: 20px;
     font-family: 'LibreBaskerville', serif;
 ">
-        <h1 class="text-center mt-5 mt-md-3 mt-lg-3 fw-bold">Our Latest Projects</h1>
-        <div class="container">
+        <h1 class="text-center mt-5 mt-md-3 mt-lg-3 fw-bold fade-section">Our Latest Projects</h1>
+        <div class="container fade-section">
             <h3 class="text-start mt-2 mt-md-3 mt-lg-3">1</h3>
             <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @foreach (range(1, 4) as $index)

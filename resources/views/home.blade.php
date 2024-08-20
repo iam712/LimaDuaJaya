@@ -54,12 +54,21 @@
         }
 
         /* Mouse Move Effect on Banner */
-        document.addEventListener('mousemove', (e) => {
-            const banner = document.querySelector('.banner');
-            const moveX = (e.pageX - window.innerWidth / 2) * 0.05;
-            const moveY = (e.pageY - window.innerHeight / 2) * 0.05;
-            banner.style.backgroundPosition = `${50 + moveX}% ${50 + moveY}%`;
-        });
+        document.addEventListener('mousemove', (e)=> {
+                const banner=document.querySelector('.banner');
+                const moveX=(e.pageX - window.innerWidth / 2) * 0.05;
+                const moveY=(e.pageY - window.innerHeight / 2) * 0.05;
+
+                banner.style.backgroundPosition=`$ {
+                    50 + moveX
+                }
+
+                % $ {
+                    50 + moveY
+                }
+
+                %`;
+            });
 
         /* Changing Text Animation */
         #changingText {
@@ -122,6 +131,7 @@
                 transform: translateY(20px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateY(0);
                 opacity: 1;
@@ -466,6 +476,21 @@
             overflow: hidden;
             height: 100vh;
         }
+
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fade-section {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+        }
     </style>
 
     <!-- Fixed Menu Bar -->
@@ -495,7 +520,7 @@
 
     <!-- Banner -->
     <section id="bannerSection" class="banner d-flex align-items-center">
-        <div class="container">
+        <div class="container fade-section">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center d-md-none">
                     <div class="wrapper">
@@ -1020,8 +1045,8 @@
                 <div class="col-md-8">
                     <iframe id="locationMap"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831.9045290247577!2d112.67742386941619!3d-7.328366686111562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fd3243363f3b%3A0x4affd245467bd83b!2sKarya%20Satria%20Surabaya!5e0!3m2!1sid!2sid!4v1723000605673!5m2!1sid!2sid"
-                        width="100%" height="450" style="border:0; transition: transform 0.3s ease;" allowfullscreen=""
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        width="100%" height="450" style="border:0; transition: transform 0.3s ease;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -1408,9 +1433,30 @@
                     revealObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
+        }, {
+            threshold: 0.1
+        });
 
         revealElements.forEach(el => revealObserver.observe(el));
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.fade-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
     </script>
 
 @endsection
