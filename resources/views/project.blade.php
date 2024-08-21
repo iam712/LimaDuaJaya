@@ -65,18 +65,24 @@
         style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover;">
         <h1 class="text-center mt-5 mt-md-3 mt-lg-3 fw-bold fade-section">Our Latest Projects</h1>
         <div class="container fade-section">
-            @foreach ($projects as $project)
-                <h3 class="text-start mt-2 mt-md-3 mt-lg-3">{{ $project->name }}</h3>
-                <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
-                    @foreach ($project->portfolioProjects as $portfolio)
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="card h-100" style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                                <img src="{{ asset('storage/' . $portfolio->image) }}" class="card-img-top" alt="{{ $project->name }}">
+            @if ($projects->isEmpty())
+                <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
+            @else
+                @foreach ($projects as $project)
+                    <h3 class="text-start mt-2 mt-md-3 mt-lg-3">{{ $project->name }}</h3>
+                    <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
+                        @foreach ($project->portfolioProjects as $portfolio)
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="card h-100"
+                                    style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+                                    <img src="{{ asset('storage/' . $portfolio->image) }}" class="card-img-top"
+                                        alt="{{ $project->name }}">
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
-                </div>
-            @endforeach
+                        @endforeach
+                    </div>
+                @endforeach
+            @endif
         </div>
     </section>
 @endsection

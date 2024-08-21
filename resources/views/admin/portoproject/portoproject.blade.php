@@ -127,8 +127,6 @@
                         @foreach ($portfolioProjects as $portfolioProject)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                              
-
                                 <td><img src="{{ asset('storage/' . $portfolioProject->image) }}" alt="Portfolio Image" style="width: 100px;"></td>
                                 <td>{{ $portfolioProject->project_id }}</td>
                                 <td>{{ $portfolioProject->projectLimaduajayaSurabaya->name }}</td>

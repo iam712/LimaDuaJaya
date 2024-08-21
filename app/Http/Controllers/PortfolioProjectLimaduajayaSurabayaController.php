@@ -22,7 +22,7 @@ class PortfolioProjectLimaduajayaSurabayaController extends Controller
     }
 
     // Store a newly created portfolio project (Admin Create)
-    
+
     public function store(Request $request)
     {
         // Validate the incoming request
@@ -55,6 +55,8 @@ class PortfolioProjectLimaduajayaSurabayaController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'project_id' => 'required|exists:projectlimaduajayasurabayas,id', // Use 'project_id'
         ]);
+
+        //dd($request->all());
 
         // Check if a new image has been uploaded
         if ($request->hasFile('image')) {
