@@ -196,62 +196,66 @@
         <div class="container">
             <h1 class="text-center" style="font-weight: bold; color: black;">Apa kata mereka?</h1>
         </div>
-        <div class="container mt-5">
-            <div class="review-wrapper">
-                <div class="review-content">
-                    @foreach ($reviews as $review)
-                        <div class="card mx-2 d-flex justify-content-around"
-                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
-                            <div class="card-body" style="overflow: hidden; flex-grow: 1;">
-                                <p class="card-text text-dark fw-bold"
-                                    style="white-space: normal; word-wrap: break-word;">
-                                    {{ $review->comment }}
-                                </p>
+        @if ($reviews->isEmpty())
+            <h5 class="text-lg text-dark p-5 text-center">No reviews available at the moment</h5>
+        @else
+            <div class="container mt-5">
+                <div class="review-wrapper">
+                    <div class="review-content">
+                        @foreach ($reviews as $review)
+                            <div class="card mx-2 d-flex justify-content-around"
+                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                                <div class="card-body" style="overflow: hidden; flex-grow: 1;">
+                                    <p class="card-text text-dark fw-bold"
+                                        style="white-space: normal; word-wrap: break-word;">
+                                        {{ $review->comment }}
+                                    </p>
+                                </div>
+                                <div class="card-footer text-end" style="background: none; border-top: none;">
+                                    <p class="card-text mb-2 text-dark fst-italic text-muted">
+                                        {{ $review->name }} | <span>{{ $review->email }}</span>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="card-footer text-end" style="background: none; border-top: none;">
-                                <p class="card-text mb-2 text-dark fst-italic text-muted">
-                                    {{ $review->name }} | <span>{{ $review->email }}</span>
-                                </p>
-                            </div>
-                        </div>
-                    @endforeach
+                        @endforeach
 
-                    @foreach ($reviews as $review)
-                        <div class="card mx-2 d-flex justify-content-around"
-                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
-                            <div class="card-body" style="overflow: hidden; flex-grow: 1;">
-                                <p class="card-text text-dark fw-bold"
-                                    style="white-space: normal; word-wrap: break-word;">
-                                    {{ $review->comment }}
-                                </p>
+                        @foreach ($reviews as $review)
+                            <div class="card mx-2 d-flex justify-content-around"
+                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                                <div class="card-body" style="overflow: hidden; flex-grow: 1;">
+                                    <p class="card-text text-dark fw-bold"
+                                        style="white-space: normal; word-wrap: break-word;">
+                                        {{ $review->comment }}
+                                    </p>
+                                </div>
+                                <div class="card-footer text-end" style="background: none; border-top: none;">
+                                    <p class="card-text mb-2 text-dark fst-italic text-muted">
+                                        {{ $review->name }} | <span>{{ $review->email }}</span>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="card-footer text-end" style="background: none; border-top: none;">
-                                <p class="card-text mb-2 text-dark fst-italic text-muted">
-                                    {{ $review->name }} | <span>{{ $review->email }}</span>
-                                </p>
-                            </div>
-                        </div>
-                    @endforeach
+                        @endforeach
 
-                    @foreach ($reviews as $review)
-                        <div class="card mx-2 d-flex justify-content-around"
-                            style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
-                            <div class="card-body" style="overflow: hidden; flex-grow: 1;">
-                                <p class="card-text text-dark fw-bold"
-                                    style="white-space: normal; word-wrap: break-word;">
-                                    {{ $review->comment }}
-                                </p>
+                        @foreach ($reviews as $review)
+                            <div class="card mx-2 d-flex justify-content-around"
+                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                                <div class="card-body" style="overflow: hidden; flex-grow: 1;">
+                                    <p class="card-text text-dark fw-bold"
+                                        style="white-space: normal; word-wrap: break-word;">
+                                        {{ $review->comment }}
+                                    </p>
+                                </div>
+                                <div class="card-footer text-end" style="background: none; border-top: none;">
+                                    <p class="card-text mb-2 text-dark fst-italic text-muted">
+                                        {{ $review->name }} | <span>{{ $review->email }}</span>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="card-footer text-end" style="background: none; border-top: none;">
-                                <p class="card-text mb-2 text-dark fst-italic text-muted">
-                                    {{ $review->name }} | <span>{{ $review->email }}</span>
-                                </p>
-                            </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
-        </div>
+        @endif
     </section>
 @endsection
 
