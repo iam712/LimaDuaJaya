@@ -66,7 +66,7 @@
         <h1 class="text-center mt-5 mt-md-3 mt-lg-3 fw-bold fade-section">Our Latest Projects</h1>
         <div class="container fade-section">
             @foreach ($projects as $project)
-                <h3 class="text-start mt-2 mt-md-3 mt-lg-3">{{ $loop->iteration }} - {{ $project->name }}</h3>
+                <h3 class="text-start mt-2 mt-md-3 mt-lg-3">{{ $project->name }}</h3>
                 <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                     @foreach ($project->portfolioProjects as $portfolio)
                         <div class="col-6 col-md-4 col-lg-3">
