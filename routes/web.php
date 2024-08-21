@@ -2,9 +2,12 @@
 
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProjectLimaduajayaSurabayaController;
+use App\Http\Controllers\PortfolioProjectLimaduajayaSurabayaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+// Routes for User-Facing Pages
 Route::get('/', function () {
     return view('home');
 });
@@ -19,20 +22,16 @@ Route::get('/detail', function () {
     return view('detail');
 });
 
-Route::get('/project', function () {
-    return view('project');
-});
+// User-facing route for viewing projects and their portfolios
+Route::get('/projects', [ProjectLimaduajayaSurabayaController::class, 'indexForUser'])->name('projects.index');
 
-// user review
-
+// User review routes
 Route::get('/review', function () {
     return view('review');
 });
-
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
-// auth system
-
+// Authentication Routes
 Route::get('/signin', function () {
     return view('signin');
 })->name('signin');
@@ -42,10 +41,9 @@ Route::get('/login', function () {
 });
 
 Route::post('/signin', [UserController::class, 'signin'])->name('signin');
-
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
-
+// Admin Routes
 Route::middleware(['auth', 'admin'])->group(function () {
     // Admin Dashboard
     Route::get('/admin', function () {
@@ -61,19 +59,16 @@ Route::middleware(['auth', 'admin'])->group(function () {
         return view('admin.workshop.workshop');
     });
 
-    // Admin Project
-    Route::get('/admin-project', function () {
-        return view('admin.project.project');
-    });
-
-    // Admin Portfolio
-    Route::get('/admin-portoproject', function () {
-        return view('admin.portoproject.portoproject');
-    });
-
+    // Admin Portfolio Workshop
     Route::get('/admin-portoworkshop', function () {
         return view('admin.portoworkshop.portoworkshop');
     });
+
+    // Project CRUD routes
+    Route::resource('/admin/projects', ProjectLimaduajayaSurabayaController::class);
+
+    // Portfolio CRUD routes
+    Route::resource('/admin/portfolio_projects', PortfolioProjectLimaduajayaSurabayaController::class);
 
     // User CRUD Routes
     Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users.index');
@@ -82,9 +77,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/users/{id}/edit', [UserController::class, 'edit'])->name('admin.users.edit');
     Route::put('/admin/users/{id}', [UserController::class, 'update'])->name('admin.users.update');
     Route::delete('/admin/users/{id}', [UserController::class, 'destroy'])->name('admin.users.destroy');
-
 });
 
+// Optional: Uncomment these routes if needed
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');

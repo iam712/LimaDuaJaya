@@ -122,15 +122,16 @@
                         <div class="card border-light shadow-sm h-100">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="{{ url('/admin-project') }}" class="text-decoration-none">
+                                    <a href="{{ route('projects.index') }}" class="text-decoration-none">
                                         Project
                                     </a>
                                 </h5>
                                 <p class="card-text">View and manage all project submissions and statuses.</p>
-                                <a href="{{ url('/admin-project') }}" class="btn btn-primary">Go to Project</a>
+                                <a href="{{ route('projects.index') }}" class="btn btn-primary">Go to Project</a>
                             </div>
                         </div>
                     </div>
+
 
                     <!-- Card 3: User -->
                     <div class="col-12 col-md-6 col-lg-6 mb-4">

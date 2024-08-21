@@ -8,12 +8,6 @@
     $color4 = '238, 63, 72'; //#EE3F48
     $color5 = '255, 222, 223'; //#ffdedf
     $color6 = '246, 232, 214'; //#F6E8D6
-
-    // Command to use rgb color
-    // style="color: rgb({{ $color0 }});"
-    // style="background-color: rgb({{ $color1 }});"
-    // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
-
 @endphp
 
 @section('title', 'Project')
@@ -68,68 +62,21 @@
 
     <!-- Project Lima Dua Jaya Surabaya -->
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5 parallax"
-        style="
-    background-image: url('{{ asset('images/banner/aboutusbg1.png') }}');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-family: 'LibreBaskerville', serif;
-">
+        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover;">
         <h1 class="text-center mt-5 mt-md-3 mt-lg-3 fw-bold fade-section">Our Latest Projects</h1>
         <div class="container fade-section">
-            <h3 class="text-start mt-2 mt-md-3 mt-lg-3">1</h3>
-            <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
-                @foreach (range(1, 4) as $index)
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card h-100"
-                            style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
-                                alt="Image {{ $index }}">
+            @foreach ($projects as $project)
+                <h3 class="text-start mt-2 mt-md-3 mt-lg-3">{{ $loop->iteration }} - {{ $project->name }}</h3>
+                <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
+                    @foreach ($project->portfolioProjects as $portfolio)
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="card h-100" style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+                                <img src="{{ asset('storage/' . $portfolio->image) }}" class="card-img-top" alt="{{ $project->name }}">
+                            </div>
                         </div>
-                    </div>
-                @endforeach
-            </div>
-            <h3 class="text-start mt-4 mt-md-5 mt-lg-5">2</h3>
-            <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
-                @foreach (range(1, 4) as $index)
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card h-100"
-                            style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
-                                alt="Image {{ $index }}">
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            <h3 class="text-start mt-4 mt-md-5 mt-lg-5">3</h3>
-            <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
-                @foreach (range(1, 4) as $index)
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card h-100"
-                            style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
-                                alt="Image {{ $index }}">
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            <h3 class="text-start mt-4 mt-md-5 mt-lg-5">4</h3>
-            <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
-                @foreach (range(1, 4) as $index)
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card h-100"
-                            style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
-                                alt="Image {{ $index }}">
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+                    @endforeach
+                </div>
+            @endforeach
         </div>
     </section>
 @endsection

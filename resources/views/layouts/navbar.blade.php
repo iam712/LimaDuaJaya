@@ -18,7 +18,7 @@
                     <a class="nav-link {{ request()->is('workshop') ? 'active' : '' }}" href="/workshop">Workshop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('project') ? 'active' : '' }}" href="/project">Project</a>
+                    <a class="nav-link {{ request()->routeIs('projects') ? 'active' : '' }}" href="/projects">Project</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="/aboutus">About Us</a>

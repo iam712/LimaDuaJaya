@@ -14,7 +14,7 @@
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
-                <a class="nav-link {{ request()->is('admin-project') ? 'active' : '' }}" href="/admin-project">
+                <a class="nav-link {{ request()->routeIs('projects.index') ? 'active' : '' }}" href="{{ route('projects.index') }}">
                     <i class="fas fa-project-diagram"></i> Manage Project
                 </a>
             </li>
@@ -31,9 +31,8 @@
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
-                <a class="nav-link {{ request()->is('admin-portoproject') ? 'active' : '' }}"
-                    href="/admin-portoproject">
-                    <i class="fas fa-star"></i> Manage Project Portoflio
+                <a class="nav-link {{ request()->routeIs('portfolio_projects.index') ? 'active' : '' }}" href="{{ route('portfolio_projects.index') }}">
+                    <i class="fas fa-star"></i> Manage Project Portfolio
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">

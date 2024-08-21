@@ -9,11 +9,13 @@ class PortfolioProjectLimaduajayaSurabaya extends Model
 {
     use HasFactory;
 
+    // Explicitly set the table name
+    protected $table = 'portfolioprojectlimaduajayasurabayas';
+
     protected $fillable = ['image', 'projectlimaduajayasurabaya_id'];
 
     public function projectLimaduajayaSurabaya()
     {
-        return $this->belongsTo(ProjectLimaduajayaSurabaya::class, 'projectlimaduajayasurabaya_id');
+        return $this->belongsTo(ProjectLimaduajayaSurabaya::class, 'project_id'); // Use 'project_id'
     }
-
 }

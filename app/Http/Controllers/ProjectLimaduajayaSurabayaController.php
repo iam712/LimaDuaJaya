@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\ProjectLimaduajayaSurabaya;
@@ -7,39 +6,51 @@ use Illuminate\Http\Request;
 
 class ProjectLimaduajayaSurabayaController extends Controller
 {
+    // Display a listing of the projects (Admin View)
     public function index()
     {
-        // Fetch and list all projects
+        $projects = ProjectLimaduajayaSurabaya::with('portfolioProjects')->get();
+        return view('admin.project.project', compact('projects'));
     }
 
-    public function create()
-    {
-        // Show the form to create a new project
-    }
-
+    // Store a newly created project (Admin Create)
     public function store(Request $request)
     {
-        // Store a newly created project in storage
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        ProjectLimaduajayaSurabaya::create($request->only('name'));
+
+        return redirect()->route('projects.index')->with('success', 'Project created successfully.');
     }
 
-    public function show($id)
-    {
-        // Display a specific project by ID
-    }
-
-    public function edit($id)
-    {
-        // Show the form to edit a specific project by ID
-    }
-
+    // Update the specified project (Admin Update)
     public function update(Request $request, $id)
     {
-        // Update the specified project in storage
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        $project = ProjectLimaduajayaSurabaya::findOrFail($id);
+        $project->update($request->only('name'));
+
+        return redirect()->route('projects.index')->with('success', 'Project updated successfully.');
     }
 
+    // Remove the specified project (Admin Delete)
     public function destroy($id)
     {
-        // Delete a specific project by ID
+        $project = ProjectLimaduajayaSurabaya::findOrFail($id);
+        $project->delete();
+
+        return redirect()->route('projects.index')->with('success', 'Project deleted successfully.');
+    }
+
+    // Display projects and their portfolios for the user view
+    public function indexForUser()
+    {
+        $projects = ProjectLimaduajayaSurabaya::with('portfolioProjects')->get();
+        return view('project', compact('projects'));
     }
 }
-

@@ -122,23 +122,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Project 1</td>
-                            <td>
-                                <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#editModal">Edit</button>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal">Delete</button>
-                            </td>
-                        </tr>
-                        <!-- Repeat for other rows -->
+                        @foreach ($projects as $project)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $project->name }}</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#editModal{{ $project->id }}">Edit</button>
+                                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal{{ $project->id }}">Delete</button>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
                 <div class="text-end mt-3">
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New
-                        Project</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Project</button>
                 </div>
             </div>
         </section>
@@ -148,66 +148,75 @@
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Add New Project</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
+                <form action="{{ route('projects.store') }}" method="POST">
+                    @csrf <!-- CSRF token for form security -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addModalLabel">Add New Project</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
                         <div class="mb-3">
                             <label for="projectName" class="form-label">Project Name</label>
-                            <input type="text" class="form-control" id="projectName">
+                            <input type="text" class="form-control" id="projectName" name="name" required>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save Project</button>
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save Project</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-    <!-- Edit Project Modal -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editModalLabel">Edit Project</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="editProjectName" class="form-label">Project Name</label>
-                            <input type="text" class="form-control" id="editProjectName" value="Project 1">
+    @foreach ($projects as $project)
+        <!-- Edit Project Modal -->
+        <div class="modal fade" id="editModal{{ $project->id }}" tabindex="-1" aria-labelledby="editModalLabel{{ $project->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="{{ route('projects.update', $project->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editModalLabel{{ $project->id }}">Edit Project</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="editProjectName{{ $project->id }}" class="form-label">Project Name</label>
+                                <input type="text" class="form-control" id="editProjectName{{ $project->id }}" name="name" value="{{ $project->name }}" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save Changes</button>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Delete Project Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete Project</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to delete this project?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-danger">Delete Project</button>
+        <!-- Delete Project Modal -->
+        <div class="modal fade" id="deleteModal{{ $project->id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ $project->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="{{ route('projects.destroy', $project->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel{{ $project->id }}">Delete Project</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this project?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Delete Project</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
+    @endforeach
 @endsection
