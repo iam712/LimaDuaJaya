@@ -32,13 +32,13 @@
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->routeIs('portfolio_projects.index') ? 'active' : '' }}" href="{{ route('portfolio_projects.index') }}">
-                    <i class="fas fa-star"></i> Manage Project Portfolio
+                    <i class="fa-regular fa-folder-open"></i> Manage Project Portfolio
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->is('admin-portoworkshop') ? 'active' : '' }}"
                     href="/admin-portoworkshop">
-                    <i class="fas fa-star"></i> Manage Workshop Portfolio
+                    <i class="fa-solid fa-folder-open"></i> Manage Workshop Portfolio
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
