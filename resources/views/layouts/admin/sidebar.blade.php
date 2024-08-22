@@ -56,7 +56,7 @@
             </li>
         </ul>
     </div>
-    <div class="sidebar-brand position-absolute bottom-0 start-0 p-3">
+    <div class=" bg-light sidebar-brand position-absolute bottom-0 start-0 p-3">
         <a href="/admin">
             <img src="{{ asset('images/LOGO.png') }}" alt="Logo" class="w-100 mw-100">
         </a>

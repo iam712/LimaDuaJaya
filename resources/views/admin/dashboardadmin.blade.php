@@ -28,7 +28,7 @@
             transform: scale(1) rotateX(0) rotateY(0);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-            background-color: rgba({{ $color6 }}, 1);
+            background-color: rgba({{ $color1 }}, 1);
         }
 
         /* Text and button styling for default state */

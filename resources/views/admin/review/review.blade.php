@@ -82,14 +82,14 @@
         }
 
         .table-responsive {
-            background-color: rgba({{ $color6 }}, 0.9);
+            background-color: rgba({{ $color1 }}, 0.9);
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
         }
 
-        .btn-warning {
+        /* .btn-warning {
             background-color: rgba({{ $color4 }}, 1);
             color: rgba({{ $color1 }}, 1);
         }
@@ -102,7 +102,7 @@
         .btn-success {
             background-color: rgba({{ $color7 }}, 1);
             color: rgba({{ $color1 }}, 1);
-        }
+        } */
 
         /* Ensures long comments wrap to the next line */
         .table td {
