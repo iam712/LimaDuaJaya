@@ -7,7 +7,7 @@ use App\Http\Controllers\PortfolioProjectLimaduajayaSurabayaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Routes for User-Facing Pages
+// User Routes
 Route::get('/', function () {
     return view('home');
 });
@@ -22,16 +22,13 @@ Route::get('/detail', function () {
     return view('detail');
 });
 
-// User-facing route for viewing projects and their portfolios
 Route::get('/projects', [ProjectLimaduajayaSurabayaController::class, 'indexForUser'])->name('projects.index');
 
-// User review routes
 Route::get('/review', function () {
     return view('review');
 });
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
-// Authentication Routes
 Route::get('/signin', function () {
     return view('signin');
 })->name('signin');
@@ -45,29 +42,24 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 // Admin Routes
 Route::middleware(['auth', 'admin'])->group(function () {
-    // Admin Dashboard
+
     Route::get('/admin', function () {
         return view('admin.dashboardadmin');
     })->name('admin.dashboard');
 
-    // Admin Reviews
     Route::get('/admin/reviews', [ReviewController::class, 'adminIndex'])->name('admin.reviews.index');
     Route::delete('/admin/reviews/{id}', [ReviewController::class, 'destroy'])->name('admin.reviews.destroy');
 
-    // Admin Workshop
     Route::get('/admin-workshop', function () {
         return view('admin.workshop.workshop');
     });
 
-    // Admin Portfolio Workshop
     Route::get('/admin-portoworkshop', function () {
         return view('admin.portoworkshop.portoworkshop');
     });
 
-    // Project CRUD routes
     Route::resource('/admin/projects', ProjectLimaduajayaSurabayaController::class);
 
-    // Portfolio CRUD routes
     Route::resource('/admin/portfolio_projects', PortfolioProjectLimaduajayaSurabayaController::class);
 
     // User CRUD Routes

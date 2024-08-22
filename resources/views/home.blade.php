@@ -959,7 +959,8 @@
 
         {{-- Our Advantages --}}
         <div class="container fade-section" id="ourAdvantagesSection">
-            <h2 class="text-center fade-section" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
+            <h2 class="text-center fade-section"
+                style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
                 Advantages</h2>
             <div class="row mt-4 d-flex justify-content-center fade-section">
                 <div class="col-6 col-md-4 col-lg-3 text-center">
@@ -1035,6 +1036,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!-- Location Map -->
     <section id="locationMapSection" class="location-map py-4 py-sm-4 parallax"
@@ -1318,6 +1321,7 @@
 
         // 360 Project Scroll Control
         document.addEventListener('DOMContentLoaded', function() {
+
             const project360Section = document.getElementById('project360Section');
             const imageElement = document.getElementById("image360");
             const images = [
@@ -1355,11 +1359,26 @@
 
             const totalImages = images.length;
             let currentImageIndex = 0;
+            let startY = 0;
+            let isScrolling = false;
 
+            // Preload all images for smoother experience
+            const preloadImages = (images) => {
+                images.forEach((src) => {
+                    const img = new Image();
+                    img.src = src;
+                });
+            };
+
+            preloadImages(images);
+
+            // Scroll prevention functions
             const preventScroll = (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
+                if (e.target.closest('#project360Section')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
             };
 
             const enableScroll = () => {
@@ -1376,20 +1395,32 @@
                 });
             };
 
+            // Image updating logic
             const updateImage = () => {
                 if (currentImageIndex < 0) currentImageIndex = 0;
                 if (currentImageIndex >= totalImages) currentImageIndex = totalImages - 1;
                 imageElement.src = images[currentImageIndex];
             };
 
+            // Debounced scroll handler
             const onScroll = (event) => {
+                if (isScrolling) return;
+                isScrolling = true;
+
                 const deltaY = event.deltaY || event.detail || event.wheelDelta;
+
                 if (deltaY > 0 && currentImageIndex < totalImages - 1) {
                     currentImageIndex++;
                 } else if (deltaY < 0 && currentImageIndex > 0) {
                     currentImageIndex--;
                 }
+
                 updateImage();
+
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 150); // Adjust timeout as necessary
+
                 if (currentImageIndex === 0 || currentImageIndex === totalImages - 1) {
                     enableScroll();
                 } else {
@@ -1397,34 +1428,32 @@
                 }
             };
 
+            // Mouse wheel event listener
             project360Section.addEventListener('wheel', onScroll);
+
+            // Touch event listeners
             project360Section.addEventListener('touchstart', (e) => {
-                const startY = e.touches[0].clientY;
-                project360Section.addEventListener('touchmove', (e) => {
-                    const endY = e.touches[0].clientY;
-                    const deltaY = startY - endY;
-                    onScroll({
-                        deltaY
-                    });
-                }, {
-                    once: true
+                startY = e.touches[0].clientY;
+            });
+
+            project360Section.addEventListener('touchmove', (e) => {
+                const endY = e.touches[0].clientY;
+                const deltaY = startY - endY;
+                onScroll({
+                    deltaY
                 });
             });
 
+            // IntersectionObserver for scroll lock control
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
                 threshold: 1.0 // Trigger when the whole image is fully visible
             };
 
-            const observer = new IntersectionObserver((entries, observer) => {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    const imageRect = entry.boundingClientRect;
-                    const imageCenter = imageRect.top + imageRect.height / 2;
-                    const viewportCenter = window.innerHeight / 2;
-
-                    if (entry.isIntersecting && Math.abs(imageCenter - viewportCenter) <= imageRect
-                        .height / 2) {
+                    if (entry.isIntersecting) {
                         disableScroll();
                     } else {
                         enableScroll();
