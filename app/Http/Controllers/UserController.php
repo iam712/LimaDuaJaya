@@ -12,8 +12,11 @@ class UserController extends Controller
     public function index()
     {
         // Fetch and list all users
-        $users = User::all();
+        // $users = User::all();
+        $users = User::paginate(10);
         return view('admin.user.user', compact('users'));
+        // $reviews = Review::paginate(10);
+        // return view('admin.review.review', compact('reviews'));
     }
 
     public function store(Request $request)

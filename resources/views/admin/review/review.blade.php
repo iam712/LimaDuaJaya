@@ -90,19 +90,19 @@
         }
 
         /* .btn-warning {
-            background-color: rgba({{ $color4 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+                background-color: rgba({{ $color4 }}, 1);
+                color: rgba({{ $color1 }}, 1);
+            }
 
-        .btn-danger {
-            background-color: rgba({{ $color3 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+            .btn-danger {
+                background-color: rgba({{ $color3 }}, 1);
+                color: rgba({{ $color1 }}, 1);
+            }
 
-        .btn-success {
-            background-color: rgba({{ $color7 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        } */
+            .btn-success {
+                background-color: rgba({{ $color7 }}, 1);
+                color: rgba({{ $color1 }}, 1);
+            } */
 
         /* Ensures long comments wrap to the next line */
         .table td {
@@ -114,7 +114,6 @@
             overflow-wrap: break-word;
             /* Breaks long words in modern browsers */
         }
-
     </style>
 
     <div class="animated-bg">
@@ -139,12 +138,11 @@
                     <tbody>
                         @foreach ($reviews as $review)
                             <tr>
-                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ ($reviews->currentPage() - 1) * $reviews->perPage() + $loop->iteration }}</td>
                                 <td>{{ $review->name }}</td>
                                 <td>{{ $review->email }}</td>
                                 <td>{{ $review->comment }}</td>
                                 <td>
-                                    <!-- Trigger the modal with a button -->
                                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal{{ $review->id }}">
                                         Delete
@@ -182,6 +180,11 @@
                         @endforeach
                     </tbody>
                 </table>
+                <!-- Pagination Links -->
+                <div class="d-flex justify-content-center">
+                    {{ $reviews->links('vendor.pagination.bootstrap-4') }}
+                </div>
+
             </div>
         </section>
     </div>

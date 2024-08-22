@@ -127,7 +127,7 @@
                     <tbody>
                         @foreach ($users as $user)
                             <tr>
-                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ ($users->currentPage() - 1) * $users->perPage() + $loop->iteration }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>*******</td> <!-- Passwords should never be displayed in plaintext -->
                                 <td>{{ $user->isAdmin ? 'Yes' : 'No' }}</td>
@@ -142,6 +142,10 @@
                     </tbody>
                 </table>
 
+                <!-- Pagination Links -->
+                <div class="d-flex justify-content-center">
+                    {{ $users->links('vendor.pagination.bootstrap-4') }}
+                </div>
 
                 <div class="text-end mt-3">
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New User</button>
