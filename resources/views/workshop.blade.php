@@ -15,7 +15,7 @@
 @section('content')
 
     <!-- Workshop Lima Dua Jaya -->
-    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5 parallax"
+    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5"
         style="
             background-image: url('{{ asset('images/banner/aboutusbg2.png') }}');
             background-size: cover;
@@ -142,10 +142,10 @@
 
     <!-- Review Form -->
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1 parallax">
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
-        <div class="container review-form-container">
+        <div class="bg parallax"></div>
+        <div class="bg bg2 parallax"></div>
+        <div class="bg bg3 parallax"></div>
+        <div class="container review-form-container fade-section">
             <div class="row" style="opacity: 1;">
                 <div class="col-12 col-lg-7 mb-4 mb-lg-0">
                     <h2 class="fw-bold mb-4">Workshop Partnership Program</h2>
@@ -220,7 +220,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
+            background-image: url('{{ asset('images/workshop/workshopbg1.png') }}');
             background-size: cover;
             background-position: center;
             opacity: 0.9;
