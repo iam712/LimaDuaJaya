@@ -491,6 +491,85 @@
         .fade-section.visible {
             opacity: 1;
         }
+
+        body {
+            margin: auto;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(315deg, rgba(101, 0, 94, 1) 3%, rgba(60, 132, 206, 1) 38%, rgba(48, 238, 226, 1) 68%, rgba(255, 25, 25, 1) 98%);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            background-attachment: fixed;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .wavey {
+            background: rgb(255 255 255 / 25%);
+            border-radius: 1000% 1000% 0 0;
+            position: fixed;
+            width: 200%;
+            height: 12em;
+            animation: wavey 10s -3s linear infinite;
+            transform: translate3d(0, 0, 0);
+            opacity: 0.8;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .wavey:nth-of-type(2) {
+            bottom: -1.25em;
+            animation: wavey 18s linear reverse infinite;
+            opacity: 0.8;
+        }
+
+        .wavey:nth-of-type(3) {
+            bottom: -2.5em;
+            animation: wavey 20s -1s reverse infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes wavey {
+            2% {
+                transform: translateX(1);
+            }
+
+            25% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            75% {
+                transform: translateX(-25%);
+            }
+
+            100% {
+                transform: translateX(1);
+            }
+        }
+
+        .banner {
+            position: relative;
+            overflow: hidden;
+            height: 800px;
+            background: none;
+            /* Remove background image */
+        }
     </style>
 
     <!-- Fixed Menu Bar -->
@@ -520,38 +599,45 @@
 
     <!-- Banner -->
     <section id="bannerSection" class="banner d-flex align-items-center">
-        <div class="container fade-section">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center d-md-none">
-                    <div class="wrapper">
-                        <div class="boxblob"></div>
+        <div class="container-fluid position-relative p-0">
+            <div class="wavey"></div>
+            <div class="wavey"></div>
+            <div class="wavey"></div>
+
+            <div class="container fade-section position-relative">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center d-md-none">
+                        <div class="wrapper">
+                            <div class="boxblob"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 py-5 text-center text-md-start">
-                    <p class="fs-3" style="font-family: 'LibreBaskerville', serif; color: black;">
-                        Lima Dua Jaya Advertising
-                    </p>
-                    <p class="fs-1 fw-bold"
-                        style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: black;">
-                        Kami Membuat
-                        <span id="changingText"></span>
-                    </p>
-                    <p class="fs-4 fst-italic fw-lighter"
-                        style="font-family: 'LibreBaskerville', serif; font-style: italic; color: black;">
-                        Supplier, Distributor, Advertising
-                    </p>
-                    <button class="btn-learn-more"
-                        onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });"
-                        style="font-family: 'LibreBaskerville', serif;">Pelajari Lebih Lanjut</button>
-                </div>
-                <div class="col-md-6 text-center d-none d-md-block">
-                    <div class="wrapper">
-                        <div class="boxblob"></div>
+                    <div class="col-md-6 py-5 text-center text-md-start">
+                        <p class="fs-3" style="font-family: 'LibreBaskerville', serif; color: black;">
+                            Lima Dua Jaya Advertising
+                        </p>
+                        <p class="fs-1 fw-bold"
+                            style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: black;">
+                            Kami Membuat
+                            <span id="changingText"></span>
+                        </p>
+                        <p class="fs-4 fst-italic fw-lighter"
+                            style="font-family: 'LibreBaskerville', serif; font-style: italic; color: black;">
+                            Supplier, Distributor, Advertising
+                        </p>
+                        <button class="btn-learn-more"
+                            onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });"
+                            style="font-family: 'LibreBaskerville', serif;">Pelajari Lebih Lanjut</button>
+                    </div>
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="wrapper">
+                            <div class="boxblob"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- About Us -->
     <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative">
