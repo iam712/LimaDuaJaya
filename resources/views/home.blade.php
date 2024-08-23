@@ -959,7 +959,8 @@
 
         {{-- Our Advantages --}}
         <div class="container fade-section" id="ourAdvantagesSection">
-            <h2 class="text-center fade-section" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
+            <h2 class="text-center fade-section"
+                style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
                 Advantages</h2>
             <div class="row mt-4 d-flex justify-content-center fade-section">
                 <div class="col-6 col-md-4 col-lg-3 text-center">
@@ -1355,33 +1356,28 @@
 
             const totalImages = images.length;
             let currentImageIndex = 0;
+            let isLockedIn360 = false;
 
-            const preventScroll = (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            };
-
-            const enableScroll = () => {
-                document.removeEventListener('wheel', preventScroll);
-                document.removeEventListener('touchmove', preventScroll);
-            };
-
-            const disableScroll = () => {
-                document.addEventListener('wheel', preventScroll, {
-                    passive: false
-                });
-                document.addEventListener('touchmove', preventScroll, {
-                    passive: false
-                });
-            };
-
+            // Helper function to update the image source
             const updateImage = () => {
                 if (currentImageIndex < 0) currentImageIndex = 0;
                 if (currentImageIndex >= totalImages) currentImageIndex = totalImages - 1;
                 imageElement.src = images[currentImageIndex];
             };
 
+            // Function to lock the scroll
+            const lockScroll = () => {
+                document.body.style.overflow = 'hidden';
+                isLockedIn360 = true;
+            };
+
+            // Function to unlock the scroll
+            const unlockScroll = () => {
+                document.body.style.overflow = '';
+                isLockedIn360 = false;
+            };
+
+            // Function to handle scrolling inside the 360 section
             const onScroll = (event) => {
                 const deltaY = event.deltaY || event.detail || event.wheelDelta;
                 if (deltaY > 0 && currentImageIndex < totalImages - 1) {
@@ -1390,13 +1386,16 @@
                     currentImageIndex--;
                 }
                 updateImage();
-                if (currentImageIndex === 0 || currentImageIndex === totalImages - 1) {
-                    enableScroll();
+
+                // Unlock scroll when the last or first image is reached
+                if (currentImageIndex === totalImages - 1 || currentImageIndex === 0) {
+                    unlockScroll();
                 } else {
-                    disableScroll();
+                    lockScroll();
                 }
             };
 
+            // Add event listeners for scrolling on the 360 project section
             project360Section.addEventListener('wheel', onScroll);
             project360Section.addEventListener('touchstart', (e) => {
                 const startY = e.touches[0].clientY;
@@ -1411,28 +1410,25 @@
                 });
             });
 
+            // Use IntersectionObserver to detect when user is entering or leaving the 360 section
             const observerOptions = {
                 root: null,
-                rootMargin: '0px',
-                threshold: 1.0 // Trigger when the whole image is fully visible
+                threshold: 0.9 // Trigger when at least 50% of the section is visible
             };
 
-            const observer = new IntersectionObserver((entries, observer) => {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    const imageRect = entry.boundingClientRect;
-                    const imageCenter = imageRect.top + imageRect.height / 2;
-                    const viewportCenter = window.innerHeight / 2;
-
-                    if (entry.isIntersecting && Math.abs(imageCenter - viewportCenter) <= imageRect
-                        .height / 2) {
-                        disableScroll();
-                    } else {
-                        enableScroll();
+                    if (entry.isIntersecting) {
+                        // When the 360 section is in view, lock the scroll
+                        lockScroll();
+                    } else if (!entry.isIntersecting && isLockedIn360) {
+                        // When the 360 section is out of view, unlock the scroll
+                        unlockScroll();
                     }
                 });
             }, observerOptions);
 
-            observer.observe(imageElement);
+            observer.observe(project360Section);
         });
 
         // Scroll Reveal
