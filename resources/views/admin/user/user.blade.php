@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-            background-color: rgba({{ $color4 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+                        background-color: rgba({{ $color4 }}, 1);
+                        color: rgba({{ $color1 }}, 1);
+                    }
 
-        .btn-danger {
-            background-color: rgba({{ $color3 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+                    .btn-danger {
+                        background-color: rgba({{ $color3 }}, 1);
+                        color: rgba({{ $color1 }}, 1);
+                    }
 
-        .btn-success {
-            background-color: rgba({{ $color7 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        } */
+                    .btn-success {
+                        background-color: rgba({{ $color7 }}, 1);
+                        color: rgba({{ $color1 }}, 1);
+                    } */
     </style>
 
     <div class="animated-bg">
@@ -142,16 +142,16 @@
                     </tbody>
                 </table>
 
-                <!-- Pagination Links -->
-                <div class="d-flex justify-content-center">
-                    {{ $users->links('vendor.pagination.bootstrap-4') }}
-                </div>
-
                 <div class="text-end mt-3">
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New User</button>
                 </div>
             </div>
+            <!-- Pagination Links -->
+            <div class="d-flex justify-content-center">
+                {{ $users->links('vendor.pagination.bootstrap-4') }}
+            </div>
         </section>
+
     </div>
 
     <!-- Add New User Modal -->
@@ -206,17 +206,17 @@
                             <div class="mb-3">
                                 <label for="editUserEmail{{ $user->id }}" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="editUserEmail{{ $user->id }}"
-                                       name="email" value="{{ $user->email }}" required>
+                                    name="email" value="{{ $user->email }}" required>
                             </div>
                             <div class="mb-3">
                                 <label for="editUserPassword{{ $user->id }}" class="form-label">Password (leave blank
                                     to keep current password)</label>
                                 <input type="password" class="form-control" id="editUserPassword{{ $user->id }}"
-                                       name="password">
+                                    name="password">
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="editIsAdmin{{ $user->id }}"
-                                       name="isAdmin" {{ $user->isAdmin ? 'checked' : '' }}>
+                                    name="isAdmin" {{ $user->isAdmin ? 'checked' : '' }}>
                                 <label class="form-check-label" for="editIsAdmin{{ $user->id }}">Is Admin?</label>
                             </div>
                         </div>
@@ -241,7 +241,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="deleteModalLabel{{ $user->id }}">Delete User</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             Are you sure you want to delete this user?
@@ -255,5 +255,5 @@
                 </div>
             </div>
         </div>
-        @endforeach
-    @endsection
+    @endforeach
+@endsection

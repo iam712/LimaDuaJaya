@@ -13,7 +13,7 @@ class UserController extends Controller
     {
         // Fetch and list all users
         // $users = User::all();
-        $users = User::paginate(10);
+        $users = User::paginate(2);
         return view('admin.user.user', compact('users'));
         // $reviews = Review::paginate(10);
         // return view('admin.review.review', compact('reviews'));
