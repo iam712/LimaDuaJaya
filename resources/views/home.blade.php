@@ -640,7 +640,7 @@
 
 
     <!-- About Us -->
-    <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative">
+    <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative" style="background-color: rgb({{ $color5 }});">
         <div class="blob-container">
             <svg id="blob" viewBox="-30 -10 100 100" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#FF6B6B">
@@ -1276,7 +1276,7 @@
 
 
     <!-- Our Clients -->
-    <section id="ourClientsSection" class="our-services py-4 py-sm-4">
+    <section id="ourClientsSection" class="our-services py-4 py-sm-4" style="background-color: rgb({{ $color6 }});">
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Clients</h2>
