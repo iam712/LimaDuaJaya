@@ -75,7 +75,7 @@
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="card h-100"
                                     style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                                    <img src="{{ asset('storage/' . $portfolio->image) }}" class="card-img-top"
+                                    <img src="{{ asset('storage/' . $portfolio->image) }}" class="card-img-top img-fluid w-auto"
                                         alt="{{ $project->name }}">
                                 </div>
                             </div>
