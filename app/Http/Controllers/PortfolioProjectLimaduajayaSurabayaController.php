@@ -14,6 +14,7 @@ class PortfolioProjectLimaduajayaSurabayaController extends Controller
         // Fetch all portfolio projects with their associated projects
         $portfolioProjects = PortfolioProjectLimaduajayaSurabaya::with('projectLimaduajayaSurabaya')->get();
 
+        $portfolioProjects = PortfolioProjectLimaduajayaSurabaya::paginate(2);
         // Fetch all projects to pass to the view (for dropdowns in modals)
         $projects = ProjectLimaduajayaSurabaya::all();
 

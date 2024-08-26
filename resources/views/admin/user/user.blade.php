@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-                        background-color: rgba({{ $color4 }}, 1);
-                        color: rgba({{ $color1 }}, 1);
-                    }
+                            background-color: rgba({{ $color4 }}, 1);
+                            color: rgba({{ $color1 }}, 1);
+                        }
 
-                    .btn-danger {
-                        background-color: rgba({{ $color3 }}, 1);
-                        color: rgba({{ $color1 }}, 1);
-                    }
+                        .btn-danger {
+                            background-color: rgba({{ $color3 }}, 1);
+                            color: rgba({{ $color1 }}, 1);
+                        }
 
-                    .btn-success {
-                        background-color: rgba({{ $color7 }}, 1);
-                        color: rgba({{ $color1 }}, 1);
-                    } */
+                        .btn-success {
+                            background-color: rgba({{ $color7 }}, 1);
+                            color: rgba({{ $color1 }}, 1);
+                        } */
     </style>
 
     <div class="animated-bg">
@@ -110,7 +110,9 @@
             <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
-
+        @if ($users->isEmpty())
+            <h5 class="text-lg text-center text-dark p-5">No users available at the moment</h5>
+        @else
         <section>
             <div class="container table-responsive py-5">
                 <!-- Success Notification -->
@@ -141,16 +143,16 @@
                         @endforeach
                     </tbody>
                 </table>
-
-                <div class="text-end mt-3">
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New User</button>
-                </div>
-            </div>
-            <!-- Pagination Links -->
-            <div class="d-flex justify-content-center">
-                {{ $users->links('vendor.pagination.bootstrap-4') }}
             </div>
         </section>
+        @endif
+        <div class="text-end mt-3">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New User</button>
+        </div>
+        <!-- Pagination Links -->
+        <div class="d-flex justify-content-center">
+            {{ $users->links('vendor.pagination.bootstrap-4') }}
+        </div>
 
     </div>
 

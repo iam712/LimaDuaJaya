@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-            background-color: rgba({{ $color4 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+                            background-color: rgba({{ $color4 }}, 1);
+                            color: rgba({{ $color1 }}, 1);
+                        }
 
-        .btn-danger {
-            background-color: rgba({{ $color3 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+                        .btn-danger {
+                            background-color: rgba({{ $color3 }}, 1);
+                            color: rgba({{ $color1 }}, 1);
+                        }
 
-        .btn-success {
-            background-color: rgba({{ $color7 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        } */
+                        .btn-success {
+                            background-color: rgba({{ $color7 }}, 1);
+                            color: rgba({{ $color1 }}, 1);
+                        } */
     </style>
 
     <div class="animated-bg">
@@ -110,38 +110,45 @@
             <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
-
-        <section>
-            <div class="container table-responsive py-5">
-                <table class="table table-borderless table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($projects as $project)
+        @if ($projects->isEmpty())
+            <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
+        @else
+            <section>
+                <div class="container table-responsive py-5">
+                    <table class="table table-borderless table-hover">
+                        <thead>
                             <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>{{ $project->name }}</td>
-                                <td>
-                                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#editModal{{ $project->id }}">Edit</button>
-                                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#deleteModal{{ $project->id }}">Delete</button>
-                                </td>
+                                <th scope="col">No</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Actions</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-
-                <div class="text-end mt-3">
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Project</button>
+                        </thead>
+                        <tbody>
+                            @foreach ($projects as $project)
+                                <tr>
+                                    <td>{{ ($projects->currentPage() - 1) * $projects->perPage() + $loop->iteration }}</td>
+                                    <td>{{ $project->name }}</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#editModal{{ $project->id }}">Edit</button>
+                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal{{ $project->id }}">Delete</button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-        </section>
+            </section>
+        @endif
+        <div class="text-end mt-3">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New
+                Project</button>
+        </div>
+         <!-- Pagination Links -->
+         <div class="d-flex justify-content-center">
+            {{ $projects->links('vendor.pagination.bootstrap-4') }}
+        </div>
     </div>
 
     <!-- Add New Project Modal -->
@@ -171,7 +178,8 @@
 
     @foreach ($projects as $project)
         <!-- Edit Project Modal -->
-        <div class="modal fade" id="editModal{{ $project->id }}" tabindex="-1" aria-labelledby="editModalLabel{{ $project->id }}" aria-hidden="true">
+        <div class="modal fade" id="editModal{{ $project->id }}" tabindex="-1"
+            aria-labelledby="editModalLabel{{ $project->id }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form action="{{ route('projects.update', $project->id) }}" method="POST">
@@ -184,7 +192,8 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="editProjectName{{ $project->id }}" class="form-label">Project Name</label>
-                                <input type="text" class="form-control" id="editProjectName{{ $project->id }}" name="name" value="{{ $project->name }}" required>
+                                <input type="text" class="form-control" id="editProjectName{{ $project->id }}"
+                                    name="name" value="{{ $project->name }}" required>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -197,7 +206,8 @@
         </div>
 
         <!-- Delete Project Modal -->
-        <div class="modal fade" id="deleteModal{{ $project->id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ $project->id }}" aria-hidden="true">
+        <div class="modal fade" id="deleteModal{{ $project->id }}" tabindex="-1"
+            aria-labelledby="deleteModalLabel{{ $project->id }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form action="{{ route('projects.destroy', $project->id) }}" method="POST">

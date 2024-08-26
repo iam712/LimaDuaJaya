@@ -10,7 +10,7 @@ class ProjectLimaduajayaSurabayaController extends Controller
     public function index()
     {
         $projects = ProjectLimaduajayaSurabaya::with('portfolioProjects')->get();
-        
+        $projects = ProjectLimaduajayaSurabaya::paginate(2);
         return view('admin.project.project', compact('projects'));
     }
 

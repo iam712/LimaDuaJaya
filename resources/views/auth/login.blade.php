@@ -294,7 +294,7 @@
             </div>
 
             <!-- Sign In Form Content -->
-            <div class="container" style="font-family: 'LibreBaskerville', serif, z-index: 10;">
+            <div class="container" style="font-family: 'LibreBaskerville', serif; z-index: 10;">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 col-12">
                         <div class="bg-custom shadow rounded-3 p-4 p-md-5">
@@ -318,7 +318,7 @@
                                             @csrf
                                             <div class="col-12">
                                                 <label for="email" class="form-label"
-                                                    style="font-family: 'LibreBaskerville', serif;">Email</label>
+                                                    >Email</label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
                                                     <input type="email" id="email" name="email" class="form-control"

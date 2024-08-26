@@ -90,19 +90,19 @@
         }
 
         /* .btn-warning {
-                    background-color: rgba({{ $color4 }}, 1);
-                    color: rgba({{ $color1 }}, 1);
-                }
+                        background-color: rgba({{ $color4 }}, 1);
+                        color: rgba({{ $color1 }}, 1);
+                    }
 
-                .btn-danger {
-                    background-color: rgba({{ $color3 }}, 1);
-                    color: rgba({{ $color1 }}, 1);
-                }
+                    .btn-danger {
+                        background-color: rgba({{ $color3 }}, 1);
+                        color: rgba({{ $color1 }}, 1);
+                    }
 
-                .btn-success {
-                    background-color: rgba({{ $color7 }}, 1);
-                    color: rgba({{ $color1 }}, 1);
-                } */
+                    .btn-success {
+                        background-color: rgba({{ $color7 }}, 1);
+                        color: rgba({{ $color1 }}, 1);
+                    } */
 
         /* Ensures long comments wrap to the next line */
         .table td {
@@ -122,69 +122,74 @@
             <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
-
-        <section>
-            <div class="container table-responsive py-5">
-                <table class="table table-borderless table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Comment</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($reviews as $review)
+        @if ($reviews->isEmpty())
+            <h5 class="text-lg text-center text-dark p-5">No reviews available at the moment</h5>
+        @else
+            <section>
+                <div class="container table-responsive py-5">
+                    <table class="table table-borderless table-hover">
+                        <thead>
                             <tr>
-                                <td>{{ ($reviews->currentPage() - 1) * $reviews->perPage() + $loop->iteration }}</td>
-                                <td>{{ $review->name }}</td>
-                                <td>{{ $review->email }}</td>
-                                <td>{{ $review->comment }}</td>
-                                <td>
-                                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                        data-bs-target="#deleteModal{{ $review->id }}">
-                                        Delete
-                                    </button>
+                                <th scope="col">No</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Comment</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($reviews as $review)
+                                <tr>
+                                    <td>{{ ($reviews->currentPage() - 1) * $reviews->perPage() + $loop->iteration }}</td>
+                                    <td>{{ $review->name }}</td>
+                                    <td>{{ $review->email }}</td>
+                                    <td>{{ $review->comment }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal{{ $review->id }}">
+                                            Delete
+                                        </button>
 
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="deleteModal{{ $review->id }}" tabindex="-1"
-                                        aria-labelledby="deleteModalLabel{{ $review->id }}" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="deleteModalLabel{{ $review->id }}">Delete
-                                                        Review</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    Are you sure you want to delete this review by {{ $review->name }}?
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Cancel</button>
-                                                    <form action="{{ route('admin.reviews.destroy', $review->id) }}"
-                                                        method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">Delete Review</button>
-                                                    </form>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="deleteModal{{ $review->id }}" tabindex="-1"
+                                            aria-labelledby="deleteModalLabel{{ $review->id }}" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="deleteModalLabel{{ $review->id }}">
+                                                            Delete
+                                                            Review</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Are you sure you want to delete this review by {{ $review->name }}?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancel</button>
+                                                        <form action="{{ route('admin.reviews.destroy', $review->id) }}"
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn btn-danger">Delete
+                                                                Review</button>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-            <!-- Pagination Links -->
-            <div class="d-flex justify-content-center">
-                {{ $reviews->links('vendor.pagination.bootstrap-4') }}
-            </div>
-        </section>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        @endif
+        <!-- Pagination Links -->
+        <div class="d-flex justify-content-center">
+            {{ $reviews->links('vendor.pagination.bootstrap-4') }}
+        </div>
     </div>
 @endsection
