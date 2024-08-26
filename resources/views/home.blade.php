@@ -675,7 +675,7 @@
     </section>
 
     <!-- Our Services -->
-    <section id="ourServicesSection" class="our-services mt-3 mt-sm-3 parallax"
+    <section id="ourServicesSection" class="our-services parallax"
         style="
         background-image: url('{{ asset('images/banner/backgroundbanner6.png') }}');
         background-size: cover;
