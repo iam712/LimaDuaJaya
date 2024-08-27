@@ -610,6 +610,7 @@
             <div class="wavey"></div>
             <div class="wavey"></div>
 
+            <!-- Content of Banner -->
             <div class="container fade-section position-relative">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center d-md-none">
@@ -643,6 +644,7 @@
             </div>
         </div>
     </section>
+
 
 
     <!-- About Us -->
