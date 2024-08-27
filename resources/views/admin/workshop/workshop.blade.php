@@ -123,6 +123,7 @@
                             <th scope="col">Description</th>
                             <th scope="col">is Lima Dua Jaya?</th>
                             <th scope="col">Actions</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -136,6 +137,8 @@
                             <td>
                                 <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
                                     data-bs-target="#editWorkshopModal">Edit</button>
+                            </td>
+                            <td>
                                 <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#deleteWorkshopModal">Delete</button>
                             </td>
@@ -150,6 +153,8 @@
                             <td>
                                 <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
                                     data-bs-target="#editWorkshopModal">Edit</button>
+                            </td>
+                            <td>
                                 <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#deleteWorkshopModal">Delete</button>
                             </td>

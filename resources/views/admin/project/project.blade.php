@@ -102,6 +102,7 @@
                                 <th scope="col">No</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Actions</th>
+                                <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -111,6 +112,8 @@
                                     <td>{{ $project->name }}</td>
                                     <td>
                                         <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal{{ $project->id }}">Edit</button>
+                                    </td>
+                                    <td>
                                         <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $project->id }}">Delete</button>
                                     </td>
                                 </tr>

@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-            background-color: rgba({{ $color4 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+                background-color: rgba({{ $color4 }}, 1);
+                color: rgba({{ $color1 }}, 1);
+            }
 
-        .btn-danger {
-            background-color: rgba({{ $color3 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+            .btn-danger {
+                background-color: rgba({{ $color3 }}, 1);
+                color: rgba({{ $color1 }}, 1);
+            }
 
-        .btn-success {
-            background-color: rgba({{ $color7 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        } */
+            .btn-success {
+                background-color: rgba({{ $color7 }}, 1);
+                color: rgba({{ $color1 }}, 1);
+            } */
     </style>
 
     <div class="animated-bg">
@@ -121,6 +121,7 @@
                             <th scope="col">Workshop Id</th>
                             <th scope="col">Workshop Name</th>
                             <th scope="col">Actions</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -132,6 +133,8 @@
                             <td>
                                 <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                     data-bs-target="#editModal">Edit</button>
+                            </td>
+                            <td>
                                 <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                     data-bs-target="#deleteModal">Delete</button>
                             </td>
@@ -142,7 +145,8 @@
             </div>
         </section>
         <div class="text-end mt-3">
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Portofolio Workshop</button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Portofolio
+                Workshop</button>
         </div>
     </div>
 

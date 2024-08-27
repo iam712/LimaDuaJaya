@@ -124,6 +124,7 @@
                             <th scope="col">Password</th>
                             <th scope="col">is Admin?</th>
                             <th scope="col">Actions</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -136,6 +137,8 @@
                                 <td>
                                     <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#editModal{{ $user->id }}">Edit</button>
+                                </td>
+                                <td>
                                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal{{ $user->id }}">Delete</button>
                                 </td>
