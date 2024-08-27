@@ -495,11 +495,17 @@
         body {
             margin: auto;
             font-family: Arial, sans-serif;
-            background: linear-gradient(315deg, rgba(101, 0, 94, 1) 3%, rgba(255, 25, 25, 1) 38%, rgba(48, 238, 226, 1) 68%, rgba(255, 25, 25, 1) 98%);
+            background: linear-gradient(315deg,
+                    rgb({{ $color3 }}) 3%,
+                    rgb({{ $color4 }}) 34%,
+                    rgb({{ $color6 }}) 54%,
+                    rgb({{ $color4 }}) 68%,
+                    rgb({{ $color3 }}) 100%);
             animation: gradient 15s ease infinite;
             background-size: 400% 400%;
             background-attachment: fixed;
         }
+
 
         @keyframes gradient {
             0% {
@@ -640,7 +646,9 @@
 
 
     <!-- About Us -->
-    <section id="aboutUsSection" class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative d-flex align-items-center justify-content-center" style="background-color: rgb({{ $color5 }}); min-height: 400px;">
+    <section id="aboutUsSection"
+        class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative d-flex align-items-center justify-content-center"
+        style="background-color: rgb({{ $color5 }}); min-height: 400px;">
         <div class="blob-container">
             <svg id="blob" viewBox="-30 -10 90 70" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#FF6B6B">
@@ -1276,7 +1284,8 @@
 
 
     <!-- Our Clients -->
-    <section id="ourClientsSection" class="our-services py-4 py-sm-4" style="background-color: rgb({{ $color6 }});">
+    <section id="ourClientsSection" class="our-services py-4 py-sm-4"
+        style="background-color: rgb({{ $color6 }});">
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Clients</h2>
