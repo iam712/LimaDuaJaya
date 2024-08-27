@@ -139,12 +139,11 @@
                         <!-- Repeat for other rows -->
                     </tbody>
                 </table>
-
-                <div class="text-end mt-3">
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Portofolio Workshop</button>
-                </div>
             </div>
         </section>
+        <div class="text-end mt-3">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Portofolio Workshop</button>
+        </div>
     </div>
 
     <!-- Add New Portofolio Workshop Modal -->

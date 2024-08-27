@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-                background-color: rgba({{ $color4 }}, 1);
-                color: rgba({{ $color1 }}, 1);
-            }
+                        background-color: rgba({{ $color4 }}, 1);
+                        color: rgba({{ $color1 }}, 1);
+                    }
 
-            .btn-danger {
-                background-color: rgba({{ $color3 }}, 1);
-                color: rgba({{ $color1 }}, 1);
-            }
+                    .btn-danger {
+                        background-color: rgba({{ $color3 }}, 1);
+                        color: rgba({{ $color1 }}, 1);
+                    }
 
-            .btn-success {
-                background-color: rgba({{ $color7 }}, 1);
-                color: rgba({{ $color1 }}, 1);
-            } */
+                    .btn-success {
+                        background-color: rgba({{ $color7 }}, 1);
+                        color: rgba({{ $color1 }}, 1);
+                    } */
     </style>
 
     <div class="animated-bg">
@@ -134,9 +134,9 @@
                             <td>halo</td>
                             <td>Yes</td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
                                     data-bs-target="#editWorkshopModal">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#deleteWorkshopModal">Delete</button>
                             </td>
                         </tr>
@@ -148,9 +148,9 @@
                             <td>halo</td>
                             <td>Yes</td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
                                     data-bs-target="#editWorkshopModal">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#deleteWorkshopModal">Delete</button>
                             </td>
                         </tr>
