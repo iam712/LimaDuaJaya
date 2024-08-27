@@ -130,7 +130,7 @@
                                 <tr>
                                     <td>{{ ($portfolioProjects->currentPage() - 1) * $portfolioProjects->perPage() + $loop->iteration }}</td>
                                     <td><img src="{{ asset('storage/' . $portfolioProject->image) }}" alt="Portfolio Image"
-                                            style="width: 100px;"></td>
+                                            style="width: 100px; object-fit: cover; aspect-ratio: 1 / 1;"></td>
                                     <td>{{ $portfolioProject->project_id }}</td>
                                     <td>{{ $portfolioProject->projectLimaduajayaSurabaya->name }}</td>
                                     <td>

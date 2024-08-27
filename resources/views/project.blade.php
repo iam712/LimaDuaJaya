@@ -23,6 +23,13 @@
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
 
+        .card-img-top {
+            height: 200px; /* Anda bisa sesuaikan tinggi sesuai keinginan */
+            width: 100%;
+            object-fit: cover; /* Memastikan gambar selalu memenuhi area */
+            aspect-ratio: 1 / 1; /* Menjaga rasio 1:1 */
+        }
+
         .parallax {
             background-attachment: fixed;
             background-size: cover;
