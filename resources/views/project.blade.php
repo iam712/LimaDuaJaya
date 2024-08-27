@@ -73,9 +73,9 @@
                     <div class="row gy-3 py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                         @foreach ($project->portfolioProjects as $portfolio)
                             <div class="col-6 col-md-4 col-lg-3">
-                                <div class="card h-100"
+                                <div class="card w-auto h-auto"
                                     style="background-color: rgb({{ $color1 }}); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                                    <img src="{{ asset('storage/' . $portfolio->image) }}" class="card-img-top img-fluid w-auto"
+                                    <img src="{{ asset('storage/' . $portfolio->image) }}" class="card-img-top img-fluid"
                                         alt="{{ $project->name }}">
                                 </div>
                             </div>

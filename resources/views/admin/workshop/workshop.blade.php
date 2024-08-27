@@ -87,20 +87,21 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         /* .btn-warning {
-            background-color: rgba({{ $color4 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+                background-color: rgba({{ $color4 }}, 1);
+                color: rgba({{ $color1 }}, 1);
+            }
 
-        .btn-danger {
-            background-color: rgba({{ $color3 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        }
+            .btn-danger {
+                background-color: rgba({{ $color3 }}, 1);
+                color: rgba({{ $color1 }}, 1);
+            }
 
-        .btn-success {
-            background-color: rgba({{ $color7 }}, 1);
-            color: rgba({{ $color1 }}, 1);
-        } */
+            .btn-success {
+                background-color: rgba({{ $color7 }}, 1);
+                color: rgba({{ $color1 }}, 1);
+            } */
     </style>
 
     <div class="animated-bg">
@@ -156,13 +157,12 @@
                         <!-- Repeat for other rows -->
                     </tbody>
                 </table>
-
-                <div class="text-end mt-3">
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                        data-bs-target="#addWorkshopModal">Add New Workshop</button>
-                </div>
             </div>
         </section>
+        <div class="text-end mt-3">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addWorkshopModal">Add New
+                Workshop</button>
+        </div>
     </div>
 
     <!-- Add Workshop Modal -->
