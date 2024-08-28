@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PortfolioProjectLimaduajayaSurabaya extends Model
 {
+
     use HasFactory;
 
     // Explicitly set the table name

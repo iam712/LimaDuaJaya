@@ -9,6 +9,7 @@ class Workshop extends Model
 {
     use HasFactory;
 
+    protected $table = 'workshops';
     protected $fillable = ['image', 'name', 'location', 'description', 'isLimaduajaya'];
 
     public function portfolios()

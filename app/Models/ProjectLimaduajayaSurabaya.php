@@ -14,8 +14,6 @@ class ProjectLimaduajayaSurabaya extends Model
 
     protected $fillable = ['name'];
 
-
-
     public function portfolioProjects()
     {
         return $this->hasMany(PortfolioProjectLimaduajayaSurabaya::class, 'project_id'); // Use 'project_id'
