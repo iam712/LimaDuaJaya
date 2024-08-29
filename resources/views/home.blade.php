@@ -267,7 +267,7 @@
             border: none;
             transition: transform 0.3s, box-shadow 0.3s;
             border-radius: 15px;
-            background: linear-gradient(135deg, rgb({{ $color5 }}), rgb({{ $color6 }}));
+            background: linear-gradient(135deg, rgb({{ $color1 }}), rgb({{ $color1 }}));
             height: 300px;
             overflow: hidden;
         }
