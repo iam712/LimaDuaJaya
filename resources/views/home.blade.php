@@ -652,7 +652,7 @@
         class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative d-flex align-items-center justify-content-center"
         style="background-color: rgb({{ $color5 }}); min-height: 400px;">
         <div class="blob-container">
-            <svg id="blob" viewBox="-30 -10 90 70" xmlns="http://www.w3.org/2000/svg">
+            <svg id="blob" viewBox="-25 -10 90 80" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#FF6B6B">
                     <animate attributeName="d" dur="30s" repeatCount="indefinite"
                         values="
