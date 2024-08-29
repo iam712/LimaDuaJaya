@@ -90,6 +90,20 @@ class WorkshopController extends Controller
         $workshop->description = $request->description;
         $workshop->isLimaduajaya = $request->isLimaduajaya;
 
+        //dd($request->all());
+
+        // Check if a new image has been uploaded
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('portfolio_images', 'public');
+            $portfolioProject->update([
+                'image' => $imagePath,
+                'project_id' => $request->project_id, // Use 'project_id'
+            ]);
+        } else {
+            $portfolioProject->update([
+                'project_id' => $request->project_id,
+            ]);
+        }
         // Handle the image if it was uploaded
         if ($request->hasFile('image')) {
             // Delete the old image if it exists
