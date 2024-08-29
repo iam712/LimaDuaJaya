@@ -41,19 +41,19 @@
         .card .btn-primary {
             background-color: rgba({{ $color4 }}, 1);
             border-color: rgba({{ $color4 }}, 1);
-            color: rgba({{ $color5 }}, 1);
+            color: rgba({{ $color1 }}, 1);
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
         }
 
         /* Text and button styling for hover state */
         .card:hover .card-title a,
         .card:hover .card-text {
-            color: rgba({{ $color5 }}, 1);
+            color: rgba({{ $color1 }}, 1);
         }
 
         .card:hover .btn-primary {
-            background-color: rgba({{ $color5 }}, 1);
-            border-color: rgba({{ $color5 }}, 1);
+            background-color: rgba({{ $color1 }}, 1);
+            border-color: rgba({{ $color1 }}, 1);
             color: rgba({{ $color3 }}, 1);
         }
 
@@ -94,7 +94,7 @@
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2"
             style="background-color: transparent;">
-            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Dashboard</h1>
+            <h1 class="display-4" style="color: rgba({{ $color1 }}, 1);">Welcome to Admin Dashboard</h1>
             <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>

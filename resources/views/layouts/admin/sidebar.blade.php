@@ -72,7 +72,7 @@
 
 <style>
     .nav-link {
-        color: rgb({{ $color6 }});
+        color: rgb({{ $color1 }});
         text-decoration: none;
         display: block;
         padding: 0.5rem 1rem;
@@ -81,7 +81,7 @@
     }
 
     .nav-link:hover {
-        color: rgb({{ $color6 }});
+        color: rgb({{ $color1 }});
         transform: scale(1.05);
     }
 
