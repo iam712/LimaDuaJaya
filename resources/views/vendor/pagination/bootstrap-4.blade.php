@@ -10,7 +10,7 @@
         }
 
         .pagination .page-item .page-link {
-            background-color: #f6e8d6; /* Light background */
+            background-color: white; /* Light background */
             border: 1px solid #ee3f48; /* Red border */
             color: #7d141d; /* Red text */
             border-radius: 50%; /* Rounded buttons */
