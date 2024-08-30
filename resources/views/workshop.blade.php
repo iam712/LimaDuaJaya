@@ -140,7 +140,7 @@
         </div>
     </section>
 
-    <!-- Review Form -->
+    <!-- Partnership Application Form -->
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1 parallax">
         <div class="bg parallax"></div>
         <div class="bg bg2 parallax"></div>
@@ -220,7 +220,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('{{ asset('images/workshop/workshopbg1.png') }}');
+            background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
             background-size: cover;
             background-position: center;
             opacity: 0.9;
