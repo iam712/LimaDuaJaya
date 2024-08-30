@@ -1124,14 +1124,14 @@
     </section>
 
     <!-- 360 Project -->
-    <section id="project360Section" class="scroll-container">
+    {{-- <section id="project360Section" class="scroll-container">
         <div class="scroll-bottom-section">
             <div class="scroll-image-container">
                 <img id="image360" src="{{ asset('images/360project/project1.jpg') }}" alt="360 Image"
                     class="img-fluid" />
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Location Map -->
     <section id="locationMapSection" class="location-map py-4 py-sm-4 parallax"
@@ -1287,7 +1287,7 @@
 
     <!-- Our Clients -->
     <section id="ourClientsSection" class="our-services py-4 py-sm-4"
-        style="background-color: rgb({{ $color6 }});">
+        style="background-color: rgb({{ $color1 }});">
         <div class="container">
             <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
                 Clients</h2>

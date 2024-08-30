@@ -204,7 +204,7 @@
                     <div class="review-content">
                         @foreach ($reviews as $review)
                             <div class="card mx-2 d-flex justify-content-around"
-                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color5 }}), rgb({{ $color1 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
                                 <div class="card-body" style="overflow: hidden; flex-grow: 1;">
                                     <p class="card-text text-dark fw-bold"
                                         style="white-space: normal; word-wrap: break-word;">
@@ -221,7 +221,7 @@
 
                         @foreach ($reviews as $review)
                             <div class="card mx-2 d-flex justify-content-around"
-                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color5 }}), rgb({{ $color1 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
                                 <div class="card-body" style="overflow: hidden; flex-grow: 1;">
                                     <p class="card-text text-dark fw-bold"
                                         style="white-space: normal; word-wrap: break-word;">
@@ -238,7 +238,7 @@
 
                         @foreach ($reviews as $review)
                             <div class="card mx-2 d-flex justify-content-around"
-                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color1 }}), rgb({{ $color6 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
+                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color5 }}), rgb({{ $color1 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
                                 <div class="card-body" style="overflow: hidden; flex-grow: 1;">
                                     <p class="card-text text-dark fw-bold"
                                         style="white-space: normal; word-wrap: break-word;">

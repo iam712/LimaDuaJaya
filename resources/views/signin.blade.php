@@ -260,6 +260,12 @@
             animation-duration: 11s;
         }
 
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
         @keyframes animate {
             0% {
                 transform: translateY(0) rotate(0deg);
@@ -275,7 +281,7 @@
         }
     </style>
 
-    <section>
+    <section class="parallax">
         <div class="signin-page">
             <!-- Animated Background -->
             <div class="area">

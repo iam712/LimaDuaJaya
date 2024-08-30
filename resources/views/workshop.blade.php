@@ -37,7 +37,7 @@
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                         <div class="card h-100 p-3"
                             style="
-                                background-color: rgb({{ $color6 }});
+                                background-color: rgb({{ $color1 }});
                                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
                                 border-radius: 8px;
                                 overflow: hidden;
@@ -94,7 +94,7 @@
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                         <div class="card h-100 p-3"
                             style="
-                                background-color: rgb({{ $color6 }});
+                                background-color: rgb({{ $color1 }});
                                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
                                 border-radius: 8px;
                                 overflow: hidden;
