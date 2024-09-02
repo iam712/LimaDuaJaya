@@ -98,7 +98,7 @@
 
         /* Background and Text Color Styles */
         .bg-custom {
-            background-color: rgb({{ $color5 }});
+            background-color: rgb({{ $color1 }});
             color: rgb({{ $color2 }});
         }
 
