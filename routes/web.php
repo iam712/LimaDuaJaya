@@ -50,16 +50,16 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/reviews', [ReviewController::class, 'adminIndex'])->name('admin.reviews.index');
     Route::delete('/admin/reviews/{id}', [ReviewController::class, 'destroy'])->name('admin.reviews.destroy');
 
+    // Workshop CRUD Routes
     Route::get('/admin-workshop', function () {
         return view('admin.workshop.workshop');
     });
-
     Route::get('/admin-portoworkshop', function () {
         return view('admin.portoworkshop.portoworkshop');
     });
 
+    // Projects CRUD Routes
     Route::resource('/admin/projects', ProjectLimaduajayaSurabayaController::class);
-
     Route::resource('/admin/portfolio_projects', PortfolioProjectLimaduajayaSurabayaController::class);
 
     // User CRUD Routes
