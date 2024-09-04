@@ -4,10 +4,16 @@
 @php
     $color1 = '255, 255, 255'; // #ffffff
     $color2 = '0, 0, 0'; // #000000
-    $color3 = '125, 20, 19'; // #7d141d
-    $color4 = '238, 63, 72'; // #EE3F48
-    $color5 = '255, 222, 223'; // #ffdedf
-    $color6 = '246, 232, 214'; // #F6E8D6
+    $color3 = '125, 20, 19'; //#7d141d
+    $color4 = '238, 63, 72'; //#EE3F48
+    $color5 = '255, 222, 223'; //#ffdedf
+    $color6 = '246, 232, 214'; //#F6E8D6
+
+    // Command to use rgb color
+    // style="color: rgb({{ $color0 }});"
+    // style="background-color: rgb({{ $color1 }});"
+    // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
+
 @endphp
 
 @section('title', 'Workshop')
@@ -183,7 +189,7 @@
                         <div class="mb-3">
                             {{-- <label for="resume" class="form-label">Attach your resume // portfolio here</label>
                             <input type="file" class="form-control" id="resume" name="resume"> --}}
-                            <small class="form-text text-light">Remember to attach your resume.</small>
+                            <small class="form-text text-dark">*Remember to attach your resume.</small>
                         </div>
                         <button type="button" class="btn btn-dark w-100" onclick="sendEmail()">Submit</button>
                     </form>
@@ -191,6 +197,7 @@
             </div>
         </div>
     </section>
+
     <style>
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -220,10 +227,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('{{ asset('images/workshop/workshopbg2.png') }}');
+            background-color: rgb({{ $color5 }});
             background-size: cover;
             background-position: center;
-            opacity: 0.9;
+            opacity: 0.8;
             z-index: 2;
         }
 
