@@ -9,7 +9,11 @@ class Review extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'comment'];
+    protected $fillable = [
+        'name',
+        'email',
+        'comment'
+    ];
 
     // If reviews belong to a user:
     // public function user()

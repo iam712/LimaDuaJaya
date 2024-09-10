@@ -15,54 +15,54 @@
 @section('content')
 
 <!-- Main Content Section -->
-<section class="py-5 mt-5">
+<section class="py-5 mt-5" style="background-color: rgb({{ $color1 }});">
     <div class="container">
-        <div class="row g-4">
-            <h2>Detail Workshop</h2>
-            <div class="col-12 col-md-5">
-                <div class="card border-0 shadow-sm" style="background-color: rgb({{ $color5 }});">
-                    <img src="{{ asset('images/clients/blastoz.png') }}" class="img-fluid card w-100" alt="Workshop Image" style="">
+        <div class="row g-4 align-items-center">
+            <h2 class="text-start mb-4" style="color: rgb({{ $color2 }});">Detail Workshop</h2>
+            <div class="col-12 col-md-4 col-lg-5">
+                <div class="card border-0 shadow-sm rounded-3" style="background-color: rgb({{ $color5 }});">
+                    <img src="{{ asset('images/clients/blastoz.png') }}" class="img-fluid card w-100 rounded-3" alt="Workshop Image">
                 </div>
             </div>
-            <div class="col-12 col-md-7">
-                <h2 style="color: rgb({{ $color2 }});">Name</h2>
-                <p style="color: rgb({{ $color2 }});"><i class="fas fa-map-marker-alt"></i> Location</p>
-                <p style="color: rgb({{ $color2 }});">Description</p>
+            <div class="col-12 col-md-8 col-lg-7">
+                <h2 class="h4" style="color: rgb({{ $color2 }});">Workshop Name</h2>
+                <p class="mb-2" style="color: rgb({{ $color2 }});"><i class="fas fa-map-marker-alt"></i> Location</p>
+                <p class="mb-4" style="color: rgb({{ $color2 }});">This is a brief description of the workshop. It includes details about the topic, location, and what participants can expect.</p>
+                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill" style="background-color: rgb({{ $color4 }}); border: none;">See More</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Additional Content Section -->
-<section class="py-5">
+<!-- Additional Workshops Section -->
+<section class="py-2 py-md-3 py-lg-4">
     <div class="container">
+        <h3 class="text-center mb-5" style="color: rgb({{ $color2 }});">More Portfolio</h3>
         <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="card border-0 shadow-sm" style="background-color: rgb({{ $color5 }});">
-                    <!-- Content for the card can go here -->
-                    <img src="{{ asset('images/clients/blastoz.png') }}" class="img-fluid card w-100" alt="Workshop Image" style="">
+            <!-- Reusable Workshop Card -->
+            @foreach([1, 2, 3, 4] as $i)
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card border-0 shadow-sm rounded-3 hover-card" style="background-color: rgb({{ $color1 }}); transition: transform 0.3s;">
+                    <img src="{{ asset('images/clients/blastoz.png') }}" class="img-fluid w-100 rounded-top" alt="Workshop Image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: rgb({{ $color2 }});">Workshop {{ $i }}</h5>
+                        <p class="card-text" style="color: rgb({{ $color2 }});">Brief description of the workshop {{ $i }}.</p>
+                        <a href="#" class="btn btn-outline-dark px-3 py-2 rounded-pill">Learn More</a>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card border-0 shadow-sm" style="background-color: rgb({{ $color5 }});">
-                    <!-- Content for the card can go here -->
-                    <img src="{{ asset('images/clients/blastoz.png') }}" class="img-fluid card w-100" alt="Workshop Image" style="">
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card border-0 shadow-sm" style="background-color: rgb({{ $color5 }});">
-                    <!-- Content for the card can go here -->
-                    <img src="{{ asset('images/clients/blastoz.png') }}" class="img-fluid card w-100" alt="Workshop Image" style="">
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card border-0 shadow-sm" style="background-color: rgb({{ $color5 }});">
-                    <!-- Content for the card can go here -->
-                    <img src="{{ asset('images/clients/blastoz.png') }}" class="img-fluid card w-100" alt="Workshop Image" style="">
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
 
 @endsection
+
+<!-- Optional Styles -->
+<style>
+    .hover-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+</style>

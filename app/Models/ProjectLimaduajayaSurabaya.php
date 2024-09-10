@@ -12,7 +12,9 @@ class ProjectLimaduajayaSurabaya extends Model
     // Explicitly set the table name
     protected $table = 'projectlimaduajayasurabayas';
 
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'name'
+    ];
 
     public function portfolioProjects()
     {

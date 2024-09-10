@@ -259,8 +259,8 @@
                                 </div>
 
                                 <!-- Static Logo -->
-                                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center mt-4 mt-md-0">
-                                    <img src="{{ asset('images/logo-square.png') }}" alt="Logo Image" class="img-fluid">
+                                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center mt-4 mt-md-0 mt-lg-0">
+                                    <img src="{{ asset('images/logo-square.png') }}" alt="Logo Image" class="img-fluid w-75">
                                 </div>
                                 <!-- End of Static Logo -->
                             </div>
