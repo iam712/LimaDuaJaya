@@ -15,7 +15,8 @@ class Workshop extends Model
         'name',
         'location',
         'description',
-        'isLimaduajaya'
+        'isLimaduajaya',
+    
     ];
 
     public function portfolios()

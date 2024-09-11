@@ -96,48 +96,17 @@
                 Workshop Partnership
             </h3>
             <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
-                @foreach (range(1, 8) as $index)
+                @foreach ($workshops as $workshop)
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                        <div class="card h-100 p-3"
-                            style="
-                                background-color: rgb({{ $color1 }});
-                                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-                                border-radius: 8px;
-                                overflow: hidden;
-                            ">
-                            <img src="{{ asset('images/clients/blastoz.png') }}" class="card-img-top"
-                                alt="Image {{ $index }}"
-                                style="
-                                    max-height: 200px;
-                                    object-fit: cover;
-                                " />
+                        <div class="card h-100 p-3" style="background-color: rgb({{ $color1 }});">
+                            <img src="{{ asset('storage/' . $workshop->image) }}" class="card-img-top"
+                                alt="{{ $workshop->name }}">
                             <div class="card-body">
-                                <h5 class="card-title"
-                                    style="
-                                        color: #333;
-                                        font-size: 1.2rem;
-                                        margin-top: 10px;
-                                    ">
-                                    Nama Workshop {{ $index }}
-                                </h5>
-                                <p class="card-text"
-                                    style="
-                                        color: #666;
-                                        font-size: 1rem;
-                                        margin-bottom: 15px;
-                                    ">
-                                    <i class="fas fa-location-dot location-icon" style="margin-right: 5px;"></i>
-                                    Location
-                                </p>
-                                <a href="/detail" class="btn btn-dark w-100"
-                                    style="
-                                        background-color: #333;
-                                        border: none;
-                                        padding: 10px;
-                                        border-radius: 5px;
-                                    ">
-                                    Detail
-                                </a>
+                                <h5 class="card-title" style="color: #333;">{{ $workshop->name }}</h5>
+                                <p class="card-text" style="color: #666;"><i class="fas fa-location-dot"></i>
+                                    {{ $workshop->location }}</p>
+                                <a href="{{ route('workshops.detail', $workshop->id) }}"
+                                    class="btn btn-dark w-100">Detail</a>
                             </div>
                         </div>
                     </div>

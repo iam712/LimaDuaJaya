@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-                background-color: rgba({{ $color4 }}, 1);
-                color: rgba({{ $color1 }}, 1);
-            }
+                    background-color: rgba({{ $color4 }}, 1);
+                    color: rgba({{ $color1 }}, 1);
+                }
 
-            .btn-danger {
-                background-color: rgba({{ $color3 }}, 1);
-                color: rgba({{ $color1 }}, 1);
-            }
+                .btn-danger {
+                    background-color: rgba({{ $color3 }}, 1);
+                    color: rgba({{ $color1 }}, 1);
+                }
 
-            .btn-success {
-                background-color: rgba({{ $color7 }}, 1);
-                color: rgba({{ $color1 }}, 1);
-            } */
+                .btn-success {
+                    background-color: rgba({{ $color7 }}, 1);
+                    color: rgba({{ $color1 }}, 1);
+                } */
     </style>
 
     <div class="animated-bg">
@@ -125,22 +125,30 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>image</td>
-                            <td>1</td>
-                            <td>tes</td>
-                            <td>
-                                <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#editModal">Edit</button>
-                            </td>
-                            <td>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal">Delete</button>
-                            </td>
-                        </tr>
-                        <!-- Repeat for other rows -->
+                        @foreach ($portfolios as $key => $portfolio)
+                            <tr>
+                                <td>{{ $key + 1 }}</td>
+                                <td><img src="{{ asset('storage/' . $portfolio->image) }}" alt="Image" width="100">
+                                </td>
+                                <td>{{ $portfolio->workshop->id }}</td>
+                                <td>{{ $portfolio->workshop->name }}</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#editPortfolioModal-{{ $portfolio->id }}">
+                                        Edit
+                                    </button>
+                                </td>
+                                <td>
+                                    <form action="{{ route('portfolios.destroy', $portfolio->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
+
                 </table>
             </div>
         </section>

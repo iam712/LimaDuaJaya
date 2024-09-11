@@ -9,7 +9,7 @@
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
-                <a class="nav-link {{ request()->is('admin-workshop') ? 'active' : '' }}" href="/admin-workshop">
+                <a class="nav-link {{ request()->is('workshops.index') ? 'active' : '' }}" href="{{ route('workshops.index') }}">
                     <i class="fas fa-cogs"></i> Manage Workshop
                 </a>
             </li>

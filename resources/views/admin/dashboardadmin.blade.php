@@ -107,12 +107,12 @@
                         <div class="card border-light shadow-sm h-100">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="{{ url('/admin-workshop') }}" class="text-decoration-none">
+                                    <a href="{{ url('/admin/workshops') }}" class="text-decoration-none">
                                         Workshop
                                     </a>
                                 </h5>
                                 <p class="card-text">Manage and review all workshop-related content.</p>
-                                <a href="{{ url('/admin-workshop') }}" class="btn btn-primary">Go to Workshop</a>
+                                <a href="{{ url('/admin/workshops') }}" class="btn btn-primary">Go to Workshop</a>
                             </div>
                         </div>
                     </div>

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WorkshopController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProjectLimaduajayaSurabayaController;
 use App\Http\Controllers\PortfolioProjectLimaduajayaSurabayaController;
 use App\Http\Controllers\ProfileController;
@@ -51,12 +53,18 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('/admin/reviews/{id}', [ReviewController::class, 'destroy'])->name('admin.reviews.destroy');
 
     // Workshop CRUD Routes
-    Route::get('/admin-workshop', function () {
-        return view('admin.workshop.workshop');
-    });
     Route::get('/admin-portoworkshop', function () {
         return view('admin.portoworkshop.portoworkshop');
     });
+
+    Route::resource('/admin/workshops', WorkshopController::class);
+
+
+
+
+    Route::resource('/admin/portfolios', PortfolioController::class);
+
+
 
     // Projects CRUD Routes
     Route::resource('/admin/projects', ProjectLimaduajayaSurabayaController::class);

@@ -4,21 +4,28 @@ namespace App\Http\Controllers;
 
 use App\Models\Workshop;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class WorkshopController extends Controller
 {
+
+    // In WorkshopController@index:
     public function index()
     {
-        // Fetch and list all workshops
-        $workshops = Workshop::with('portfolios')->get();
-        $workshops = Workshop::paginate(2);
+        $workshops = Workshop::with('portfolios')->paginate(10); // Adjust pagination as needed
         return view('admin.workshop.workshop', compact('workshops'));
+    }
+
+    public function userIndex()
+    {
+        $workshops = Workshop::where('isLimaduajaya', true)->paginate(10);  // Or other filtering criteria
+        return view('workshop', compact('workshops'));
     }
 
     public function create()
     {
         // Show the form to create a new workshop
-
+        return view('admin.workshop.create');
     }
 
     public function store(Request $request)
@@ -28,8 +35,8 @@ class WorkshopController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
-            'description' => 'required|string|max:255',
-            'isLimaduajaya' => 'required|boolean'
+            'description' => 'required|string|max:500',  // Adjust length as per your requirements
+            'isLimaduajaya' => 'nullable|boolean'
         ]);
 
         // Handle the image upload
@@ -37,37 +44,30 @@ class WorkshopController extends Controller
 
         // Create and save the new workshop
         Workshop::create([
-            'image' => $imagePath,  // Store the path to the uploaded image
+            'image' => $imagePath,
             'name' => $request->name,
             'location' => $request->location,
             'description' => $request->description,
-            'isLimaduajaya' => $request->isLimaduajaya
+            //'isLimaduajaya' => $request->has('isLimaduajaya') ? true : false,
+            'isLimaduajaya' => $request->input('isLimaduajaya', false) ? true : false, // Explicitly check the value
         ]);
 
         // Redirect to the workshops index with a success message
         return redirect()->route('workshops.index')->with('success', 'Workshop created successfully.');
     }
 
-
     public function show($id)
     {
-        // Display a specific workshop by ID
-        // Retrieve the specific workshop by its ID
-        $workshops = Workshop::findOrFail($id);
-
-        // Pass the workshop data to the view
-        return view('workshops.show', compact('workshops'));
+        $workshop = Workshop::with('portfolios')->findOrFail($id);
+        return view('detail', compact('workshop'));
     }
+
 
     public function edit($id)
     {
         // Show the form to edit a specific workshop by ID
-        // Find the specific workshop by ID
-        // $workshop = Workshop::findOrFail($id);
-
-        // // Pass the workshop data to the view to edit
-        // return view('admin.workshop.edit', compact('workshop'));
-
+        $workshop = Workshop::findOrFail($id);
+        return view('admin.workshop.edit', compact('workshop'));
     }
 
     public function update(Request $request, $id)
@@ -77,8 +77,8 @@ class WorkshopController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
-            'description' => 'required|string|max:255',
-            'isLimaduajaya' => 'required|boolean',
+            'description' => 'required|string|max:500',  // Adjust length as per your requirements
+            'isLimaduajaya' => 'nullable|boolean',
         ]);
 
         // Find the specific workshop by ID
@@ -88,27 +88,14 @@ class WorkshopController extends Controller
         $workshop->name = $request->name;
         $workshop->location = $request->location;
         $workshop->description = $request->description;
-        $workshop->isLimaduajaya = $request->isLimaduajaya;
+        //$workshop->isLimaduajaya = $request->has('isLimaduajaya') ? true : false;
+        $workshop->isLimaduajaya = $request->input('isLimaduajaya', false) ? true : false; // Explicitly check the value
 
-        //dd($request->all());
-
-        // Check if a new image has been uploaded
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('portfolio_images', 'public');
-            $portfolioProject->update([
-                'image' => $imagePath,
-                'project_id' => $request->project_id, // Use 'project_id'
-            ]);
-        } else {
-            $portfolioProject->update([
-                'project_id' => $request->project_id,
-            ]);
-        }
         // Handle the image if it was uploaded
         if ($request->hasFile('image')) {
             // Delete the old image if it exists
             if ($workshop->image) {
-                \Storage::delete('public/' . $workshop->image);
+                Storage::delete('public/' . $workshop->image);
             }
 
             // Store the new image
@@ -125,18 +112,18 @@ class WorkshopController extends Controller
 
     public function destroy($id)
     {
-        // Delete a specific workshop by ID
-    $workshop = Workshop::findOrFail($id);
+        // Find and delete a specific workshop by ID
+        $workshop = Workshop::findOrFail($id);
 
-    // Delete the workshop's image from storage
-    if ($workshop->image) {
-        \Storage::delete('public/' . $workshop->image);
-    }
+        // Delete the workshop's image from storage
+        if ($workshop->image) {
+            Storage::delete('public/' . $workshop->image);
+        }
 
-    // Delete the workshop from the database
-    $workshop->delete();
+        // Delete the workshop from the database
+        $workshop->delete();
 
-    // Redirect to the workshops list with a success message
-    return redirect()->route('workshops.index')->with('success', 'Workshop deleted successfully!');
+        // Redirect to the workshops list with a success message
+        return redirect()->route('workshops.index')->with('success', 'Workshop deleted successfully!');
     }
 }

@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-                        background-color: rgba({{ $color4 }}, 1);
-                        color: rgba({{ $color1 }}, 1);
-                    }
+                                                    background-color: rgba({{ $color4 }}, 1);
+                                                    color: rgba({{ $color1 }}, 1);
+                                                }
 
-                    .btn-danger {
-                        background-color: rgba({{ $color3 }}, 1);
-                        color: rgba({{ $color1 }}, 1);
-                    }
+                                                .btn-danger {
+                                                    background-color: rgba({{ $color3 }}, 1);
+                                                    color: rgba({{ $color1 }}, 1);
+                                                }
 
-                    .btn-success {
-                        background-color: rgba({{ $color7 }}, 1);
-                        color: rgba({{ $color1 }}, 1);
-                    } */
+                                                .btn-success {
+                                                    background-color: rgba({{ $color7 }}, 1);
+                                                    color: rgba({{ $color1 }}, 1);
+                                                } */
     </style>
 
     <div class="animated-bg">
@@ -110,63 +110,66 @@
             <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
-
-        <section>
-            <div class="container table-responsive py-5">
-                <table class="table table-hover table-borderless">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Photo</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Location</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">is Lima Dua Jaya?</th>
-                            <th scope="col">Actions</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>image</td>
-                            <td>Workshop 1</td>
-                            <td>Surabaya</td>
-                            <td>halo</td>
-                            <td>Yes</td>
-                            <td>
-                                <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                                    data-bs-target="#editWorkshopModal">Edit</button>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#deleteWorkshopModal">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>image</td>
-                            <td>Workshop 2</td>
-                            <td>Surabaya</td>
-                            <td>halo</td>
-                            <td>Yes</td>
-                            <td>
-                                <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                                    data-bs-target="#editWorkshopModal">Edit</button>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#deleteWorkshopModal">Delete</button>
-                            </td>
-                        </tr>
-                        <!-- Repeat for other rows -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        @if ($workshops->isEmpty())
+            <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
+        @else
+            <section>
+                <div class="container table-responsive py-5">
+                    <table class="table table-hover table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Photo</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">is Lima Dua Jaya?</th>
+                                <th scope="col">Actions</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($workshops as $workshop)
+                                <tr>
+                                    <td>{{ ($workshops->currentPage() - 1) * $workshops->perPage() + $loop->iteration }}
+                                    </td>
+                                    <td><img src="{{ asset('storage/' . $workshop->image) }}" alt="Image"
+                                            width="100">
+                                    </td>
+                                    <td>{{ $workshop->name }}</td>
+                                    <td>{{ $workshop->location }}</td>
+                                    <td>{{ $workshop->description }}</td>
+                                    <td>{{ $workshop->isLimaduajaya ? 'Yes' : 'No' }}</td>
+                                    <td>
+                                        <!-- Edit button -->
+                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#editWorkshopModal-{{ $workshop->id }}">
+                                            Edit
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <!-- Delete button -->
+                                        {{-- <form action="{{ route('workshops.destroy', $workshop->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                        </form> --}}
+                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $workshop->id }}">Delete</button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        @endif
         <div class="text-end mt-3">
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addWorkshopModal">Add New
                 Workshop</button>
+        </div>
+        <!-- Pagination Links -->
+        <div class="d-flex justify-content-center">
+            {{ $workshops->links('vendor.pagination.bootstrap-4') }}
         </div>
     </div>
 
@@ -179,95 +182,127 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="{{ route('workshops.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="mb-3">
                             <label for="workshopPhoto" class="form-label">Workshop Photo</label>
-                            <input type="file" class="form-control" id="workshopPhoto">
+                            <input type="file" name="image" class="form-control" id="workshopPhoto" required>
                         </div>
                         <div class="mb-3">
                             <label for="workshopName" class="form-label">Workshop Name</label>
-                            <input type="text" class="form-control" id="workshopName">
+                            <input type="text" name="name" class="form-control" id="workshopName" required>
                         </div>
                         <div class="mb-3">
                             <label for="workshopLocation" class="form-label">Workshop Location</label>
-                            <input type="text" class="form-control" id="workshopLocation">
+                            <input type="text" name="location" class="form-control" id="workshopLocation" required>
                         </div>
                         <div class="mb-3">
                             <label for="workshopDescription" class="form-label">Description</label>
-                            <textarea class="form-control" id="workshopDescription"></textarea>
+                            <textarea name="description" class="form-control" id="workshopDescription" required></textarea>
                         </div>
+                        {{-- <div class="mb-3 form-check">
+                            <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="isLimaDua">
+                            <label class="form-check-label" for="isLimaDua">Is the workshop from LimaDua?</label>
+                        </div> --}}
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="isLimaDua">
+                            <!-- Hidden input to ensure 'false' is sent when the checkbox is not checked -->
+                            <input type="hidden" name="isLimaduajaya" value="0">
+
+                            <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="isLimaDua" value="1">
                             <label class="form-check-label" for="isLimaDua">Is the workshop from LimaDua?</label>
                         </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Edit Workshop Modal -->
-    <div class="modal fade" id="editWorkshopModal" tabindex="-1" aria-labelledby="editWorkshopModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editWorkshopModalLabel">Edit Workshop</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    @foreach ($workshops as $workshop)
+        <!-- Edit Workshop Modal -->
+        <div class="modal fade" id="editWorkshopModal-{{ $workshop->id }}" tabindex="-1"
+            aria-labelledby="editModalLabel{{ $workshop->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editWorkshopModalLabel">Edit Workshop</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ route('workshops.update', $workshop->id) }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+                            <div class="mb-3">
+                                <label for="editWorkshopPhoto" class="form-label">Workshop Photo</label>
+                                <input type="file" name="image" class="form-control" id="editWorkshopPhoto">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editWorkshopName" class="form-label">Workshop Name</label>
+                                <input type="text" name="name" class="form-control" id="editWorkshopName"
+                                    value="{{ $workshop->name }}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editWorkshopLocation" class="form-label">Workshop Location</label>
+                                <input type="text" name="location" class="form-control" id="editWorkshopLocation"
+                                    value="{{ $workshop->location }}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editWorkshopDescription" class="form-label">Description</label>
+                                <textarea name="description" class="form-control" id="editWorkshopDescription">{{ $workshop->description }}</textarea>
+                            </div>
+                            {{-- <div class="mb-3 form-check">
+                                <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="editIsLimaDua"
+                                    {{ $workshop->isLimaduajaya ? 'checked' : '' }}>
+                                <label class="form-check-label" for="editIsLimaDua">Is the workshop from LimaDua?</label>
+                            </div> --}}
+
+                            <div class="mb-3 form-check">
+                                <!-- Hidden input to ensure 'false' is sent when the checkbox is not checked -->
+                                <input type="hidden" name="isLimaduajaya" value="0">
+
+                                <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="editIsLimaDua" value="1"
+                                    {{ $workshop->isLimaduajaya ? 'checked' : '' }}>
+                                <label class="form-check-label" for="editIsLimaDua">Is the workshop from LimaDua?</label>
+                            </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                    </form>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="editWorkshopPhoto" class="form-label">Workshop Photo</label>
-                            <input type="file" class="form-control" id="editWorkshopPhoto">
+            </div>
+        </div>
+
+        <!-- Delete Workshop Modal -->
+        <div class="modal fade" id="deleteModal{{ $workshop->id }}" tabindex="-1"
+            aria-labelledby="deleteModalLabel{{ $workshop->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="{{ route('workshops.destroy', $workshop->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel{{ $workshop->id }}">Delete Workshop</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
-                        <div class="mb-3">
-                            <label for="editWorkshopName" class="form-label">Workshop Name</label>
-                            <input type="text" class="form-control" id="editWorkshopName">
+                        <div class="modal-body">
+                            Are you sure you want to delete this workshop?
                         </div>
-                        <div class="mb-3">
-                            <label for="editWorkshopLocation" class="form-label">Workshop Location</label>
-                            <input type="text" class="form-control" id="editWorkshopLocation">
-                        </div>
-                        <div class="mb-3">
-                            <label for="editWorkshopDescription" class="form-label">Description</label>
-                            <textarea class="form-control" id="editWorkshopDescription"></textarea>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="editIsLimaDua">
-                            <label class="form-check-label" for="editIsLimaDua">Is the workshop from LimaDua?</label>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Delete Workshop</button>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Delete Workshop Modal -->
-    <div class="modal fade" id="deleteWorkshopModal" tabindex="-1" aria-labelledby="deleteWorkshopModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteWorkshopModalLabel">Delete Workshop</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Are you sure you want to delete this workshop?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    @endforeach
 @endsection
