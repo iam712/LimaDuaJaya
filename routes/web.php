@@ -16,9 +16,10 @@ Route::get('/', function () {
 
 Route::get('/aboutus', [ReviewController::class, 'index'])->name('aboutus');
 
-Route::get('/workshop', function () {
-    return view('workshop');
-});
+
+Route::get('/workshops', [WorkshopController::class, 'userIndex'])->name('workshop.index');
+
+Route::get('/workshops/{id}', [WorkshopController::class, 'show'])->name('workshops.detail');
 
 Route::get('/detail', function () {
     return view('detail');

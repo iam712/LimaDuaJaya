@@ -12,8 +12,15 @@ class PortfolioController extends Controller
 
     public function index()
     {
-        $portfolios = Portfolio::with('workshop')->paginate(10); // Adjust pagination as needed
-        return view('admin.portoworkshop.portoworkshop', compact('portfolios'));
+        // Fetch all portfolios with their associated workshops
+        $portfolios = Portfolio::with('workshop')->get();
+
+        $portfolios = Portfolio::with('workshop')->paginate(2);
+        // Adjust pagination as needed
+        $workshops = Workshop::all();
+
+        // Pass the portfolios and workshops to the view
+        return view('admin.portoworkshop.portoworkshop', compact('portfolios', 'workshops'));
     }
 
 
@@ -41,6 +48,12 @@ class PortfolioController extends Controller
             'id_workshop' => $request->id_workshop,
         ]);
 
+        // Create the portfolio explicitly assigning id_workshop
+        $portfolio = new Portfolio();
+        $portfolio->image = $imagePath;
+        $portfolio->id_workshop = $request->id_workshop; // Explicit assignment of id_workshop
+        $portfolio->save();
+
         // Redirect to the portfolios index with a success message
         return redirect()->route('portfolios.index')->with('success', 'Portfolio created successfully.');
     }
@@ -62,37 +75,36 @@ class PortfolioController extends Controller
 
     public function update(Request $request, $id)
     {
-        // Update the specified portfolio in storage
+
+        // Fetch the specific portfolio by ID
+        $portfolio = Portfolio::findOrFail($id);
+
+        // Validate the incoming request
         $request->validate([
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'id_workshop' => 'required|exists:workshops,id',
         ]);
 
-        // Find the specific portfolio by ID
-        $portfolio = Portfolio::findOrFail($id);
-
-        // Update the portfolio's details
-        $portfolio->id_workshop = $request->id_workshop;
-
         // Handle the image if it was uploaded
         if ($request->hasFile('image')) {
             // Delete the old image if it exists
-            if ($portfolio->image) {
-                Storage::delete('public/' . $portfolio->image);
-            }
-
-            // Store the new image
             $imagePath = $request->file('image')->store('portfolio_images', 'public');
-            $portfolio->image = $imagePath;
+            $portfolio->update([
+                'image' => $imagePath,
+                'id_workshop' => $request->id_workshop, // Use 'id_workshop'
+            ]);
+        } else {
+            $portfolio->update([
+                'id_workshop' => $request->id_workshop,
+            ]);
         }
-
-        // Save the updated portfolio
-        $portfolio->save();
 
         // Redirect back with a success message
         return redirect()->route('portfolios.index')->with('success', 'Portfolio updated successfully.');
     }
 
+
+    // Remove the specified portfolio project (Admin Delete)
     public function destroy($id)
     {
         // Delete a specific portfolio by ID
@@ -109,4 +121,5 @@ class PortfolioController extends Controller
         // Redirect to the portfolios list with a success message
         return redirect()->route('portfolios.index')->with('success', 'Portfolio deleted successfully!');
     }
+
 }

@@ -44,7 +44,6 @@ class PortfolioProjectLimaduajayaSurabayaController extends Controller
         return redirect()->route('portfolio_projects.index')->with('success', 'Portfolio project created successfully.');
     }
 
-
     // Update the specified portfolio project (Admin Update)
     public function update(Request $request, $id)
     {

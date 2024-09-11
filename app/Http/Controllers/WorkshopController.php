@@ -12,15 +12,22 @@ class WorkshopController extends Controller
     // In WorkshopController@index:
     public function index()
     {
-        $workshops = Workshop::with('portfolios')->paginate(10); // Adjust pagination as needed
+        $workshops = Workshop::with('portfolios')->paginate(2); // Adjust pagination as needed
         return view('admin.workshop.workshop', compact('workshops'));
     }
 
     public function userIndex()
     {
-        $workshops = Workshop::where('isLimaduajaya', true)->paginate(10);  // Or other filtering criteria
-        return view('workshop', compact('workshops'));
+        // Fetch Lima Dua Jaya workshops
+        $limaduajayaWorkshops = Workshop::where('isLimaduajaya', true)->get();
+
+        // Fetch other workshops (not Lima Dua Jaya)
+        $otherWorkshops = Workshop::where('isLimaduajaya', false)->get();
+
+        // Pass both collections to the view
+        return view('workshop', compact('limaduajayaWorkshops', 'otherWorkshops'));
     }
+
 
     public function create()
     {
