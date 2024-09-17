@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-                                                    background-color: rgba({{ $color4 }}, 1);
-                                                    color: rgba({{ $color1 }}, 1);
-                                                }
+                                                        background-color: rgba({{ $color4 }}, 1);
+                                                        color: rgba({{ $color1 }}, 1);
+                                                    }
 
-                                                .btn-danger {
-                                                    background-color: rgba({{ $color3 }}, 1);
-                                                    color: rgba({{ $color1 }}, 1);
-                                                }
+                                                    .btn-danger {
+                                                        background-color: rgba({{ $color3 }}, 1);
+                                                        color: rgba({{ $color1 }}, 1);
+                                                    }
 
-                                                .btn-success {
-                                                    background-color: rgba({{ $color7 }}, 1);
-                                                    color: rgba({{ $color1 }}, 1);
-                                                } */
+                                                    .btn-success {
+                                                        background-color: rgba({{ $color7 }}, 1);
+                                                        color: rgba({{ $color1 }}, 1);
+                                                    } */
     </style>
 
     <div class="animated-bg">
@@ -134,7 +134,7 @@
                                     <td>{{ ($workshops->currentPage() - 1) * $workshops->perPage() + $loop->iteration }}
                                     </td>
                                     <td><img src="{{ asset('storage/' . $workshop->image) }}" alt="Image"
-                                            width="100">
+                                            style="width: 100px; object-fit: cover; aspect-ratio: 1 / 1;">
                                     </td>
                                     <td>{{ $workshop->name }}</td>
                                     <td>{{ $workshop->location }}</td>
@@ -154,7 +154,8 @@
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                         </form> --}}
-                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $workshop->id }}">Delete</button>
+                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal{{ $workshop->id }}">Delete</button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -208,7 +209,8 @@
                             <!-- Hidden input to ensure 'false' is sent when the checkbox is not checked -->
                             <input type="hidden" name="isLimaduajaya" value="0">
 
-                            <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="isLimaDua" value="1">
+                            <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="isLimaDua"
+                                value="1">
                             <label class="form-check-label" for="isLimaDua">Is the workshop from LimaDua?</label>
                         </div>
 
@@ -265,8 +267,8 @@
                                 <!-- Hidden input to ensure 'false' is sent when the checkbox is not checked -->
                                 <input type="hidden" name="isLimaduajaya" value="0">
 
-                                <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="editIsLimaDua" value="1"
-                                    {{ $workshop->isLimaduajaya ? 'checked' : '' }}>
+                                <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="editIsLimaDua"
+                                    value="1" {{ $workshop->isLimaduajaya ? 'checked' : '' }}>
                                 <label class="form-check-label" for="editIsLimaDua">Is the workshop from LimaDua?</label>
                             </div>
 

@@ -154,7 +154,25 @@
     <style>
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
         }
+
+        .card-img-top {
+            object-fit: cover;
+            /* Ensures the image covers the box without distortion */
+            height: 200px;
+            /* Set a max height for the images */
+            width: 100%;
+            /* Ensure the image takes the full width of the container */
+            border-radius: 8px;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
 
         .card:hover {
             transform: scale(1.05);
@@ -238,6 +256,13 @@
 
         .fade-section.visible {
             opacity: 1;
+        }
+
+        @media (min-width: 768px) {
+            .card-img-top {
+                height: 250px;
+                /* Adjust height for larger screens */
+            }
         }
     </style>
     <script>

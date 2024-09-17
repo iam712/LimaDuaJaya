@@ -117,7 +117,7 @@
                                     <td>{{ ($portfolios->currentPage() - 1) * $portfolios->perPage() + $loop->iteration }}
                                     </td>
                                     <td><img src="{{ asset('storage/' . $portfolio->image) }}" alt="Image"
-                                            width="100">
+                                        style="width: 100px; object-fit: cover; aspect-ratio: 1 / 1;">
                                     </td>
                                     <td>{{ $portfolio->id_workshop }}</td>
                                     <td>{{ $portfolio->workshop->name }}</td>
