@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-                        background-color: rgba({{ $color4 }}, 1);
-                        color: rgba({{ $color1 }}, 1);
-                    }
+                                background-color: rgba({{ $color4 }}, 1);
+                                color: rgba({{ $color1 }}, 1);
+                            }
 
-                    .btn-danger {
-                        background-color: rgba({{ $color3 }}, 1);
-                        color: rgba({{ $color1 }}, 1);
-                    }
+                            .btn-danger {
+                                background-color: rgba({{ $color3 }}, 1);
+                                color: rgba({{ $color1 }}, 1);
+                            }
 
-                    .btn-success {
-                        background-color: rgba({{ $color7 }}, 1);
-                        color: rgba({{ $color1 }}, 1);
-                    } */
+                            .btn-success {
+                                background-color: rgba({{ $color7 }}, 1);
+                                color: rgba({{ $color1 }}, 1);
+                            } */
     </style>
 
     <div class="animated-bg">
@@ -129,7 +129,8 @@
                         <tbody>
                             @foreach ($portfolioProjects as $portfolioProject)
                                 <tr>
-                                    <td>{{ ($portfolioProjects->currentPage() - 1) * $portfolioProjects->perPage() + $loop->iteration }}</td>
+                                    <td>{{ ($portfolioProjects->currentPage() - 1) * $portfolioProjects->perPage() + $loop->iteration }}
+                                    </td>
                                     <td><img src="{{ asset('storage/' . $portfolioProject->image) }}" alt="Portfolio Image"
                                             style="width: 100px; object-fit: cover; aspect-ratio: 1 / 1;"></td>
                                     <td>{{ $portfolioProject->project_id }}</td>
@@ -149,12 +150,12 @@
                 </div>
             </section>
         @endif
-            <div class="text-end mt-3">
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Portfolio
-                    Project</button>
-            </div>
-            <!-- Pagination Links -->
-         <div class="d-flex justify-content-center">
+        <div class="text-end mt-3">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Portfolio
+                Project</button>
+        </div>
+        <!-- Pagination Links -->
+        <div class="d-flex justify-content-center">
             {{ $portfolioProjects->links('vendor.pagination.bootstrap-4') }}
         </div>
     </div>
@@ -178,13 +179,11 @@
                         <div class="mb-3">
                             <label for="projectName" class="form-label">Project Name</label>
                             <select class="form-control" id="projectName" name="project_id" required>
-                                <!-- This name should be 'project_id' -->
                                 <option value="" disabled selected>Select a project</option>
                                 @foreach ($projects as $project)
                                     <option value="{{ $project->id }}">{{ $project->name }}</option>
                                 @endforeach
                             </select>
-
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -217,7 +216,7 @@
                                     class="form-label">Image</label>
                                 <input type="file" class="form-control"
                                     id="editPortfolioProjectImage{{ $portfolioProject->id }}" name="image"
-                                    accept="image/*">
+                                    accept="image/*" required>
                             </div>
                             <div class="mb-3">
                                 <label for="editProjectName{{ $portfolioProject->id }}" class="form-label">Project

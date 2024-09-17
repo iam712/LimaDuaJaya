@@ -12,7 +12,7 @@ class WorkshopController extends Controller
     // In WorkshopController@index:
     public function index()
     {
-        $workshops = Workshop::with('portfolios')->paginate(2); // Adjust pagination as needed
+        $workshops = Workshop::with('portfolios')->paginate(5); // Adjust pagination as needed
         return view('admin.workshop.workshop', compact('workshops'));
     }
 

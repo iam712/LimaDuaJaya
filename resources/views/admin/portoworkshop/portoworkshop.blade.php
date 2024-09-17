@@ -87,21 +87,6 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-
-        /* .btn-warning {
-                    background-color: rgba({{ $color4 }}, 1);
-                    color: rgba({{ $color1 }}, 1);
-                }
-
-                .btn-danger {
-                    background-color: rgba({{ $color3 }}, 1);
-                    color: rgba({{ $color1 }}, 1);
-                }
-
-                .btn-success {
-                    background-color: rgba({{ $color7 }}, 1);
-                    color: rgba({{ $color1 }}, 1);
-                } */
     </style>
 
     <div class="animated-bg">
@@ -110,51 +95,56 @@
             <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
-
-        <section>
-            <div class="container table-responsive py-5">
-                <table class="table table-borderless table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Image</th>
-                            <th scope="col">Workshop Id</th>
-                            <th scope="col">Workshop Name</th>
-                            <th scope="col">Actions</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($portfolios as $key => $portfolio)
+        @if ($portfolios->isEmpty())
+            <h5 class="text-lg text-center text-dark p-5">No portfolio workshops available at the moment</h5>
+        @else
+            <section>
+                <div class="container table-responsive py-5">
+                    <table class="table table-borderless table-hover">
+                        <thead>
                             <tr>
-                                <td>{{ $key + 1 }}</td>
-                                <td><img src="{{ asset('storage/' . $portfolio->image) }}" alt="Image" width="100">
-                                </td>
-                                <td>{{ $portfolio->workshop->id }}</td>
-                                <td>{{ $portfolio->workshop->name }}</td>
-                                <td>
-                                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                        data-bs-target="#editPortfolioModal-{{ $portfolio->id }}">
-                                        Edit
-                                    </button>
-                                </td>
-                                <td>
-                                    <form action="{{ route('portfolios.destroy', $portfolio->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                    </form>
-                                </td>
+                                <th scope="col">No</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Workshop Id</th>
+                                <th scope="col">Workshop Name</th>
+                                <th scope="col">Actions</th>
+                                <th scope="col">Actions</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-
-                </table>
-            </div>
-        </section>
+                        </thead>
+                        <tbody>
+                            @foreach ($portfolios as $portfolio)
+                                <tr>
+                                    <td>{{ ($portfolios->currentPage() - 1) * $portfolios->perPage() + $loop->iteration }}
+                                    </td>
+                                    <td><img src="{{ asset('storage/' . $portfolio->image) }}" alt="Image"
+                                            width="100">
+                                    </td>
+                                    <td>{{ $portfolio->id_workshop }}</td>
+                                    <td>{{ $portfolio->workshop->name }}</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#editModal{{ $portfolio->id }}">
+                                            Edit
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal{{ $portfolio->id }}">Delete</button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        @endif
         <div class="text-end mt-3">
             <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Portofolio
                 Workshop</button>
+        </div>
+        <!-- Pagination Links -->
+        <div class="d-flex justify-content-center">
+            {{ $portfolios->links('vendor.pagination.bootstrap-4') }}
         </div>
     </div>
 
@@ -162,86 +152,106 @@
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Add New Portofolio Workshop</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
+                <form action="{{ route('portfolios.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addModalLabel">Add New Portofolio Workshop</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
                         <div class="mb-3">
                             <label for="portofolioWorkshopImage" class="form-label">Image</label>
-                            <input type="file" class="form-control" id="portofolioWorkshopImage" accept="image/*">
+                            <input type="file" class="form-control" id="portofolioWorkshopImage" name="image"
+                                accept="image/*" required>
                         </div>
                         <div class="mb-3">
                             <label for="workshopName" class="form-label">Workshop Name</label>
-                            <select class="form-control" id="workshopName">
+                            <select class="form-control" id="workshopName" name="id_workshop" required>
                                 <option value="" disabled selected>Select a workshop</option>
-                                <option value="workshop1">Workshop 1</option>
-                                <option value="workshop2">Workshop 2</option>
-                                <option value="workshop3">Workshop 3</option>
-                                <!-- Add more options as needed -->
+                                @foreach ($workshops as $workshop)
+                                    <option value="{{ $workshop->id }}">{{ $workshop->name }}</option>
+                                @endforeach
                             </select>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save Portofolio Workshop</button>
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save Portofolio Workshop</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-    <!-- Edit Portofolio Workshop Modal -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editModalLabel">Edit Portofolio Workshop</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="editPortofolioWorkshopImage" class="form-label">Image</label>
-                            <input type="file" class="form-control" id="editPortofolioWorkshopImage" accept="image/*">
+    @foreach ($portfolios as $portfolio)
+        <!-- Edit Portofolio Workshop Modal -->
+        <div class="modal fade" id="editModal{{ $portfolio->id }}" tabindex="-1"
+            aria-labelledby="editModalLabel{{ $portfolio->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="{{ route('portfolios.update', $portfolio->id) }}" method="POST"
+                        enctype="multipart/form-data">
+                        @csrf
+                        @method('PUT')
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editModalLabel{{ $portfolio->id }}">Edit Portofolio Workshop</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="mb-3">
-                            <label for="editWorkshopName" class="form-label">Workshop Name</label>
-                            <select class="form-control" id="editWorkshopName">
-                                <option value="" disabled selected>Select a workshop</option>
-                                <option value="workshop1">Workshop 1</option>
-                                <option value="workshop2">Workshop 2</option>
-                                <option value="workshop3">Workshop 3</option>
-                                <!-- Add more options as needed -->
-                            </select>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="editPortofolioWorkshopImage{{ $portfolio->id }}"
+                                    class="form-label">Image</label>
+                                <input type="file" class="form-control"
+                                    id="editPortofolioWorkshopImage{{ $portfolio->id }}" name="image" accept="image/*"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editWorkshopName{{ $portfolio->id }}" class="form-label">Workshop Name</label>
+                                <select class="form-control" id="editWorkshopName{{ $portfolio->id }}"
+                                    name="id_workshop" required>
+                                    <option value="" disabled selected>Select a workshop</option>
+                                    @foreach ($workshops as $workshop)
+                                        <option value="{{ $workshop->id }}"
+                                            {{ $portfolio->id_workshop == $workshop->id ? 'selected' : '' }}>
+                                            {{ $workshop->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save Changes</button>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Delete Portofolio Workshop Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete Portofolio Workshop</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to delete this Portofolio Workshop?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-danger">Delete Portofolio Workshop</button>
+        <!-- Delete Portofolio Workshop Modal -->
+        <div class="modal fade" id="deleteModal{{ $portfolio->id }}" tabindex="-1"
+            aria-labelledby="deleteModalLabel{{ $portfolio->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="{{ route('portfolios.destroy', $portfolio->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel{{ $portfolio->id }}">Delete Portofolio Workshop
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this Portofolio Workshop?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Delete Portofolio Workshop</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
+    @endforeach
 @endsection

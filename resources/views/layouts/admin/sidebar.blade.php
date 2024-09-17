@@ -36,8 +36,8 @@
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
-                <a class="nav-link {{ request()->is('admin-portoworkshop') ? 'active' : '' }}"
-                    href="/admin-portoworkshop">
+                <a class="nav-link {{ request()->is('portfolios.index') ? 'active' : '' }}"
+                    href="{{ route('portfolios.index') }}">
                     <i class="fa-solid fa-folder-open"></i> Manage Workshop Portfolio
                 </a>
             </li>

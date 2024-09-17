@@ -15,7 +15,7 @@ class PortfolioController extends Controller
         // Fetch all portfolios with their associated workshops
         $portfolios = Portfolio::with('workshop')->get();
 
-        $portfolios = Portfolio::with('workshop')->paginate(2);
+        $portfolios = Portfolio::with('workshop')->paginate(5);
         // Adjust pagination as needed
         $workshops = Workshop::all();
 
@@ -24,12 +24,12 @@ class PortfolioController extends Controller
     }
 
 
-    public function create()
-    {
-        // Show the form to create a new portfolio
-        $workshops = Workshop::all();  // Get all workshops to associate a portfolio with a workshop
-        return view('admin.portfolio.create', compact('workshops'));
-    }
+    // public function create()
+    // {
+    //     // Show the form to create a new portfolio
+    //     $workshops = Workshop::all();  // Get all workshops to associate a portfolio with a workshop
+    //     return view('admin.portfolio.create', compact('workshops'));
+    // }
 
     public function store(Request $request)
     {
@@ -41,12 +41,6 @@ class PortfolioController extends Controller
 
         // Handle the image upload
         $imagePath = $request->file('image')->store('portfolio_images', 'public');
-
-        // Create and save the new portfolio
-        Portfolio::create([
-            'image' => $imagePath,
-            'id_workshop' => $request->id_workshop,
-        ]);
 
         // Create the portfolio explicitly assigning id_workshop
         $portfolio = new Portfolio();
@@ -65,13 +59,13 @@ class PortfolioController extends Controller
         return view('admin.portfolio.show', compact('portfolio'));
     }
 
-    public function edit($id)
-    {
-        // Show the form to edit a specific portfolio by ID
-        $portfolio = Portfolio::findOrFail($id);
-        $workshops = Workshop::all();  // Get all workshops for the dropdown
-        return view('admin.portfolio.edit', compact('portfolio', 'workshops'));
-    }
+    // public function edit($id)
+    // {
+    //     // Show the form to edit a specific portfolio by ID
+    //     $portfolio = Portfolio::findOrFail($id);
+    //     $workshops = Workshop::all();  // Get all workshops for the dropdown
+    //     return view('admin.portfolio.edit', compact('portfolio', 'workshops'));
+    // }
 
     public function update(Request $request, $id)
     {

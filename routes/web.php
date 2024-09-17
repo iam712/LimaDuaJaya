@@ -54,14 +54,11 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('/admin/reviews/{id}', [ReviewController::class, 'destroy'])->name('admin.reviews.destroy');
 
     // Workshop CRUD Routes
-    Route::get('/admin-portoworkshop', function () {
-        return view('admin.portoworkshop.portoworkshop');
-    });
+    // Route::get('/admin-portoworkshop', function () {
+    //     return view('admin.portoworkshop.portoworkshop');
+    // });
 
     Route::resource('/admin/workshops', WorkshopController::class);
-
-
-
 
     Route::resource('/admin/portfolios', PortfolioController::class);
 
