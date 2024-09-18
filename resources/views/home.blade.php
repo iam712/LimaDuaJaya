@@ -604,7 +604,7 @@
     </div>
 
     <!-- Banner -->
-    <section id="bannerSection" class="banner d-flex align-items-center">
+    <section id="bannerSection" class="banner d-flex align-items-center" style="font-family: Inria Sans, sans-serif;">
         <div class="container-fluid position-relative p-0">
             <div class="wavey"></div>
             <div class="wavey"></div>
@@ -619,21 +619,19 @@
                         </div>
                     </div>
                     <div class="col-md-6 py-5 text-center text-md-start">
-                        <p class="fs-3" style="font-family: 'LibreBaskerville', serif; color: black;">
+                        <p class="fs-3 text-dark">
                             Lima Dua Jaya Advertising
                         </p>
-                        <p class="fs-1 fw-bold"
-                            style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: black;">
+                        <p class="fs-1 fw-bold text-dark">
                             Kami Membuat
                             <span id="changingText"></span>
                         </p>
-                        <p class="fs-4 fst-italic fw-lighter"
-                            style="font-family: 'LibreBaskerville', serif; font-style: italic; color: black;">
+                        <p class="fs-4 fst-italic fw-lighter">
                             Supplier, Distributor, Advertising
                         </p>
                         <button class="btn-learn-more"
-                            onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });"
-                            style="font-family: 'LibreBaskerville', serif;">Pelajari Lebih Lanjut</button>
+                            onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });">Pelajari
+                            Lebih Lanjut</button>
                     </div>
                     <div class="col-md-6 text-center d-none d-md-block">
                         <div class="wrapper">
@@ -650,7 +648,7 @@
     <!-- About Us -->
     <section id="aboutUsSection"
         class="about-us py-4 py-sm-4 mt-3 mt-sm-3 fade-in position-relative d-flex align-items-center justify-content-center"
-        style="background-color: rgb({{ $color5 }}); min-height: 400px;">
+        style="background-color: rgb({{ $color5 }}); min-height: 400px; font-family: Inria Sans, sans-serif;">
         <div class="blob-container">
             <svg id="blob" viewBox="-25 -10 90 80" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#FF6B6B">
@@ -669,8 +667,8 @@
                     <img src="{{ asset('images/LOGO.png') }}" alt="About Us" class="img-fluid">
                 </div>
                 <div class="col-sm-5 mt-1 mt-sm-1">
-                    <h2 style="font-family: 'LibreBaskerville', serif; font-weight: bold;">About Us</h2>
-                    <p style="font-family: 'LibreBaskerville', serif;">
+                    <h2 class="fw-bold">About Us</h2>
+                    <p>
                         PT Lima Dua Jaya berdiri di Madiun pada bulan Oktober tahun 2021 dan bergerak dalam bidang
                         advertising, dimulai dari vending machine dan proyek branding seperti car branding, media promosi
                         melalui vending machine, billboard/ baliho, produksi gondola, booth, papan nama toko, brand
@@ -696,23 +694,23 @@
         overflow: hidden;
         padding-top: 20px;
         padding-bottom: 20px;
+        font-family: Inria Sans, sans-serif;
 ">
         <div class="container">
-            <h2 class="text-center mb-3 mb-sm-3 py-3 fade-section"
-                style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white">
+            <h2 class="text-center mb-3 mb-sm-3 py-3 fade-section fw-bold text-light">
                 Our Services
             </h2>
             <div class="row d-flex justify-content-center text-center mt-2 fade-section">
                 <!-- Service Cards -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="NEON BOX">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="NEON BOX"
+                            style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            <h5 class="card-title fw-bold">
                                 NEON BOX
                             </h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Neonbox kreatif kami menawarkan pencahayaan neon yang menarik untuk memaksimalkan
                                 visibilitas dan daya tarik merek Anda di malam hari...
                             </p>
@@ -726,13 +724,13 @@
                 <!-- Second Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BRANDING RAK">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BRANDING RAK"
+                            style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            <h5 class="card-title fw-bold">
                                 BRANDING RAK
                             </h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Kami menciptakan branding rak yang menonjol untuk menarik perhatian pelanggan dan
                                 meningkatkan penjualan produk Anda. Dengan kombinasi desain yang menawan dan material
                                 berkualitas tinggi, kami memastikan setiap rak toko menjadi elemen strategis dalam mencapai
@@ -748,12 +746,12 @@
                 <!-- Third Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="ROLL UP BANNER">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="ROLL UP BANNER"
+                            style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">ROLL
+                            <h5 class="card-title fw-bold">ROLL
                                 UP BANNER</h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Rollup banner kami menawarkan solusi promosi yang efektif dan mudah dipindahkan
                                 untuk acara, promosi produk, atau branding perusahaan Anda. Dibuat dengan teknologi cetak
                                 terkini dan bahan yang tahan lama, banner ini memberikan kepraktisan dan daya tarik visual
@@ -769,13 +767,13 @@
                 <!-- Fourth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="LETTER SIGN">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="LETTER SIGN"
+                            style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            <h5 class="card-title fw-bold">
                                 LETTER SIGN
                             </h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Letter sign kami memberikan identitas visual yang kuat dan menarik untuk bangunan Anda,
                                 memperkuat kesan profesional dan keberlanjutan merek Anda. Dengan pilihan material dan
                                 desain yang beragam, kami menyesuaikan setiap letter sign untuk mencerminkan nilai-nilai
@@ -791,13 +789,13 @@
                 <!-- Fifth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SPANDUK">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SPANDUK"
+                            style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            <h5 class="card-title fw-bold">
                                 SPANDUK
                             </h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Spanduk kami dirancang dengan detail yang presisi untuk memastikan pesan promosi Anda jelas
                                 terlihat dan menarik bagi audiens di luar ruangan. Dengan pilihan ukuran, finishing, dan
                                 kemampuan tahan cuaca, spanduk ini menjadi investasi berharga dalam meningkatkan
@@ -813,12 +811,12 @@
                 <!-- Sixth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SHOP SIGN">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SHOP SIGN"
+                            style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">SHOP
+                            <h5 class="card-title fw-bold">SHOP
                                 SIGN</h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Shop sign kami menciptakan kesan pertama yang berkesan dan memudahkan pelanggan menemukan
                                 toko Anda di tengah keramaian. Didesain untuk meningkatkan citra toko Anda, papan nama ini
                                 memadukan estetika yang menarik dengan daya tahan yang dapat diandalkan dalam berbagai
@@ -834,13 +832,13 @@
                 <!-- Seventh Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BILLBOARD">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BILLBOARD"
+                            style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            <h5 class="card-title fw-bold">
                                 BILLBOARD
                             </h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Billboard kami menawarkan ruang iklan yang besar dan strategis untuk mencapai audiens luas
                                 dengan pesan yang kuat dan menarik. Dengan teknologi cetak terkini dan material berkualitas
                                 tinggi, kami memastikan setiap iklan billboard memberikan dampak maksimal bagi keberhasilan
@@ -856,12 +854,12 @@
                 <!-- Eighth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="CAR BRANDING">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="CAR BRANDING"
+                            style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">CAR
+                            <h5 class="card-title fw-bold">CAR
                                 BRANDING</h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Car branding kami memberikan promosi bergerak yang efektif, menjadikan kendaraan Anda
                                 sebagai papan iklan bergerak untuk meningkatkan kesadaran merek di mana pun pergi. Dengan
                                 desain yang menarik dan aplikasi yang presisi, kami mengubah setiap kendaraan menjadi alat
@@ -878,12 +876,11 @@
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo"
-                            alt="CHILLER BRANDING">
+                            alt="CHILLER BRANDING" style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            <h5 class="card-title fw-bold">
                                 CHILLER BRANDING</h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Chiller branding kami menawarkan solusi kreatif untuk mempromosikan produk Anda dengan
                                 menambahkan branding pada lemari pendingin, menarik perhatian pelanggan di toko atau
                                 supermarket. Dengan desain yang estetis dan pilihan material yang tahan lama, chiller
@@ -899,14 +896,13 @@
                 <!-- Tenth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo"
-                            alt="PAPAN NAMA TOKO">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="PAPAN NAMA TOKO"
+                            style="object-fit: cover; width: 100%; height: 200px;">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                            <h5 class="card-title fw-bold">
                                 PAPAN NAMA TOKO
                             </h5>
-                            <p class="card-text card-description"
-                                style="font-family: 'LibreBaskerville', serif; font-style: italic;">
+                            <p class="card-text card-description fst-italic">
                                 Papan nama toko kami memberikan penandaan yang jelas dan profesional untuk membantu
                                 pelanggan menemukan dan mengenali toko Anda dengan mudah. Dengan pilihan desain yang
                                 fleksibel dan kemampuan untuk disesuaikan dengan identitas merek Anda, papan nama ini
@@ -926,146 +922,18 @@
         <hr style="border: 2px solid #ffdedf; margin: 35px 0; fade-section">
         <br>
 
-        {{-- Test Code --}}
-
-
-        {{-- rotating cube anination --}}
-        {{-- <style>
-            .cube-container {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                margin-top: 50px;
-            }
-
-            .cube {
-                width: 200px;
-                height: 200px;
-                position: relative;
-                transform-style: preserve-3d;
-                animation: rotate 10s infinite linear;
-            }
-
-            .cube div {
-                position: absolute;
-                width: 200px;
-                height: 200px;
-                background: rgba(255, 255, 255, 0.9);
-                border: 2px solid #000;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .cube .front {
-                transform: translateZ(100px);
-            }
-
-            .cube .back {
-                transform: rotateY(180deg) translateZ(100px);
-            }
-
-            .cube .right {
-                transform: rotateY(90deg) translateZ(100px);
-            }
-
-            .cube .left {
-                transform: rotateY(-90deg) translateZ(100px);
-            }
-
-            .cube .top {
-                transform: rotateX(90deg) translateZ(100px);
-            }
-
-            .cube .bottom {
-                transform: rotateX(-90deg) translateZ(100px);
-            }
-
-            @keyframes rotate {
-                from {
-                    transform: rotateY(0);
-                }
-
-                to {
-                    transform: rotateY(360deg);
-                }
-            }
-        </style> --}}
-
-        {{-- Rotating Cube --}}
-
-        {{-- <div class="cube-container">
-            <div class="cube">
-                <div class="front">
-                    <img src="{{ asset('images/clients/blastoz.png') }}" alt="Front Image" class="img-fluid">
-                </div>
-                <div class="back">
-                    <img src="{{ asset('images/clients/formula.png') }}" alt="Back Image" class="img-fluid">
-                </div>
-                <div class="right">
-                    <img src="{{ asset('images/clients/fruittea.png') }}" alt="Right Image" class="img-fluid">
-                </div>
-                <div class="left">
-                    <img src="{{ asset('images/clients/fruzz.png') }}" alt="Left Image" class="img-fluid">
-                </div>
-            </div>
-            <div class="cube">
-                <div class="front">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Front Image" class="img-fluid">
-                </div>
-                <div class="back">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Back Image" class="img-fluid">
-                </div>
-                <div class="right">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Right Image" class="img-fluid">
-                </div>
-                <div class="left">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
-                </div>
-            </div>
-            <div class="cube">
-                <div class="front">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Front Image" class="img-fluid">
-                </div>
-                <div class="back">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Back Image" class="img-fluid">
-                </div>
-                <div class="right">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Right Image" class="img-fluid">
-                </div>
-                <div class="left">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
-                </div>
-            </div>
-            <div class="cube">
-                <div class="front">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Front Image" class="img-fluid">
-                </div>
-                <div class="back">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Back Image" class="img-fluid">
-                </div>
-                <div class="right">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Right Image" class="img-fluid">
-                </div>
-                <div class="left">
-                    <img src="{{ asset('images/LOGO.png') }}" alt="Left Image" class="img-fluid">
-                </div>
-            </div>
-        </div> --}}
-
         {{-- Our Advantages --}}
-        <div class="container fade-section" id="ourAdvantagesSection">
-            <h2 class="text-center fade-section"
-                style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Our
+        <div class="container fade-section" id="ourAdvantagesSection" style="font-family: Inria Sans, sans-serif;">
+            <h2 class="text-center fade-section text-light fw-bold">Our
                 Advantages</h2>
             <div class="row mt-4 d-flex justify-content-center fade-section">
                 <div class="col-6 col-md-4 col-lg-3 text-center">
                     <div class="advantage-box">
                         <img src="{{ asset('images/LOGO.png') }}" alt="Tailored Solution" class="img-fluid mb-3">
-                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">1</h4>
-                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Tailored
+                        <h4 class="text-light">1</h4>
+                        <h5 class="fw-bold text-light">Tailored
                             Solution</h5>
-                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">At our company, we
+                        <p class="text-light">At our company, we
                             understand that one size does not fit all. Our tailored
                             solutions ensure that every aspect of our service is customized to meet your unique business
                             needs and goals.</p>
@@ -1074,10 +942,10 @@
                 <div class="col-6 col-md-4 col-lg-3 text-center">
                     <div class="advantage-box">
                         <img src="{{ asset('images/LOGO.png') }}" alt="Creative Excellence" class="img-fluid mb-3">
-                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">2</h4>
-                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Creative
+                        <h4 class="text-light">2</h4>
+                        <h5 class="fw-bold text-light">Creative
                             Excellence</h5>
-                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">Creativity is at the heart
+                        <p class="text-light">Creativity is at the heart
                             of everything we do. Our team of talented
                             professionals brings fresh ideas and innovative approaches to every project, ensuring that your
                             brand stands out in a crowded market.</p>
@@ -1098,10 +966,10 @@
                 <div class="col-6 col-md-4 col-lg-3 text-center mt-4">
                     <div class="advantage-box">
                         <img src="{{ asset('images/LOGO.png') }}" alt="Innovative Solutions" class="img-fluid mb-3">
-                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">4</h4>
-                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Innovative
+                        <h4 class="text-light">4</h4>
+                        <h5 class="fw-bold text-light">Innovative
                             Solutions</h5>
-                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">We pride ourselves on
+                        <p class="text-light">We pride ourselves on
                             offering innovative solutions that push the boundaries
                             of
                             what is possible, ensuring that your business stays ahead of the curve.</p>
@@ -1110,10 +978,10 @@
                 <div class="col-6 col-md-4 col-lg-3 text-center mt-4">
                     <div class="advantage-box">
                         <img src="{{ asset('images/LOGO.png') }}" alt="Expert Team" class="img-fluid mb-3">
-                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">5</h4>
-                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Expert Team
+                        <h4 class="text-light">5</h4>
+                        <h5 class="fw-bold text-light">Expert Team
                         </h5>
-                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">Our team consists of
+                        <p class="text-light">Our team consists of
                             industry experts with extensive experience and
                             knowledge,
                             ready to provide you with the highest level of service and support.</p>
@@ -1147,7 +1015,7 @@
         padding-bottom: 20px;
 ">
         <div class="container fade-section">
-            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
+            <h2 class="text-center" style="font-family: Inria Sans, sans-serif; font-weight: bold">Our
                 Location</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -1162,24 +1030,23 @@
 
     <!-- FAQ -->
     <section id="faqSection" class="faq-section py-4 py-sm-4"
-        style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }}));">
+        style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }})); font-family: Inria Sans, sans-serif;">
         <div class="container">
-            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold; color:white;">
+            <h2 class="text-center fw-bold text-light">
                 Frequently Asked
                 Questions</h2>
             <div class="accordion" id="faqAccordion">
                 <div class="accordion-item" style="border: none; margin-bottom: 10px;">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
-                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Bagaimana Anda bisa mewujudkan proyek kami dengan
                             anggaran minimum?
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#faqAccordion">
-                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                        <div class="accordion-body fst-italic">
                             Kami memastikan bahwa kami memahami kebutuhan Anda sejak awal dan berapa anggaran
                             maksimum Anda
                             untuk menyelesaikan proyek. Kami menghitung semua faktor dan mengurangi biaya untuk
@@ -1192,15 +1059,14 @@
                 </div>
                 <div class="accordion-item" style="border: none; margin-bottom: 10px;">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Proyek seperti apa yang dapat Anda berikan kepada kami?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#faqAccordion">
-                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                        <div class="accordion-body fst-italic">
                             Kami adalah spesialis di luar rumah dengan pengalaman lebih dari 20 tahun . Kami
                             dapat
                             memberikan semua yang Anda butuhkan dalam proyek di luar rumah . Silakan periksa
@@ -1213,15 +1079,14 @@
                 </div>
                 <div class="accordion-item" style="border: none; margin-bottom: 10px;">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
-                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Bagaimana jika anggaran kita tidak sesuai dengan proyek kita?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#faqAccordion">
-                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                        <div class="accordion-body fst-italic">
                             Kami yakin Anda profesional dalam merencanakan proyek dan menghitung anggaran Anda .
                             Jika
                             anggaran Anda tidak sesuai dengan proyek Anda, kami tidak akan mengecewakan Anda .
@@ -1237,16 +1102,15 @@
                 </div>
                 <div class="accordion-item" style="border: none; margin-bottom: 10px;">
                     <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
-                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                             Apakah Anda memiliki kebijakan privasi untuk menjaga kerahasiaan
                             proyek kami?
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                         data-bs-parent="#faqAccordion">
-                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                        <div class="accordion-body fst-italic">
                             Kami sangat menyadari kerahasiaan data mitra kami . Oleh karena itu, Anda dapat
                             meminta
                             perjanjian larangan pengungkapan rahasi dari kami untuk ditandatangani terlebih
@@ -1259,15 +1123,14 @@
                 </div>
                 <div class="accordion-item" style="border: none; margin-bottom: 10px;">
                     <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
-                            style="font-family: 'LibreBaskerville', serif; font-weight: bold;">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                             Mengapa kita perlu menggunakan layanan khusus ini?
                         </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                         data-bs-parent="#faqAccordion">
-                        <div class="accordion-body" style="font-family: 'LibreBaskerville', serif; font-style: italic">
+                        <div class="accordion-body fst-italic">
                             Anda akan mempercepat waktu untuk memutuskan apakah proyek Anda dapat dilakukan atau
                             tidak . Di
                             sisi lain, Anda dapat menghemat biaya karena cepat . Tidak ada kebingungan dan tidak
@@ -1287,9 +1150,9 @@
 
     <!-- Our Clients -->
     <section id="ourClientsSection" class="our-services py-4 py-sm-4"
-        style="background-color: rgb({{ $color1 }});">
+        style="background-color: rgb({{ $color1 }}); font-family: Inria Sans, sans-serif;">
         <div class="container">
-            <h2 class="text-center" style="font-family: 'LibreBaskerville', serif; font-weight: bold;">Our
+            <h2 class="text-center fw-bold">Our
                 Clients</h2>
             <div class="row justify-content-center mt-5 text-center">
                 @foreach (['blastoz', 'formula', 'fruittea', 'fruzz', 'imperialcreme', 'inlite', 'macito', 'orios', 'prima', 'tebs', 'Sosro', 'stee', 'tango', 'raywhite'] as $client)

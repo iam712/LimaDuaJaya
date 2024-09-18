@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start text-dark"
-    style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color4 }})); font-family: 'LibreBaskerville', serif;">
+    style="background: linear-gradient(to bottom, rgb({{ $color3 }}), rgb({{ $color4 }})); font-family: Inria Sans, sans-serif;">
     <!-- Grid container -->
     <div class="container p-3">
         <!-- Section: Links -->

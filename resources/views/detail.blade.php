@@ -15,7 +15,7 @@
 @section('content')
 
     <!-- Main Content Section -->
-    <section class="py-5 mt-5" style="background-color: rgb({{ $color1 }});">
+    <section class="py-5 mt-5" style="background-color: rgb({{ $color1 }}); font-family: 'LibreBaskerville', serif;">
         <div class="container">
             <div class="row g-4 align-items-center">
                 <h2 class="text-start mb-4" style="color: rgb({{ $color2 }});">Detail Workshop</h2>
@@ -36,7 +36,7 @@
     </section>
 
     <!-- Additional Workshops Section -->
-    <section class="py-2 py-md-3 py-lg-4">
+    <section class="py-2 py-md-3 py-lg-4" style="font-family: 'LibreBaskerville', serif;">
         <div class="container">
             <h3 class="text-center mb-5" style="color: rgb({{ $color2 }});">More Portfolio</h3>
             <div class="row g-4">
@@ -44,9 +44,9 @@
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card hover-card">
                             <img src="{{ asset('storage/' . $portfolio->image) }}" class="img-fluid rounded" alt="Portfolio Image" style="object-fit: cover; width: 100%; height: 200px;">
-                            <div class="card-body">
+                            {{-- <div class="card-body">
                                 <p>Portfolio Image {{ $portfolio->id }}</p>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 @endforeach
