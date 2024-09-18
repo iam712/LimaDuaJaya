@@ -72,7 +72,7 @@
 
     <!-- Project Lima Dua Jaya Surabaya -->
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5 parallax"
-        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover;">
+        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; font-family: 'LibreBaskerville', serif;">
         <h1 class="text-center mt-5 mt-md-3 mt-lg-3 fw-bold fade-section">Our Latest Projects</h1>
         <div class="container fade-section">
             @if ($projects->isEmpty())

@@ -21,7 +21,7 @@
                 <h2 class="text-start mb-4" style="color: rgb({{ $color2 }});">Detail Workshop</h2>
                 <div class="col-12 col-md-4 col-lg-5">
                     <div class="card border-0 shadow-sm rounded-3" style="background-color: rgb({{ $color5 }});">
-                        <img src="{{ asset('storage/' . $workshop->image) }}" class="img-fluid rounded" alt="{{ $workshop->name }}" style="object-fit: cover; width: 100%; height: 100%;">
+                        <img src="{{ asset('storage/' . $workshop->image) }}" class="img-fluid rounded" alt="{{ $workshop->name }}" style="object-fit: cover; width: 100%; height: 300px;">
                     </div>
                 </div>
                 <div class="col-12 col-md-8 col-lg-7">
