@@ -140,8 +140,6 @@
                                 placeholder="Enter your contact number" required>
                         </div>
                         <div class="mb-3">
-                            {{-- <label for="resume" class="form-label">Attach your resume // portfolio here</label>
-                            <input type="file" class="form-control" id="resume" name="resume"> --}}
                             <small class="form-text text-dark">*Remember to attach your resume.</small>
                         </div>
                         <button type="button" class="btn btn-dark w-100" onclick="sendEmail()">Submit</button>
@@ -278,7 +276,7 @@
 
             // construct the mailto link
             var mailtoLink =
-                `mailto:williamwongge@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                `mailto:limaduaadvertising@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
             // open the email client
             window.location.href = mailtoLink;
