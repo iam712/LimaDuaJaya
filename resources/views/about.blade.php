@@ -22,7 +22,7 @@
 
     <!-- Banner -->
     <section class="banner d-flex align-items-center parallax"
-        style="background-image: url('{{ asset('images/banner/imagebg1.jpeg') }}'); background-size: cover; background-position: center; background-attachment: fixed; height: 100vh; position: relative; font-family: 'LibreBaskerville', serif;">
+        style="background-image: url('{{ asset('images/banner/imagebg1.jpeg') }}'); background-size: cover; background-position: center; background-attachment: fixed; height: 100vh; position: relative; font-family: Inria Sans, sans-serif;">
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
             style="background-color: rgba({{ $color4 }}, 0.8); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: 0 0 10px; display: inline-block;">
             <h2 class="text-center text-light fw-bold">PT. Lima Dua Jaya</h2>
@@ -41,7 +41,7 @@
 
     <!-- About Us -->
     <section id="aboutUsSection" class="py-5 py-sm-5 fade-section parallax"
-        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: 'LibreBaskerville', serif;">
+        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Inria Sans, sans-serif;">
         <div class="container">
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
@@ -73,7 +73,7 @@
     </div>
 
     <div class="parallax"
-        style="background-image: url('{{ asset('images/banner/imagebg2.jpeg') }}'); background-attachment: fixed; background-size: cover; background-position: center; font-family: 'LibreBaskerville', serif;">
+        style="background-image: url('{{ asset('images/banner/imagebg2.jpeg') }}'); background-attachment: fixed; background-size: cover; background-position: center; font-family: Inria Sans, sans-serif;">
         <!-- Visi dan Misi -->
         <section id="visiMisiSection" class="py-5 fade-section fade-in-left position-relative"
             style="overflow: hidden; background-color: rgba({{ $color1 }}, 0.9);">
@@ -192,7 +192,7 @@
 
     <!-- Review Section -->
     <section id="aboutUsSection" class="py-5 py-sm-5 fade-section parallax"
-        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: 'LibreBaskerville', serif;">
+        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Inria Sans, sans-serif;">
         <div class="container">
             <h1 class="text-center" style="font-weight: bold; color: black;">Apa kata mereka?</h1>
         </div>

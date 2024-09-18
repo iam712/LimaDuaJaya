@@ -52,8 +52,7 @@
                         <a class="text-light" href="/review">Send us a feedback!</a>
                     </p>
                     <p>
-                        <a href="/workshop#workshopPartnershipProgram" class="text-light">Become an
-                            Affiliate</a>
+                        <a href="/workshops#workshopPartnershipProgram" class="text-light">Become an Affiliate</a>
                     </p>
                     <p>
                         <a class="text-light">Shipping Rates</a>

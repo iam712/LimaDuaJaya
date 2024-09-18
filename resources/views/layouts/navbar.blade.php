@@ -24,7 +24,7 @@
                     <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="/aboutus">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}" href="/signin">Sign In</a>
+                    <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}" href="/signin">Get Started</a>
                 </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

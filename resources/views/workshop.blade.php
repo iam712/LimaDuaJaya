@@ -32,7 +32,7 @@
        overflow: hidden;
        padding-top: 20px;
        padding-bottom: 20px;
-       font-family: 'LibreBaskerville', serif;
+       font-family: Inria Sans, sans-serif;
    ">
         <div class="container fade-section">
             <h3 class="text-start mt-5 mt-md-3 mt-lg-3 text-light text text-lg">
@@ -98,9 +98,8 @@
         </div>
     </section>
 
-
     <!-- Partnership Application Form -->
-    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1 parallax">
+    <section id="workshopPartnershipProgram" class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1 parallax" style="font-family: Inria Sans, sans-serif;">
         <div class="bg parallax"></div>
         <div class="bg bg2 parallax"></div>
         <div class="bg bg3 parallax"></div>

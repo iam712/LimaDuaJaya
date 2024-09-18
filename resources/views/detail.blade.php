@@ -15,7 +15,7 @@
 @section('content')
 
     <!-- Main Content Section -->
-    <section class="py-5 mt-5" style="background-color: rgb({{ $color1 }}); font-family: 'LibreBaskerville', serif;">
+    <section class="py-5 mt-5" style="background-color: rgb({{ $color1 }}); font-family: Inria Sans, sans-serif;">
         <div class="container">
             <div class="row g-4 align-items-center">
                 <h2 class="text-start mb-4" style="color: rgb({{ $color2 }});">Detail Workshop</h2>
@@ -36,7 +36,7 @@
     </section>
 
     <!-- Additional Workshops Section -->
-    <section class="py-2 py-md-3 py-lg-4" style="font-family: 'LibreBaskerville', serif;">
+    <section class="py-2 py-md-3 py-lg-4" style="font-family: Inria Sans, sans-serif;">
         <div class="container">
             <h3 class="text-center mb-5" style="color: rgb({{ $color2 }});">More Portfolio</h3>
             <div class="row g-4">
