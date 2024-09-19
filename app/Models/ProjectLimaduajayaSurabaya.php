@@ -18,6 +18,6 @@ class ProjectLimaduajayaSurabaya extends Model
 
     public function portfolioProjects()
     {
-        return $this->hasMany(PortfolioProjectLimaduajayaSurabaya::class, 'project_id'); // Use 'project_id'
+        return $this->hasMany(PortfolioProjectLimaduajayaSurabaya::class, 'project_id'); 
     }
 }

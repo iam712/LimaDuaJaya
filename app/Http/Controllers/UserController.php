@@ -13,10 +13,9 @@ class UserController extends Controller
     {
         // Fetch and list all users
         // $users = User::all();
-        $users = User::paginate(2);
+        $users = User::paginate(5);
         return view('admin.user.user', compact('users'));
-        // $reviews = Review::paginate(10);
-        // return view('admin.review.review', compact('reviews'));
+
     }
 
     public function store(Request $request)

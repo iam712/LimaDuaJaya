@@ -20,6 +20,6 @@ class PortfolioProjectLimaduajayaSurabaya extends Model
 
     public function projectLimaduajayaSurabaya()
     {
-        return $this->belongsTo(ProjectLimaduajayaSurabaya::class, 'project_id'); // Use 'project_id'
+        return $this->belongsTo(ProjectLimaduajayaSurabaya::class, 'project_id');
     }
 }

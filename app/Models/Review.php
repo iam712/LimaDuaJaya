@@ -14,10 +14,5 @@ class Review extends Model
         'email',
         'comment'
     ];
-
-    // If reviews belong to a user:
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
+    
 }
