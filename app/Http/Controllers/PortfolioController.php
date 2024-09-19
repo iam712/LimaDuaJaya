@@ -59,17 +59,8 @@ class PortfolioController extends Controller
         return view('admin.portfolio.show', compact('portfolio'));
     }
 
-    // public function edit($id)
-    // {
-    //     // Show the form to edit a specific portfolio by ID
-    //     $portfolio = Portfolio::findOrFail($id);
-    //     $workshops = Workshop::all();  // Get all workshops for the dropdown
-    //     return view('admin.portfolio.edit', compact('portfolio', 'workshops'));
-    // }
-
     public function update(Request $request, $id)
     {
-
         // Fetch the specific portfolio by ID
         $portfolio = Portfolio::findOrFail($id);
 

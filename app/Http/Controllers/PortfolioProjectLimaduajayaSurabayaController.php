@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\PortfolioProjectLimaduajayaSurabaya;
 use App\Models\ProjectLimaduajayaSurabaya;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PortfolioProjectLimaduajayaSurabayaController extends Controller
 {
@@ -79,6 +80,10 @@ class PortfolioProjectLimaduajayaSurabayaController extends Controller
     {
         // Fetch the specific portfolio project by ID
         $portfolioProject = PortfolioProjectLimaduajayaSurabaya::findOrFail($id);
+
+        if ($portfolioProject->image) {
+            Storage::delete('public/' . $portfolioProject->image);
+        }
 
         // Delete the portfolio project
         $portfolioProject->delete();
