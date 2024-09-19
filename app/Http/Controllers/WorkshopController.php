@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\Storage;
 
 class WorkshopController extends Controller
 {
-
-    // In WorkshopController@index:
     public function index()
     {
         $workshops = Workshop::with('portfolios')->paginate(5); // Adjust pagination as needed
@@ -42,7 +40,7 @@ class WorkshopController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
-            'description' => 'required|string|max:500',  // Adjust length as per your requirements
+            'description' => 'required|string|max:500', 
             'isLimaduajaya' => 'nullable|boolean'
         ]);
 
@@ -55,8 +53,7 @@ class WorkshopController extends Controller
             'name' => $request->name,
             'location' => $request->location,
             'description' => $request->description,
-            //'isLimaduajaya' => $request->has('isLimaduajaya') ? true : false,
-            'isLimaduajaya' => $request->input('isLimaduajaya', false) ? true : false, // Explicitly check the value
+            'isLimaduajaya' => $request->input('isLimaduajaya', false) ? true : false,
         ]);
 
         // Redirect to the workshops index with a success message
@@ -68,7 +65,6 @@ class WorkshopController extends Controller
         $workshop = Workshop::with('portfolios')->findOrFail($id);
         return view('detail', compact('workshop'));
     }
-
 
     public function edit($id)
     {

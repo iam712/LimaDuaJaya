@@ -11,7 +11,7 @@ class PortfolioController extends Controller
 {
 
     public function index()
-    {
+    { 
         // Fetch all portfolios with their associated workshops
         $portfolios = Portfolio::with('workshop')->get();
 
@@ -22,14 +22,6 @@ class PortfolioController extends Controller
         // Pass the portfolios and workshops to the view
         return view('admin.portoworkshop.portoworkshop', compact('portfolios', 'workshops'));
     }
-
-
-    // public function create()
-    // {
-    //     // Show the form to create a new portfolio
-    //     $workshops = Workshop::all();  // Get all workshops to associate a portfolio with a workshop
-    //     return view('admin.portfolio.create', compact('workshops'));
-    // }
 
     public function store(Request $request)
     {

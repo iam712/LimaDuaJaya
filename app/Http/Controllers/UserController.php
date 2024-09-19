@@ -12,7 +12,6 @@ class UserController extends Controller
     public function index()
     {
         // Fetch and list all users
-        // $users = User::all();
         $users = User::paginate(5);
         return view('admin.user.user', compact('users'));
 
@@ -25,8 +24,8 @@ class UserController extends Controller
             'password' => 'required|min:6',
         ]);
 
-        $validated['password'] = $request->password; // Store the password in plain text
-        $validated['isAdmin'] = true; // Automatically set new users as admin
+        $validated['password'] = $request->password;
+        $validated['isAdmin'] = true;
 
         User::create($validated);
 
@@ -77,9 +76,6 @@ class UserController extends Controller
 
         return redirect()->route('admin.users.index')->with('success', 'User deleted successfully');
     }
-
-    // handle user login
-
 
     public function signin(Request $request)
     {

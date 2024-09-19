@@ -89,19 +89,19 @@
         }
 
         /* .btn-warning {
-                                background-color: rgba({{ $color4 }}, 1);
-                                color: rgba({{ $color1 }}, 1);
-                            }
+                                    background-color: rgba({{ $color4 }}, 1);
+                                    color: rgba({{ $color1 }}, 1);
+                                }
 
-                            .btn-danger {
-                                background-color: rgba({{ $color3 }}, 1);
-                                color: rgba({{ $color1 }}, 1);
-                            }
+                                .btn-danger {
+                                    background-color: rgba({{ $color3 }}, 1);
+                                    color: rgba({{ $color1 }}, 1);
+                                }
 
-                            .btn-success {
-                                background-color: rgba({{ $color7 }}, 1);
-                                color: rgba({{ $color1 }}, 1);
-                            } */
+                                .btn-success {
+                                    background-color: rgba({{ $color7 }}, 1);
+                                    color: rgba({{ $color1 }}, 1);
+                                } */
     </style>
 
     <div class="animated-bg">
