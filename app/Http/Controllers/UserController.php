@@ -17,6 +17,11 @@ class UserController extends Controller
 
     }
 
+    public function count() {
+        $userCount = User::All();
+        return $userCount;
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([

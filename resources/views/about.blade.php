@@ -49,12 +49,12 @@
                         <span class="text-dark fst-italic">Our
                             Story</span>
                         <h2 class="display-5 fw-bold text-dark">About Us</h2>
-                        <p class="lead">PT LIMA DUA JAYA
+                        <p class="">PT LIMA DUA JAYA
                             sudah berdiri sejak bulan oktober tahun 2021 yang bergerak dalam
                             bidang Advertising. Dimulai dari vending machine dan projek branding seperti car branding, media
                             promosi melalui vending machine, billboard/baliho, produksi gondola, booth, papan nama toko,
                             brand activation, dan lain-lain.</p>
-                        <p class="lead mb-0 text-dark">PT LIMA DUA JAYA
+                        <p class="mb-0 text-dark">PT LIMA DUA JAYA
                             berdiri di tahun 2021 di Madiun dan pada tahun 2023 mendirikan
                             kantor pusat di Surabaya. Di Tahun 2024 mendirikan kantor cabang Semarang.</p>
                     </div>
@@ -144,10 +144,10 @@
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-dark fst-italic">Visi</span>
-                            <h2 class="display-5 fw-bold text-light">
+                            <h2 class="display-5 fw-bold text-dark">
                                 Visi
                             </h2>
-                            <p class="text-light">Menjadi mitra
+                            <p class="text-dark">Menjadi mitra
                                 periklanan terdepan di Indonesia yang dikenal karena keunggulan
                                 dalam memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas
                                 utama dan kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
@@ -162,16 +162,16 @@
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-dark fst-italic">Misi</span>
-                            <h2 class="display-5 fw-bold text-light">
+                            <h2 class="display-5 fw-bold text-dark">
                                 Misi
                             </h2>
-                            <p class="text-light"><span>1.
+                            <p class="text-dark"><span>1.
                                 </span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
-                            <p class="text-light"><span>2.
+                            <p class="text-dark"><span>2.
                                 </span>Menjunjung Tinggi Integeritas Pekerjaan.</p>
-                            <p class="text-light"><span>3.
+                            <p class="text-dark"><span>3.
                                 </span>Berinovasi untuk Memenuhi Kebutuhan Klien.</p>
-                            <p class="text-light"><span>4.
+                            <p class="text-dark"><span>4.
                                 </span>Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.
                             </p>
                         </div>

@@ -14,6 +14,11 @@ class WorkshopController extends Controller
         return view('admin.workshop.workshop', compact('workshops'));
     }
 
+    public function count() {
+        $workshopCount = Workshop::All();
+        return $workshopCount;
+    }
+
     public function userIndex()
     {
         // Fetch Lima Dua Jaya workshops
@@ -40,7 +45,7 @@ class WorkshopController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
-            'description' => 'required|string|max:500', 
+            'description' => 'required|string|max:500',
             'isLimaduajaya' => 'nullable|boolean'
         ]);
 

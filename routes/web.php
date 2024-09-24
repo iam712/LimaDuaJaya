@@ -6,6 +6,7 @@ use App\Http\Controllers\WorkshopController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProjectLimaduajayaSurabayaController;
 use App\Http\Controllers\PortfolioProjectLimaduajayaSurabayaController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,9 +51,11 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 Route::middleware(['auth', 'admin'])->group(function () {
 
     // Dashboard Routes
-    Route::get('/admin', function () {
-        return view('admin.dashboardadmin');
-    })->name('admin.dashboard');
+    // Route::get('/admin', function () {
+    //     return view('admin.dashboardadmin');
+    // })->name('admin.dashboard');
+
+    Route::get('/admin', [DashboardController::class, 'index'])->name('admin.dashboard');
 
     // Review Routes
     Route::get('/admin/reviews', [ReviewController::class, 'adminIndex'])->name('admin.reviews.index');

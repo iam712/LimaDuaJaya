@@ -9,6 +9,25 @@
     $color5 = '255, 222, 223'; //#ffdedf
     $color6 = '246, 232, 214'; //#F6E8D6
     $color7 = '240, 104, 111'; //#F0686F
+
+    use Carbon\Carbon;
+
+    // Set the timezone to Jakarta (Indonesia)
+    $currentTime = Carbon::now('Asia/Jakarta');
+    $greeting = '';
+
+    // Define morning and evening times
+    if ($currentTime->hour < 12) {
+        $greeting = 'Good Morning';
+    } elseif ($currentTime->hour < 18) {
+        $greeting = 'Good Afternoon';
+    } else {
+        $greeting = 'Good Evening';
+    }
+
+    // Get the user's name
+    $userName = Auth::user()->name;
+
 @endphp
 
 @section('title', 'Dashboard-Admin')
@@ -91,7 +110,7 @@
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2"
             style="background-color: transparent;">
             <h1 class="display-4" style="color: rgba({{ $color1 }}, 1);">Welcome to Admin Dashboard</h1>
-            <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span class=""
+            <p class="lead" style="color: rgba({{ $color3 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
 
@@ -108,6 +127,8 @@
                                     </a>
                                 </h5>
                                 <p class="card-text">Manage and review all workshop-related content.</p>
+                                <p class="card-text">Total Workshop : <span class="text-dark">{{ $workshopCount }}</span>
+                                </p>
                                 <a href="{{ url('/admin/workshops') }}" class="btn btn-primary">Go to Workshop</a>
                             </div>
                         </div>
@@ -123,6 +144,8 @@
                                     </a>
                                 </h5>
                                 <p class="card-text">View and manage all project submissions and statuses.</p>
+                                <p class="card-text">Total Workshop : <span class="text-dark">{{ $projectCount }}</span>
+                                </p>
                                 <a href="{{ route('projects.index') }}" class="btn btn-primary">Go to Project</a>
                             </div>
                         </div>
@@ -139,6 +162,8 @@
                                     </a>
                                 </h5>
                                 <p class="card-text">Manage user profiles and permissions.</p>
+                                <p class="card-text">Total Workshop : <span class="text-dark">{{ $userCount }}</span>
+                                </p>
                                 <a href="{{ url('/admin/users') }}" class="btn btn-primary">Go to User Management</a>
                             </div>
                         </div>
@@ -154,6 +179,8 @@
                                     </a>
                                 </h5>
                                 <p class="card-text">Moderate and respond to user reviews and feedback.</p>
+                                <p class="card-text">Total Workshop : <span class="text-dark">{{ $reviewCount }}</span>
+                                </p>
                                 <a href="{{ url('/admin/reviews') }}" class="btn btn-primary">Go to Reviews</a>
                             </div>
                         </div>

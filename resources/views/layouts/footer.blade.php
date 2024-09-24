@@ -25,7 +25,7 @@
 
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase text-light fw-bold mb-4">Products</h6>
+                    <h6 class="text-uppercase text-light fw-bold mb-4">Services</h6>
                     <p>
                         <a class="text-light">MDBootstrap</a>
                     </p>
@@ -58,7 +58,7 @@
                         <a class="text-light">Shipping Rates</a>
                     </p>
                     <p>
-                        <a class="text-light">Help</a>
+                        <a href="/#faqSection" class="text-light">Help</a>
                     </p>
                 </div>
 

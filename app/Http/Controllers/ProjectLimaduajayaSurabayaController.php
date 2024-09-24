@@ -14,6 +14,11 @@ class ProjectLimaduajayaSurabayaController extends Controller
         return view('admin.project.project', compact('projects'));
     }
 
+    public function count() {
+        $projectCount = ProjectLimaduajayaSurabaya::All();
+        return $projectCount;
+    }
+
     // Store a newly created project (Admin Create)
     public function store(Request $request)
     {

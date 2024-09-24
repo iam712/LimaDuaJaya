@@ -58,7 +58,7 @@
     <!-- Review Form -->
     <section class="banner d-flex justify-content-center align-items-center animated-bg">
         <div class="rounded rounded-3 p-4"
-            style="background-color: rgb({{ $color5 }}); width: 60%; max-width: 600px; box-shadow: 0 0 10px rgb({{ $color2 }}); font-family: Inria Sans, sans-serif;">
+            style="background-color: rgb({{ $color1 }}); width: 60%; max-width: 600px; box-shadow: 0 0 10px rgb({{ $color2 }}); font-family: Inria Sans, sans-serif;">
             <h3 class="text-center text-dark fw-bold">Submit
                 Your Review</h3>
             <form action="{{ route('reviews.store') }}" method="POST">

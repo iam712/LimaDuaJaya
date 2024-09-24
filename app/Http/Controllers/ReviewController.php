@@ -14,6 +14,11 @@ class ReviewController extends Controller
         return view('about', compact('reviews'));
     }
 
+    public function count() {
+        $reviewCount = Review::All();
+        return $reviewCount;
+    }
+
     // Store a newly created review in storage
     public function store(Request $request)
     {

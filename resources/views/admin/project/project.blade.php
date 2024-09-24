@@ -9,6 +9,25 @@
     $color5 = '255, 222, 223'; //#ffdedf
     $color6 = '246, 232, 214'; //#F6E8D6
     $color7 = '240, 104, 111'; //#F0686F
+
+    use Carbon\Carbon;
+
+    // Set the timezone to Jakarta (Indonesia)
+    $currentTime = Carbon::now('Asia/Jakarta');
+    $greeting = '';
+
+    // Define morning and evening times
+    if ($currentTime->hour < 12) {
+        $greeting = 'Good Morning';
+    } elseif ($currentTime->hour < 18) {
+        $greeting = 'Good Afternoon';
+    } else {
+        $greeting = 'Good Evening';
+    }
+
+    // Get the user's name
+    $userName = Auth::user()->name;
+
 @endphp
 
 @section('title', 'Project-Admin')
@@ -89,7 +108,7 @@
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
             <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Project</h1>
-            <p class="lead" style="color: rgba({{ $color3 }}, 1);">Hello, <span style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
+            <p class="lead" style="color: rgba({{ $color3 }}, 1);">{{ $greeting }}, <span style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
         @if ($projects->isEmpty())
             <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
