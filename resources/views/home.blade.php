@@ -811,8 +811,8 @@
                 <!-- Sixth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SHOP SIGN"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/shopsign/shopsign1.jpeg') }}" class="card-img-top custom-logo" alt="SHOP SIGN"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">SHOP
                                 SIGN</h5>
@@ -854,8 +854,8 @@
                 <!-- Eighth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="CAR BRANDING"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/carbranding/carbranding1.jpeg') }}" class="card-img-top custom-logo" alt="CAR BRANDING"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">CAR
                                 BRANDING</h5>

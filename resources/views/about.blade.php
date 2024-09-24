@@ -190,8 +190,7 @@
         <div style="width: 70%; height: 1px; background-color: rgb({{ $color3 }});"></div>
     </div>
 
-    <!-- Review Section -->
-    <section id="aboutUsSection" class="py-5 py-sm-5 fade-section parallax"
+    <section id="reviewSection" class="py-5 py-sm-5 fade-section parallax"
         style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Inria Sans, sans-serif;">
         <div class="container">
             <h1 class="text-center" style="font-weight: bold; color: black;">Apa kata mereka?</h1>
@@ -200,66 +199,52 @@
             <h5 class="text-lg text-dark p-5 text-center">No reviews available at the moment</h5>
         @else
             <div class="container mt-5">
-                <div class="review-wrapper">
-                    <div class="review-content">
-                        @foreach ($reviews as $review)
-                            <div class="card mx-2 d-flex justify-content-around"
-                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color5 }}), rgb({{ $color1 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
-                                <div class="card-body" style="overflow: hidden; flex-grow: 1;">
-                                    <p class="card-text text-dark fw-bold"
-                                        style="white-space: normal; word-wrap: break-word;">
-                                        {{ $review->comment }}
-                                    </p>
-                                </div>
-                                <div class="card-footer text-end" style="background: none; border-top: none;">
-                                    <p class="card-text mb-2 text-dark fst-italic text-muted">
-                                        {{ $review->name }} | <span>{{ $review->email }}</span>
-                                    </p>
-                                </div>
-                            </div>
-                        @endforeach
-
-                        @foreach ($reviews as $review)
-                            <div class="card mx-2 d-flex justify-content-around"
-                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color5 }}), rgb({{ $color1 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
-                                <div class="card-body" style="overflow: hidden; flex-grow: 1;">
-                                    <p class="card-text text-dark fw-bold"
-                                        style="white-space: normal; word-wrap: break-word;">
-                                        {{ $review->comment }}
-                                    </p>
-                                </div>
-                                <div class="card-footer text-end" style="background: none; border-top: none;">
-                                    <p class="card-text mb-2 text-dark fst-italic text-muted">
-                                        {{ $review->name }} | <span>{{ $review->email }}</span>
-                                    </p>
-                                </div>
-                            </div>
-                        @endforeach
-
-                        @foreach ($reviews as $review)
-                            <div class="card mx-2 d-flex justify-content-around"
-                                style="flex-shrink: 0; background: linear-gradient(to bottom, rgb({{ $color5 }}), rgb({{ $color1 }})); display: flex; flex-direction: column; width: 100%; max-width: 30rem;">
-                                <div class="card-body" style="overflow: hidden; flex-grow: 1;">
-                                    <p class="card-text text-dark fw-bold"
-                                        style="white-space: normal; word-wrap: break-word;">
-                                        {{ $review->comment }}
-                                    </p>
-                                </div>
-                                <div class="card-footer text-end" style="background: none; border-top: none;">
-                                    <p class="card-text mb-2 text-dark fst-italic text-muted">
-                                        {{ $review->name }} | <span>{{ $review->email }}</span>
-                                    </p>
+                <!-- Carousel for Reviews -->
+                <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="review-carousel-inner">
+                        @foreach ($reviews->chunk(3) as $key => $reviewChunk)
+                            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
+                                <div class="row justify-content-center">
+                                    @foreach ($reviewChunk as $review)
+                                        <div class="col-12 col-md-4 col-lg-4 d-flex">
+                                            <div class="card mx-2"
+                                                style="background: linear-gradient(to bottom, rgb({{ $color5 }}), rgb({{ $color1 }})); flex-grow: 1;">
+                                                <div class="card-body">
+                                                    <p class="card-text text-dark fw-bold">
+                                                        {{ $review->comment }}
+                                                    </p>
+                                                </div>
+                                                <div class="card-footer text-end">
+                                                    <p class="text-dark fst-italic text-muted">
+                                                        {{ $review->name }} | <span>{{ $review->email }}</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         @endforeach
                     </div>
+                    <!-- Carousel Controls -->
+                    <a class="carousel-control-prev" href="#reviewCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#reviewCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
                 </div>
             </div>
         @endif
     </section>
+
+
 @endsection
 
 <style>
+    /* Enhance the Review Section */
     .review-wrapper {
         position: relative;
         overflow: hidden;
@@ -268,7 +253,43 @@
 
     .review-content {
         display: inline-flex;
+        padding: 20px 0;
         animation: marquee 60s linear infinite;
+    }
+
+    .card {
+        margin: 20px;
+        flex: 1 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-body {
+        font-family: 'Inria Sans', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+        padding-bottom: 10px;
+    }
+
+    .card-footer {
+        font-size: 0.875rem;
+        font-weight: bold;
+        text-align: right;
+        border-top: none;
+        color: #7d141d;
+    }
+
+    .card-footer span {
+        color: #555;
     }
 
     @keyframes marquee {
@@ -281,11 +302,7 @@
         }
     }
 
-    .card {
-        margin: 10px;
-        flex: 1 0 auto;
-    }
-
+    /* Media queries for responsiveness */
     @media (max-width: 768px) {
         .review-content {
             animation-duration: 30s;
@@ -308,39 +325,59 @@
         }
     }
 
-    .parallax {
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
+    /* Default - Desktop: Show 3 reviews */
+    .carousel-item .col-md-4 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
     }
 
-    .fade-section {
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-    }
-
-    .fade-section.visible {
-        opacity: 1;
-    }
-
-    /* Additional styles */
-    .card {
-        margin: 10px;
-        flex: 1 0 auto;
-    }
-
-    @media (max-width: 768px) {
-        .card {
-            width: 90%;
-            max-width: none;
+    /* Tablet: Show 3 reviews */
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+        .carousel-item .col-md-4 {
+            flex: 0 0 33.333%;;
+            max-width: 33.333%;
         }
     }
 
-    @media (min-width: 768px) and (max-width: 1200px) {
-        .card {
-            width: 100%;
-            max-width: 25rem;
+    /* Mobile: Handled by JavaScript */
+    @media (max-width: 767.98px) {
+        .carousel-item .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
         }
+    }
+
+    /* Customize Previous and Next Buttons to Black */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #000000;
+        /* Set to black */
+        border-radius: 70%;
+        /* Optional: Make the icon background circular */
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Optional: Change the icon itself (arrows) to white or another color */
+    .carousel-control-prev-icon::before,
+    .carousel-control-next-icon::before {
+        color: white;
+        /* Keep the arrow icon white */
+    }
+
+    /* Add hover effect for the controls */
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: #333333;
+        /* Darker black (optional) for hover effect */
+        transition: background-color 0.3s ease;
+    }
+
+    /* Add hover effect for the arrows */
+    .carousel-control-prev-icon::before:hover,
+    .carousel-control-next-icon::before:hover {
+        color: #fff;
+        /* Keeps the arrow white on hover */
     }
 </style>
 
@@ -362,5 +399,37 @@
         sections.forEach(section => {
             observer.observe(section);
         });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const isMobile = window.innerWidth <= 767.98;
+
+        if (isMobile) {
+            const reviewCarouselInner = document.getElementById('review-carousel-inner');
+            const carouselItems = reviewCarouselInner.getElementsByClassName('carousel-item');
+
+            // For mobile, remove chunking and display each review separately
+            Array.from(carouselItems).forEach((item) => {
+                const reviews = item.querySelectorAll('.col-md-4, .col-sm-6, .col-12');
+                if (reviews.length > 1) {
+                    // For each review in the chunk, clone it into individual carousel items
+                    reviews.forEach((review) => {
+                        let newCarouselItem = document.createElement('div');
+                        newCarouselItem.classList.add('carousel-item');
+                        newCarouselItem.innerHTML =
+                            `<div class="row justify-content-center">${review.outerHTML}</div>`;
+                        reviewCarouselInner.appendChild(newCarouselItem);
+                    });
+                    // Remove the original chunked item
+                    reviewCarouselInner.removeChild(item);
+                }
+            });
+
+            // Make sure the first item is set to active
+            const firstItem = reviewCarouselInner.querySelector('.carousel-item');
+            if (firstItem) {
+                firstItem.classList.add('active');
+            }
+        }
     });
 </script>
