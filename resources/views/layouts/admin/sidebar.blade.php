@@ -1,5 +1,5 @@
 <div class="sidebar"
-    style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; background-color: rgb({{ $color3 }}); font-family: 'LibreBaskerville', serif; transition: transform 0.3s ease, background-color 0.3s ease, background 0.3s ease; overflow-y: auto; z-index: 1000; display: flex; flex-direction: column; justify-content: space-between; padding: 1rem;"
+    style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; background-color: rgb({{ $color3 }}); font-family: Inria Sans, sans-serif; transition: transform 0.3s ease, background-color 0.3s ease, background 0.3s ease; overflow-y: auto; z-index: 1000; display: flex; flex-direction: column; justify-content: space-between; padding: 1rem;"
     id="sidebar">
     <div class="sidebar-content" style="flex: 1;">
         <ul class="sidebar-nav" style="list-style: none; padding: 0;">

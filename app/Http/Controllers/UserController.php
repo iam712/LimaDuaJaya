@@ -32,8 +32,6 @@ class UserController extends Controller
         return redirect()->route('admin.users.index')->with('success', 'User created successfully and set as admin by default.');
     }
 
-
-
     public function show($id)
     {
         // Display a specific user by ID
