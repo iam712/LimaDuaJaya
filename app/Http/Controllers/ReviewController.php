@@ -36,7 +36,7 @@ class ReviewController extends Controller
     public function adminIndex()
     {
         //$reviews = Review::all();
-        $reviews = Review::paginate(2);
+        $reviews = Review::paginate(5);
         return view('admin.review.review', compact('reviews'));
     }
 

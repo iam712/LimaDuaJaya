@@ -42,7 +42,7 @@
     </style>
     <!-- Banner -->
     <section class="banner d-flex align-items-center"
-        style="background-color: rgb({{ $color4 }}); height: 100vh; position: relative; font-family: 'LibreBaskerville', serif;">
+        style="background-color: rgb({{ $color4 }}); height: 100vh; position: relative; font-family: Inria Sans, sans-serif;">
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
             style="background-color: rgb({{ $color3 }}); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: 0 0 10px;
         display: inline-block;">
@@ -58,7 +58,7 @@
     <!-- Review Form -->
     <section class="banner d-flex justify-content-center align-items-center animated-bg">
         <div class="rounded rounded-3 p-4"
-            style="background-color: rgb({{ $color5 }}); width: 60%; max-width: 600px; box-shadow: 0 0 10px rgb({{ $color2 }}); font-family: 'LibreBaskerville', serif;">
+            style="background-color: rgb({{ $color5 }}); width: 60%; max-width: 600px; box-shadow: 0 0 10px rgb({{ $color2 }}); font-family: Inria Sans, sans-serif;">
             <h3 class="text-center text-dark fw-bold">Submit
                 Your Review</h3>
             <form action="{{ route('reviews.store') }}" method="POST">

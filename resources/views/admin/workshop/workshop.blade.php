@@ -148,12 +148,6 @@
                                         </button>
                                     </td>
                                     <td>
-                                        <!-- Delete button -->
-                                        {{-- <form action="{{ route('workshops.destroy', $workshop->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                        </form> --}}
                                         <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#deleteModal{{ $workshop->id }}">Delete</button>
                                     </td>

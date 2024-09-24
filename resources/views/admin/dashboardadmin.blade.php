@@ -86,10 +86,6 @@
         /*  */
     </style>
 
-    <!-- Sidebar Toggle Button (only visible on mobile) -->
-    {{-- <button class="btn btn-primary sidebar-toggle d-md-none" id="sidebarToggle" type="button">
-        Toggle Sidebar
-    </button> --}}
 
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2"
