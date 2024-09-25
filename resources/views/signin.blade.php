@@ -33,12 +33,30 @@
         .btn-primary {
             background-color: rgb({{ $color4 }});
             border: none;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb({{ $color3 }});
+            transform: scale(1.05);
+        }
+
+        .btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(238, 63, 72, 0.5);
         }
 
         /* Background and Text Color Styles */
         .bg-custom {
             background-color: rgb({{ $color1 }});
             color: rgb({{ $color2 }});
+            border-radius: 8px;
+            padding: 3rem;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .bg-custom:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .bg-custom .form-label,
