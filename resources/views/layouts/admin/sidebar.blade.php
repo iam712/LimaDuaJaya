@@ -9,12 +9,14 @@
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
-                <a class="nav-link {{ request()->routeIs('workshops.index') ? 'active' : '' }}" href="{{ route('workshops.index') }}">
+                <a class="nav-link {{ request()->routeIs('workshops.index') ? 'active' : '' }}"
+                    href="{{ route('workshops.index') }}">
                     <i class="fas fa-cogs"></i> Manage Workshop
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
-                <a class="nav-link {{ request()->routeIs('projects.index') ? 'active' : '' }}" href="{{ route('projects.index') }}">
+                <a class="nav-link {{ request()->routeIs('projects.index') ? 'active' : '' }}"
+                    href="{{ route('projects.index') }}">
                     <i class="fas fa-project-diagram"></i> Manage Project
                 </a>
             </li>
@@ -30,7 +32,8 @@
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
-                <a class="nav-link {{ request()->routeIs('portfolio_projects.index') ? 'active' : '' }}" href="{{ route('portfolio_projects.index') }}">
+                <a class="nav-link {{ request()->routeIs('portfolio_projects.index') ? 'active' : '' }}"
+                    href="{{ route('portfolio_projects.index') }}">
                     <i class="fa-regular fa-folder-open"></i> Manage Project Portfolio
                 </a>
             </li>
@@ -49,16 +52,17 @@
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
-                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <a class="nav-link" href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
             </li>
         </ul>
     </div>
     <div class=" bg-light sidebar-brand position-absolute bottom-0 start-0 p-3">
-        <a href="/admin">
-            <img src="{{ asset('images/LOGO.png') }}" alt="Logo" class="w-100 mw-100">
-        </a>
+
+        <img src="{{ asset('images/LOGO.png') }}" alt="Logo" class="w-100 mw-100">
+
     </div>
 </div>
 
@@ -72,21 +76,61 @@
 <style>
     .nav-link {
         color: rgb({{ $color1 }});
+        /* Text color */
         text-decoration: none;
+        /* Remove default underline */
         display: block;
+        /* Make link a block element */
         padding: 0.5rem 1rem;
+        /* Add padding */
         border-radius: 0.25rem;
-        transition: color 0.3s ease, transform 0.3s ease;
+        /* Rounded corners */
+        position: relative;
+        /* Position for the pseudo-element */
+        overflow: hidden;
+        /* Prevent overflow */
+    }
+
+    .nav-link::after {
+        content: '';
+        /* Create an empty pseudo-element */
+        position: absolute;
+        /* Position it absolutely */
+        left: 0;
+        /* Align to the left */
+        top: 0;
+        /* Align to the top */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        background-color: rgba({{ $color4 }}, 0.3);
+        /* Background color with transparency */
+        transform: scale(0);
+        /* Start with no scale (invisible) */
+        transition: transform 0.3s ease;
+        /* Animation effect */
+        z-index: -1;
+        /* Place behind the text */
+        border-radius: 0.75rem;
+        /* Match border-radius */
     }
 
     .nav-link:hover {
         color: rgb({{ $color1 }});
-        transform: scale(1.05);
+        /* Change text color on hover */
+    }
+
+    .nav-link:hover::after {
+        transform: scale(1);
+        /* Scale to full size on hover */
     }
 
     .nav-link.active {
         font-weight: bold;
+        /* Highlight active link */
     }
+
 
     @media (max-width: 768px) {
         .sidebar {

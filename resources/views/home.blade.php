@@ -1002,7 +1002,7 @@
     </section> --}}
 
     <!-- Location Map -->
-    <section id="locationMapSection" class="location-map py-4 py-sm-4 parallax"
+    <section id="locationMapSection" class="location-map py-4 py-md-4 py-lg-4 parallax"
         style="
         background-image: url('{{ asset('images/banner/backgroundbanner6.png') }}');
         background-size: cover;
@@ -1029,7 +1029,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faqSection" class="faq-section py-4 py-sm-4"
+    <section id="faqSection" class="faq-section py-4 py-md-4 py-lg-4"
         style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }})); font-family: Inria Sans, sans-serif;">
         <div class="container">
             <h2 class="text-center fw-bold text-light">

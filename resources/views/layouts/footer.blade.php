@@ -68,9 +68,11 @@
                 <!-- Grid column -->
                 <div class="col mt-3">
                     <h6 class="text-uppercase text-light mb-4 fw-bold">Contact</h6>
-                    <p class="text-light"><i class="fas fa-home mr-3"></i>
-                        LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur 60215
-                        Surabaya, Indonesia</p>
+                    <p class="text-light"><i class="fas fa-home mr-3"></i><a class="text-light"
+                            href="/#locationMapSection">
+                            LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur
+                            60215
+                            Surabaya, Indonesia</a></p>
                     <p class="text-light"><i class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
                     <p class="text-light"><i class="fas fa-phone mr-3"></i>
                         +62 821 1598 3575</p>
@@ -126,3 +128,37 @@
     <!-- Grid container -->
 </footer>
 <!-- Footer -->
+
+<style>
+    a {
+        text-decoration: none;
+        /* Remove default underline */
+        position: relative;
+        /* Position for the pseudo-element */
+        color: rgb({{ $color2 }});
+        /* Ensure link color matches your theme */
+    }
+
+    a::after {
+        content: '';
+        /* Create an empty pseudo-element */
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        /* Adjust to position the underline */
+        width: 100%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: rgb({{ $color1 }});
+        /* Color of the underline */
+        transform: scaleX(0);
+        /* Start with no scale (invisible) */
+        transition: transform 0.3s ease;
+        /* Animation effect */
+    }
+
+    a:hover::after {
+        transform: scaleX(1);
+        /* Scale to full width on hover */
+    }
+</style>
