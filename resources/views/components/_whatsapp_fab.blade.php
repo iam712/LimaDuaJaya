@@ -29,6 +29,6 @@
 }
 
 .whatsapp-button:hover {
-    background-color: #000000; /* Darker shade on hover */
+    background-color: #ffffff; /* Darker shade on hover */
 }
 </style>
