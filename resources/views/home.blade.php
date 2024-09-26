@@ -811,7 +811,8 @@
                 <!-- Sixth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/shopsign/shopsign1.jpeg') }}" class="card-img-top custom-logo" alt="SHOP SIGN"
+                        <img src="{{ asset('images/shopsign/shopsign1.jpeg') }}" class="card-img-top custom-logo"
+                            alt="SHOP SIGN"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">SHOP
@@ -854,7 +855,8 @@
                 <!-- Eighth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/carbranding/carbranding1.jpeg') }}" class="card-img-top custom-logo" alt="CAR BRANDING"
+                        <img src="{{ asset('images/carbranding/carbranding1.jpeg') }}" class="card-img-top custom-logo"
+                            alt="CAR BRANDING"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">CAR
@@ -907,6 +909,52 @@
                                 pelanggan menemukan dan mengenali toko Anda dengan mudah. Dengan pilihan desain yang
                                 fleksibel dan kemampuan untuk disesuaikan dengan identitas merek Anda, papan nama ini
                                 menjadi elemen penting dalam membangun citra toko yang kuat dan dikenang.
+                            </p>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eleven Card -->
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card custom-card h-100">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo"
+                            alt="BRANDING ROLLING DOOR" style="object-fit: cover; width: 100%; height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                BRANDING ROLLING DOOR
+                            </h5>
+                            <p class="card-text card-description fst-italic">
+                                Branding rolling door kami memberikan kesempatan untuk mengubah pintu toko Anda menjadi
+                                media promosi yang menarik. Dengan desain yang dapat disesuaikan dan pencetakan berkualitas
+                                tinggi, pintu rolling door Anda tidak hanya berfungsi sebagai pelindung, tetapi juga sebagai
+                                alat pemasaran yang efektif. Produk ini cocok untuk meningkatkan visibilitas merek Anda,
+                                baik dalam kondisi toko buka atau tutup.
+                            </p>
+                            <button class="btn read-more-btn text-light"
+                                style="background-color: rgb({{ $color2 }})">Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Twelve Card -->
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card custom-card h-100">
+                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BRANDING BOOTH"
+                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                BRANDING BOOTH
+                            </h5>
+                            <p class="card-text card-description fst-italic">
+                                Branding booth kami menawarkan tampilan yang menarik untuk meningkatkan interaksi dengan
+                                pelanggan. Desain yang kreatif dan fleksibel memungkinkan booth ini disesuaikan dengan
+                                identitas dan kebutuhan bisnis Anda. Sangat ideal untuk pameran, event, atau promosi di
+                                berbagai lokasi, booth ini dirancang untuk menarik perhatian dan memperkuat kesan positif
+                                dari merek Anda.
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
