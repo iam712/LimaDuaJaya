@@ -807,8 +807,8 @@
                 <!-- Fifth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="SPANDUK"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/spanduk/spanduk1.jpg') }}" class="card-img-top custom-logo" alt="SPANDUK"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 SPANDUK
