@@ -243,10 +243,14 @@
 
                                             <div class="col-12">
                                                 <label for="password" class="form-label">Password</label>
-                                                <div class="input-group">
+                                                <div class="input-group" style="position: relative;">
                                                     <div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
                                                     <input type="password" id="password" name="password"
                                                         class="form-control" placeholder="Enter Password" required>
+                                                    <span id="togglePassword"
+                                                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; z-index: 10;">
+                                                        <i class="fa-solid fa-eye"></i>
+                                                    </span>
                                                 </div>
                                             </div>
 
@@ -271,4 +275,20 @@
         </div>
     </section>
 
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            var passwordInput = document.getElementById('password');
+            var icon = this.querySelector('i');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    </script>
+    
 @endsection
