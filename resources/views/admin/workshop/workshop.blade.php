@@ -131,10 +131,10 @@
         </section>
 
          <!-- Filter Form -->
-        <form action="{{ route('workshops.index') }}" method="GET" class="mb-4">
+        <form action="{{ route('workshops.index') }}" method="GET" class="mb-2 mb-md-3 mb-lg-4">
             <div class="form-group">
                 <label for="type" class="text-light">Filter by Type:</label>
-                <select name="type" id="type" class="form-control" onchange="this.form.submit()">
+                <select name="type" id="type" class="form-control mt-2 mt-md-2 mt-lg-2" onchange="this.form.submit()">
                     <option value="all" {{ $type === 'all' ? 'selected' : '' }}>All Workshops</option>
                     <option value="limaduajaya" {{ $type === 'limaduajaya' ? 'selected' : '' }}>Lima Dua Jaya Workshops</option>
                     <option value="other" {{ $type === 'other' ? 'selected' : '' }}>Other Workshops</option>
