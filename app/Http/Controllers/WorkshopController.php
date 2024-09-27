@@ -8,13 +8,30 @@ use Illuminate\Support\Facades\Storage;
 
 class WorkshopController extends Controller
 {
-    public function index()
+
+
+    public function index(Request $request)
     {
-        $workshops = Workshop::with('portfolios')->paginate(5); // Adjust pagination as needed
-        return view('admin.workshop.workshop', compact('workshops'));
+        // Fetch filter criteria from the request
+        $type = $request->input('type'); // Expecting 'limaduajaya', 'other', or 'all'
+
+        // Fetch workshops based on the filter criteria
+        $query = Workshop::with('portfolios');
+
+        if ($type === 'limaduajaya') {
+            $query->where('isLimaduajaya', true);
+        } elseif ($type === 'other') {
+            $query->where('isLimaduajaya', false);
+        }
+
+        $workshops = $query->paginate(5); // Adjust pagination as needed
+
+        return view('admin.workshop.workshop', compact('workshops', 'type'));
     }
 
-    public function count() {
+
+    public function count()
+    {
         $workshopCount = Workshop::All();
         return $workshopCount;
     }

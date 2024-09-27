@@ -108,19 +108,19 @@
         }
 
         /* .btn-warning {
-                                                        background-color: rgba({{ $color4 }}, 1);
-                                                        color: rgba({{ $color1 }}, 1);
-                                                    }
+                                                                    background-color: rgba({{ $color4 }}, 1);
+                                                                    color: rgba({{ $color1 }}, 1);
+                                                                }
 
-                                                    .btn-danger {
-                                                        background-color: rgba({{ $color3 }}, 1);
-                                                        color: rgba({{ $color1 }}, 1);
-                                                    }
+                                                                .btn-danger {
+                                                                    background-color: rgba({{ $color3 }}, 1);
+                                                                    color: rgba({{ $color1 }}, 1);
+                                                                }
 
-                                                    .btn-success {
-                                                        background-color: rgba({{ $color7 }}, 1);
-                                                        color: rgba({{ $color1 }}, 1);
-                                                    } */
+                                                                .btn-success {
+                                                                    background-color: rgba({{ $color7 }}, 1);
+                                                                    color: rgba({{ $color1 }}, 1);
+                                                                } */
     </style>
 
     <div class="animated-bg">
@@ -129,6 +129,19 @@
             <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
+
+         <!-- Filter Form -->
+        <form action="{{ route('workshops.index') }}" method="GET" class="mb-4">
+            <div class="form-group">
+                <label for="type" class="text-light">Filter by Type:</label>
+                <select name="type" id="type" class="form-control" onchange="this.form.submit()">
+                    <option value="all" {{ $type === 'all' ? 'selected' : '' }}>All Workshops</option>
+                    <option value="limaduajaya" {{ $type === 'limaduajaya' ? 'selected' : '' }}>Lima Dua Jaya Workshops</option>
+                    <option value="other" {{ $type === 'other' ? 'selected' : '' }}>Other Workshops</option>
+                </select>
+            </div>
+        </form>
+
         @if ($workshops->isEmpty())
             <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
         @else
@@ -153,7 +166,8 @@
                                     <td>{{ ($workshops->currentPage() - 1) * $workshops->perPage() + $loop->iteration }}
                                     </td>
                                     <td><img src="{{ asset('storage/' . $workshop->image) }}" alt="Image"
-                                            style="width: 100px; object-fit: cover; aspect-ratio: 1 / 1;">
+                                            style="width: 100px; object-fit: cover; aspect-ratio: 1 / 1;"
+                                            onclick="showImageModal('{{ asset('storage/' . $workshop->image) }}')">
                                     </td>
                                     <td>{{ $workshop->name }}</td>
                                     <td>{{ $workshop->location }}</td>
@@ -186,6 +200,22 @@
             {{ $workshops->links('vendor.pagination.bootstrap-4') }}
         </div>
     </div>
+
+    <!-- Image View Modal -->
+    <div class="modal fade" id="imageViewModal" tabindex="-1" aria-labelledby="imageViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageViewModalLabel">Workshop Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Workshop Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Add Workshop Modal -->
     <div class="modal fade" id="addWorkshopModal" tabindex="-1" aria-labelledby="addWorkshopModalLabel" aria-hidden="true">
@@ -320,4 +350,17 @@
             </div>
         </div>
     @endforeach
+
+    <script>
+        function showImageModal(imageSrc) {
+            // Get the modal image element
+            var modalImage = document.getElementById('modalImage');
+            // Set the source of the modal image to the clicked image
+            modalImage.src = imageSrc;
+            // Show the modal
+            var imageViewModal = new bootstrap.Modal(document.getElementById('imageViewModal'));
+            imageViewModal.show();
+        }
+    </script>
+
 @endsection

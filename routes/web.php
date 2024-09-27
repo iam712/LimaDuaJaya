@@ -50,11 +50,6 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 // FOR ADMIN
 Route::middleware(['auth', 'admin'])->group(function () {
 
-    // Dashboard Routes
-    // Route::get('/admin', function () {
-    //     return view('admin.dashboardadmin');
-    // })->name('admin.dashboard');
-
     Route::get('/admin', [DashboardController::class, 'index'])->name('admin.dashboard');
 
     // Review Routes
