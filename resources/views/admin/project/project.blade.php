@@ -108,7 +108,8 @@
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
             <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Project</h1>
-            <p class="lead" style="color: rgba({{ $color3 }}, 1);">{{ $greeting }}, <span style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
+            <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span
+                    style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
         @if ($projects->isEmpty())
             <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
@@ -130,10 +131,12 @@
                                     <td>{{ ($projects->currentPage() - 1) * $projects->perPage() + $loop->iteration }}</td>
                                     <td>{{ $project->name }}</td>
                                     <td>
-                                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal{{ $project->id }}">Edit</button>
+                                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#editModal{{ $project->id }}">Edit</button>
                                     </td>
                                     <td>
-                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $project->id }}">Delete</button>
+                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal{{ $project->id }}">Delete</button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -178,7 +181,8 @@
 
     @foreach ($projects as $project)
         <!-- Edit Project Modal -->
-        <div class="modal fade" id="editModal{{ $project->id }}" tabindex="-1" aria-labelledby="editModalLabel{{ $project->id }}" aria-hidden="true">
+        <div class="modal fade" id="editModal{{ $project->id }}" tabindex="-1"
+            aria-labelledby="editModalLabel{{ $project->id }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form action="{{ route('projects.update', $project->id) }}" method="POST">
@@ -191,7 +195,8 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="editProjectName{{ $project->id }}" class="form-label">Project Name</label>
-                                <input type="text" class="form-control" id="editProjectName{{ $project->id }}" name="name" value="{{ $project->name }}" required>
+                                <input type="text" class="form-control" id="editProjectName{{ $project->id }}"
+                                    name="name" value="{{ $project->name }}" required>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -204,7 +209,8 @@
         </div>
 
         <!-- Delete Project Modal -->
-        <div class="modal fade" id="deleteModal{{ $project->id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ $project->id }}" aria-hidden="true">
+        <div class="modal fade" id="deleteModal{{ $project->id }}" tabindex="-1"
+            aria-labelledby="deleteModalLabel{{ $project->id }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form action="{{ route('projects.destroy', $project->id) }}" method="POST">

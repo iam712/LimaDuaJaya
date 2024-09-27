@@ -110,7 +110,7 @@
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2"
             style="background-color: transparent;">
             <h1 class="display-4" style="color: rgba({{ $color1 }}, 1);">Welcome to Admin Dashboard</h1>
-            <p class="lead" style="color: rgba({{ $color3 }}, 1);">{{ $greeting }}, <span class=""
+            <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
 
@@ -127,7 +127,7 @@
                                     </a>
                                 </h5>
                                 <p class="card-text">Manage and review all workshop-related content.</p>
-                                <p class="card-text">Total Workshop : <span class="text-dark">{{ $workshopCount }}</span>
+                                <p class="card-text">Total Workshop : <span class="card-text">{{ $workshopCount }}</span>
                                 </p>
                                 <a href="{{ url('/admin/workshops') }}" class="btn btn-primary">Go to Workshop</a>
                             </div>
@@ -144,7 +144,7 @@
                                     </a>
                                 </h5>
                                 <p class="card-text">View and manage all project submissions and statuses.</p>
-                                <p class="card-text">Total Workshop : <span class="text-dark">{{ $projectCount }}</span>
+                                <p class="card-text">Total Project : <span class="card-text">{{ $projectCount }}</span>
                                 </p>
                                 <a href="{{ route('projects.index') }}" class="btn btn-primary">Go to Project</a>
                             </div>
@@ -162,7 +162,7 @@
                                     </a>
                                 </h5>
                                 <p class="card-text">Manage user profiles and permissions.</p>
-                                <p class="card-text">Total Workshop : <span class="text-dark">{{ $userCount }}</span>
+                                <p class="card-text">Total User : <span class="card-text">{{ $userCount }}</span>
                                 </p>
                                 <a href="{{ url('/admin/users') }}" class="btn btn-primary">Go to User Management</a>
                             </div>
@@ -179,7 +179,7 @@
                                     </a>
                                 </h5>
                                 <p class="card-text">Moderate and respond to user reviews and feedback.</p>
-                                <p class="card-text">Total Workshop : <span class="text-dark">{{ $reviewCount }}</span>
+                                <p class="card-text">Total Review : <span class="card-text">{{ $reviewCount }}</span>
                                 </p>
                                 <a href="{{ url('/admin/reviews') }}" class="btn btn-primary">Go to Reviews</a>
                             </div>
