@@ -720,7 +720,7 @@
                 <!-- Service Cards -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/neonbox/neonbox1.jpeg') }}" class="card-img-top custom-logo"
+                        <img src="{{ asset('images/neonbox/neonbox1.png') }}" class="card-img-top custom-logo"
                             alt="NEON BOX"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
@@ -741,7 +741,7 @@
                 <!-- Second Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/brandingrak/brandingrak1.jpeg') }}" class="card-img-top custom-logo"
+                        <img src="{{ asset('images/brandingrak/brandingrak1.png') }}" class="card-img-top custom-logo"
                             alt="BRANDING RAK"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
@@ -764,8 +764,8 @@
                 <!-- Third Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="ROLL UP BANNER"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/rollupbanner/rollupbanner1.jpeg') }}" class="card-img-top custom-logo" alt="ROLL UP BANNER"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">ROLL
                                 UP BANNER</h5>
@@ -785,8 +785,8 @@
                 <!-- Fourth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="LETTER SIGN"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/lettersign/lettersign1.jpeg') }}" class="card-img-top custom-logo" alt="LETTER SIGN"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 LETTER SIGN
@@ -829,7 +829,7 @@
                 <!-- Sixth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/shopsign/shopsign1.jpeg') }}" class="card-img-top custom-logo"
+                        <img src="{{ asset('images/shopsign/shopsign1.png') }}" class="card-img-top custom-logo"
                             alt="SHOP SIGN"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
@@ -851,8 +851,8 @@
                 <!-- Seventh Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BILLBOARD"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/billboard/billboard1.jpeg') }}" class="card-img-top custom-logo" alt="BILLBOARD"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 BILLBOARD
@@ -895,8 +895,8 @@
                 <!-- Ninth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo"
-                            alt="CHILLER BRANDING" style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/brandingchiller/brandingchiller1.jpeg') }}" class="card-img-top custom-logo"
+                            alt="CHILLER BRANDING" style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 CHILLER BRANDING</h5>
@@ -916,7 +916,7 @@
                 <!-- Tenth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/papannamatoko/papannamatoko1.jpeg') }}"
+                        <img src="{{ asset('images/papannamatoko/papannamatoko1.png') }}"
                             class="card-img-top custom-logo" alt="PAPAN NAMA TOKO"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
