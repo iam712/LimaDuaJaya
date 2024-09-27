@@ -576,6 +576,22 @@
             background: none;
             /* Remove background image */
         }
+
+        /* Button Hover Animation */
+        button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            /* Slightly increase the size */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* Add a soft shadow */
+            background-color: rgb({{ $color4 }});
+            /* Change background color on hover */
+            color: rgb({{ $color1 }});
+            /* Change text color on hover */
+        }
     </style>
 
     <!-- Fixed Menu Bar -->
@@ -704,8 +720,9 @@
                 <!-- Service Cards -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="NEON BOX"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/neonbox/neonbox1.jpeg') }}" class="card-img-top custom-logo"
+                            alt="NEON BOX"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 NEON BOX
@@ -724,8 +741,9 @@
                 <!-- Second Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BRANDING RAK"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/brandingrak/brandingrak1.jpeg') }}" class="card-img-top custom-logo"
+                            alt="BRANDING RAK"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 BRANDING RAK
@@ -898,8 +916,9 @@
                 <!-- Tenth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="PAPAN NAMA TOKO"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/papannamatoko/papannamatoko1.jpeg') }}"
+                            class="card-img-top custom-logo" alt="PAPAN NAMA TOKO"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 PAPAN NAMA TOKO
@@ -920,8 +939,9 @@
                 <!-- Eleven Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo"
-                            alt="BRANDING ROLLING DOOR" style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/brandingrollingdoor/brandingrollingdoor1.jpeg') }}"
+                            class="card-img-top custom-logo" alt="BRANDING ROLLING DOOR"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 BRANDING ROLLING DOOR
@@ -943,8 +963,8 @@
                 <!-- Twelve Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/logo.png') }}" class="card-img-top custom-logo" alt="BRANDING BOOTH"
-                            style="object-fit: cover; width: 100%; height: 200px;">
+                        <img src="{{ asset('images/brandingbooth/brandingbooth1.jpeg') }}" class="card-img-top custom-logo" alt="BRANDING BOOTH"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 BRANDING BOOTH

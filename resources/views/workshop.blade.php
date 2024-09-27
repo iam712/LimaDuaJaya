@@ -99,7 +99,8 @@
     </section>
 
     <!-- Partnership Application Form -->
-    <section id="workshopPartnershipProgram" class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1 parallax" style="font-family: Inria Sans, sans-serif;">
+    <section id="workshopPartnershipProgram" class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-1 parallax"
+        style="font-family: Inria Sans, sans-serif;">
         <div class="bg parallax"></div>
         <div class="bg bg2 parallax"></div>
         <div class="bg bg3 parallax"></div>
@@ -149,6 +150,34 @@
     </section>
 
     <style>
+        /* Add this in your existing <style> block */
+
+        /* Button hover animation */
+        button,
+        .btn {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover,
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Specific animation for 'Submit' button */
+        button[type="submit"],
+        .btn-dark {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover,
+        .btn-dark:hover {
+            transform: scale(1.1);
+            background-color: rgb({{ $color3 }});
+            /* Changes background color on hover */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-radius: 8px;

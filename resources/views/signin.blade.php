@@ -30,18 +30,18 @@
             overflow: hidden;
         }
 
-        .btn-primary {
+        .btn-danger {
             background-color: rgb({{ $color4 }});
             border: none;
             transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
-        .btn-primary:hover {
+        .btn-danger:hover {
             background-color: rgb({{ $color3 }});
             transform: scale(1.05);
         }
 
-        .btn-primary:focus {
+        .btn-danger:focus {
             outline: none;
             box-shadow: 0 0 0 0.2rem rgba(238, 63, 72, 0.5);
         }
