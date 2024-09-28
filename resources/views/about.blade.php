@@ -193,7 +193,7 @@
     <section id="reviewSection" class="py-5 py-sm-5 fade-section parallax"
         style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Inria Sans, sans-serif;">
         <div class="container">
-            <h1 class="text-center" style="font-weight: bold; color: black;">Apa kata mereka?</h1>
+            <h1 class="text-center" style="font-weight: bold; color: black;">What do our users say?</h1>
         </div>
         @if ($reviews->isEmpty())
             <h5 class="text-lg text-dark p-5 text-center">No reviews available at the moment</h5>
