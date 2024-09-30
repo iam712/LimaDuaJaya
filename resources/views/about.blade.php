@@ -135,16 +135,16 @@
                 </svg>
             </div>
             <div class="container position-relative" style="z-index: 2;">
-                <div class="row align-items-center gx-4 mb-5">
-                    <div class="col-md-5">
-                        <div class="ms-md-2 ms-lg-5">
+                <div class="row gx-4 mb-5">
+                    <div class="col-12 col-md-5 col-lg-5">
+                        <div class="ms-1 ms-md-2 ms-lg-5">
                             <img class="card img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
                                 src="{{ asset('images/visi.png') }}" alt="Visi Image">
                         </div>
                     </div>
-                    <div class="col-md-6 offset-md-1">
+                    <div class="col-12 col-md-6 col-lg-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
-                            <span class="text-dark fst-italic">Visi</span>
+                            <span class="text-dark fst-italic">Vision</span>
                             <h2 class="display-5 fw-bold text-dark">Visi</h2>
                             <p class="text-dark">
                                 Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan dalam
@@ -158,9 +158,9 @@
                     </div>
                 </div>
                 <div class="row align-items-center gx-4">
-                    <div class="col-md-6 offset-md-1">
+                    <div class="col-12 col-md-6 col-lg-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
-                            <span class="text-dark fst-italic">Misi</span>
+                            <span class="text-dark fst-italic">Mission</span>
                             <h2 class="display-5 fw-bold text-dark">Misi</h2>
                             <p class="text-dark"><span>1.</span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
                             <p class="text-dark"><span>2.</span>Menjunjung Tinggi Integritas Pekerjaan.</p>
@@ -169,8 +169,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="ms-md-2 ms-lg-5">
+                    <div class="col-12 col-md-5 col-lg-5">
+                        <div class="ms-1 ms-md-2 ms-lg-5">
                             <img class="card img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
                                 src="{{ asset('images/misi.png') }}" alt="Misi Image">
                         </div>
