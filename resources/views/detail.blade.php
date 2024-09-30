@@ -15,21 +15,23 @@
 @section('content')
 
     <!-- Main Content Section -->
-    <section class="py-5 mt-5" style="background-color: rgb({{ $color1 }}); font-family: Inria Sans, sans-serif;">
+    <section class="py-4 py-md-5 py-lg-5 mt-5 mt-md-5 mt-lg-5"
+        style="background-color: rgb({{ $color1 }}); font-family: Inria Sans, sans-serif;">
         <div class="container">
             <div class="row g-4 align-items-center">
-                <h2 class="text-start mb-4" style="color: rgb({{ $color2 }});">Detail Workshop</h2>
+                <h2 class="text-start mb-4 fw-bold text-dark">Detail Workshop</h2>
                 <div class="col-12 col-md-4 col-lg-5">
                     <div class="card border-0 shadow-sm rounded-3" style="background-color: rgb({{ $color5 }});">
-                        <img src="{{ asset('storage/' . $workshop->image) }}" class="img-fluid rounded" alt="{{ $workshop->name }}" style="object-fit: cover; width: 100%; height: 300px;">
+                        <img src="{{ asset('storage/' . $workshop->image) }}" class=" card img-fluid rounded"
+                            alt="{{ $workshop->name }}" style="object-fit: cover; width: 100%; height: 300px;">
                     </div>
                 </div>
                 <div class="col-12 col-md-8 col-lg-7">
                     <h2>{{ $workshop->name }}</h2>
-                    <p><i class="fas fa-map-marker-alt"></i> {{ $workshop->location }}</p>
-                    <p>{{ $workshop->description }}</p>
-                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill"
-                        style="background-color: rgb({{ $color4 }}); border: none;">See More</a>
+                    <h5 class="mt-3 mt-md-4 mt-lg-4"><i class="fas fa-map-marker-alt"></i> {{ $workshop->location }}</h5>
+                    <p class="mt-3 mt-md-4 mt-lg-4">{{ $workshop->description }}</p>
+                    {{-- <a href="#" class="btn btn-primary px-4 py-2 rounded-pill"
+                        style="background-color: rgb({{ $color4 }}); border: none;">See More</a> --}}
                 </div>
             </div>
         </div>
@@ -38,12 +40,13 @@
     <!-- Additional Workshops Section -->
     <section class="py-2 py-md-3 py-lg-4" style="font-family: Inria Sans, sans-serif;">
         <div class="container">
-            <h3 class="text-center mb-5" style="color: rgb({{ $color2 }});">More Portfolio</h3>
+            <h3 class="text-center mb-5 fw-bold text-dark">More Portfolio</h3>
             <div class="row g-4">
                 @foreach ($workshop->portfolios as $portfolio)
                     <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card hover-card">
-                            <img src="{{ asset('storage/' . $portfolio->image) }}" class="img-fluid rounded" alt="Portfolio Image" style="object-fit: cover; width: 100%; height: 200px;">
+                        <div class="hover-card">
+                            <img src="{{ asset('storage/' . $portfolio->image) }}" class="img-fluid rounded"
+                                alt="Portfolio Image" style="object-fit: cover; width: 100%; height: 200px;">
                             {{-- <div class="card-body">
                                 <p>Portfolio Image {{ $portfolio->id }}</p>
                             </div> --}}
@@ -76,8 +79,17 @@
     /* Responsive Adjustments */
     @media (min-width: 768px) {
         .img-fluid {
-            height: 350px; /* Adjust height for larger screens */
+            height: 350px;
+            /* Adjust height for larger screens */
         }
     }
 
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
 </style>

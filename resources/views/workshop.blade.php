@@ -22,22 +22,17 @@
 
 
     <!-- Filter Buttons -->
-    <div class="container py-3 py-md-4 py-lg-5 mt-4 mt-md-5 mt-lg-5 text-center">
-
-        <h4 class="text-light">Filter by Category</h4>
-
-        <div class="row mt-2 mt-md-3 mt-lg-3">
-            <div class="btn-group" role="group">
+    <div class="container py-3 py-md-4 py-lg-5 mt-4 mt-md-5 mt-lg-5">
+        <div class="row mt-2 mt-md-3 mt-lg-3 justify-content-center">
+            <div class="btn-group btn-group-sm" role="group" aria-label="Filter Workshops">
                 <a href="{{ route('workshop.index', ['type' => null]) }}"
                     class="btn btn-outline-dark fw-bold {{ $type === null ? 'active' : '' }}">
                     All Workshops
                 </a>
-
                 <a href="{{ route('workshop.index', ['type' => 'limaduajaya']) }}"
                     class="btn btn-outline-dark fw-bold {{ $type === 'limaduajaya' ? 'active' : '' }}">
                     Lima Dua Jaya
                 </a>
-
                 <a href="{{ route('workshop.index', ['type' => 'partnership']) }}"
                     class="btn btn-outline-dark fw-bold {{ $type === 'partnership' ? 'active' : '' }}">
                     Partnership
@@ -45,6 +40,9 @@
             </div>
         </div>
     </div>
+
+
+
 
     <!-- Workshop Lima Dua Jaya -->
     <section class="py-3 py-md-4 py-lg-5 mt-2 mt-md-2 mt-lg-4"

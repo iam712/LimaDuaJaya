@@ -108,19 +108,19 @@
         }
 
         /* .btn-warning {
-                                                                    background-color: rgba({{ $color4 }}, 1);
-                                                                    color: rgba({{ $color1 }}, 1);
-                                                                }
+                                                                        background-color: rgba({{ $color4 }}, 1);
+                                                                        color: rgba({{ $color1 }}, 1);
+                                                                    }
 
-                                                                .btn-danger {
-                                                                    background-color: rgba({{ $color3 }}, 1);
-                                                                    color: rgba({{ $color1 }}, 1);
-                                                                }
+                                                                    .btn-danger {
+                                                                        background-color: rgba({{ $color3 }}, 1);
+                                                                        color: rgba({{ $color1 }}, 1);
+                                                                    }
 
-                                                                .btn-success {
-                                                                    background-color: rgba({{ $color7 }}, 1);
-                                                                    color: rgba({{ $color1 }}, 1);
-                                                                } */
+                                                                    .btn-success {
+                                                                        background-color: rgba({{ $color7 }}, 1);
+                                                                        color: rgba({{ $color1 }}, 1);
+                                                                    } */
     </style>
 
     <div class="animated-bg">
@@ -130,15 +130,19 @@
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
 
-         <!-- Filter Form -->
+        <!-- Filter Form -->
         <form action="{{ route('workshops.index') }}" method="GET" class="mb-2 mb-md-3 mb-lg-4">
             <div class="form-group">
-                <label for="type" class="text-light">Filter by Type:</label>
-                <select name="type" id="type" class="form-control mt-2 mt-md-2 mt-lg-2" onchange="this.form.submit()">
-                    <option value="all" {{ $type === 'all' ? 'selected' : '' }}>All Workshops</option>
-                    <option value="limaduajaya" {{ $type === 'limaduajaya' ? 'selected' : '' }}>Lima Dua Jaya Workshops</option>
-                    <option value="other" {{ $type === 'other' ? 'selected' : '' }}>Other Workshops</option>
-                </select>
+                <label for="type" class="text-light">Filter by workshop type:</label>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <select name="type" id="type" class="form-control mt-2 mt-md-2 mt-lg-2"
+                        onchange="this.form.submit()">
+                        <option value="all" {{ $type === 'all' ? 'selected' : '' }}>All Workshops</option>
+                        <option value="limaduajaya" {{ $type === 'limaduajaya' ? 'selected' : '' }}>Lima Dua Jaya Workshops
+                        </option>
+                        <option value="other" {{ $type === 'other' ? 'selected' : '' }}>Other Workshops</option>
+                    </select>
+                </div>
             </div>
         </form>
 
@@ -172,7 +176,13 @@
                                     <td>{{ $workshop->name }}</td>
                                     <td>{{ $workshop->location }}</td>
                                     <td>{{ $workshop->description }}</td>
-                                    <td>{{ $workshop->isLimaduajaya ? 'Yes' : 'No' }}</td>
+                                    <td>
+                                        @if ($workshop->isLimaduajaya)
+                                            <i class="fas fa-check text-success"></i>
+                                        @else
+                                            <i class="fas fa-times text-danger"></i>
+                                        @endif
+                                    </td>
                                     <td>
                                         <!-- Edit button -->
                                         <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
