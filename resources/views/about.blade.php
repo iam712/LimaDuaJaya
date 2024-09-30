@@ -75,7 +75,7 @@
     <div class="parallax"
         style="background-image: url('{{ asset('images/banner/imagebg2.jpeg') }}'); background-attachment: fixed; background-size: cover; background-position: center; font-family: Inria Sans, sans-serif;">
         <!-- Visi dan Misi -->
-        <section id="visiMisiSection" class="py-5 fade-section fade-in-left position-relative"
+        <section id="visiMisiSection" class="py-5 fade-section fade-in-left position-relative d-flex justify-content-center"
             style="overflow: hidden; background-color: rgba({{ $color1 }}, 0.9);">
             <div id="bg-wrap" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;">
                 <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
@@ -138,19 +138,18 @@
                 <div class="row align-items-center gx-4 mb-5">
                     <div class="col-md-5">
                         <div class="ms-md-2 ms-lg-5">
-                            <img class="img-fluid rounded-3" src="{{ asset('images/logo.png') }}" alt="Company Logo">
+                            <img class="card img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
+                                src="{{ asset('images/visi.png') }}" alt="Visi Image">
                         </div>
                     </div>
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-dark fst-italic">Visi</span>
-                            <h2 class="display-5 fw-bold text-dark">
-                                Visi
-                            </h2>
-                            <p class="text-dark">Menjadi mitra
-                                periklanan terdepan di Indonesia yang dikenal karena keunggulan
-                                dalam memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas
-                                utama dan kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
+                            <h2 class="display-5 fw-bold text-dark">Visi</h2>
+                            <p class="text-dark">
+                                Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan dalam
+                                memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas utama
+                                dan kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
                                 kepercayaan klien melalui prinsip-prinsip yang jelas dan konsisten serta terus berinovasi
                                 untuk memenuhi dan melampaui harapan klien, menghadirkan solusi kreatif yang efektif dalam
                                 setiap kampanye periklanan.
@@ -162,27 +161,23 @@
                     <div class="col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-dark fst-italic">Misi</span>
-                            <h2 class="display-5 fw-bold text-dark">
-                                Misi
-                            </h2>
-                            <p class="text-dark"><span>1.
-                                </span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
-                            <p class="text-dark"><span>2.
-                                </span>Menjunjung Tinggi Integeritas Pekerjaan.</p>
-                            <p class="text-dark"><span>3.
-                                </span>Berinovasi untuk Memenuhi Kebutuhan Klien.</p>
-                            <p class="text-dark"><span>4.
-                                </span>Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.
+                            <h2 class="display-5 fw-bold text-dark">Misi</h2>
+                            <p class="text-dark"><span>1.</span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
+                            <p class="text-dark"><span>2.</span>Menjunjung Tinggi Integritas Pekerjaan.</p>
+                            <p class="text-dark"><span>3.</span>Berinovasi untuk Memenuhi Kebutuhan Klien.</p>
+                            <p class="text-dark"><span>4.</span>Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="ms-md-2 ms-lg-5">
-                            <img class="img-fluid rounded-3" src="{{ asset('images/logo.png') }}" alt="Company Logo">
+                            <img class="card img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
+                                src="{{ asset('images/misi.png') }}" alt="Misi Image">
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
     </div>
 
@@ -334,7 +329,8 @@
     /* Tablet: Show 3 reviews */
     @media (min-width: 768px) and (max-width: 1199.98px) {
         .carousel-item .col-md-4 {
-            flex: 0 0 33.333%;;
+            flex: 0 0 33.333%;
+            ;
             max-width: 33.333%;
         }
     }
