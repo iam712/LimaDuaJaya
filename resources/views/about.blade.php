@@ -136,43 +136,40 @@
             </div>
             <div class="container position-relative" style="z-index: 2;">
                 <div class="row gx-4 mb-5">
-                    <div class="col-12 col-md-5 col-lg-5">
+                    <div class="col-12 col-md-5">
                         <div class="ms-1 ms-md-2 ms-lg-5">
-                            <img class="card img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
-                                src="{{ asset('images/visi.png') }}" alt="Visi Image">
+                            <img class="img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
+                                 src="{{ asset('images/visi.png') }}" alt="Visi Image">
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-6 offset-md-1">
+                    <div class="col-12 col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-dark fst-italic">Vision</span>
                             <h2 class="display-5 fw-bold text-dark">Visi</h2>
                             <p class="text-dark">
-                                Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan dalam
-                                memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas utama
-                                dan kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
-                                kepercayaan klien melalui prinsip-prinsip yang jelas dan konsisten serta terus berinovasi
-                                untuk memenuhi dan melampaui harapan klien, menghadirkan solusi kreatif yang efektif dalam
-                                setiap kampanye periklanan.
+                                Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan dalam memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas utama dan kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin kepercayaan klien melalui prinsip-prinsip yang jelas dan konsisten serta terus berinovasi untuk memenuhi dan melampaui harapan klien, menghadirkan solusi kreatif yang efektif dalam setiap kampanye periklanan.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center gx-4">
-                    <div class="col-12 col-md-6 col-lg-6 offset-md-1">
+
+                <div class="row gx-4 align-items-center">
+                    <div class="col-12 col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
                             <span class="text-dark fst-italic">Mission</span>
                             <h2 class="display-5 fw-bold text-dark">Misi</h2>
-                            <p class="text-dark"><span>1.</span>Memberikan Pelayanan Cepat dan Bertanggung Jawab.</p>
-                            <p class="text-dark"><span>2.</span>Menjunjung Tinggi Integritas Pekerjaan.</p>
-                            <p class="text-dark"><span>3.</span>Berinovasi untuk Memenuhi Kebutuhan Klien.</p>
-                            <p class="text-dark"><span>4.</span>Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.
-                            </p>
+                            <ul class="text-dark">
+                                <li><span>1.</span> Memberikan Pelayanan Cepat dan Bertanggung Jawab.</li>
+                                <li><span>2.</span> Menjunjung Tinggi Integritas Pekerjaan.</li>
+                                <li><span>3.</span> Berinovasi untuk Memenuhi Kebutuhan Klien.</li>
+                                <li><span>4.</span> Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 col-lg-5">
+                    <div class="col-12 col-md-5">
                         <div class="ms-1 ms-md-2 ms-lg-5">
-                            <img class="card img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
-                                src="{{ asset('images/misi.png') }}" alt="Misi Image">
+                            <img class="img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
+                                 src="{{ asset('images/misi.png') }}" alt="Misi Image">
                         </div>
                     </div>
                 </div>
