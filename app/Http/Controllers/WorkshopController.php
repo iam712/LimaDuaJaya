@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\Storage;
 
 class WorkshopController extends Controller
 {
-
-
     public function index(Request $request)
     {
         // Fetch filter criteria from the request
@@ -36,17 +34,42 @@ class WorkshopController extends Controller
         return $workshopCount;
     }
 
-    public function userIndex()
+    // public function userIndex()
+    // {
+    //     // Fetch Lima Dua Jaya workshops
+    //     $limaduajayaWorkshops = Workshop::where('isLimaduajaya', true)->get();
+
+    //     // Fetch other workshops (not Lima Dua Jaya)
+    //     $otherWorkshops = Workshop::where('isLimaduajaya', false)->get();
+
+    //     // Pass both collections to the view
+    //     return view('workshop', compact('limaduajayaWorkshops', 'otherWorkshops'));
+    // }
+
+    public function userIndex(Request $request)
     {
-        // Fetch Lima Dua Jaya workshops
-        $limaduajayaWorkshops = Workshop::where('isLimaduajaya', true)->get();
+        // Fetch the filter criteria from the request (if any)
+        $type = $request->input('type'); // 'limaduajaya', 'partnership', or null
 
-        // Fetch other workshops (not Lima Dua Jaya)
-        $otherWorkshops = Workshop::where('isLimaduajaya', false)->get();
+        // Filter based on the type
+        if ($type === 'limaduajaya') {
+            // Fetch Lima Dua Jaya workshops
+            $limaduajayaWorkshops = Workshop::where('isLimaduajaya', true)->get();
+            $otherWorkshops = collect(); // Empty collection
+        } elseif ($type === 'partnership') {
+            // Fetch partnership workshops (not Lima Dua Jaya)
+            $limaduajayaWorkshops = collect(); // Empty collection
+            $otherWorkshops = Workshop::where('isLimaduajaya', false)->get();
+        } else {
+            // Fetch all workshops
+            $limaduajayaWorkshops = Workshop::where('isLimaduajaya', true)->get();
+            $otherWorkshops = Workshop::where('isLimaduajaya', false)->get();
+        }
 
-        // Pass both collections to the view
-        return view('workshop', compact('limaduajayaWorkshops', 'otherWorkshops'));
+        // Pass both collections and the current filter type to the view
+        return view('workshop', compact('limaduajayaWorkshops', 'otherWorkshops', 'type'));
     }
+
 
 
     public function create()

@@ -20,8 +20,34 @@
 
 @section('content')
 
+
+    <!-- Filter Buttons -->
+    <div class="container py-3 py-md-4 py-lg-5 mt-4 mt-md-5 mt-lg-5 text-center">
+
+        <h4 class="text-light">Filter by Category</h4>
+
+        <div class="row mt-2 mt-md-3 mt-lg-3">
+            <div class="btn-group" role="group">
+                <a href="{{ route('workshop.index', ['type' => null]) }}"
+                    class="btn btn-outline-dark fw-bold {{ $type === null ? 'active' : '' }}">
+                    All Workshops
+                </a>
+
+                <a href="{{ route('workshop.index', ['type' => 'limaduajaya']) }}"
+                    class="btn btn-outline-dark fw-bold {{ $type === 'limaduajaya' ? 'active' : '' }}">
+                    Lima Dua Jaya
+                </a>
+
+                <a href="{{ route('workshop.index', ['type' => 'partnership']) }}"
+                    class="btn btn-outline-dark fw-bold {{ $type === 'partnership' ? 'active' : '' }}">
+                    Partnership
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Workshop Lima Dua Jaya -->
-    <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5"
+    <section class="py-3 py-md-4 py-lg-5 mt-2 mt-md-2 mt-lg-4"
         style="
        background-image: url('{{ asset('images/banner/aboutusbg2.png') }}');
        background-size: cover;
@@ -57,7 +83,7 @@
                                     <h5 class="card-title" style="color: #333;">{{ $workshop->name }}</h5>
                                     <p class="card-text" style="color: #666;"><i class="fas fa-location-dot"></i>
                                         {{ $workshop->location }}</p>
-                                    <a href="{{ route('workshops.detail', $workshop->id) }}"
+                                    <a href="{{ route('workshop.detail', $workshop->id) }}"
                                         class="btn btn-dark w-100">Detail</a>
                                 </div>
                             </div>
@@ -87,7 +113,7 @@
                                     <h5 class="card-title" style="color: #333;">{{ $workshop->name }}</h5>
                                     <p class="card-text" style="color: #666;"><i class="fas fa-location-dot"></i>
                                         {{ $workshop->location }}</p>
-                                    <a href="{{ route('workshops.detail', $workshop->id) }}"
+                                    <a href="{{ route('workshop.detail', $workshop->id) }}"
                                         class="btn btn-dark w-100">Detail</a>
                                 </div>
                             </div>
@@ -105,7 +131,7 @@
         <div class="bg bg2 parallax"></div>
         <div class="bg bg3 parallax"></div>
         <div class="container review-form-container fade-section">
-            <div class="row" style="opacity: 1;">
+            <div class="row" style="opacity: 2;">
                 <div class="col-12 col-lg-7 mb-4 mb-lg-0">
                     <h2 class="fw-bold mb-4">Workshop Partnership Program</h2>
                     <h5 class="fw-bold fs-3">Requirements :</h5>

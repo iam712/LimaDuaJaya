@@ -24,7 +24,7 @@ Route::get('/aboutus', [ReviewController::class, 'index'])->name('aboutus');
 // Workshop Routes
 Route::get('/workshops', [WorkshopController::class, 'userIndex'])->name('workshop.index');
 
-Route::get('/workshops/{id}', [WorkshopController::class, 'show'])->name('workshops.detail');
+Route::get('/workshops/{id}', [WorkshopController::class, 'show'])->name('workshop.detail');
 
 // Project Routes
 Route::get('/projects', [ProjectLimaduajayaSurabayaController::class, 'indexForUser'])->name('projects.index');
