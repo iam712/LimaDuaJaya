@@ -279,14 +279,14 @@
 
                                     </div>
                                 </div>
-
                                 <!-- Static Logo -->
                                 <div
-                                    class="col-12 col-md-6 d-flex align-items-center justify-content-center mt-4 mt-md-0 mt-lg-0">
+                                    class="col-12 col-md-6 d-flex align-items-center justify-content-center mt-4 mt-md-0 mt-lg-0 text-center">
                                     <img src="{{ asset('images/logo-square.png') }}" alt="Logo Image"
-                                        class="img-fluid w-75">
+                                        class="img-fluid w-50">
                                 </div>
                                 <!-- End of Static Logo -->
+
                             </div>
                         </div>
                     </div>
@@ -296,7 +296,7 @@
     </section>
 
     <script>
-        document.getElementById('togglePassword').addEventListener('click', function () {
+        document.getElementById('togglePassword').addEventListener('click', function() {
             var passwordInput = document.getElementById('password');
             var icon = this.querySelector('i');
             if (passwordInput.type === 'password') {

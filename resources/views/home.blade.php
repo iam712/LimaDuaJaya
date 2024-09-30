@@ -764,7 +764,8 @@
                 <!-- Third Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/rollupbanner/rollupbanner1.jpeg') }}" class="card-img-top custom-logo" alt="ROLL UP BANNER"
+                        <img src="{{ asset('images/rollupbanner/rollupbanner1.jpeg') }}" class="card-img-top custom-logo"
+                            alt="ROLL UP BANNER"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">ROLL
@@ -785,7 +786,8 @@
                 <!-- Fourth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/lettersign/lettersign1.jpeg') }}" class="card-img-top custom-logo" alt="LETTER SIGN"
+                        <img src="{{ asset('images/lettersign/lettersign1.jpeg') }}" class="card-img-top custom-logo"
+                            alt="LETTER SIGN"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
@@ -807,7 +809,8 @@
                 <!-- Fifth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/spanduk/spanduk1.jpg') }}" class="card-img-top custom-logo" alt="SPANDUK"
+                        <img src="{{ asset('images/spanduk/spanduk1.jpg') }}" class="card-img-top custom-logo"
+                            alt="SPANDUK"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
@@ -851,7 +854,8 @@
                 <!-- Seventh Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/billboard/billboard1.jpeg') }}" class="card-img-top custom-logo" alt="BILLBOARD"
+                        <img src="{{ asset('images/billboard/billboard1.jpeg') }}" class="card-img-top custom-logo"
+                            alt="BILLBOARD"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
@@ -895,8 +899,9 @@
                 <!-- Ninth Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/brandingchiller/brandingchiller1.jpeg') }}" class="card-img-top custom-logo"
-                            alt="CHILLER BRANDING" style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
+                        <img src="{{ asset('images/brandingchiller/brandingchiller1.jpeg') }}"
+                            class="card-img-top custom-logo" alt="CHILLER BRANDING"
+                            style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
                                 CHILLER BRANDING</h5>
@@ -963,7 +968,8 @@
                 <!-- Twelve Card -->
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
-                        <img src="{{ asset('images/brandingbooth/brandingbooth1.jpeg') }}" class="card-img-top custom-logo" alt="BRANDING BOOTH"
+                        <img src="{{ asset('images/brandingbooth/brandingbooth1.jpeg') }}"
+                            class="card-img-top custom-logo" alt="BRANDING BOOTH"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">
@@ -992,71 +998,61 @@
 
         {{-- Our Advantages --}}
         <div class="container fade-section" id="ourAdvantagesSection" style="font-family: Inria Sans, sans-serif;">
-            <h2 class="text-center fade-section text-light fw-bold">Our
-                Advantages</h2>
+            <h2 class="text-center fade-section text-light fw-bold">Our Advantages</h2>
             <div class="row mt-4 d-flex justify-content-center fade-section">
+                <!-- Advantage 1: Tailored Solution -->
                 <div class="col-6 col-md-4 col-lg-3 text-center">
                     <div class="advantage-box">
-                        <img src="{{ asset('images/LOGO.png') }}" alt="Tailored Solution" class="img-fluid mb-3">
-                        <h4 class="text-light">1</h4>
-                        <h5 class="fw-bold text-light">Tailored
-                            Solution</h5>
-                        <p class="text-light">At our company, we
-                            understand that one size does not fit all. Our tailored
-                            solutions ensure that every aspect of our service is customized to meet your unique business
-                            needs and goals.</p>
+                        <i class="fa-solid fa-gear fa-3x text-light mb-3"></i>
+
+                        <h5 class="fw-bold text-light">Tailored Solution</h5>
+                        <p class="text-light">Our solutions are customized to fit your specific business needs, ensuring
+                            success in every advertising and branding project.</p>
                     </div>
                 </div>
+                <!-- Advantage 2: Creative Excellence -->
                 <div class="col-6 col-md-4 col-lg-3 text-center">
                     <div class="advantage-box">
-                        <img src="{{ asset('images/LOGO.png') }}" alt="Creative Excellence" class="img-fluid mb-3">
-                        <h4 class="text-light">2</h4>
-                        <h5 class="fw-bold text-light">Creative
-                            Excellence</h5>
-                        <p class="text-light">Creativity is at the heart
-                            of everything we do. Our team of talented
-                            professionals brings fresh ideas and innovative approaches to every project, ensuring that your
-                            brand stands out in a crowded market.</p>
+                        <i class="fa-solid fa-lightbulb fa-3x text-light mb-3"></i>
+
+                        <h5 class="fw-bold text-light">Creative Excellence</h5>
+                        <p class="text-light">With innovation at our core, we bring fresh ideas and creative solutions for
+                            effective branding and promotional media.</p>
                     </div>
                 </div>
+                <!-- Advantage 3: Strategic Partnerships -->
                 <div class="col-6 col-md-4 col-lg-3 text-center">
                     <div class="advantage-box">
-                        <img src="{{ asset('images/LOGO.png') }}" alt="Strategic Partnerships" class="img-fluid mb-3">
-                        <h4 style="font-family: 'LibreBaskerville', serif; color: white;">3</h4>
-                        <h5 style="font-family: 'LibreBaskerville', serif; font-weight: bold; color: white;">Strategic
-                            Partnerships</h5>
-                        <p class="text-light" style="font-family: 'LibreBaskerville', serif;">We don't just see ourselves
-                            as service providers; we're strategic partners
-                            invested in your success. Together, we collaborate closely to devise strategies and implement
-                            solutions tailored to your enduring objectives.</p>
+                        <i class="fa-solid fa-handshake fa-3x text-light mb-3"></i>
+
+                        <h5 class="fw-bold text-light">Strategic Partnerships</h5>
+                        <p class="text-light">We collaborate closely as partners to create strategic solutions that align
+                            with your long-term business goals.</p>
                     </div>
                 </div>
+                <!-- Advantage 4: Innovative Solutions -->
                 <div class="col-6 col-md-4 col-lg-3 text-center mt-4">
                     <div class="advantage-box">
-                        <img src="{{ asset('images/LOGO.png') }}" alt="Innovative Solutions" class="img-fluid mb-3">
-                        <h4 class="text-light">4</h4>
-                        <h5 class="fw-bold text-light">Innovative
-                            Solutions</h5>
-                        <p class="text-light">We pride ourselves on
-                            offering innovative solutions that push the boundaries
-                            of
-                            what is possible, ensuring that your business stays ahead of the curve.</p>
+                        <i class="fa-solid fa-rocket fa-3x text-light mb-3"></i>
+
+                        <h5 class="fw-bold text-light">Innovative Solutions</h5>
+                        <p class="text-light">We provide cutting-edge advertising methods, from car branding to billboards,
+                            keeping your brand at the forefront of the industry.</p>
                     </div>
                 </div>
+                <!-- Advantage 5: Expert Team -->
                 <div class="col-6 col-md-4 col-lg-3 text-center mt-4">
                     <div class="advantage-box">
-                        <img src="{{ asset('images/LOGO.png') }}" alt="Expert Team" class="img-fluid mb-3">
-                        <h4 class="text-light">5</h4>
-                        <h5 class="fw-bold text-light">Expert Team
-                        </h5>
-                        <p class="text-light">Our team consists of
-                            industry experts with extensive experience and
-                            knowledge,
-                            ready to provide you with the highest level of service and support.</p>
+                        <i class="fa-solid fa-users fa-3x text-light mb-3"></i>
+
+                        <h5 class="fw-bold text-light">Expert Team</h5>
+                        <p class="text-light">Our experienced team brings deep expertise in branding, media production, and
+                            advertising to ensure top-quality service.</p>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- 360 Project -->
