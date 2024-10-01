@@ -138,7 +138,7 @@
                 <div class="row gx-4 mb-5">
                     <div class="col-12 col-md-5">
                         <div class="ms-1 ms-md-2 ms-lg-5">
-                            <img class="img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
+                            <img class="img-fluid img-thumbnail rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
                                  src="{{ asset('images/visi.png') }}" alt="Visi Image">
                         </div>
                     </div>
@@ -168,13 +168,12 @@
                     </div>
                     <div class="col-12 col-md-5">
                         <div class="ms-1 ms-md-2 ms-lg-5">
-                            <img class="img-fluid rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
+                            <img class="img-fluid img-thumbnail rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
                                  src="{{ asset('images/misi.png') }}" alt="Misi Image">
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
     </div>
 
@@ -183,7 +182,7 @@
     </div>
 
     <section id="reviewSection" class="py-5 py-sm-5 fade-section parallax"
-        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Inria Sans, sans-serif;">
+        style="background-image: url('{{ asset('images/banner/backgroundbanner6.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Inria Sans, sans-serif;">
         <div class="container">
             <h1 class="text-center" style="font-weight: bold; color: black;">What do our users say?</h1>
         </div>
@@ -206,7 +205,7 @@
                                                         {{ $review->comment }}
                                                     </p>
                                                 </div>
-                                                <div class="card-footer text-end">
+                                                <div class="text-end">
                                                     <p class="fst-italic text-muted">
                                                         {{ $review->name }} | <span>{{ $review->email }}</span>
                                                     </p>

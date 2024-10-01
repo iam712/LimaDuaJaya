@@ -684,7 +684,7 @@
                 </div>
                 <div class="col-sm-5 mt-1 mt-sm-1">
                     <h2 class="fw-bold">About Us</h2>
-                    <p>
+                    <p class="text-dark">
                         PT Lima Dua Jaya berdiri di Madiun pada bulan Oktober tahun 2021 dan bergerak dalam bidang
                         advertising, dimulai dari vending machine dan proyek branding seperti car branding, media promosi
                         melalui vending machine, billboard/ baliho, produksi gondola, booth, papan nama toko, brand
@@ -1072,7 +1072,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        min-height: 100vh;
+        max-height: 100vh;
         position: relative;
         overflow: hidden;
         padding-top: 20px;
