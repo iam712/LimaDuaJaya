@@ -8,46 +8,16 @@
             <!--Grid row-->
             <div class="row">
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <div class="col-12 col-md-6 col-lg-6 mx-auto mt-3">
                     <h6 class="mb-4 text-light fw-bold">
                         Lima Dua Jaya
                     </h6>
                     <p class="text-light">
                         Standar yang diberikan oleh Lima Dua Jaya adalah
-                        yang Terbaik.
+                        yang Terbaik. <br>
                         Kami berfokus untuk memberikan pelayanan yang
                         bisa dibanggakan
                     </p>
-                </div>
-                <!-- Grid column -->
-
-                <hr class="w-100 clearfix d-md-none" />
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase text-light fw-bold mb-4">Services</h6>
-                    <p>
-                        <a class="text-light">MDBootstrap</a>
-                    </p>
-                    <p>
-                        <a class="text-light">MDWordPress</a>
-                    </p>
-                    <p>
-                        <a class="text-light">BrandFlow</a>
-                    </p>
-                    <p>
-                        <a class="text-light">Bootstrap Angular</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <hr class="w-100 clearfix d-md-none" />
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase text-light mb-4 fw-bold">
-                        Useful links
-                    </h6>
                     <p>
                         <a class="text-light" href="/review">Send us a feedback!</a>
                     </p>
@@ -55,22 +25,20 @@
                         <a href="/workshops#workshopPartnershipProgram" class="text-light">Become an Affiliate</a>
                     </p>
                     <p>
-                        <a class="text-light">Shipping Rates</a>
-                    </p>
-                    <p>
                         <a href="/#faqSection" class="text-light">Help</a>
                     </p>
                 </div>
-
                 <!-- Grid column -->
+
                 <hr class="w-100 clearfix d-md-none" />
 
+
                 <!-- Grid column -->
-                <div class="col mt-3">
+                <div class="col-12 col-md-6 col-lg-6 mt-3">
                     <h6 class="text-uppercase text-light mb-4 fw-bold">Contact</h6>
                     <p class="text-light"><i class="fas fa-home mr-3"></i><a class="text-light"
                             href="/#locationMapSection">
-                            LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri, Kota SBY, Jawa Timur
+                            LIMA DUA JAYA pusat Surabaya, Jl. Lakarsantri no.9, Kec.Lakarsantri,<br> Kota SBY, Jawa Timur
                             60215
                             Surabaya, Indonesia</a></p>
                     <p class="text-light"><i class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
