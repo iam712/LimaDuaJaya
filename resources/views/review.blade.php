@@ -39,6 +39,21 @@
                 background-position: 0% 50%;
             }
         }
+
+        button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            /* Slightly increase the size */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* Add a soft shadow */
+            background-color: rgb({{ $color4 }});
+            /* Change background color on hover */
+            color: rgb({{ $color1 }});
+            /* Change text color on hover */
+        }
     </style>
     <!-- Banner -->
     <section class="banner d-flex align-items-center"
@@ -75,7 +90,7 @@
                     <label for="comments" class="form-label text-dark">Comments</label>
                     <textarea class="form-control" id="comments" name="comments" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="btn bg-dark text-light w-100">Submit
+                <button type="submit" class="btn btn-dark text-light w-100">Submit
                     Review</button>
             </form>
         </div>

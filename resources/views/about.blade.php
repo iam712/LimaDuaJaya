@@ -200,14 +200,14 @@
                                     @foreach ($reviewChunk as $review)
                                         <div class="col-12 col-md-4 col-lg-4 d-flex">
                                             <div class="card mx-2"
-                                                style="background: linear-gradient(to bottom, rgb({{ $color5 }}), rgb({{ $color1 }})); flex-grow: 1;">
+                                                style="background-color: rgb({{ $color1 }});">
                                                 <div class="card-body">
-                                                    <p class="card-text text-dark fw-bold">
+                                                    <p class="card-text text-dark">
                                                         {{ $review->comment }}
                                                     </p>
                                                 </div>
                                                 <div class="card-footer text-end">
-                                                    <p class="text-dark fst-italic text-muted">
+                                                    <p class="fst-italic text-muted">
                                                         {{ $review->name }} | <span>{{ $review->email }}</span>
                                                     </p>
                                                 </div>
@@ -246,7 +246,7 @@
     .review-content {
         display: inline-flex;
         padding: 20px 0;
-        animation: marquee 60s linear infinite;
+        animation: marquee 15s linear infinite;
     }
 
     .card {
@@ -256,7 +256,6 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         padding: 20px;
-        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .card:hover {
@@ -277,7 +276,7 @@
         font-weight: bold;
         text-align: right;
         border-top: none;
-        color: #7d141d;
+        background-color: #fff;
     }
 
     .card-footer span {
@@ -297,7 +296,7 @@
     /* Media queries for responsiveness */
     @media (max-width: 768px) {
         .review-content {
-            animation-duration: 30s;
+            animation-duration: 15s;
         }
 
         .card {
@@ -308,7 +307,7 @@
 
     @media (min-width: 768px) and (max-width: 1200px) {
         .review-content {
-            animation-duration: 40s;
+            animation-duration: 15s;
         }
 
         .card {

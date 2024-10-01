@@ -1082,7 +1082,7 @@
             <h2 class="text-center" style="font-family: Inria Sans, sans-serif; font-weight: bold">Our
                 Location</h2>
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-10 col-md-8 col-lg-8">
                     <iframe id="locationMap"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831.9045290247577!2d112.67742386941619!3d-7.328366686111562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fd3243363f3b%3A0x4affd245467bd83b!2sKarya%20Satria%20Surabaya!5e0!3m2!1sid!2sid!4v1723000605673!5m2!1sid!2sid"
                         width="100%" height="450" style="border:0; transition: transform 0.3s ease;"
