@@ -109,19 +109,19 @@
         }
 
         /* .btn-warning {
-                            background-color: rgba({{ $color4 }}, 1);
-                            color: rgba({{ $color1 }}, 1);
-                        }
+                                    background-color: rgba({{ $color4 }}, 1);
+                                    color: rgba({{ $color1 }}, 1);
+                                }
 
-                        .btn-danger {
-                            background-color: rgba({{ $color3 }}, 1);
-                            color: rgba({{ $color1 }}, 1);
-                        }
+                                .btn-danger {
+                                    background-color: rgba({{ $color3 }}, 1);
+                                    color: rgba({{ $color1 }}, 1);
+                                }
 
-                        .btn-success {
-                            background-color: rgba({{ $color7 }}, 1);
-                            color: rgba({{ $color1 }}, 1);
-                        } */
+                                .btn-success {
+                                    background-color: rgba({{ $color7 }}, 1);
+                                    color: rgba({{ $color1 }}, 1);
+                                } */
 
         /* Ensures long comments wrap to the next line */
         .table td {
@@ -162,7 +162,15 @@
                                     <td>{{ ($reviews->currentPage() - 1) * $reviews->perPage() + $loop->iteration }}</td>
                                     <td>{{ $review->name }}</td>
                                     <td>{{ $review->email }}</td>
-                                    <td>{{ $review->comment }}</td>
+                                    <td>
+                                        @if (strlen($review->comment) > 40)
+                                            {{ substr($review->comment, 0, 40) }}...
+                                            <a href="#" class="read-more-link text-dark" data-bs-toggle="modal"
+                                                data-bs-target="#commentModal{{ $review->id }}"><br> Read More</a>
+                                        @else
+                                            {{ $review->comment }}
+                                        @endif
+                                    </td>
                                     <td>
                                         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#deleteModal{{ $review->id }}">
@@ -211,4 +219,27 @@
             {{ $reviews->links('vendor.pagination.bootstrap-4') }}
         </div>
     </div>
+
+    @foreach ($reviews as $review)
+        <div class="modal fade" id="commentModal{{ $review->id }}" tabindex="-1"
+            aria-labelledby="commentModalLabel{{ $review->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="commentModalLabel{{ $review->id }}">{{ $review->name }} - Full
+                            Comment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ $review->comment }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+
+
 @endsection

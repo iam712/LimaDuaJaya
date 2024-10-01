@@ -108,19 +108,19 @@
         }
 
         /* .btn-warning {
-                                                                        background-color: rgba({{ $color4 }}, 1);
-                                                                        color: rgba({{ $color1 }}, 1);
-                                                                    }
+                                                                            background-color: rgba({{ $color4 }}, 1);
+                                                                            color: rgba({{ $color1 }}, 1);
+                                                                        }
 
-                                                                    .btn-danger {
-                                                                        background-color: rgba({{ $color3 }}, 1);
-                                                                        color: rgba({{ $color1 }}, 1);
-                                                                    }
+                                                                        .btn-danger {
+                                                                            background-color: rgba({{ $color3 }}, 1);
+                                                                            color: rgba({{ $color1 }}, 1);
+                                                                        }
 
-                                                                    .btn-success {
-                                                                        background-color: rgba({{ $color7 }}, 1);
-                                                                        color: rgba({{ $color1 }}, 1);
-                                                                    } */
+                                                                        .btn-success {
+                                                                            background-color: rgba({{ $color7 }}, 1);
+                                                                            color: rgba({{ $color1 }}, 1);
+                                                                        } */
     </style>
 
     <div class="animated-bg">
@@ -175,7 +175,15 @@
                                     </td>
                                     <td>{{ $workshop->name }}</td>
                                     <td>{{ $workshop->location }}</td>
-                                    <td>{{ $workshop->description }}</td>
+                                    <td>
+                                        @if (strlen($workshop->description) > 40)
+                                            {{ substr($workshop->description, 0, 40) }}...
+                                            <a href="#" class="read-more-link text-dark" data-bs-toggle="modal"
+                                                data-bs-target="#descriptionModal{{ $workshop->id }}"><br> Read More</a>
+                                        @else
+                                            {{ $workshop->description }}
+                                        @endif
+                                    </td>
                                     <td>
                                         @if ($workshop->isLimaduajaya)
                                             <i class="fas fa-check text-success"></i>
@@ -211,6 +219,7 @@
         </div>
     </div>
 
+
     <!-- Image View Modal -->
     <div class="modal fade" id="imageViewModal" tabindex="-1" aria-labelledby="imageViewModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -225,6 +234,28 @@
             </div>
         </div>
     </div>
+
+    @foreach ($workshops as $workshop)
+        <div class="modal fade" id="descriptionModal{{ $workshop->id }}" tabindex="-1"
+            aria-labelledby="descriptionModalLabel{{ $workshop->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="descriptionModalLabel{{ $workshop->id }}">{{ $workshop->name }} - Full
+                            Description</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ $workshop->description }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+
 
 
     <!-- Add Workshop Modal -->

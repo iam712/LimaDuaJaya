@@ -72,7 +72,7 @@
                            border-radius: 8px;
                            overflow: hidden;
                        ">
-                                <img src="{{ asset('storage/' . $workshop->image) }}" class="card-img-top"
+                                <img src="{{ asset('storage/' . $workshop->image) }}" class="card-img-top img-fluid"
                                     alt="{{ $workshop->name }}">
                                 <div class="card-body">
                                     <h5 class="card-title" style="color: #333;">{{ $workshop->name }}</h5>
@@ -208,7 +208,7 @@
         .card-img-top {
             object-fit: cover;
             /* Ensures the image covers the box without distortion */
-            height: 200px;
+            height: 100px;
             /* Set a max height for the images */
             width: 100%;
             /* Ensure the image takes the full width of the container */
