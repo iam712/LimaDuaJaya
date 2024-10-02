@@ -33,6 +33,7 @@ Route::get('/projects', [ProjectLimaduajayaSurabayaController::class, 'indexForU
 Route::get('/review', function () {
     return view('review');
 });
+
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 // Sign In Routes

@@ -138,8 +138,9 @@
                 <div class="row gx-4 mb-5">
                     <div class="col-12 col-md-5">
                         <div class="ms-1 ms-md-2 ms-lg-5">
-                            <img class="img-fluid img-thumbnail rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
-                                 src="{{ asset('images/visi.png') }}" alt="Visi Image">
+                            <img class="img-fluid img-thumbnail rounded-3"
+                                style="object-fit: cover; width: 100%; max-height: 400px;"
+                                src="{{ asset('images/visi.png') }}" alt="Visi Image">
                         </div>
                     </div>
                     <div class="col-12 col-md-6 offset-md-1">
@@ -147,7 +148,12 @@
                             <span class="text-dark fst-italic">Vision</span>
                             <h2 class="display-5 fw-bold text-dark">Visi</h2>
                             <p class="text-dark">
-                                Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan dalam memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas utama dan kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin kepercayaan klien melalui prinsip-prinsip yang jelas dan konsisten serta terus berinovasi untuk memenuhi dan melampaui harapan klien, menghadirkan solusi kreatif yang efektif dalam setiap kampanye periklanan.
+                                Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan dalam
+                                memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas utama
+                                dan kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
+                                kepercayaan klien melalui prinsip-prinsip yang jelas dan konsisten serta terus berinovasi
+                                untuk memenuhi dan melampaui harapan klien, menghadirkan solusi kreatif yang efektif dalam
+                                setiap kampanye periklanan.
                             </p>
                         </div>
                     </div>
@@ -168,8 +174,9 @@
                     </div>
                     <div class="col-12 col-md-5">
                         <div class="ms-1 ms-md-2 ms-lg-5">
-                            <img class="img-fluid img-thumbnail rounded-3" style="object-fit: cover; width: 100%; max-height: 400px;"
-                                 src="{{ asset('images/misi.png') }}" alt="Misi Image">
+                            <img class="img-fluid img-thumbnail rounded-3"
+                                style="object-fit: cover; width: 100%; max-height: 400px;"
+                                src="{{ asset('images/misi.png') }}" alt="Misi Image">
                         </div>
                     </div>
                 </div>
@@ -198,7 +205,7 @@
                                 <div class="row justify-content-center">
                                     @foreach ($reviewChunk as $review)
                                         <div class="col-12 col-md-4 col-lg-4 d-flex">
-                                            <div class="card mx-2"
+                                            <div class="card review-card mx-2"
                                                 style="background-color: rgb({{ $color1 }});">
                                                 <div class="card-body">
                                                     <p class="card-text text-dark">
@@ -228,6 +235,7 @@
                     </a>
                 </div>
             </div>
+
         @endif
     </section>
 
@@ -248,18 +256,22 @@
         animation: marquee 15s linear infinite;
     }
 
+    .review-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     .card {
         margin: 20px;
         flex: 1 0 auto;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
         padding: 20px;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        max-width: 400px;
+        width: 100%;
+        height: 190px;
     }
 
     .card-body {
@@ -268,7 +280,11 @@
         line-height: 1.6;
         color: #333;
         padding-bottom: 10px;
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
     }
+
 
     .card-footer {
         font-size: 0.875rem;
@@ -278,8 +294,9 @@
         background-color: #fff;
     }
 
-    .card-footer span {
-        color: #555;
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     }
 
     @keyframes marquee {
@@ -313,6 +330,13 @@
             width: 100%;
             max-width: 25rem;
         }
+    }
+
+    .carousel-item .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        /* Ensure all cards stretch to the tallest */
     }
 
     /* Default - Desktop: Show 3 reviews */
@@ -423,4 +447,40 @@
             }
         }
     });
+
+
+    <
+    script >
+        document.addEventListener('DOMContentLoaded', function() {
+            function setMaxHeightForAllCards() {
+                let maxHeight = 0;
+                const allCards = document.querySelectorAll('.review-card'); // Select all review cards
+
+                // Reset all card heights
+                allCards.forEach(card => {
+                    card.style.height = 'auto'; // Reset height to auto
+                });
+
+                // Find the maximum height of all cards across all slides
+                allCards.forEach(card => {
+                    const cardHeight = card.offsetHeight; // Get the height of each card
+                    if (cardHeight > maxHeight) {
+                        maxHeight = cardHeight; // Track the tallest card
+                    }
+                });
+
+                // Set all cards to the max height found
+                allCards.forEach(card => {
+                    card.style.height = maxHeight + 'px'; // Apply the max height to each card
+                });
+            }
+
+            // Apply the height adjustment on page load
+            setMaxHeightForAllCards();
+
+            // Reapply the height adjustment when the window is resized to handle responsiveness
+            window.addEventListener('resize', setMaxHeightForAllCards);
+        });
+</script>
+
 </script>

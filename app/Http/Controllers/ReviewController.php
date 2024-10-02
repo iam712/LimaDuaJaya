@@ -14,7 +14,8 @@ class ReviewController extends Controller
         return view('about', compact('reviews'));
     }
 
-    public function count() {
+    public function count()
+    {
         $reviewCount = Review::All();
         return $reviewCount;
     }
