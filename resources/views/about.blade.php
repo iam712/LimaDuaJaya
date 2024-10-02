@@ -196,45 +196,44 @@
         @if ($reviews->isEmpty())
             <h5 class="text-lg text-dark p-5 text-center">No reviews available at the moment</h5>
         @else
-            <div class="container mt-5">
-                <!-- Carousel for Reviews -->
-                <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" id="review-carousel-inner">
-                        @foreach ($reviews->chunk(3) as $key => $reviewChunk)
-                            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
-                                <div class="row justify-content-center">
-                                    @foreach ($reviewChunk as $review)
-                                        <div class="col-12 col-md-4 col-lg-4 d-flex">
-                                            <div class="card review-card mx-2"
-                                                style="background-color: rgb({{ $color1 }});">
-                                                <div class="card-body">
-                                                    <p class="card-text text-dark">
-                                                        {{ $review->comment }}
-                                                    </p>
-                                                </div>
-                                                <div class="text-end">
-                                                    <p class="fst-italic text-muted">
-                                                        {{ $review->name }} | <span>{{ $review->email }}</span>
-                                                    </p>
-                                                </div>
+        <div class="container mt-5">
+            <!-- Carousel for Reviews -->
+            <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" id="review-carousel-inner">
+                    @foreach ($reviews->chunk(3) as $key => $reviewChunk)
+                        <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
+                            <div class="row justify-content-center">
+                                @foreach ($reviewChunk as $review)
+                                    <div class="col-12 col-md-4 col-lg-4 d-flex">
+                                        <div class="card review-card mx-2" style="background-color: rgb({{ $color1 }});">
+                                            <div class="card-body">
+                                                <p class="card-text text-dark">
+                                                    {{ $review->comment }}
+                                                </p>
+                                            </div>
+                                            <div class="text-end">
+                                                <p class="fst-italic text-muted">
+                                                    {{ $review->name }} | <span>{{ $review->email }}</span>
+                                                </p>
                                             </div>
                                         </div>
-                                    @endforeach
-                                </div>
+                                    </div>
+                                @endforeach
                             </div>
-                        @endforeach
-                    </div>
-                    <!-- Carousel Controls -->
-                    <a class="carousel-control-prev" href="#reviewCarousel" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#reviewCarousel" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </a>
+                        </div>
+                    @endforeach
                 </div>
+                <!-- Carousel Controls -->
+                <a class="carousel-control-prev" href="#reviewCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#reviewCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
             </div>
+        </div>
 
         @endif
     </section>
@@ -256,12 +255,6 @@
         animation: marquee 15s linear infinite;
     }
 
-    .review-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
     .card {
         margin: 20px;
         flex: 1 0 auto;
@@ -271,7 +264,7 @@
         padding: 20px;
         max-width: 400px;
         width: 100%;
-        height: 190px;
+        height: auto;
     }
 
     .card-body {
@@ -297,6 +290,10 @@
     .card:hover {
         transform: scale(1.05);
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-footer span {
+        color: #555;
     }
 
     @keyframes marquee {
@@ -330,13 +327,6 @@
             width: 100%;
             max-width: 25rem;
         }
-    }
-
-    .carousel-item .row {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        /* Ensure all cards stretch to the tallest */
     }
 
     /* Default - Desktop: Show 3 reviews */
@@ -449,38 +439,34 @@
     });
 
 
-    <
-    script >
-        document.addEventListener('DOMContentLoaded', function() {
-            function setMaxHeightForAllCards() {
-                let maxHeight = 0;
-                const allCards = document.querySelectorAll('.review-card'); // Select all review cards
+    document.addEventListener('DOMContentLoaded', function() {
+        function setMaxHeightForCards() {
+            let maxHeight = 0;
+            const allCards = document.querySelectorAll('.review-card');
 
-                // Reset all card heights
-                allCards.forEach(card => {
-                    card.style.height = 'auto'; // Reset height to auto
-                });
+            // Reset card heights to auto before calculating the max height
+            allCards.forEach(card => {
+                card.style.height = 'auto'; // Ensure height is flexible
+            });
 
-                // Find the maximum height of all cards across all slides
-                allCards.forEach(card => {
-                    const cardHeight = card.offsetHeight; // Get the height of each card
-                    if (cardHeight > maxHeight) {
-                        maxHeight = cardHeight; // Track the tallest card
-                    }
-                });
+            // Find the max height of all cards
+            allCards.forEach(card => {
+                const cardHeight = card.offsetHeight;
+                if (cardHeight > maxHeight) {
+                    maxHeight = cardHeight;
+                }
+            });
 
-                // Set all cards to the max height found
-                allCards.forEach(card => {
-                    card.style.height = maxHeight + 'px'; // Apply the max height to each card
-                });
-            }
+            // Set all cards to the max height
+            allCards.forEach(card => {
+                card.style.height = maxHeight + 'px'; // Apply the calculated max height
+            });
+        }
 
-            // Apply the height adjustment on page load
-            setMaxHeightForAllCards();
+        // Apply on page load
+        setMaxHeightForAllCards();
 
-            // Reapply the height adjustment when the window is resized to handle responsiveness
-            window.addEventListener('resize', setMaxHeightForAllCards);
-        });
-</script>
-
+        // Reapply on window resize
+        window.addEventListener('resize', setMaxHeightForAllCards);
+    });
 </script>
