@@ -56,7 +56,7 @@
        font-family: Inria Sans, sans-serif;
    ">
         <div class="container fade-section">
-            <h3 class="text-start mt-5 mt-md-3 mt-lg-3 text-light text text-lg">
+            <h3 class="text-start mt-5 mt-md-3 mt-lg-3 text-light">
                 Workshop Lima Dua Jaya
             </h3>
             <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
@@ -88,11 +88,7 @@
             </div>
 
             <!-- Workshop Partnership/ Not Lima Dua Jaya -->
-            <h3 class="text-start mt-5 mt-md-3 mt-lg-3 text-light"
-                style="
-               color: white;
-               font-size: 2rem;
-           ">
+            <h3 class="text-start mt-5 mt-md-3 mt-lg-3 text-light">
                 Workshop Partnership
             </h3>
             <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
@@ -128,7 +124,7 @@
         <div class="container review-form-container fade-section">
             <div class="row" style="opacity: 2;">
                 <div class="col-12 col-lg-7 mb-4 mb-lg-0">
-                    <h2 class="fw-bold mb-4">Workshop Partnership Program</h2>
+                    <h3 class="fw-bold mb-4">Workshop Partnership Program</h2>
                     <h5 class="fw-bold fs-3">Requirements :</h5>
                     <ul class="list-unstyled fs-4">
                         <li>1. Memiliki Workshop Lokal</li>
@@ -208,11 +204,13 @@
         .card-img-top {
             object-fit: cover;
             /* Ensures the image covers the box without distortion */
-            height: 100px;
+            height: 200px;
             /* Set a max height for the images */
             width: 100%;
             /* Ensure the image takes the full width of the container */
             border-radius: 8px;
+            aspect-ratio: 1 / 1;
+            /* Menjaga rasio 1:1 */
         }
 
         .card-body {
