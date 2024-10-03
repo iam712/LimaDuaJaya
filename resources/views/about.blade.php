@@ -208,13 +208,14 @@
                                             <div class="card review-card mx-2"
                                                 style="background-color: rgb({{ $color1 }});">
                                                 <div class="card-body">
-                                                    <p class="card-text text-dark ">
+                                                    <p class="card-text text-dark">
                                                         {{ $review->comment }}
                                                     </p>
                                                 </div>
                                                 <div class="text-end">
-                                                    <p class="fst-italic text-muted">
+                                                    <p class="fst-italic text-muted"> <small>
                                                         {{ $review->name }} | <span>{{ $review->email }}</span>
+                                                    </small>
                                                     </p>
                                                 </div>
                                             </div>
@@ -268,7 +269,7 @@
         width: 100%;
         height: auto;
         max-height: 200px;
-        min-height: 200px;
+        min-height: 200px
     }
 
     .card-body {

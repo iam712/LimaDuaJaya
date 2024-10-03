@@ -272,6 +272,9 @@
             overflow: hidden;
         }
 
+        /* Ensure images in the service cards resize dynamically and maintain their aspect ratio */
+
+
         .card.custom-card:hover {
             transform: scale(1.01) rotate(1deg);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -290,7 +293,20 @@
             border-top-right-radius: 15px;
             margin: 15px;
             max-width: 100%;
-            max-height: 80px;
+            /* max-height: 80px; */
+
+            object-fit: cover;
+            /* Ensures the image covers the space without distorting */
+            width: 100%;
+            /* Ensures the image takes the full width */
+            height: auto;
+            /* Auto adjust height based on width for proper aspect ratio */
+            max-height: 200px;
+            /* This limits the max height of the image to avoid stretching on larger screens */
+        }
+
+        .card.custom-card .card-img-top {
+
         }
 
         .card-description {
@@ -333,6 +349,13 @@
 
             .service-description {
                 font-size: 0.60rem;
+            }
+
+            .card.custom-card .card-img-top {
+                height: auto;
+                /* Allow images to resize naturally on smaller screens */
+                max-height: none;
+                /* Remove height restrictions for a better fit */
             }
         }
 
@@ -718,7 +741,7 @@
             </h2>
             <div class="row d-flex justify-content-center text-center mt-2 fade-section">
                 <!-- Service Cards -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/neonbox/neonbox1.png') }}" class="card-img-top custom-logo"
                             alt="NEON BOX"
@@ -739,7 +762,7 @@
                 </div>
 
                 <!-- Second Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/brandingrak/brandingrak1.png') }}" class="card-img-top custom-logo"
                             alt="BRANDING RAK"
@@ -762,7 +785,7 @@
                 </div>
 
                 <!-- Third Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/rollupbanner/rollupbanner1.jpeg') }}" class="card-img-top custom-logo"
                             alt="ROLL UP BANNER"
@@ -784,7 +807,7 @@
                 </div>
 
                 <!-- Fourth Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/lettersign/lettersign1.jpeg') }}" class="card-img-top custom-logo"
                             alt="LETTER SIGN"
@@ -807,7 +830,7 @@
                 </div>
 
                 <!-- Fifth Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/spanduk/spanduk1.jpg') }}" class="card-img-top custom-logo"
                             alt="SPANDUK"
@@ -830,7 +853,7 @@
                 </div>
 
                 <!-- Sixth Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/shopsign/shopsign1.png') }}" class="card-img-top custom-logo"
                             alt="SHOP SIGN"
@@ -852,7 +875,7 @@
                 </div>
 
                 <!-- Seventh Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/billboard/billboard1.jpeg') }}" class="card-img-top custom-logo"
                             alt="BILLBOARD"
@@ -875,7 +898,7 @@
                 </div>
 
                 <!-- Eighth Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/carbranding/carbranding1.jpeg') }}" class="card-img-top custom-logo"
                             alt="CAR BRANDING"
@@ -897,7 +920,7 @@
                 </div>
 
                 <!-- Ninth Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/brandingchiller/brandingchiller1.jpeg') }}"
                             class="card-img-top custom-logo" alt="CHILLER BRANDING"
@@ -919,7 +942,7 @@
                 </div>
 
                 <!-- Tenth Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/papannamatoko/papannamatoko1.png') }}"
                             class="card-img-top custom-logo" alt="PAPAN NAMA TOKO"
@@ -942,7 +965,7 @@
                 </div>
 
                 <!-- Eleven Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/brandingrollingdoor/brandingrollingdoor1.jpeg') }}"
                             class="card-img-top custom-logo" alt="BRANDING ROLLING DOOR"
@@ -966,7 +989,7 @@
                 </div>
 
                 <!-- Twelve Card -->
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <div class="card custom-card h-100">
                         <img src="{{ asset('images/brandingbooth/brandingbooth1.jpeg') }}"
                             class="card-img-top custom-logo" alt="BRANDING BOOTH"
