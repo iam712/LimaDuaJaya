@@ -196,44 +196,45 @@
         @if ($reviews->isEmpty())
             <h5 class="text-lg text-dark p-5 text-center">No reviews available at the moment</h5>
         @else
-        <div class="container mt-5">
-            <!-- Carousel for Reviews -->
-            <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" id="review-carousel-inner">
-                    @foreach ($reviews->chunk(3) as $key => $reviewChunk)
-                        <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
-                            <div class="row justify-content-center">
-                                @foreach ($reviewChunk as $review)
-                                    <div class="col-12 col-md-4 col-lg-4 d-flex">
-                                        <div class="card review-card mx-2" style="background-color: rgb({{ $color1 }});">
-                                            <div class="card-body">
-                                                <p class="card-text text-dark">
-                                                    {{ $review->comment }}
-                                                </p>
-                                            </div>
-                                            <div class="text-end">
-                                                <p class="fst-italic text-muted">
-                                                    {{ $review->name }} | <span>{{ $review->email }}</span>
-                                                </p>
+            <div class="container mt-5">
+                <!-- Carousel for Reviews -->
+                <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="review-carousel-inner">
+                        @foreach ($reviews->chunk(3) as $key => $reviewChunk)
+                            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
+                                <div class="row justify-content-center">
+                                    @foreach ($reviewChunk as $review)
+                                        <div class="col-12 col-md-4 col-lg-4 d-flex">
+                                            <div class="card review-card mx-2"
+                                                style="background-color: rgb({{ $color1 }});">
+                                                <div class="card-body">
+                                                    <p class="card-text text-dark ">
+                                                        {{ $review->comment }}
+                                                    </p>
+                                                </div>
+                                                <div class="text-end">
+                                                    <p class="fst-italic text-muted">
+                                                        {{ $review->name }} | <span>{{ $review->email }}</span>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                @endforeach
+                                    @endforeach
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
+                    <!-- Carousel Controls -->
+                    <a class="carousel-control-prev" href="#reviewCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#reviewCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
                 </div>
-                <!-- Carousel Controls -->
-                <a class="carousel-control-prev" href="#reviewCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#reviewCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
             </div>
-        </div>
 
         @endif
     </section>
@@ -243,6 +244,7 @@
 
 <style>
     /* Enhance the Review Section */
+
     .review-wrapper {
         position: relative;
         overflow: hidden;
@@ -265,6 +267,8 @@
         max-width: 400px;
         width: 100%;
         height: auto;
+        max-height: 200px;
+        min-height: 200px;
     }
 
     .card-body {
