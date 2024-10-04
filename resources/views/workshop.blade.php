@@ -93,7 +93,7 @@
             </h3>
             <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @if ($otherWorkshops->isEmpty())
-                    <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
+                    <h5 class="text-lg text-center text-dark p-5">No Workshop Partnership available at the moment</h5>
                 @else
                     @foreach ($otherWorkshops as $workshop)
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">

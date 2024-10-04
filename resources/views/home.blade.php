@@ -628,9 +628,9 @@
         <button onclick="document.getElementById('ourAdvantagesSection').scrollIntoView({ behavior: 'smooth' });">
             <img src="{{ asset('images/advantage.png') }}" alt="Our Advantages">
         </button>
-        <button onclick="document.getElementById('ourLiveProduct').scrollIntoView({ behavior: 'smooth' });">
+        {{-- <button onclick="document.getElementById('ourLiveProduct').scrollIntoView({ behavior: 'smooth' });">
             <img src="{{ asset('images/product.png') }}" alt="Our Product">
-        </button>
+        </button> --}}
         <button onclick="document.getElementById('locationMapSection').scrollIntoView({ behavior: 'smooth' });">
             <img src="{{ asset('images/location.png') }}" alt="Location Map">
         </button>

@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/links', function(){
+    return view('link');
+});
+
 // About Us Routes
 Route::get('/aboutus', [ReviewController::class, 'index'])->name('aboutus');
 
