@@ -8,31 +8,56 @@
     $color4 = '238, 63, 72'; //#EE3F48
     $color5 = '255, 222, 223'; //#ffdedf
     $color6 = '246, 232, 214'; //#F6E8D6
-
-    // Command to use rgb color
-    // style="color: rgb({{ $color0 }});"
-    // style="background-color: rgb({{ $color1 }});"
-    // style="background: linear-gradient(to bottom, rgb({{ $color2 }}), rgb({{ $color3 }}));"
-
 @endphp
 
 @section('title', 'Links')
 
 @section('content')
     <section style="background-color: rgb({{ $color1 }});">
-        <div class="container">
-            <div class="p-5 p-md-5 p-lg-5 d-grid gap-2 col-5 mx-auto">
+        <div class="container text-center">
+            <div class="p-5 d-grid gap-3 col-lg-4 mx-auto">
+                <!-- Logo Section -->
                 <img src="{{ asset('images/logo-square.png') }}"
-                    style="border-radius: 15px; background-color: rgb({{ $color1 }}); width: 250px"
-                    class="img-fluid mx-auto d-block mt-5 mt-md-4 mt-lg-5" alt="">
-                <a href="" class="btn btn-dark mt-5 mt-md-4 mt-lg-5">tes12345</a>
-                <a href="" class="btn btn-dark mt-3 mt-md-4 mt-lg-4">tes12345</a>
-                <a href="" class="btn btn-dark mt-3 mt-md-4 mt-lg-4">tes12345</a>
-                <a href="" class="btn btn-dark mt-3 mt-md-4 mt-lg-4">tes12345</a>
-                <a href="" class="btn btn-dark mt-3 mt-md-4 mt-lg-4">tes12345</a>
-                <a href="" class="btn btn-dark mt-3 mt-md-4 mt-lg-4">tes12345</a>
+                    style="border-radius: 15px; background-color: rgb({{ $color1 }}); width: 200px; margin-top: 40px;"
+                    class="img-fluid mx-auto d-block" alt="Limadua Jaya Logo">
+
+                <!-- Buttons Section -->
+                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                    Link
+                </a>
+                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                    Link
+                </a>
+                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                    Link
+                </a>
+                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                    Link
+                </a>
+                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                    Link
+                </a>
+                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                    Link
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Custom CSS -->
+    <style>
+        .custom-button {
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 16px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .custom-button:hover {
+            transform: scale(1.05); /* Slight scaling effect */
+            background-color: rgb(238, 63, 72); /* Change to a different color on hover */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Add more depth on hover */
+        }
+    </style>
 @endsection
