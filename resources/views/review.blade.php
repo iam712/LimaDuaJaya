@@ -87,7 +87,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="comments" class="form-label text-dark">Comments</label>
-                    <textarea class="form-control" id="comments" name="comments" rows="2" maxlength="50" required></textarea>
+                    <textarea class="form-control" id="comments" name="comments" rows="2" maxlength="100" required></textarea>
 
                 </div>
                 <button type="submit" class="btn btn-dark text-light w-100">Submit

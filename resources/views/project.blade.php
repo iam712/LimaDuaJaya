@@ -72,8 +72,8 @@
 
     <!-- Project Lima Dua Jaya Surabaya -->
     <section class="py-3 py-md-4 py-lg-5 mt-3 mt-md-3 mt-lg-5 parallax"
-        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; font-family: Inria Sans, sans-serif;">
-        <h1 class="text-center mt-5 mt-md-3 mt-lg-3 fw-bold fade-section">Our Latest Projects</h1>
+        style="background-image: url('{{ asset('images/banner/aboutusbg1.png') }}'); background-size: cover; background-repeat: no-repeat; min-height: 100vh; font-family: Inria Sans, sans-serif;">
+        <h1 class="text-center mt-5 mt-md-3 mt-lg-5 fw-bold fade-section">Our Latest Projects</h1>
         <div class="container fade-section">
             @if ($projects->isEmpty())
                 <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
