@@ -285,7 +285,7 @@
         }
 
         .card.custom-card .card-body {
-            margin: 15px;
+            margin: 10px;
         }
 
         .card.custom-card .card-img-top {
@@ -303,10 +303,6 @@
             /* Auto adjust height based on width for proper aspect ratio */
             max-height: 200px;
             /* This limits the max height of the image to avoid stretching on larger screens */
-        }
-
-        .card.custom-card .card-img-top {
-
         }
 
         .card-description {
@@ -354,7 +350,7 @@
             .card.custom-card .card-img-top {
                 height: auto;
                 /* Allow images to resize naturally on smaller screens */
-                max-height: none;
+                max-height: 300px;
                 /* Remove height restrictions for a better fit */
             }
         }
@@ -372,6 +368,7 @@
                 /* Adjust width as needed */
                 background-size: 50%, cover;
                 /* Adjust background size as needed */
+
             }
 
             .fixed-menu {
@@ -742,7 +739,7 @@
             <div class="row d-flex justify-content-center text-center mt-2 fade-section">
                 <!-- Service Cards -->
                 <div class="col-12 col-md-4 col-lg-3 mb-4">
-                    <div class="card custom-card h-100">
+                    <div class="card custom-card h-auto">
                         <img src="{{ asset('images/neonbox/neonbox1.png') }}" class="card-img-top custom-logo"
                             alt="NEON BOX"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
