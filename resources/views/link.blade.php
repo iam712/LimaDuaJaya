@@ -19,7 +19,7 @@
 @section('title', 'Links')
 
 @section('content')
-    <section style="background-color: rgb({{ $color4 }});">
+    <section style="background-color: rgb({{ $color1 }});">
         <div class="container">
             <div class="p-5 p-md-5 p-lg-5 d-grid gap-2 col-5 mx-auto">
                 <img src="{{ asset('images/logo-square.png') }}"
