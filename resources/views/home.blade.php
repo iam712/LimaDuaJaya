@@ -155,7 +155,7 @@
             /* Keep the max height */
             width: auto;
             /* Adjust width to maintain aspect ratio */
-            object-fit: contain;
+            object-fit: cover;
             /* Ensure image fits within the set height without distortion */
             display: block;
             /* Remove any extra space below the image */
@@ -289,12 +289,11 @@
         }
 
         .card.custom-card .card-img-top {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            margin: 15px;
-            max-width: 100%;
-            /* max-height: 80px; */
-
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
             object-fit: cover;
             /* Ensures the image covers the space without distorting */
             width: 100%;
@@ -350,7 +349,7 @@
             .card.custom-card .card-img-top {
                 height: auto;
                 /* Allow images to resize naturally on smaller screens */
-                max-height: 300px;
+                max-height: 200px;
                 /* Remove height restrictions for a better fit */
             }
         }
