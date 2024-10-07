@@ -268,8 +268,8 @@
         max-width: 400px;
         width: 100%;
         height: auto;
-        max-height: 300px;
-        min-height: 300px;
+        max-height: 280px;
+        min-height: 280px;
     }
 
     .card-body {

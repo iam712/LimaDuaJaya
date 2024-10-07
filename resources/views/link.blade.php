@@ -22,22 +22,22 @@
                     class="img-fluid mx-auto d-block" alt="Limadua Jaya Logo">
 
                 <!-- Buttons Section -->
-                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
                     Link
                 </a>
-                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
                     Link
                 </a>
-                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
                     Link
                 </a>
-                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
                     Link
                 </a>
-                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
                     Link
                 </a>
-                <a href="#" class="btn btn-dark btn-lg btn-block mt-3 custom-button">
+                <a href="#" class="btn btn-light text-dark btn-lg btn-block mt-3 custom-button border border-2">
                     Link
                 </a>
             </div>
