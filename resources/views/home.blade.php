@@ -222,7 +222,7 @@
             flex-direction: column;
             align-items: center;
             z-index: 1000;
-            background-color: rgba({{ $color6 }}, 0.6);
+            background-color: rgba({{ $color1 }}, 0.6);
             padding: 10px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
