@@ -289,14 +289,14 @@
         }
 
         .card.custom-card .card-img-top {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            border-radius: 5px;
             display: block;
             margin: 0 auto;
             margin-top: 10px;
             object-fit: cover;
             /* Ensures the image covers the space without distorting */
             width: 100%;
+            max-width: 200px;
             /* Ensures the image takes the full width */
             height: auto;
             /* Auto adjust height based on width for proper aspect ratio */

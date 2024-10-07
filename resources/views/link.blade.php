@@ -22,22 +22,22 @@
                     class="img-fluid mx-auto d-block" alt="Limadua Jaya Logo">
 
                 <!-- Buttons Section -->
-                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-3">
                     Link
                 </a>
-                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-3">
                     Link
                 </a>
-                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-3">
                     Link
                 </a>
-                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-3">
                     Link
                 </a>
-                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-2">
+                <a href="#" class="btn btn-light btn-lg text-dark btn-block mt-3 custom-button border border-3">
                     Link
                 </a>
-                <a href="#" class="btn btn-light text-dark btn-lg btn-block mt-3 custom-button border border-2">
+                <a href="#" class="btn btn-light text-dark btn-lg btn-block mt-3 custom-button border border-3">
                     Link
                 </a>
             </div>
@@ -47,7 +47,7 @@
     <!-- Custom CSS -->
     <style>
         .custom-button {
-            border-radius: 10px;
+            border-radius: 20px;
             padding: 15px;
             font-size: 16px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
