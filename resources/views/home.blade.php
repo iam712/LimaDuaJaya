@@ -268,7 +268,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
             border-radius: 15px;
             background: linear-gradient(135deg, rgb({{ $color1 }}), rgb({{ $color1 }}));
-            height: 300px;
+            height: 350px;
             overflow: hidden;
         }
 
@@ -305,7 +305,7 @@
         }
 
         .card-description {
-            max-height: 120px;
+            max-height: 100px;
             overflow: hidden;
             text-overflow: ellipsis;
             transition: max-height 0.3s ease;
@@ -346,11 +346,16 @@
                 font-size: 0.60rem;
             }
 
-            .card.custom-card .card-img-top {
+            .card.custom-card {
                 height: auto;
-                /* Allow images to resize naturally on smaller screens */
-                max-height: 200px;
-                /* Remove height restrictions for a better fit */
+                /* Let the height be flexible on smaller screens */
+                min-height: 300px;
+                /* Adjust to an appropriate height */
+            }
+
+            .card-description {
+                max-height: 60px;
+                /* Adjust description height for smaller screens */
             }
         }
 
