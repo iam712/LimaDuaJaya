@@ -315,9 +315,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
             transition: max-height 0.3s ease;
-            /* display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical; */
         }
 
         .card.custom-card.expanded .card-description {
@@ -752,7 +749,7 @@
             <div class="row d-flex justify-content-center text-center mt-2 fade-section">
                 <!-- Service Cards -->
                 <div class="col-12 col-md-4 col-lg-3 mb-4">
-                    <div class="card custom-card h-auto">
+                    <div class="card custom-card h-100">
                         <img src="{{ asset('images/neonbox/neonbox1.png') }}" class="card-img-top custom-logo"
                             alt="NEON BOX"
                             style="object-fit: contain; width: 100%; height: fit-content; max-height: 200px;">
