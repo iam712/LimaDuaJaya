@@ -306,8 +306,6 @@
             /* Auto adjust height based on width for proper aspect ratio */
             max-height: 200px;
             min-height: 200px;
-            /* This limits the max height of the image to avoid stretching on larger screens */
-            /* object-fit: contain; */
         }
 
         .card-description {
