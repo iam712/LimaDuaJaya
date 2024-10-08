@@ -264,12 +264,16 @@
 
         /* Card Styles */
         .card.custom-card {
+            height: 350px;
+            overflow: hidden;
+            display: flex;
             border: none;
+            flex-direction: column;
+            justify-content: space-between;
             transition: transform 0.3s, box-shadow 0.3s;
             border-radius: 15px;
             background: linear-gradient(135deg, rgb({{ $color1 }}), rgb({{ $color1 }}));
-            height: 350px;
-            overflow: hidden;
+
         }
 
         /* Ensure images in the service cards resize dynamically and maintain their aspect ratio */
@@ -301,14 +305,19 @@
             height: auto;
             /* Auto adjust height based on width for proper aspect ratio */
             max-height: 200px;
+            min-height: 200px;
             /* This limits the max height of the image to avoid stretching on larger screens */
+            /* object-fit: contain; */
         }
 
         .card-description {
-            max-height: 100px;
+            max-height: 3.6em;
             overflow: hidden;
             text-overflow: ellipsis;
             transition: max-height 0.3s ease;
+            /* display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical; */
         }
 
         .card.custom-card.expanded .card-description {
