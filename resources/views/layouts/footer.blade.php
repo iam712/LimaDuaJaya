@@ -27,6 +27,9 @@
                     <p>
                         <a href="/#faqSection" class="text-light">Help</a>
                     </p>
+                    <p>
+                        <a href="/links" class="text-light">Linktree</a>
+                    </p>
                 </div>
                 <!-- Grid column -->
 
