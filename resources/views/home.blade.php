@@ -309,7 +309,7 @@
         }
 
         .card-description {
-            max-height: 3.6em;
+            max-height: 4.4em;
             overflow: hidden;
             text-overflow: ellipsis;
             transition: max-height 0.3s ease;
