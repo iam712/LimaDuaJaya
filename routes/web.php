@@ -7,11 +7,20 @@ use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProjectLimaduajayaSurabayaController;
 use App\Http\Controllers\PortfolioProjectLimaduajayaSurabayaController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 
 // FOR USER
+
+// Switch Languange
+Route::get('lang/{locale}', function($locale) {
+    if(in_array($locale, ['en', 'id'])) {
+        Session::put('locale', $locale);
+    }
+    return redirect()->back();
+});
 
 // Landing Page Routes
 Route::get('/', function () {
@@ -53,7 +62,7 @@ Route::post('/signin', [UserController::class, 'signin'])->name('signin');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 // FOR ADMIN
-Route::middleware(['auth', 'admin'])->group(function () {
+Route::middleware(['auth', AdminMiddleware::class])->group(function () {
 
     Route::get('/admin', [DashboardController::class, 'index'])->name('admin.dashboard');
 

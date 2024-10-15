@@ -26,6 +26,12 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}" href="/signin">Get Started</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('lang/en') }}">EN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('lang/id') }}">ID</a>
+                </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li> --}}
