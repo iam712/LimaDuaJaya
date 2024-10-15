@@ -26,15 +26,26 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}" href="/signin">Get Started</a>
                 </li>
+
+                <!-- Language Dropdown with Font Awesome Flags -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('lang/en') }}">EN</a>
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Language
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ url('lang/en') }}">
+                                <i class="fas fa-flag-usa"></i> EN
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ url('lang/id') }}">
+                                <i class="fas fa-flag"></i> ID
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('lang/id') }}">ID</a>
-                </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li> --}}
             </ul>
         </div>
     </div>
@@ -44,7 +55,7 @@
     document.addEventListener('scroll', function() {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgb({{ $color1 }}, 0.6)';
+            navbar.style.backgroundColor = 'rgba({{ $color1 }}, 0.6)';
         } else {
             navbar.style.backgroundColor = 'rgb({{ $color4 }})';
         }
@@ -74,45 +85,32 @@
 
     .nav-link:hover {
         color: rgba(255, 255, 255, 0.9);
-        /* Lighten color on hover */
         transform: scale(1.05);
-        /* Slightly scale up the link */
     }
 
     .nav-link.active {
         font-weight: bold;
-        /* Remove border styling if preferred */
     }
 
     a {
         text-decoration: none;
-        /* Remove default underline */
         position: relative;
-        /* Position for the pseudo-element */
         color: rgb({{ $color2 }});
-        /* Ensure link color matches your theme */
     }
 
     a::after {
         content: '';
-        /* Create an empty pseudo-element */
         position: absolute;
         left: 0;
         bottom: -2px;
-        /* Adjust to position the underline */
         width: 100%;
         height: 2px;
-        /* Thickness of the underline */
         background-color: rgb({{ $color1 }});
-        /* Color of the underline */
         transform: scaleX(0);
-        /* Start with no scale (invisible) */
         transition: transform 0.3s ease;
-        /* Animation effect */
     }
 
     a:hover::after {
         transform: scaleX(1);
-        /* Scale to full width on hover */
     }
 </style>

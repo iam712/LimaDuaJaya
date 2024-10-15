@@ -675,8 +675,7 @@
                             Supplier, Distributor, Advertising
                         </p>
                         <button class="btn-learn-more"
-                            onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });">Pelajari
-                            Lebih Lanjut</button>
+                            onclick="document.getElementById('aboutUsSection').scrollIntoView({ behavior: 'smooth' });">{{ __('messages.bannerbtn') }}</button>
                     </div>
                     <div class="col-md-6 text-center d-none d-md-block">
                         <div class="wrapper">
@@ -712,15 +711,9 @@
                     <img src="{{ asset('images/LOGO.png') }}" alt="About Us" class="img-fluid">
                 </div>
                 <div class="col-sm-5 mt-1 mt-sm-1">
-                    <h2 class="fw-bold">About Us</h2>
+                    <h2 class="fw-bold">{{ __('messages.aboutustitle') }}</h2>
                     <p class="text-dark">
-                        PT Lima Dua Jaya berdiri di Madiun pada bulan Oktober tahun 2021 dan bergerak dalam bidang
-                        advertising, dimulai dari vending machine dan proyek branding seperti car branding, media promosi
-                        melalui vending machine, billboard/ baliho, produksi gondola, booth, papan nama toko, brand
-                        activation,
-                        dan lain lain. Pada tahun 2023 kami melakukan ekspansi dengan mendirikan kantor pusat di Surabaya
-                        dan
-                        pada tahun 2024 mendirikan kantor cabang di semarang
+                        {{ __('messages.aboutustext') }}
                     </p>
                 </div>
             </div>
@@ -743,7 +736,7 @@
 ">
         <div class="container">
             <h2 class="text-center mb-3 mb-sm-3 py-3 fade-section fw-bold text-light">
-                Our Services
+                {{ __('messages.ourservicestitle') }}
             </h2>
             <div class="row d-flex justify-content-center text-center mt-2 fade-section">
                 <!-- Service Cards -->
@@ -757,8 +750,7 @@
                                 NEON BOX
                             </h5>
                             <p class="card-text card-description fst-italic">
-                                Neonbox kreatif kami menawarkan pencahayaan neon yang menarik untuk memaksimalkan
-                                visibilitas dan daya tarik merek Anda di malam hari...
+                                {{ __('messages.neonboxdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -778,10 +770,7 @@
                                 BRANDING RAK
                             </h5>
                             <p class="card-text card-description fst-italic">
-                                Kami menciptakan branding rak yang menonjol untuk menarik perhatian pelanggan dan
-                                meningkatkan penjualan produk Anda. Dengan kombinasi desain yang menawan dan material
-                                berkualitas tinggi, kami memastikan setiap rak toko menjadi elemen strategis dalam mencapai
-                                tujuan branding Anda.
+                                {{ __('messages.brandingrakdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -800,10 +789,7 @@
                             <h5 class="card-title fw-bold">ROLL
                                 UP BANNER</h5>
                             <p class="card-text card-description fst-italic">
-                                Rollup banner kami menawarkan solusi promosi yang efektif dan mudah dipindahkan
-                                untuk acara, promosi produk, atau branding perusahaan Anda. Dibuat dengan teknologi cetak
-                                terkini dan bahan yang tahan lama, banner ini memberikan kepraktisan dan daya tarik visual
-                                yang kuat di setiap kesempatan.
+                                {{ __('messages.rollupbannerdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -823,10 +809,7 @@
                                 LETTER SIGN
                             </h5>
                             <p class="card-text card-description fst-italic">
-                                Letter sign kami memberikan identitas visual yang kuat dan menarik untuk bangunan Anda,
-                                memperkuat kesan profesional dan keberlanjutan merek Anda. Dengan pilihan material dan
-                                desain yang beragam, kami menyesuaikan setiap letter sign untuk mencerminkan nilai-nilai
-                                unik perusahaan Anda secara konsisten.
+                                {{ __('messages.lettersigndesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -846,10 +829,7 @@
                                 SPANDUK
                             </h5>
                             <p class="card-text card-description fst-italic">
-                                Spanduk kami dirancang dengan detail yang presisi untuk memastikan pesan promosi Anda jelas
-                                terlihat dan menarik bagi audiens di luar ruangan. Dengan pilihan ukuran, finishing, dan
-                                kemampuan tahan cuaca, spanduk ini menjadi investasi berharga dalam meningkatkan
-                                pengaruh pemasaran Anda di berbagai lokasi strategis.
+                                {{ __('messages.spandukdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -868,10 +848,7 @@
                             <h5 class="card-title fw-bold">SHOP
                                 SIGN</h5>
                             <p class="card-text card-description fst-italic">
-                                Shop sign kami menciptakan kesan pertama yang berkesan dan memudahkan pelanggan menemukan
-                                toko Anda di tengah keramaian. Didesain untuk meningkatkan citra toko Anda, papan nama ini
-                                memadukan estetika yang menarik dengan daya tahan yang dapat diandalkan dalam berbagai
-                                kondisi lingkungan.
+                                {{ __('messages.shopsigndesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -891,10 +868,7 @@
                                 BILLBOARD
                             </h5>
                             <p class="card-text card-description fst-italic">
-                                Billboard kami menawarkan ruang iklan yang besar dan strategis untuk mencapai audiens luas
-                                dengan pesan yang kuat dan menarik. Dengan teknologi cetak terkini dan material berkualitas
-                                tinggi, kami memastikan setiap iklan billboard memberikan dampak maksimal bagi keberhasilan
-                                kampanye pemasaran Anda.
+                                {{ __('messages.billboarddesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -913,10 +887,7 @@
                             <h5 class="card-title fw-bold">CAR
                                 BRANDING</h5>
                             <p class="card-text card-description fst-italic">
-                                Car branding kami memberikan promosi bergerak yang efektif, menjadikan kendaraan Anda
-                                sebagai papan iklan bergerak untuk meningkatkan kesadaran merek di mana pun pergi. Dengan
-                                desain yang menarik dan aplikasi yang presisi, kami mengubah setiap kendaraan menjadi alat
-                                pemasaran yang kuat dan berkelanjutan.
+                                {{ __('messages.carbrandingdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -935,10 +906,7 @@
                             <h5 class="card-title fw-bold">
                                 CHILLER BRANDING</h5>
                             <p class="card-text card-description fst-italic">
-                                Chiller branding kami menawarkan solusi kreatif untuk mempromosikan produk Anda dengan
-                                menambahkan branding pada lemari pendingin, menarik perhatian pelanggan di toko atau
-                                supermarket. Dengan desain yang estetis dan pilihan material yang tahan lama, chiller
-                                branding kami memberikan nilai tambah bagi promosi produk Anda.
+                                {{ __('messages.chillerbrandingdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -958,10 +926,7 @@
                                 PAPAN NAMA TOKO
                             </h5>
                             <p class="card-text card-description fst-italic">
-                                Papan nama toko kami memberikan penandaan yang jelas dan profesional untuk membantu
-                                pelanggan menemukan dan mengenali toko Anda dengan mudah. Dengan pilihan desain yang
-                                fleksibel dan kemampuan untuk disesuaikan dengan identitas merek Anda, papan nama ini
-                                menjadi elemen penting dalam membangun citra toko yang kuat dan dikenang.
+                                {{ __('messages.papannamatokodesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -981,11 +946,7 @@
                                 BRANDING ROLLING DOOR
                             </h5>
                             <p class="card-text card-description fst-italic">
-                                Branding rolling door kami memberikan kesempatan untuk mengubah pintu toko Anda menjadi
-                                media promosi yang menarik. Dengan desain yang dapat disesuaikan dan pencetakan berkualitas
-                                tinggi, pintu rolling door Anda tidak hanya berfungsi sebagai pelindung, tetapi juga sebagai
-                                alat pemasaran yang efektif. Produk ini cocok untuk meningkatkan visibilitas merek Anda,
-                                baik dalam kondisi toko buka atau tutup.
+                                {{ __('messages.brandingrollingdoordesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -1005,11 +966,7 @@
                                 BRANDING BOOTH
                             </h5>
                             <p class="card-text card-description fst-italic">
-                                Branding booth kami menawarkan tampilan yang menarik untuk meningkatkan interaksi dengan
-                                pelanggan. Desain yang kreatif dan fleksibel memungkinkan booth ini disesuaikan dengan
-                                identitas dan kebutuhan bisnis Anda. Sangat ideal untuk pameran, event, atau promosi di
-                                berbagai lokasi, booth ini dirancang untuk menarik perhatian dan memperkuat kesan positif
-                                dari merek Anda.
+                                {{ __('messages.brandingboothdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
                                 style="background-color: rgb({{ $color2 }})">Read More
@@ -1027,7 +984,7 @@
 
         {{-- Our Advantages --}}
         <div class="container fade-section" id="ourAdvantagesSection" style="font-family: Inria Sans, sans-serif;">
-            <h2 class="text-center fade-section text-light fw-bold">Our Advantages</h2>
+            <h2 class="text-center fade-section text-light fw-bold">{{ __('messages.ouradvantagestitle') }}</h2>
             <div class="row mt-4 d-flex justify-content-center fade-section">
                 <!-- Advantage 1: Tailored Solution -->
                 <div class="col-6 col-md-4 col-lg-3 text-center">
@@ -1035,8 +992,7 @@
                         <i class="fa-solid fa-gear fa-3x text-light mb-3"></i>
 
                         <h5 class="fw-bold text-light">Tailored Solution</h5>
-                        <p class="text-light">Our solutions are customized to fit your specific business needs, ensuring
-                            success in every advertising and branding project.</p>
+                        <p class="text-light">{{ __('messages.ouradvantages1') }}</p>
                     </div>
                 </div>
                 <!-- Advantage 2: Creative Excellence -->
@@ -1045,8 +1001,7 @@
                         <i class="fa-solid fa-lightbulb fa-3x text-light mb-3"></i>
 
                         <h5 class="fw-bold text-light">Creative Excellence</h5>
-                        <p class="text-light">With innovation at our core, we bring fresh ideas and creative solutions for
-                            effective branding and promotional media.</p>
+                        <p class="text-light">{{ __('messages.ouradvantages2') }}</p>
                     </div>
                 </div>
                 <!-- Advantage 3: Strategic Partnerships -->
@@ -1055,8 +1010,7 @@
                         <i class="fa-solid fa-handshake fa-3x text-light mb-3"></i>
 
                         <h5 class="fw-bold text-light">Strategic Partnerships</h5>
-                        <p class="text-light">We collaborate closely as partners to create strategic solutions that align
-                            with your long-term business goals.</p>
+                        <p class="text-light">{{ __('messages.ouradvantages3') }}</p>
                     </div>
                 </div>
                 <!-- Advantage 4: Innovative Solutions -->
@@ -1065,8 +1019,7 @@
                         <i class="fa-solid fa-rocket fa-3x text-light mb-3"></i>
 
                         <h5 class="fw-bold text-light">Innovative Solutions</h5>
-                        <p class="text-light">We provide cutting-edge advertising methods, from car branding to billboards,
-                            keeping your brand at the forefront of the industry.</p>
+                        <p class="text-light">{{ __('messages.ouradvantages4') }}</p>
                     </div>
                 </div>
                 <!-- Advantage 5: Expert Team -->
@@ -1075,8 +1028,7 @@
                         <i class="fa-solid fa-users fa-3x text-light mb-3"></i>
 
                         <h5 class="fw-bold text-light">Expert Team</h5>
-                        <p class="text-light">Our experienced team brings deep expertise in branding, media production, and
-                            advertising to ensure top-quality service.</p>
+                        <p class="text-light">{{ __('messages.ouradvantages5') }}</p>
                     </div>
                 </div>
             </div>
@@ -1108,8 +1060,7 @@
         padding-bottom: 20px;
 ">
         <div class="container fade-section">
-            <h2 class="text-center text-light" style="font-family: Inria Sans, sans-serif; font-weight: bold">Our
-                Location</h2>
+            <h2 class="text-center text-light" style="font-family: Inria Sans, sans-serif; font-weight: bold">{{ __('messages.ourlocationtitle') }}</h2>
             <div class="row justify-content-center">
                 <div class="col-10 col-md-8 col-lg-8">
                     <iframe id="locationMap"
@@ -1126,27 +1077,20 @@
         style="background: linear-gradient(to bottom, rgb({{ $color4 }}), rgb({{ $color3 }})); font-family: Inria Sans, sans-serif;">
         <div class="container">
             <h2 class="text-center fw-bold text-light">
-                Frequently Asked
-                Questions</h2>
+                {{ __('messages.faqtitle') }}
+            </h2>
             <div class="accordion" id="faqAccordion">
                 <div class="accordion-item" style="border: none; margin-bottom: 10px;">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Bagaimana Anda bisa mewujudkan proyek kami dengan
-                            anggaran minimum?
+                            {{ __('messages.question1') }}
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#faqAccordion">
                         <div class="accordion-body fst-italic">
-                            Kami memastikan bahwa kami memahami kebutuhan Anda sejak awal dan berapa anggaran
-                            maksimum Anda
-                            untuk menyelesaikan proyek. Kami menghitung semua faktor dan mengurangi biaya untuk
-                            mencapai
-                            efisiensi kerja yang memungkinkan kami merealisasikan proyek Anda. Kami juga telah
-                            mengurangi
-                            waktu yang biasanya diperlukan untuk mendiskusikan suatu proyek.
+                            {{ __('messages.answer1') }}
                         </div>
                     </div>
                 </div>
@@ -1154,19 +1098,13 @@
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Proyek seperti apa yang dapat Anda berikan kepada kami?
+                            {{ __('messages.question2') }}
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#faqAccordion">
                         <div class="accordion-body fst-italic">
-                            Kami adalah spesialis di luar rumah dengan pengalaman lebih dari 20 tahun . Kami
-                            dapat
-                            memberikan semua yang Anda butuhkan dalam proyek di luar rumah . Silakan periksa
-                            halaman
-                            "Layanan" di profil perusahaan kami untuk mempelajari lebih lanjut tentang jenis
-                            layanan yang
-                            kami sediakan .
+                            {{ __('messages.answer2') }}
                         </div>
                     </div>
                 </div>
@@ -1174,22 +1112,13 @@
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Bagaimana jika anggaran kita tidak sesuai dengan proyek kita?
+                            {{ __('messages.question3') }}
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#faqAccordion">
                         <div class="accordion-body fst-italic">
-                            Kami yakin Anda profesional dalam merencanakan proyek dan menghitung anggaran Anda .
-                            Jika
-                            anggaran Anda tidak sesuai dengan proyek Anda, kami tidak akan mengecewakan Anda .
-                            Konsultan
-                            kami akan mencoba yang terbaik untuk memberi saran kepada Anda alternatif yang
-                            tersedia yang
-                            mungkin sesuai dengan anggaran Anda . Jadi, jangan khawatir anggaran Anda akan
-                            menghentikan
-                            proyek Anda untuk direalisasikan . Ada layanan lain yang mungkin sesuai dengan
-                            anggaran Anda .
+                            {{ __('messages.answer3') }}
                         </div>
                     </div>
                 </div>
@@ -1197,20 +1126,13 @@
                     <h2 class="accordion-header" id="headingFour">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Apakah Anda memiliki kebijakan privasi untuk menjaga kerahasiaan
-                            proyek kami?
+                            {{ __('messages.question4') }}
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                         data-bs-parent="#faqAccordion">
                         <div class="accordion-body fst-italic">
-                            Kami sangat menyadari kerahasiaan data mitra kami . Oleh karena itu, Anda dapat
-                            meminta
-                            perjanjian larangan pengungkapan rahasi dari kami untuk ditandatangani terlebih
-                            dahulu sebelum
-                            kami melanjutkan pembicaraan mendalam tentang proyek Anda . Kami menghargai privasi
-                            dan
-                            kerahasiaan .
+                            {{ __('messages.answer4') }}
                         </div>
                     </div>
                 </div>
@@ -1218,21 +1140,13 @@
                     <h2 class="accordion-header" id="headingFive">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Mengapa kita perlu menggunakan layanan khusus ini?
+                            {{ __('messages.question5') }}
                         </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                         data-bs-parent="#faqAccordion">
                         <div class="accordion-body fst-italic">
-                            Anda akan mempercepat waktu untuk memutuskan apakah proyek Anda dapat dilakukan atau
-                            tidak . Di
-                            sisi lain, Anda dapat menghemat biaya karena cepat . Tidak ada kebingungan dan tidak
-                            ada
-                            keraguan untuk memulai proyek Anda dalam anggaran terbatas . Anda akan memulai
-                            proyek terlebih
-                            dahulu sementara pesaing Anda masih berusaha mencari tahu proyek terbaik untuk
-                            dilakukan dengan
-                            kebingungan dan keraguan
+                            {{ __('messages.answer5') }}
                         </div>
                     </div>
                 </div>
