@@ -17,6 +17,8 @@ return [
 
     'ourservicestitle' => 'Our Services',
 
+    'ourservicesbtn' => 'Read More',
+
     'neonboxdesc' => 'Our creative neonbox offers eye-catching neon lighting to make the most of
                       visibility and appeal of your brand at night...',
 

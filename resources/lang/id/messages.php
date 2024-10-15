@@ -19,6 +19,8 @@ return [
 
     'ourservicestitle' => 'Layanan Kami',
 
+    'ourservicesbtn' => 'Baca Selengkapnya',
+
     'neonboxdesc' => 'Neonbox kreatif kami menawarkan pencahayaan neon yang menarik untuk memaksimalkan
                       visibilitas dan daya tarik merek Anda di malam hari...',
 

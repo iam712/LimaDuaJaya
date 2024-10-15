@@ -753,7 +753,8 @@
                                 {{ __('messages.neonboxdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -773,7 +774,8 @@
                                 {{ __('messages.brandingrakdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -792,7 +794,8 @@
                                 {{ __('messages.rollupbannerdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -812,7 +815,8 @@
                                 {{ __('messages.lettersigndesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -832,7 +836,8 @@
                                 {{ __('messages.spandukdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -851,7 +856,8 @@
                                 {{ __('messages.shopsigndesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -871,7 +877,8 @@
                                 {{ __('messages.billboarddesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -890,7 +897,8 @@
                                 {{ __('messages.carbrandingdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -909,7 +917,8 @@
                                 {{ __('messages.chillerbrandingdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -929,7 +938,8 @@
                                 {{ __('messages.papannamatokodesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -949,7 +959,8 @@
                                 {{ __('messages.brandingrollingdoordesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -969,7 +980,8 @@
                                 {{ __('messages.brandingboothdesc') }}
                             </p>
                             <button class="btn read-more-btn text-light"
-                                style="background-color: rgb({{ $color2 }})">Read More
+                                style="background-color: rgb({{ $color2 }})">
+                                {{ __('messages.ourservicesbtn') }}
                             </button>
                         </div>
                     </div>
@@ -1060,7 +1072,8 @@
         padding-bottom: 20px;
 ">
         <div class="container fade-section">
-            <h2 class="text-center text-light" style="font-family: Inria Sans, sans-serif; font-weight: bold">{{ __('messages.ourlocationtitle') }}</h2>
+            <h2 class="text-center text-light" style="font-family: Inria Sans, sans-serif; font-weight: bold">
+                {{ __('messages.ourlocationtitle') }}</h2>
             <div class="row justify-content-center">
                 <div class="col-10 col-md-8 col-lg-8">
                     <iframe id="locationMap"
@@ -1266,23 +1279,52 @@
             blob.style.animationDuration = '10s'; // Reset to original speed
         });
 
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+        //     readMoreButtons.forEach(button => {
+        //         button.addEventListener('click', function() {
+        //             const card = this.closest('.custom-card');
+        //             card.classList.toggle('expanded');
+        //             if (card.classList.contains('expanded')) {
+        //                 this.textContent = 'Read Less';
+        //             } else {
+        //                 this.textContent = 'Read More';
+        //             }
+        //         });
+        //     });
+        // });
+
         document.addEventListener("DOMContentLoaded", function() {
             const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+            // Detect the current language from a data attribute or a global JS variable
+            const currentLang = document.documentElement.lang || 'en'; // Assuming HTML lang attribute is set
+
+            // Text content for both languages
+            const buttonText = {
+                en: {
+                    readMore: 'Read More',
+                    readLess: 'Read Less'
+                },
+                id: {
+                    readMore: 'Baca Selengkapnya',
+                    readLess: 'Baca Lebih Sedikit'
+                }
+            };
 
             readMoreButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const card = this.closest('.custom-card');
                     card.classList.toggle('expanded');
                     if (card.classList.contains('expanded')) {
-                        this.textContent = 'Read Less';
+                        this.textContent = buttonText[currentLang].readLess;
                     } else {
-                        this.textContent = 'Read More';
+                        this.textContent = buttonText[currentLang].readMore;
                     }
                 });
             });
         });
-
-
 
         // 360 Project Scroll Control
         document.addEventListener('DOMContentLoaded', function() {
