@@ -204,5 +204,23 @@ return [
 
     'errproject' => 'No projects available at the moment',
 
+    // about us
+
+    'aboutbanner' => 'The standards provided by Lima Dua Jaya are the best.
+                      We focus on providing excellent service can be proud of.',
+
+    'aboutbtn' => 'Read more',
+
+    'aboutspan' => 'Our Story',
+
+    'abouttitle' => 'About Us',
+
+    'aboutdesc1' => 'PT LIMA DUA JAYA has been established since October 2021 and operates in the advertising sector.
+                     Starting from vending machines and branding projects such as car branding, promotional media through
+                     vending machines, billboards, gondola production, booths, shop signs, brand activation, and others.',
+
+    'aboutdesc2' => 'PT LIMA DUA JAYA
+                     established in 2021 in Madiun and in 2023 founded
+                     head office in Surabaya. In 2024, we will establish a branch office in Semarang.',
 
 ];

@@ -27,11 +27,8 @@
             style="background-color: rgba({{ $color4 }}, 0.8); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: 0 0 10px; display: inline-block;">
             <h2 class="text-center text-light fw-bold">PT. Lima Dua Jaya</h2>
             <br>
-            <p class="text-center text-light fst-italic">Standar
-                yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk memberikan pelayanan yang bisa
-                dibanggakan.</p>
-            <a href="#aboutUsSection" class="btn text-light w-auto" style="background-color: rgb({{ $color2 }});">Read
-                more</a>
+            <p class="text-center text-light fst-italic">{{ __('messages.aboutbanner') }}</p>
+            <a href="#aboutUsSection" class="btn text-light w-auto" style="background-color: rgb({{ $color2 }});">{{ __('messages.aboutbtn') }}</a>
         </div>
     </section>
 
@@ -46,17 +43,10 @@
             <div class="row align-items-center gx-4">
                 <div class="col-md-6 offset-md-1">
                     <div class="ms-md-2 ms-lg-5">
-                        <span class="text-dark fst-italic">Our
-                            Story</span>
-                        <h2 class="display-5 fw-bold text-dark">About Us</h2>
-                        <p class="">PT LIMA DUA JAYA
-                            sudah berdiri sejak bulan oktober tahun 2021 yang bergerak dalam
-                            bidang Advertising. Dimulai dari vending machine dan projek branding seperti car branding, media
-                            promosi melalui vending machine, billboard/baliho, produksi gondola, booth, papan nama toko,
-                            brand activation, dan lain-lain.</p>
-                        <p class="mb-0 text-dark">PT LIMA DUA JAYA
-                            berdiri di tahun 2021 di Madiun dan pada tahun 2023 mendirikan
-                            kantor pusat di Surabaya. Di Tahun 2024 mendirikan kantor cabang Semarang.</p>
+                        <span class="text-dark fst-italic">{{ __('messages.aboutspan') }}</span>
+                        <h2 class="display-5 fw-bold text-dark">{{ __('messages.abouttitle') }}</h2>
+                        <p class="">{{ __('messages.aboutdesc1') }}</p>
+                        <p class="mb-0 text-dark">{{ __('messages.aboutdesc2') }}</p>
                     </div>
                 </div>
                 <div class="col-md-5">

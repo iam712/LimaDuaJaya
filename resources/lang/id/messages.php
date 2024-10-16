@@ -206,4 +206,22 @@ return [
     'projecttitle' => 'Proyek Terbaru Kami',
 
     'errproject' => 'Proyek tidak tersedia saat ini',
+
+    // about us
+
+    'aboutbanner' => 'Standar yang diberikan oleh Lima Dua Jaya adalah yang terbaik.
+                      Kami berfokus untuk memberikan pelayanan yang bisa dibanggakan.',
+
+    'aboutbtn' => 'Baca selengkapnya',
+
+    'aboutspan' => 'Cerita Kami',
+
+    'abouttitle' => 'Tentang Kami',
+
+    'aboutdesc1' => 'PT LIMA DUA JAYA sudah berdiri sejak bulan oktober 2021 yang bergerak dalam bidang Advertising.
+                     Dimulai dari vending machine dan proyek branding seperti car branding, media promosi melalui
+                     vending machine, billboard/ baliho, produksi gondola, booth, papan nama toko, brand activation, dan lain lain.',
+
+    'aboutdesc2' => 'PT LIMA DUA JAYA berdiri di tahun 2021 di Madiun dan pada tahun 2023 mendirikan kantor pusat di Surabaya.
+                     Di tahun 2024 mendirikan kantor cabang di Semarang.'
 ];
