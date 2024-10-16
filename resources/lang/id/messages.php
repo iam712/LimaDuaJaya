@@ -141,5 +141,27 @@ return [
                   tidak. Di sisi lain, Anda dapat menghemat biaya karena cepat.
                   Tidak ada kebingungan dan tidak ada keraguan untuk memulai proyek Anda dalam anggaran terbatas.
                   Anda akan memulai proyek terlebih dahulu sementara pesaing Anda masih berusaha
-                  mencari tahu proyek terbaik untuk dilakukan dengan kebingungan dan keraguan.'
+                  mencari tahu proyek terbaik untuk dilakukan dengan kebingungan dan keraguan.',
+
+    // footer
+
+    'footerdesc' => 'Standar yang diberikan oleh Lima Dua Jaya adalah
+                     yang Terbaik,<br> Kami berfokus untuk memberikan pelayanan yang
+                     bisa dibanggakan.',
+
+    'footerfeedback' => 'Beri masukkan!',
+
+    'footerpartner' => 'Menjadi Mitra',
+
+    'footerhelp' => 'Bantuan',
+
+    // navbar
+
+    'navhome' => 'Beranda',
+
+    'navproject' => 'Proyek',
+
+    'navaboutus' => 'Tentang Kami',
+
+    'navsignin' => 'Masuk',
 ];

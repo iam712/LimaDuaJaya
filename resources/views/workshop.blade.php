@@ -310,6 +310,7 @@
             }
         }
     </style>
+    
     <script>
         function sendEmail() {
             // get form values

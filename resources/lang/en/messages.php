@@ -3,6 +3,8 @@
 return [
     'language' => 'Language',
 
+    // home
+
     'bannertext' => 'We make',
 
     'bannerbtn' => 'Learn More',
@@ -137,4 +139,26 @@ return [
                   There is no confusion and no hesitation to start your project within a limited budget.
                   You will start the project first while your competitors are still trying
                   figuring out the best project to do with confusion and doubt.',
+
+    // footer
+
+    'footerdesc' => 'The standards provided by Lima Dua Jaya are
+                     the best,<br> we focus on providing excellent service
+                     can be proud of.',
+
+    'footerfeedback' => 'Send us a feedback!',
+
+    'footerpartner' => 'Become a Partner',
+
+    'footerhelp' => 'Help',
+
+    // navbar
+
+    'navhome' => 'Home',
+
+    'navproject' => 'Project',
+
+    'navaboutus' => 'About Us',
+
+    'navsignin' => 'Sign In',
 ];

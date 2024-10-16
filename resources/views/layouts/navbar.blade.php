@@ -12,19 +12,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Home</a>
+                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">{{ __('messages.navhome') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('workshops') ? 'active' : '' }}" href="/workshops">Workshop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('projects') ? 'active' : '' }}" href="/projects">Project</a>
+                    <a class="nav-link {{ request()->is('projects') ? 'active' : '' }}" href="/projects">{{ __('messages.navproject') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="/aboutus">About Us</a>
+                    <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="/aboutus">{{ __('messages.navaboutus') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}" href="/signin">Get Started</a>
+                    <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}" href="/signin">{{ __('messages.navsignin') }}</a>
                 </li>
 
                 <!-- Language Dropdown with Font Awesome Flags -->

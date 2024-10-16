@@ -13,19 +13,16 @@
                         Lima Dua Jaya
                     </h6>
                     <p class="text-light">
-                        Standar yang diberikan oleh Lima Dua Jaya adalah
-                        yang Terbaik. <br>
-                        Kami berfokus untuk memberikan pelayanan yang
-                        bisa dibanggakan
+                        {!! __('messages.footerdesc') !!}
                     </p>
                     <p>
-                        <a class="text-light" href="/review">Send us a feedback!</a>
+                        <a class="text-light" href="/review">{{ __('messages.footerfeedback') }}</a>
                     </p>
                     <p>
-                        <a href="/workshops#workshopPartnershipProgram" class="text-light">Become an Affiliate</a>
+                        <a href="/workshops#workshopPartnershipProgram" class="text-light">{{ __('messages.footerpartner') }}</a>
                     </p>
                     <p>
-                        <a href="/#faqSection" class="text-light">Help</a>
+                        <a href="/#faqSection" class="text-light">{{ __('messages.footerhelp') }}</a>
                     </p>
                     <p>
                         <a href="/links" class="text-light">Linktree</a>
