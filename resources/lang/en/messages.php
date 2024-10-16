@@ -177,4 +177,32 @@ return [
     'formrequirements' => 'Requirements',
 
     'formr1' => 'Have a Local Workshop',
+
+    'formr2' => 'Attach KTP & NPWP (if any)',
+
+    'formr3' => 'Willing to sign a cooperation contract',
+
+    'formr4' => 'Attach the number of workers',
+
+    'formr5' => 'Attach work samples or portfolio results',
+
+    'formsubject' => 'Subject',
+
+    'formworkshopname' => 'Workshop Name',
+
+    'formlocation' => 'Location',
+
+    'formphone' => 'Phone Number',
+
+    'formfoot' => '*Remember to attach your documents.',
+
+    'formbtn' => 'Send',
+
+    // project
+
+    'projecttitle' => 'Our Latest Projects',
+
+    'errproject' => 'No projects available at the moment',
+
+
 ];

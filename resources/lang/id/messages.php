@@ -180,4 +180,30 @@ return [
     'formrequirements' => 'Persyaratan',
 
     'formr1' => 'Memiliki Workshop Lokal',
+
+    'formr2' => 'Melampirkan KTP & NPWP (jika ada)',
+
+    'formr3' => 'Bersedia menandatangani surat kerja sama',
+
+    'formr4' => 'Melampirkan jumlah pekerja',
+
+    'formr5' => 'Melampirkan hasil contoh pengerjaan atau portofolio',
+
+    'formsubject' => 'Subjek',
+
+    'formworkshopname' => 'Nama Workshop',
+
+    'formlocation' => 'Lokasi',
+
+    'formphone' => 'Nomor Telepon',
+
+    'formfoot' => '*Jangan lupa untuk melampirkan dokumen anda.',
+
+    'formbtn' => 'Kirim',
+
+    // project
+
+    'projecttitle' => 'Proyek Terbaru Kami',
+
+    'errproject' => 'Proyek tidak tersedia saat ini',
 ];

@@ -123,43 +123,45 @@
         <div class="bg bg3 parallax"></div>
         <div class="container review-form-container fade-section">
             <div class="row" style="opacity: 2;">
-                <div class="col-12 col-lg-7 mb-4 mb-lg-0">
+                <div class="col-12 col-lg-7 mb-4 mb-md-3 mb-lg-2">
                     <h3 class="fw-bold mb-4">{{ __('messages.formtitle') }}</h2>
-                    <h5 class="fw-bold fs-3">{{ __('messages.formrequirements') }}</h5>
-                    <ul class="list-unstyled fs-4">
-                        <li>1. <span>{{ __('messages.formr1') }}</span></li>
-                        <li>2. Lampirkan KTP & NPWP (jika ada)</li>
-                        <li>3. Bersedia menandatangani surat kerja sama</li>
-                        <li>4. Melampirkan jumlah pekerja</li>
-                        <li>5. Lampirkan hasil contoh perngerjaan/ portofolio</li>
-                    </ul>
+                        <h5 class="fw-bold fs-3">{{ __('messages.formrequirements') }}</h5>
+                        <ul class="list-unstyled fs-4 py-1 py-md-2 py-lg-3">
+                            <li>1. <span>{{ __('messages.formr1') }}</span></li>
+                            <li>2. <span>{{ __('messages.formr2') }}</span></li>
+                            <li>3. <span>{{ __('messages.formr3') }}</span></li>
+                            <li>4. <span>{{ __('messages.formr4') }}</span></li>
+                            <li>5. <span>{{ __('messages.formr5') }}</span></li>
+                        </ul>
                 </div>
                 <div class="col-12 col-lg-5">
                     <form id="emailForm" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label for="subject" class="form-label">Subject</label>
+                            <label for="subject" class="form-label">{{ __('messages.formsubject') }}</label>
                             <input type="text" class="form-control" id="subject" name="subject"
                                 placeholder="Enter subject" required>
                         </div>
                         <div class="mb-3">
-                            <label for="workshopName" class="form-label">Workshop Name</label>
+                            <label for="workshopName" class="form-label">{{ __('messages.formworkshopname') }}</label>
                             <input type="text" class="form-control" id="workshopName" name="workshopName"
                                 placeholder="Enter your workshop name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="location" class="form-label">Location</label>
+                            <label for="location" class="form-label">{{ __('messages.formlocation') }}</label>
                             <input type="text" class="form-control" id="location" name="location"
                                 placeholder="Enter your workshop location" required>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone</label>
+                            <label for="phone" class="form-label">{{ __('messages.formphone') }}</label>
                             <input type="text" class="form-control" id="phone" name="phone"
                                 placeholder="Enter your contact number" required>
                         </div>
                         <div class="mb-3">
-                            <small class="form-text text-dark">*Remember to attach your resume.</small>
+                            <small class="form-text text-dark">{{ __('messages.formfoot') }}</small>
                         </div>
-                        <button type="button" class="btn btn-dark w-100" onclick="sendEmail()">Submit</button>
+                        <button type="button" class="btn btn-dark w-100"
+                            onclick="sendEmail()">{{ __('messages.formbtn') }}<i
+                                class="fa-regular fa-paper-plane ms-1 ms-md-2 ms-lg-3"></i></button>
                     </form>
                 </div>
             </div>
@@ -312,23 +314,42 @@
     </style>
 
     <script>
+        // function sendEmail() {
+        //     // get form values
+        //     var subject = document.getElementById('subject').value;
+        //     var workshopName = document.getElementById('workshopName').value;
+        //     var location = document.getElementById('location').value;
+        //     var phone = document.getElementById('phone').value;
+
+        //     // construct email body
+        //     var body = `Workshop Name: ${workshopName}%0ALocation: ${location}%0APhone: ${phone}`;
+
+        //     // construct the mailto link
+        //     var mailtoLink =
+        //         `mailto:limaduaadvertising@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        //     // open the email client
+        //     window.location.href = mailtoLink;
+        // }
+
         function sendEmail() {
-            // get form values
+            // Get form values
             var subject = document.getElementById('subject').value;
             var workshopName = document.getElementById('workshopName').value;
             var location = document.getElementById('location').value;
             var phone = document.getElementById('phone').value;
 
-            // construct email body
-            var body = `Workshop Name: ${workshopName}%0ALocation: ${location}%0APhone: ${phone}`;
+            // Construct email body with proper newlines (use \n instead of %0A)
+            var body = `Workshop Name: ${workshopName}\nLocation: ${location}\nPhone: ${phone}`;
 
-            // construct the mailto link
+            // Construct the mailto link
             var mailtoLink =
                 `mailto:limaduaadvertising@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-            // open the email client
+            // Open the email client
             window.location.href = mailtoLink;
         }
+
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('.fade-section');
             const observer = new IntersectionObserver(entries => {

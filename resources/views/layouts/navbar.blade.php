@@ -12,23 +12,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">{{ __('messages.navhome') }}</a>
+                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}"
+                        href="/">{{ __('messages.navhome') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('workshops') ? 'active' : '' }}" href="/workshops">Workshop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('projects') ? 'active' : '' }}" href="/projects">{{ __('messages.navproject') }}</a>
+                    <a class="nav-link {{ request()->is('projects') ? 'active' : '' }}"
+                        href="/projects">{{ __('messages.navproject') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="/aboutus">{{ __('messages.navaboutus') }}</a>
+                    <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}"
+                        href="/aboutus">{{ __('messages.navaboutus') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}" href="/signin">{{ __('messages.navsignin') }}</a>
+                    <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}"
+                        href="/signin">{{ __('messages.navsignin') }}</a>
                 </li>
 
                 <!-- Language Dropdown with Font Awesome Flags -->
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Language
@@ -45,7 +49,28 @@
                             </a>
                         </li>
                     </ul>
+                </li> --}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <!-- Current language will be shown as the active flag -->
+                        {{ app()->getLocale() == 'en' ? '🇺🇸 EN' : '🇮🇩 ID' }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <!-- Emoji for US flag 🇺🇸 and Indonesian flag 🇮🇩 -->
+                        <li>
+                            <a class="dropdown-item" href="{{ url('lang/en') }}">
+                                🇺🇸 EN
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ url('lang/id') }}">
+                                🇮🇩 ID
+                            </a>
+                        </li>
+                    </ul>
                 </li>
+
             </ul>
         </div>
     </div>
@@ -82,6 +107,14 @@
     .nav-link {
         transition: color 0.3s ease, transform 0.3s ease;
     }
+
+    .nav-link,
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
 
     .nav-link:hover {
         color: rgba(255, 255, 255, 0.9);
