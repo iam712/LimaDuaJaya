@@ -161,4 +161,20 @@ return [
     'navaboutus' => 'About Us',
 
     'navsignin' => 'Sign In',
+
+    // workshop
+
+    'filterall' => 'All Workshops',
+
+    'filterpartner' => 'Partnership',
+
+    'errlimaduajaya' => 'No Lima Dua Jaya Workshop available at the moment',
+
+    'errpartner' => 'No Partnership Workshop available at the moment',
+
+    'formtitle' => 'Workshop Partnership Program',
+
+    'formrequirements' => 'Requirements',
+
+    'formr1' => 'Have a Local Workshop',
 ];

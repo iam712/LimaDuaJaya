@@ -164,4 +164,20 @@ return [
     'navaboutus' => 'Tentang Kami',
 
     'navsignin' => 'Masuk',
+
+    // workshop
+
+    'filterall' => 'Semua Workshop',
+
+    'filterpartner' => 'Kemitraan',
+
+    'errlimaduajaya' => 'Workshop Lima Dua Jaya tidak tersedia saat ini',
+
+    'errpartner' => 'Workshop Partnership tidak tersedia saat ini',
+
+    'formtitle' => 'Program Kemitraan Workshop',
+
+    'formrequirements' => 'Persyaratan',
+
+    'formr1' => 'Memiliki Workshop Lokal',
 ];

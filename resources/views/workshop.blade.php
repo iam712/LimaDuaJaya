@@ -27,7 +27,7 @@
             <div class="btn-group btn-group-sm" role="group" aria-label="Filter Workshops">
                 <a href="{{ route('workshop.index', ['type' => null]) }}"
                     class="btn btn-outline-dark fw-bold {{ $type === null ? 'active' : '' }}">
-                    All Workshops
+                    {{ __('messages.filterall') }}
                 </a>
                 <a href="{{ route('workshop.index', ['type' => 'limaduajaya']) }}"
                     class="btn btn-outline-dark fw-bold {{ $type === 'limaduajaya' ? 'active' : '' }}">
@@ -35,7 +35,7 @@
                 </a>
                 <a href="{{ route('workshop.index', ['type' => 'partnership']) }}"
                     class="btn btn-outline-dark fw-bold {{ $type === 'partnership' ? 'active' : '' }}">
-                    Partnership
+                    {{ __('messages.filterpartner') }}
                 </a>
             </div>
         </div>
@@ -61,7 +61,7 @@
             </h3>
             <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @if ($limaduajayaWorkshops->isEmpty())
-                    <h5 class="text-lg text-center text-dark p-5">No Workshop Lima Dua Jaya available at the moment</h5>
+                    <h5 class="text-lg text-center text-dark p-5">{{ __('messages.errlimaduajaya') }}</h5>
                 @else
                     @foreach ($limaduajayaWorkshops as $workshop)
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
@@ -93,7 +93,7 @@
             </h3>
             <div class="row py-3 py-md-4 py-lg-4 mt-3 mt-md-3 mt-lg-2">
                 @if ($otherWorkshops->isEmpty())
-                    <h5 class="text-lg text-center text-dark p-5">No Workshop Partnership available at the moment</h5>
+                    <h5 class="text-lg text-center text-dark p-5">{{ __('messages.errpartner') }}</h5>
                 @else
                     @foreach ($otherWorkshops as $workshop)
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
@@ -124,14 +124,14 @@
         <div class="container review-form-container fade-section">
             <div class="row" style="opacity: 2;">
                 <div class="col-12 col-lg-7 mb-4 mb-lg-0">
-                    <h3 class="fw-bold mb-4">Workshop Partnership Program</h2>
-                    <h5 class="fw-bold fs-3">Requirements :</h5>
+                    <h3 class="fw-bold mb-4">{{ __('messages.formtitle') }}</h2>
+                    <h5 class="fw-bold fs-3">{{ __('messages.formrequirements') }}</h5>
                     <ul class="list-unstyled fs-4">
-                        <li>1. Memiliki Workshop Lokal</li>
+                        <li>1. <span>{{ __('messages.formr1') }}</span></li>
                         <li>2. Lampirkan KTP & NPWP (jika ada)</li>
                         <li>3. Bersedia menandatangani surat kerja sama</li>
-                        <li>4. Melampirkan jumlah pekerja.</li>
-                        <li>5. Lampirkan hasil contoh perngerjaan/ portofolio.</li>
+                        <li>4. Melampirkan jumlah pekerja</li>
+                        <li>5. Lampirkan hasil contoh perngerjaan/ portofolio</li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-5">
@@ -310,7 +310,7 @@
             }
         }
     </style>
-    
+
     <script>
         function sendEmail() {
             // get form values
