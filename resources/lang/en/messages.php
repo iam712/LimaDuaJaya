@@ -223,4 +223,23 @@ return [
                      established in 2021 in Madiun and in 2023 founded
                      head office in Surabaya. In 2024, we will establish a branch office in Semarang.',
 
+    'visispan' => 'Vision',
+
+    'visititle' => 'Vision',
+
+    'visidesc' => 'To become the leading advertising company in Indonesia known for excellence in providing fast and responsive services,
+                   also keeping client satisfaction as the main priority and we uphold high values in every aspect of our bussiness.
+                   Guaranteeing client trust through clear and consistent principles, as well as continously innovating to meet and
+                   exceed client expectations. Presenting effective and creative solutions in every advertising campaign',
+
+    'misispan' => 'Mission',
+
+    'misititle' => 'Mission',
+
+    'misi1' => 'Providing Fast and Responsible Service.',
+
+    'misi2' => 'Upholding Integrity in Work.',
+
+    'misi3' => 'Continously Innovating to meet Client Needs',
+
 ];

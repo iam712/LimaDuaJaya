@@ -223,5 +223,26 @@ return [
                      vending machine, billboard/ baliho, produksi gondola, booth, papan nama toko, brand activation, dan lain lain.',
 
     'aboutdesc2' => 'PT LIMA DUA JAYA berdiri di tahun 2021 di Madiun dan pada tahun 2023 mendirikan kantor pusat di Surabaya.
-                     Di tahun 2024 mendirikan kantor cabang di Semarang.'
+                     Di tahun 2024 mendirikan kantor cabang di Semarang.',
+
+    'visispan' => 'Visi',
+
+    'visititle' => 'Visi',
+
+    'visidesc' => 'Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan dalam memberikan layanan
+                   yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas utama dan kami menjunjung tinggi nilai
+                   integritas dalam setiap aspek bisnis kami. Menjamin kepercayaan klien melalui prinsip prinsip yang jelas
+                   dan konsisten serta terus berinovasi untuk memenuhi dan melampaui harapan klien.
+                   Menghadirkan solusi kreatif yang efektif dalam setiap kampanye periklanan',
+
+    'misispan' => 'Misi',
+
+    'misititle' => 'Misi',
+
+    'misi1' => 'Memberikan Pelayanan Cepat dan Bertanggung Jawab.',
+
+    'misi2' => 'Menjunjung Tinggi Integritas Dalam Bekerja.',
+
+    'misi3' => 'Berinovasi untuk Memenuhi Kebutuhan Klien.',
+
 ];

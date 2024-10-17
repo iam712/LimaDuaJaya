@@ -135,15 +135,10 @@
                     </div>
                     <div class="col-12 col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
-                            <span class="text-dark fst-italic">Vision</span>
-                            <h2 class="display-5 fw-bold text-dark">Visi</h2>
+                            <span class="text-dark fst-italic">{{ __('messages.visispan') }}</span>
+                            <h2 class="display-5 fw-bold text-dark">{{ __('messages.visititle') }}</h2>
                             <p class="text-dark">
-                                Menjadi mitra periklanan terdepan di Indonesia yang dikenal karena keunggulan dalam
-                                memberikan layanan yang cepat dan responsif, menjaga kepuasan klien sebagai prioritas utama
-                                dan kami menjunjung tinggi nilai integritas dalam setiap aspek bisnis kami, menjamin
-                                kepercayaan klien melalui prinsip-prinsip yang jelas dan konsisten serta terus berinovasi
-                                untuk memenuhi dan melampaui harapan klien, menghadirkan solusi kreatif yang efektif dalam
-                                setiap kampanye periklanan.
+                                {{ __('messages.visidesc') }}
                             </p>
                         </div>
                     </div>
@@ -152,12 +147,12 @@
                 <div class="row gx-4 align-items-center">
                     <div class="col-12 col-md-6 offset-md-1">
                         <div class="ms-md-2 ms-lg-5">
-                            <span class="text-dark fst-italic">Mission</span>
-                            <h2 class="display-5 fw-bold text-dark">Misi</h2>
+                            <span class="text-dark fst-italic">{{ __('messages.misispan') }}</span>
+                            <h2 class="display-5 fw-bold text-dark">{{ __('messages.misititle') }}</h2>
                             <ul class="text-dark">
-                                <li><span>1.</span> Memberikan Pelayanan Cepat dan Bertanggung Jawab.</li>
-                                <li><span>2.</span> Menjunjung Tinggi Integritas Pekerjaan.</li>
-                                <li><span>3.</span> Berinovasi untuk Memenuhi Kebutuhan Klien.</li>
+                                <li><span>1.</span> {{ __('messages.misi1') }}</li>
+                                <li><span>2.</span> {{ __('messages.misi2') }}</li>
+                                <li><span>3.</span> {{ __('messages.misi3') }}</li>
                                 <li><span>4.</span> Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.</li>
                             </ul>
                         </div>
