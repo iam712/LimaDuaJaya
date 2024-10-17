@@ -202,7 +202,7 @@ return [
 
     'projecttitle' => 'Our Latest Projects',
 
-    'errproject' => 'No projects available at the moment',
+    'errproject' => 'No project available at the moment',
 
     // about us
 
@@ -241,5 +241,18 @@ return [
     'misi2' => 'Upholding Integrity in Work.',
 
     'misi3' => 'Continously Innovating to meet Client Needs',
+
+    'misi4' => 'Prioritizing a Work Ethic that Respects Clients & Employees',
+
+    'aboutreviewtitle' => 'What do our users say?',
+
+    'aboutreviewerr' => 'No review available at the moment',
+
+
+    // Admin
+
+        // Dashboard
+
+        
 
 ];

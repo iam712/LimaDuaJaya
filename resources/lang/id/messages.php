@@ -149,7 +149,7 @@ return [
                      yang Terbaik,<br> Kami berfokus untuk memberikan pelayanan yang
                      bisa dibanggakan.',
 
-    'footerfeedback' => 'Beri masukkan!',
+    'footerfeedback' => 'Kirimkan ulasan!',
 
     'footerpartner' => 'Menjadi Mitra',
 
@@ -244,5 +244,11 @@ return [
     'misi2' => 'Menjunjung Tinggi Integritas Dalam Bekerja.',
 
     'misi3' => 'Berinovasi untuk Memenuhi Kebutuhan Klien.',
+
+    'misi4' => 'Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.',
+
+    'aboutreviewtitle' => 'Apa kata mereka?',
+
+    'aboutreviewerr' => 'Ulasan tidak tersedia saat ini',
 
 ];

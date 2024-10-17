@@ -3,6 +3,30 @@
     id="sidebar">
     <div class="sidebar-content" style="flex: 1;">
         <ul class="sidebar-nav" style="list-style: none; padding: 0;">
+
+            <!-- Language Switcher -->
+            <li class="nav-item mb-2 mb-md-2 mb-lg-2 mt-5 mt-md-2 mt-lg-2">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        {{ app()->getLocale() == 'en' ? '🇺🇸 EN' : '🇮🇩 ID' }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ url('lang/en') }}">
+                                🇺🇸 EN
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ url('lang/id') }}">
+                                🇮🇩 ID
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Navigation Links -->
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->is('admin') ? 'active' : '' }}" href="/admin">
                     <i class="fas fa-tachometer-alt"></i> Dashboard

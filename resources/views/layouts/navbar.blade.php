@@ -30,26 +30,6 @@
                     <a class="nav-link {{ request()->is('signin') ? 'active' : '' }}"
                         href="/signin">{{ __('messages.navsignin') }}</a>
                 </li>
-
-                <!-- Language Dropdown with Font Awesome Flags -->
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Language
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="{{ url('lang/en') }}">
-                                <i class="fas fa-flag-usa"></i> EN
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url('lang/id') }}">
-                                <i class="fas fa-flag"></i> ID
-                            </a>
-                        </li>
-                    </ul>
-                </li> --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">

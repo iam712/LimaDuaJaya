@@ -153,7 +153,7 @@
                                 <li><span>1.</span> {{ __('messages.misi1') }}</li>
                                 <li><span>2.</span> {{ __('messages.misi2') }}</li>
                                 <li><span>3.</span> {{ __('messages.misi3') }}</li>
-                                <li><span>4.</span> Mengutamakan Etos Kerja yang Menghargai Karyawan dan Klien.</li>
+                                <li><span>4.</span> {{ __('messages.misi4') }}</li>
                             </ul>
                         </div>
                     </div>
@@ -176,10 +176,10 @@
     <section id="reviewSection" class="py-5 py-sm-5 fade-section parallax"
         style="background-image: url('{{ asset('images/banner/backgroundbanner6.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Inria Sans, sans-serif;">
         <div class="container">
-            <h1 class="text-center" style="font-weight: bold; color: black;">What do our users say?</h1>
+            <h1 class="text-center" style="font-weight: bold; color: black;">{{ __('messages.aboutreviewtitle') }}</h1>
         </div>
         @if ($reviews->isEmpty())
-            <h5 class="text-lg text-dark p-5 text-center">No reviews available at the moment</h5>
+            <h5 class="text-lg text-dark p-5 text-center">No review available at the moment</h5>
         @else
             <div class="container mt-5">
                 <!-- Carousel for Reviews -->
