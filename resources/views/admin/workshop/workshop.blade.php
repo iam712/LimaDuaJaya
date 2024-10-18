@@ -108,24 +108,25 @@
         }
 
         /* .btn-warning {
-                                                                            background-color: rgba({{ $color4 }}, 1);
-                                                                            color: rgba({{ $color1 }}, 1);
-                                                                        }
+                                                                                background-color: rgba({{ $color4 }}, 1);
+                                                                                color: rgba({{ $color1 }}, 1);
+                                                                            }
 
-                                                                        .btn-danger {
-                                                                            background-color: rgba({{ $color3 }}, 1);
-                                                                            color: rgba({{ $color1 }}, 1);
-                                                                        }
+                                                                            .btn-danger {
+                                                                                background-color: rgba({{ $color3 }}, 1);
+                                                                                color: rgba({{ $color1 }}, 1);
+                                                                            }
 
-                                                                        .btn-success {
-                                                                            background-color: rgba({{ $color7 }}, 1);
-                                                                            color: rgba({{ $color1 }}, 1);
-                                                                        } */
+                                                                            .btn-success {
+                                                                                background-color: rgba({{ $color7 }}, 1);
+                                                                                color: rgba({{ $color1 }}, 1);
+                                                                            } */
     </style>
 
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
-            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Workshop</h1>
+            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">{{ __('messages.adminworkshopwelcome') }}
+            </h1>
             <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
@@ -133,21 +134,22 @@
         <!-- Filter Form -->
         <form action="{{ route('workshops.index') }}" method="GET" class="mb-2 mb-md-3 mb-lg-4">
             <div class="form-group">
-                <label for="type" class="text-light">Filter by workshop type:</label>
+                <label for="type" class="text-light">{{ __('messages.adminworkshopfilterlabel') }}</label>
                 <div class="col-12 col-md-6 col-lg-3">
                     <select name="type" id="type" class="form-control mt-2 mt-md-2 mt-lg-2"
                         onchange="this.form.submit()">
-                        <option value="all" {{ $type === 'all' ? 'selected' : '' }}>All Workshops</option>
-                        <option value="limaduajaya" {{ $type === 'limaduajaya' ? 'selected' : '' }}>Lima Dua Jaya Workshops
+                        <option value="all" {{ $type === 'all' ? 'selected' : '' }}>
+                            {{ __('messages.adminworkshopalloption') }}</option>
+                        <option value="limaduajaya" {{ $type === 'limaduajaya' ? 'selected' : '' }}>{{ __('messages.adminworkshoplimaduaoption') }}
                         </option>
-                        <option value="other" {{ $type === 'other' ? 'selected' : '' }}>Other Workshops</option>
+                        <option value="other" {{ $type === 'other' ? 'selected' : '' }}>{{ __('messages.adminworkshopotheroption') }}</option>
                     </select>
                 </div>
             </div>
         </form>
 
         @if ($workshops->isEmpty())
-            <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
+            <h5 class="text-lg text-center text-dark p-5">{{ __('messages.adminworkshoperrempty') }}</h5>
         @else
             <section>
                 <div class="container table-responsive py-5">

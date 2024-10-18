@@ -251,4 +251,53 @@ return [
 
     'aboutreviewerr' => 'Ulasan tidak tersedia saat ini',
 
+    // Admin
+
+        // Dashboard
+
+    'admindashboardwelcome' => 'Selamat datang di Admin Dashboard',
+
+    'cardworkshopdesc' => 'Kelola Workshop',
+
+    'cardworkshoplink' => 'Pergi ke Workshop',
+
+    'cardprojecttitle' => 'Proyek',
+
+    'cardprojectdesc' => 'Kelola Proyek',
+
+    'cardprojecttotal' => 'Total Proyek :',
+
+    'cardprojectlink' => 'Pergi ke Proyek',
+
+    'cardusertitle' => 'Pengguna',
+
+    'carduserdesc' => 'Kelola Pengguna',
+
+    'cardusertotal' => 'Total Pengguna :',
+
+    'carduserlink' => 'Pergi ke Pengguna',
+
+    'cardreviewtitle' => 'Ulasan',
+
+    'cardreviewdesc' => 'Kelola Review',
+
+    'cardreviewtotal' => 'Total Ulasan :',
+
+    'cardreviewlink' => 'Pergi ke Review',
+
+
+        // Manage Workshop
+
+    'adminworkshopwelcome' => 'Selamat datang di Admin Workshop',
+
+    'adminworkshopfilterlabel' => 'Filter berdasarkan jenis workshop:',
+
+    'adminworkshopalloption' => 'Semua Workshop',
+
+    'adminworkshoplimaduaoption' => 'Workshop Lima Dua Jaya',
+
+    'adminworkshopotheroption' => 'Workshop Lainnya',
+
+    'adminworkshoperrempty' => 'Workshop tidak tersedia saat ini',
+
 ];

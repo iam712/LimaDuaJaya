@@ -253,6 +253,48 @@ return [
 
         // Dashboard
 
-        
+    'admindashboardwelcome' => 'Welcome to Admin Dashboard',
 
+    'cardworkshopdesc' => 'Manage and review all workshop-related content',
+
+    'cardworkshoplink' => 'Go to Workshop',
+
+    'cardprojecttitle' => 'Project',
+
+    'cardprojectdesc' => 'View and manage all project submissions ans statuses',
+
+    'cardprojecttotal' => 'Total Project :',
+
+    'cardprojectlink' => 'Go to Project',
+
+    'cardusertitle' => 'User',
+
+    'carduserdesc' => 'Manage user profiles and permissions',
+
+    'cardusertotal' => 'Total User :',
+
+    'carduserlink' => 'Go to User Management',
+
+    'cardreviewtitle' => 'Review',
+
+    'cardreviewdesc' => 'Moderate and respond to user reviews and feedback',
+
+    'cardreviewtotal' => 'Total Review :',
+
+    'cardreviewlink' => 'Go to Reviews',
+
+
+        // Manage Workshop
+
+    'adminworkshopwelcome' => 'Welcome to Admin Workshop',
+
+    'adminworkshopfilterlabel' => 'Filter by workshop type:',
+
+    'adminworkshopalloption' => 'All Workshops',
+
+    'adminworkshoplimaduaoption' => 'Lima Dua Jaya Workshops',
+
+    'adminworkshopotheroption' => 'Other Workshops',
+
+    'adminworkshoperrempty' => 'No workshops available at the moment',
 ];

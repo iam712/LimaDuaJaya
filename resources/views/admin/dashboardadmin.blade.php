@@ -109,7 +109,8 @@
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2"
             style="background-color: transparent;">
-            <h1 class="display-4" style="color: rgba({{ $color1 }}, 1);">Welcome to Admin Dashboard</h1>
+            <h1 class="display-4" style="color: rgba({{ $color1 }}, 1);">{{ __('messages.admindashboardwelcome') }}
+            </h1>
             <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
@@ -126,10 +127,11 @@
                                         Workshop
                                     </a>
                                 </h5>
-                                <p class="card-text">Manage and review all workshop-related content.</p>
+                                <p class="card-text">{{ __('messages.cardworkshopdesc') }}</p>
                                 <p class="card-text">Total Workshop : <span class="card-text">{{ $workshopCount }}</span>
                                 </p>
-                                <a href="{{ url('/admin/workshops') }}" class="btn btn-primary">Go to Workshop</a>
+                                <a href="{{ url('/admin/workshops') }}"
+                                    class="btn btn-primary">{{ __('messages.cardworkshoplink') }}</a>
                             </div>
                         </div>
                     </div>
@@ -140,13 +142,15 @@
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="{{ route('projects.index') }}" class="text-decoration-none">
-                                        Project
+                                        {{ __('messages.cardprojecttitle') }}
                                     </a>
                                 </h5>
-                                <p class="card-text">View and manage all project submissions and statuses.</p>
-                                <p class="card-text">Total Project : <span class="card-text">{{ $projectCount }}</span>
+                                <p class="card-text">{{ __('messages.cardprojectdesc') }}</p>
+                                <p class="card-text">{{ __('messages.cardprojecttotal') }} <span
+                                        class="card-text">{{ $projectCount }}</span>
                                 </p>
-                                <a href="{{ route('projects.index') }}" class="btn btn-primary">Go to Project</a>
+                                <a href="{{ route('projects.index') }}"
+                                    class="btn btn-primary">{{ __('messages.cardprojectlink') }}</a>
                             </div>
                         </div>
                     </div>
@@ -158,13 +162,14 @@
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="{{ url('/admin-user') }}" class="text-decoration-none">
-                                        User
+                                        {{ __('messages.cardusertitle') }}
                                     </a>
                                 </h5>
-                                <p class="card-text">Manage user profiles and permissions.</p>
-                                <p class="card-text">Total User : <span class="card-text">{{ $userCount }}</span>
+                                <p class="card-text">{{ __('messages.carduserdesc') }}</p>
+                                <p class="card-text">{{ __('messages.cardusertotal') }} <span
+                                        class="card-text">{{ $userCount }}</span>
                                 </p>
-                                <a href="{{ url('/admin/users') }}" class="btn btn-primary">Go to User Management</a>
+                                <a href="{{ url('/admin/users') }}" class="btn btn-primary">{{ __('messages.carduserlink') }}</a>
                             </div>
                         </div>
                     </div>
@@ -175,13 +180,13 @@
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="{{ url('/admin/reviews') }}" class="text-decoration-none">
-                                        Review
+                                        {{ __('messages.cardreviewtitle') }}
                                     </a>
                                 </h5>
-                                <p class="card-text">Moderate and respond to user reviews and feedback.</p>
-                                <p class="card-text">Total Review : <span class="card-text">{{ $reviewCount }}</span>
+                                <p class="card-text">{{ __('messages.cardreviewdesc') }}</p>
+                                <p class="card-text">{{ __('messages.cardreviewtotal') }} <span class="card-text">{{ $reviewCount }}</span>
                                 </p>
-                                <a href="{{ url('/admin/reviews') }}" class="btn btn-primary">Go to Reviews</a>
+                                <a href="{{ url('/admin/reviews') }}" class="btn btn-primary">{{ __('messages.cardreviewlink') }}</a>
                             </div>
                         </div>
                     </div>
