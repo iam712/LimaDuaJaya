@@ -297,4 +297,110 @@ return [
     'adminworkshopotheroption' => 'Other Workshops',
 
     'adminworkshoperrempty' => 'No workshops available at the moment',
+
+    'adminworkshopcolphoto' => 'Photo',
+
+    'adminworkshopcolname' => 'Name',
+
+    'adminworkshopcollocation' => 'Location',
+
+    'adminworkshopcoldescription' => 'Description',
+
+    'adminworkshopboollimadua' => 'Is Lima Dua Jaya?',
+
+    'adminworkshopimgmodal' => 'Workshop Image',
+
+    'adminworkshopdelbtn' => 'Delete',
+
+    'adminworkshopaddbtn' => 'Add New Workshop',
+
+    'adminworkshopeditmodalphoto' => 'Workshop Photo',
+
+    'adminworkshopeditmodalname' => 'Workshop Name',
+
+    'adminworkshopeditmodallocation' => 'Workshop Location',
+
+    'adminworkshopeditmodaldescription' => 'Description',
+
+    'adminworkshopeditmodalcheckbox' => 'Is the workshop from Lima Dua Jaya?',
+
+    'adminworkshopeditmodalclosebtn' => 'Close',
+
+    'adminworkshopeditmodalsavebtn' => 'Save changes',
+
+    'adminworkshopdelmodaltitle' => 'Delete Workshop',
+
+    'adminworkshopdelmodalconfirm' => 'Are you sure you want to delete this workshop?',
+
+    'adminworkshopdelmodalcancelbtn' => 'Cancel',
+
+    'adminworkshopdelmodaldelbtn' => 'Delete Workshop',
+
+    'adminworkshopaddmodaltitle' => 'Add New Workshop',
+
+    'adminworkshopaddmodalphoto' => 'Workshop Photo',
+
+    'adminworkshopaddmodalname' => 'Workshop Name',
+
+    'adminworkshopaddmodallocation' => 'Workshop Location',
+
+    'adminworkshopaddmodaldescription' => 'Description',
+
+    'adminworkshopaddmodalcheckbox' => 'Is the workshop from Lima Dua Jaya?',
+
+    'adminworkshopaddmodalclosebtn' => 'Close',
+
+    'adminworkshopaddmodalsavebtn' => 'Save Workshop',
+
+
+        // Manage Project
+
+    'adminprojectwelcome' => 'Welcome to Admin Project',
+
+    'adminprojecterrempty' => 'No projects available at the moment',
+
+    'adminprojectcolname' => 'Name',
+
+    'adminprojectdelbtn' => 'Delete',
+
+    'adminprojectaddbtn' => 'Add New Project',
+
+    'adminprojectaddmodaltitle' => 'Add New Project',
+
+    'adminprojectaddmodalname' => 'Project Name',
+
+    'adminprojectaddmodalclosebtn' => 'Close',
+
+    'adminprojectaddmodalsavebtn' =>  'Save Project',
+
+    'adminprojecteditmodaltitle' => 'Edit Project',
+
+    'adminprojecteditmodalname' => 'Project Name',
+
+    'adminprojecteditmodalclosebtn' => 'Close',
+
+    'adminprojecteditmodalsavebtn' => 'Save Changes',
+
+    'adminprojectdelmodaltitle' => 'Delete Project',
+
+    'adminprojectdelmodalconfirm' => 'Are you sure you want to delete this project?',
+
+    'adminprojectdelmodalcancelbtn' => 'Cancel',
+
+    'adminprojectdelmodaldelbtn' => 'Delete Project',
+
+
+        // Manage User
+
+    'adminuserwelcome' => 'Welcome to Admin User',
+
+    'adminusererrempty' => 'No users available at the moment',
+
+    'adminuserbooladmin' => 'Is Admin?',
+
+    'adminuserdelbtn' => 'Delete',
+
+    'adminuseraddbtn' => 'Add New User',
+
+    'adminuseraddmodaltitle' => 'Add New User',
 ];

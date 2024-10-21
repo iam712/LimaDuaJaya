@@ -300,4 +300,110 @@ return [
 
     'adminworkshoperrempty' => 'Workshop tidak tersedia saat ini',
 
+    'adminworkshopcolphoto' => 'Foto',
+
+    'adminworkshopcolname' => 'Nama',
+
+    'adminworkshopcollocation' => 'Lokasi',
+
+    'adminworkshopcoldescription' => 'Deskripsi',
+
+    'adminworkshopboollimadua' => 'Apakah Lima Dua Jaya?',
+
+    'adminworkshopimgmodal' => 'Gambar Workshop',
+
+    'adminworkshopdelbtn' => 'Hapus',
+
+    'adminworkshopaddbtn' => 'Tambah Workshop Baru',
+
+    'adminworkshopeditmodalphoto' => 'Foto Workshop',
+
+    'adminworkshopeditmodalname' => 'Nama Workshop',
+
+    'adminworkshopeditmodallocation' => 'Lokasi Workshop',
+
+    'adminworkshopeditmodaldescription' => 'Deskripsi',
+
+    'adminworkshopeditmodalcheckbox' => 'Apakah workshop berasal dari Lima Dua Jaya?',
+
+    'adminworkshopeditmodalclosebtn' => 'Tutup',
+
+    'adminworkshopeditmodalsavebtn' => 'Simpan perubahan',
+
+    'adminworkshopdelmodaltitle' => 'Hapus Workshop',
+
+    'adminworkshopdelmodalconfirm' => 'Apakah anda yakin ingin menghapus workshop ini?',
+
+    'adminworkshopdelmodalcancelbtn' => 'Batal',
+
+    'adminworkshopdelmodaldelbtn' => 'Hapus Workshop',
+
+    'adminworkshopaddmodaltitle' => 'Tambah Workshop Baru',
+
+    'adminworkshopaddmodalphoto' => 'Foto Workshop',
+
+    'adminworkshopaddmodalname' => 'Nama Workshop',
+
+    'adminworkshopaddmodallocation' => 'Lokasi Workshop',
+
+    'adminworkshopaddmodaldescription' => 'Deskripsi',
+
+    'adminworkshopaddmodalcheckbox' => 'Apakah workshop berasal dari Lima Dua Jaya?',
+
+    'adminworkshopaddmodalclosebtn' => 'Tutup',
+
+    'adminworkshopaddmodalsavebtn' => 'Simpan Workshop',
+
+
+        // Manage Project
+
+    'adminprojectwelcome' => 'Selamat datang di Admin Proyek',
+
+    'adminprojecterrempty' => 'Proyek tidak tersedia saat ini',
+
+    'adminprojectcolname' => 'Nama',
+
+    'adminprojectdelbtn' => 'Hapus',
+
+    'adminprojectaddbtn' => 'Tambah Proyek Baru',
+
+    'adminprojectaddmodaltitle' => 'Tambah Proyek Baru',
+
+    'adminprojectaddmodalname' => 'Nama Proyek',
+
+    'adminprojectaddmodalclosebtn' => 'Tutup',
+
+    'adminprojectaddmodalsavebtn' => 'Simpan Proyek',
+
+    'adminprojecteditmodaltitle' => 'Edit Proyek',
+
+    'adminprojecteditmodalname' => 'Nama Proyek',
+
+    'adminprojecteditmodalclosebtn' => 'Tutup',
+
+    'adminprojecteditmodalsavebtn' => 'Simpan Perubahan',
+
+    'adminprojectdelmodaltitle' => 'Hapus Proyek',
+
+    'adminprojectdelmodalconfirm' => 'Apakah anda yakin ingin menghapus proyek ini?',
+
+    'adminprojectdelmodalcancelbtn' => 'Batal',
+
+    'adminprojectdelmodaldelbtn' => 'Hapus Proyek',
+
+
+        // Manage User
+
+    'adminuserwelcome' => 'Selamat datang di Admin Pengguna',
+
+    'adminusererrempty' => 'Pengguna tidak tersedia saat ini',
+
+    'adminuserbooladmin' => 'Apakah Admin?',
+
+    'adminuserdelbtn' => 'Hapus',
+
+    'adminuseraddbtn' => 'Tambah Pengguna Baru',
+
+    'adminuseraddmodaltitle' => 'Tambah Pengguna Baru',
+
 ];

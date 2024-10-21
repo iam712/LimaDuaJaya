@@ -125,12 +125,12 @@
 
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
-            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin User</h1>
+            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">{{ __('messages.adminuserwelcome') }}</h1>
             <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
         @if ($users->isEmpty())
-            <h5 class="text-lg text-center text-dark p-5">No users available at the moment</h5>
+            <h5 class="text-lg text-center text-dark p-5">{{ __('messages.adminusererrempty') }}</h5>
         @else
         <section>
             <div class="container table-responsive py-5">
@@ -141,7 +141,7 @@
                             <th scope="col">No</th>
                             <th scope="col">Email</th>
                             <th scope="col">Password</th>
-                            <th scope="col">is Admin?</th>
+                            <th scope="col">{{ __('messages.adminuserbooladmin') }}</th>
                             <th scope="col">Actions</th>
                             <th scope="col">Actions</th>
                         </tr>
@@ -159,7 +159,7 @@
                                 </td>
                                 <td>
                                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                        data-bs-target="#deleteModal{{ $user->id }}">Delete</button>
+                                        data-bs-target="#deleteModal{{ $user->id }}">{{ __('messages.adminuserdelbtn') }}</button>
                                 </td>
                             </tr>
                         @endforeach
@@ -169,7 +169,7 @@
         </section>
         @endif
         <div class="text-end mt-3">
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New User</button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">{{ __('messages.adminuseraddbtn') }}</button>
         </div>
         <!-- Pagination Links -->
         <div class="d-flex justify-content-center">
@@ -185,7 +185,7 @@
                 <form action="{{ route('admin.users.store') }}" method="POST">
                     @csrf <!-- CSRF token for form security -->
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Add New User</h5>
+                        <h5 class="modal-title" id="addModalLabel">{{ __('messages.adminuseraddmodaltitle') }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">

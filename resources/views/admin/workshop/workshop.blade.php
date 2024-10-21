@@ -157,11 +157,11 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Photo</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Location</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">is Lima Dua Jaya?</th>
+                                <th scope="col">{{ __('messages.adminworkshopcolphoto') }}</th>
+                                <th scope="col">{{ __('messages.adminworkshopcolname') }}</th>
+                                <th scope="col">{{ __('messages.adminworkshopcollocation') }}</th>
+                                <th scope="col">{{ __('messages.adminworkshopcoldescription') }}</th>
+                                <th scope="col">{{ __('messages.adminworkshopboollimadua') }}</th>
                                 <th scope="col">Actions</th>
                                 <th scope="col">Actions</th>
                             </tr>
@@ -202,7 +202,7 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#deleteModal{{ $workshop->id }}">Delete</button>
+                                            data-bs-target="#deleteModal{{ $workshop->id }}">{{ __('messages.adminworkshopdelbtn') }}</button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -212,8 +212,7 @@
             </section>
         @endif
         <div class="text-end mt-3">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addWorkshopModal">Add New
-                Workshop</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addWorkshopModal">{{ __('messages.adminworkshopaddbtn') }}</button>
         </div>
         <!-- Pagination Links -->
         <div class="d-flex justify-content-center">
@@ -227,7 +226,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageViewModalLabel">Workshop Image</h5>
+                    <h5 class="modal-title" id="imageViewModalLabel">{{ __('messages.adminworkshopimgmodal') }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -265,44 +264,40 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addWorkshopModalLabel">Add New Workshop</h5>
+                    <h5 class="modal-title" id="addWorkshopModalLabel">{{ __('messages.adminworkshopaddmodaltitle') }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="{{ route('workshops.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="workshopPhoto" class="form-label">Workshop Photo</label>
+                            <label for="workshopPhoto" class="form-label">{{ __('messages.adminworkshopaddmodalphoto') }}</label>
                             <input type="file" name="image" class="form-control" id="workshopPhoto" required>
                         </div>
                         <div class="mb-3">
-                            <label for="workshopName" class="form-label">Workshop Name</label>
+                            <label for="workshopName" class="form-label">{{ __('messages.adminworkshopaddmodalname') }}</label>
                             <input type="text" name="name" class="form-control" id="workshopName" required>
                         </div>
                         <div class="mb-3">
-                            <label for="workshopLocation" class="form-label">Workshop Location</label>
+                            <label for="workshopLocation" class="form-label">{{ __('messages.adminworkshopaddmodallocation') }}</label>
                             <input type="text" name="location" class="form-control" id="workshopLocation" required>
                         </div>
                         <div class="mb-3">
-                            <label for="workshopDescription" class="form-label">Description</label>
+                            <label for="workshopDescription" class="form-label">{{ __('messages.adminworkshopaddmodaldescription') }}</label>
                             <textarea name="description" class="form-control" id="workshopDescription" required></textarea>
                         </div>
-                        {{-- <div class="mb-3 form-check">
-                            <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="isLimaDua">
-                            <label class="form-check-label" for="isLimaDua">Is the workshop from LimaDua?</label>
-                        </div> --}}
                         <div class="mb-3 form-check">
                             <!-- Hidden input to ensure 'false' is sent when the checkbox is not checked -->
                             <input type="hidden" name="isLimaduajaya" value="0">
 
                             <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="isLimaDua"
                                 value="1">
-                            <label class="form-check-label" for="isLimaDua">Is the workshop from LimaDua?</label>
+                            <label class="form-check-label" for="isLimaDua">{{ __('messages.adminworkshopaddmodalcheckbox') }}</label>
                         </div>
 
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminworkshopaddmodalclosebtn') }}</button>
+                            <button type="submit" class="btn btn-primary">{{ __('messages.adminworkshopaddmodalsavebtn') }}</button>
                         </div>
                     </form>
                 </div>
@@ -326,42 +321,36 @@
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
-                                <label for="editWorkshopPhoto" class="form-label">Workshop Photo</label>
+                                <label for="editWorkshopPhoto" class="form-label">{{ __('messages.adminworkshopeditmodalphoto') }}</label>
                                 <input type="file" name="image" class="form-control" id="editWorkshopPhoto">
                             </div>
                             <div class="mb-3">
-                                <label for="editWorkshopName" class="form-label">Workshop Name</label>
+                                <label for="editWorkshopName" class="form-label">{{ __('messages.adminworkshopeditmodalname') }}</label>
                                 <input type="text" name="name" class="form-control" id="editWorkshopName"
                                     value="{{ $workshop->name }}">
                             </div>
                             <div class="mb-3">
-                                <label for="editWorkshopLocation" class="form-label">Workshop Location</label>
+                                <label for="editWorkshopLocation" class="form-label">{{ __('messages.adminworkshopeditmodallocation') }}</label>
                                 <input type="text" name="location" class="form-control" id="editWorkshopLocation"
                                     value="{{ $workshop->location }}">
                             </div>
                             <div class="mb-3">
-                                <label for="editWorkshopDescription" class="form-label">Description</label>
+                                <label for="editWorkshopDescription" class="form-label">{{ __('messages.adminworkshopeditmodaldescription') }}</label>
                                 <textarea name="description" class="form-control" id="editWorkshopDescription">{{ $workshop->description }}</textarea>
                             </div>
-                            {{-- <div class="mb-3 form-check">
-                                <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="editIsLimaDua"
-                                    {{ $workshop->isLimaduajaya ? 'checked' : '' }}>
-                                <label class="form-check-label" for="editIsLimaDua">Is the workshop from LimaDua?</label>
-                            </div> --}}
-
                             <div class="mb-3 form-check">
                                 <!-- Hidden input to ensure 'false' is sent when the checkbox is not checked -->
                                 <input type="hidden" name="isLimaduajaya" value="0">
 
                                 <input type="checkbox" name="isLimaduajaya" class="form-check-input" id="editIsLimaDua"
                                     value="1" {{ $workshop->isLimaduajaya ? 'checked' : '' }}>
-                                <label class="form-check-label" for="editIsLimaDua">Is the workshop from LimaDua?</label>
+                                <label class="form-check-label" for="editIsLimaDua">{{ __('messages.adminworkshopeditmodalcheckbox') }}</label>
                             </div>
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminworkshopeditmodalclosebtn') }}</button>
+                        <button type="submit" class="btn btn-primary">{{ __('messages.adminworkshopeditmodalsavebtn') }}</button>
                     </div>
                     </form>
                 </div>
@@ -377,16 +366,16 @@
                         @csrf
                         @method('DELETE')
                         <div class="modal-header">
-                            <h5 class="modal-title" id="deleteModalLabel{{ $workshop->id }}">Delete Workshop</h5>
+                            <h5 class="modal-title" id="deleteModalLabel{{ $workshop->id }}">{{ __('messages.adminworkshopdelmodaltitle') }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Are you sure you want to delete this workshop?
+                            {{ __('messages.adminworkshopdelmodalconfirm') }}
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger">Delete Workshop</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminworkshopdelmodalcancelbtn') }}</button>
+                            <button type="submit" class="btn btn-danger">{{ __('messages.adminworkshopdelmodaldelbtn') }}</button>
                         </div>
                     </form>
                 </div>

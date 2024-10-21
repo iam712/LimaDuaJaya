@@ -107,12 +107,12 @@
 
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
-            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Project</h1>
+            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">{{ __('messages.adminprojectwelcome') }}</h1>
             <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
         @if ($projects->isEmpty())
-            <h5 class="text-lg text-center text-dark p-5">No projects available at the moment</h5>
+            <h5 class="text-lg text-center text-dark p-5">{{ __('messages.adminprojecterrempty') }}</h5>
         @else
             <section>
                 <div class="container-fluid table-responsive py-5">
@@ -120,7 +120,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Name</th>
+                                <th scope="col">{{ __('messages.adminprojectcolname') }}</th>
                                 <th scope="col">Actions</th>
                                 <th scope="col">Actions</th>
                             </tr>
@@ -136,7 +136,7 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#deleteModal{{ $project->id }}">Delete</button>
+                                            data-bs-target="#deleteModal{{ $project->id }}">{{ __('messages.adminprojectdelbtn') }}</button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -146,7 +146,7 @@
             </section>
         @endif
         <div class="text-end mt-3">
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Project</button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">{{ __('messages.adminprojectaddbtn') }}</button>
         </div>
         <!-- Pagination Links -->
         <div class="d-flex justify-content-center">
@@ -161,18 +161,18 @@
                 <form action="{{ route('projects.store') }}" method="POST">
                     @csrf
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Add New Project</h5>
+                        <h5 class="modal-title" id="addModalLabel">{{ __('messages.adminprojectaddmodaltitle') }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="projectName" class="form-label">Project Name</label>
+                            <label for="projectName" class="form-label">{{ __('messages.adminprojectaddmodalname') }}</label>
                             <input type="text" class="form-control" id="projectName" name="name" required>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save Project</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminprojectaddmodalclosebtn') }}</button>
+                        <button type="submit" class="btn btn-primary">{{ __('messages.adminprojectaddmodalsavebtn') }}</button>
                     </div>
                 </form>
             </div>
@@ -189,19 +189,19 @@
                         @csrf
                         @method('PUT')
                         <div class="modal-header">
-                            <h5 class="modal-title" id="editModalLabel{{ $project->id }}">Edit Project</h5>
+                            <h5 class="modal-title" id="editModalLabel{{ $project->id }}">{{ __('messages.adminprojecteditmodaltitle') }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="editProjectName{{ $project->id }}" class="form-label">Project Name</label>
+                                <label for="editProjectName{{ $project->id }}" class="form-label">{{ __('messages.adminprojecteditmodalname') }}</label>
                                 <input type="text" class="form-control" id="editProjectName{{ $project->id }}"
                                     name="name" value="{{ $project->name }}" required>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminprojecteditmodalclosebtn') }}</button>
+                            <button type="submit" class="btn btn-primary">{{ __('messages.adminprojecteditmodalsavebtn') }}</button>
                         </div>
                     </form>
                 </div>
@@ -217,15 +217,15 @@
                         @csrf
                         @method('DELETE')
                         <div class="modal-header">
-                            <h5 class="modal-title" id="deleteModalLabel{{ $project->id }}">Delete Project</h5>
+                            <h5 class="modal-title" id="deleteModalLabel{{ $project->id }}">{{ __('messages.adminprojectdelmodaltitle') }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Are you sure you want to delete this project?
+                            {{ __('messages.adminprojectdelmodalconfirm') }}
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger">Delete Project</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminprojectdelmodalcancelbtn') }}</button>
+                            <button type="submit" class="btn btn-danger">{{ __('messages.adminprojectdelmodaldelbtn') }}</button>
                         </div>
                     </form>
                 </div>
