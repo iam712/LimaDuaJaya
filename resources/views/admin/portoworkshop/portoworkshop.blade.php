@@ -301,5 +301,5 @@
             imageViewModal.show();
         }
     </script>
-    
+
 @endsection

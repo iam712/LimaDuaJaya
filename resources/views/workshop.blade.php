@@ -314,23 +314,6 @@
     </style>
 
     <script>
-        // function sendEmail() {
-        //     // get form values
-        //     var subject = document.getElementById('subject').value;
-        //     var workshopName = document.getElementById('workshopName').value;
-        //     var location = document.getElementById('location').value;
-        //     var phone = document.getElementById('phone').value;
-
-        //     // construct email body
-        //     var body = `Workshop Name: ${workshopName}%0ALocation: ${location}%0APhone: ${phone}`;
-
-        //     // construct the mailto link
-        //     var mailtoLink =
-        //         `mailto:limaduaadvertising@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        //     // open the email client
-        //     window.location.href = mailtoLink;
-        // }
 
         function sendEmail() {
             // Get form values
@@ -368,5 +351,6 @@
                 observer.observe(section);
             });
         });
+
     </script>
 @endsection

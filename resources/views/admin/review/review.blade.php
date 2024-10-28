@@ -137,12 +137,12 @@
 
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
-            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Review</h1>
+            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">{{ __('messages.adminreviewwelcome') }}</h1>
             <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
         @if ($reviews->isEmpty())
-            <h5 class="text-lg text-center text-dark p-5">No reviews available at the moment</h5>
+            <h5 class="text-lg text-center text-dark p-5">{{ __('messages.adminreviewerrempty') }}</h5>
         @else
             <section>
                 <div class="container table-responsive py-5">
@@ -150,9 +150,9 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Name</th>
+                                <th scope="col">{{ __('messages.adminreviewcolname') }}</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Comment</th>
+                                <th scope="col">{{ __('messages.adminreviewcolcomment') }}</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -174,7 +174,7 @@
                                     <td>
                                         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#deleteModal{{ $review->id }}">
-                                            Delete
+                                            {{ __('messages.adminreviewdelbtn') }}
                                         </button>
 
                                         <!-- Modal -->
@@ -183,24 +183,21 @@
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="deleteModalLabel{{ $review->id }}">
-                                                            Delete
-                                                            Review</h5>
+                                                        <h5 class="modal-title" id="deleteModalLabel{{ $review->id }}">{{ __('messages.adminreviewdelmodaltitle') }}</h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        Are you sure you want to delete this review by {{ $review->name }}?
+                                                        {{ __('messages.adminreviewdelmodalconfirm') }} {{ $review->name }}?
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Cancel</button>
+                                                            data-bs-dismiss="modal">{{ __('messages.adminreviewdelmodalcancelbtn') }}</button>
                                                         <form action="{{ route('admin.reviews.destroy', $review->id) }}"
                                                             method="POST">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <button type="submit" class="btn btn-danger">Delete
-                                                                Review</button>
+                                                            <button type="submit" class="btn btn-danger">{{ __('messages.adminreviewdelmodaldelbtn') }}</button>
                                                         </form>
                                                     </div>
                                                 </div>

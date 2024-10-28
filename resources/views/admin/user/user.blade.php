@@ -199,12 +199,12 @@
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="isAdmin" name="isAdmin">
-                            <label class="form-check-label" for="isAdmin">Is Admin?</label>
+                            <label class="form-check-label" for="isAdmin">{{ __('messages.adminuseraddmodalcheckbox') }}</label>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save User</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminuseraddmodalclosebtn') }}</button>
+                        <button type="submit" class="btn btn-primary">{{ __('messages.adminuseraddmodalsavebtn') }}</button>
                     </div>
                 </form>
 
@@ -223,7 +223,7 @@
                         @csrf
                         @method('PUT')
                         <div class="modal-header">
-                            <h5 class="modal-title" id="editModalLabel{{ $user->id }}">Edit User</h5>
+                            <h5 class="modal-title" id="editModalLabel{{ $user->id }}">{{ __('messages.adminusereditmodaltitle') }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -233,20 +233,19 @@
                                     name="email" value="{{ $user->email }}" required>
                             </div>
                             <div class="mb-3">
-                                <label for="editUserPassword{{ $user->id }}" class="form-label">Password (leave blank
-                                    to keep current password)</label>
+                                <label for="editUserPassword{{ $user->id }}" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="editUserPassword{{ $user->id }}"
                                     name="password">
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="editIsAdmin{{ $user->id }}"
                                     name="isAdmin" {{ $user->isAdmin ? 'checked' : '' }}>
-                                <label class="form-check-label" for="editIsAdmin{{ $user->id }}">Is Admin?</label>
+                                <label class="form-check-label" for="editIsAdmin{{ $user->id }}">{{ __('messages.adminusereditmodalcheckbox') }}</label>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminusereditmodalclosebtn') }}</button>
+                            <button type="submit" class="btn btn-primary">{{ __('messages.adminusereditmodalsavebtn') }}</button>
                         </div>
                     </form>
 
@@ -263,16 +262,16 @@
                         @csrf
                         @method('DELETE')
                         <div class="modal-header">
-                            <h5 class="modal-title" id="deleteModalLabel{{ $user->id }}">Delete User</h5>
+                            <h5 class="modal-title" id="deleteModalLabel{{ $user->id }}">{{ __('messages.adminuserdelmodaltitle') }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Are you sure you want to delete this user?
+                            {{ __('messages.adminuserdelmodalconfirm') }}
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger">Delete User</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminuserdelmodalcancelbtn') }}</button>
+                            <button type="submit" class="btn btn-danger">{{ __('messages.adminuserdelmodaldelbtn') }}</button>
                         </div>
                     </form>
 

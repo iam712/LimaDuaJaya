@@ -201,6 +201,11 @@ return [
 
     'formbtn' => 'Kirim',
 
+
+    // Detail
+
+    'detailportfolio' => 'Portofolio',
+
     // project
 
     'projecttitle' => 'Proyek Terbaru Kami',
@@ -251,7 +256,49 @@ return [
 
     'aboutreviewerr' => 'Ulasan tidak tersedia saat ini',
 
+    // sign in
+
+    'signinemaillabel' => 'Masukkan Email',
+
+    'signinpasswordlabel' => 'Masukkan Password',
+
+    'signinsigninbtn' => 'Masuk',
+
+    // review
+
+    'reviewhead' => 'Ulasan anda sangat penting bagi kami!',
+
+    'reviewsubhead' => 'Standar yang diberikan oleh Lima Dua Jaya adalah yang terbaik.
+                        Kami berfokus untuk memberikan pelayanan yang bisa dibanggakan.',
+
+    'reviewformtitle' => 'Kirim Ulasan Anda',
+
+    'reviewformname' => 'Nama',
+
+    'reviewformcomment' => 'Komentar',
+
+    'reviewsubmitbtn' => 'Kirim Ulasan',
+
     // Admin
+
+        // Sidebar
+
+    'sidebardashboard' => 'Dasbor',
+
+    'sidebarmanageworkshop' => 'Kelola Workshop',
+
+    'sidebarmanageproject' => 'Kelola Proyek',
+
+    'sidebarmanageuser' => 'Kelola Pengguna',
+
+    'sidebarmanagereview' => 'Kelola Ulasan',
+
+    'sidebarmanageprojectportfolio' => 'Kelola Portofolio Proyek',
+
+    'sidebarmanageworkshopportfolio' => 'Kelola Portofolio Workshop',
+
+    'sidebarlogout' => 'Keluar',
+
 
         // Dashboard
 
@@ -405,5 +452,57 @@ return [
     'adminuseraddbtn' => 'Tambah Pengguna Baru',
 
     'adminuseraddmodaltitle' => 'Tambah Pengguna Baru',
+
+    'adminuseraddmodalcheckbox' => 'Apakah Admin?',
+
+    'adminuseraddmodalclosebtn' => 'Tutup',
+
+    'adminuseraddmodalsavebtn' => 'Simpan Pengguna',
+
+    'adminusereditmodaltitle' => 'Edit Pengguna',
+
+    'adminusereditmodalcheckbox' => 'Apakah Admin?',
+
+    'adminusereditmodalclosebtn' => 'Tutup',
+
+    'adminusereditmodalsavebtn' => 'Simpan Perubahan',
+
+    'adminuserdelmodaltitle' => 'Hapus Pengguna',
+
+    'adminuserdelmodalconfirm' => 'Apakah anda yakin ingin menghapus pengguna ini?',
+
+    'adminuserdelmodalcancelbtn' => 'Batal',
+
+    'adminuserdelmodaldelbtn' => 'Hapus Pengguna',
+
+
+        // Manage Review
+
+    'adminreviewwelcome' => 'Selamat datang di Admin Ulasan',
+
+    'adminreviewerrempty' => 'Ulasan tidak tersedia saat ini',
+
+    'adminreviewcolname' => 'Nama',
+
+    'adminreviewcolcomment' => 'Komentar',
+
+    'adminreviewdelbtn' => 'Hapus',
+
+    'adminreviewdelmodaltitle' => 'Hapus Ulasan',
+
+    'adminreviewdelmodalconfirm' => 'Apakah anda yakin ingin menghapus ulasan dari',
+
+    'adminreviewdelmodalcancelbtn' => 'Batal',
+
+    'adminreviewdelmodaldelbtn' => 'Hapus Ulasan',
+
+
+        // Manage Project Portfolio
+
+    'adminprojectportfoliowelcome' => 'Selamat datang di Admin Portofolio Proyek',
+
+    'adminprojectportfolioerrempty' => 'Portofolio proyek tidak tersedia saat ini',
+
+    'adminprojectportfoliocolimage' => 'Foto',
 
 ];

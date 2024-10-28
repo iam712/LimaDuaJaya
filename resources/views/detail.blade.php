@@ -40,7 +40,7 @@
     <!-- Additional Workshops Section -->
     <section class="py-2 py-md-3 py-lg-4" style="font-family: Inria Sans, sans-serif;">
         <div class="container">
-            <h3 class="text-center mb-5 fw-bold text-dark">More Portfolio</h3>
+            <h3 class="text-center mb-5 fw-bold text-dark">{{ __('messages.detailportfolio') }}</h3>
             <div class="row g-4">
                 @foreach ($workshop->portfolios as $portfolio)
                     <div class="col-6 col-md-4 col-lg-3">

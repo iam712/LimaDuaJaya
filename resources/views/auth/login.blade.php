@@ -30,15 +30,33 @@
             overflow: hidden;
         }
 
-        .btn-primary {
+        .btn-danger {
             background-color: rgb({{ $color4 }});
             border: none;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn-danger:hover {
+            background-color: rgb({{ $color3 }});
+            transform: scale(1.05);
+        }
+
+        .btn-danger:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(238, 63, 72, 0.5);
         }
 
         /* Background and Text Color Styles */
         .bg-custom {
             background-color: rgb({{ $color1 }});
             color: rgb({{ $color2 }});
+            border-radius: 8px;
+            padding: 3rem;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .bg-custom:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .bg-custom .form-label,
@@ -237,7 +255,7 @@
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
                                                     <input type="email" id="email" name="email" class="form-control"
-                                                        placeholder="Enter Email" value="{{ old('email') }}" required>
+                                                        placeholder="{{ __('messages.signinemaillabel') }}" value="{{ old('email') }}" required>
                                                 </div>
                                             </div>
 
@@ -246,7 +264,7 @@
                                                 <div class="input-group" style="position: relative;">
                                                     <div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
                                                     <input type="password" id="password" name="password"
-                                                        class="form-control" placeholder="Enter Password" required>
+                                                        class="form-control" placeholder="{{ __('messages.signinpasswordlabel') }}" required>
                                                     <span id="togglePassword"
                                                         style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; z-index: 10;">
                                                         <i class="fa-solid fa-eye"></i>
@@ -255,13 +273,12 @@
                                             </div>
 
                                             <div class="col-12" style="z-index: 10;">
-                                                <button type="submit" class="btn btn-danger w-100 mt-3">Sign In</button>
+                                                <button type="submit" class="btn btn-danger w-100 mt-3">{{ __('messages.signinsigninbtn') }}</button>
                                             </div>
                                         </form>
 
                                     </div>
                                 </div>
-
                                 <!-- Static Logo -->
                                 <div
                                     class="col-12 col-md-6 d-flex align-items-center justify-content-center mt-4 mt-md-0 mt-lg-0 text-center">

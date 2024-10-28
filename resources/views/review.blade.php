@@ -60,12 +60,9 @@
         <div class="rounded rounded-3 flex-column d-flex justify-content-center align-items-center text-dark"
             style="background-color: rgb({{ $color3 }}); width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: 0 0 10px;
         display: inline-block;">
-            <h2 class="text-center text-light fw-bold">Your
-                review is important for us!
-            </h2> <br>
-            <p class="text-center text-light fst-italic">Standar
-                yang diberikan oleh Lima Dua Jaya adalah yang Terbaik. Kami berfokus untuk
-                memberikan pelayanan yang bisa dibanggakan.</p>
+            <h2 class="text-center text-light fw-bold">{{ __('messages.reviewhead') }}</h2>
+            <br>
+            <p class="text-center text-light fst-italic">{{ __('messages.reviewsubhead') }}</p>
         </div>
     </section>
 
@@ -73,12 +70,11 @@
     <section class="banner d-flex justify-content-center align-items-center animated-bg">
         <div class="rounded rounded-3 p-4"
             style="background-color: rgb({{ $color1 }}); width: 60%; max-width: 600px; box-shadow: 0 0 10px rgb({{ $color2 }}); font-family: Inria Sans, sans-serif;">
-            <h3 class="text-center text-dark fw-bold">Submit
-                Your Review</h3>
+            <h3 class="text-center text-dark fw-bold">{{ __('messages.reviewformtitle') }}</h3>
             <form action="{{ route('reviews.store') }}" method="POST">
                 @csrf
                 <div class="mb-3">
-                    <label for="name" class="form-label text-dark">Name</label>
+                    <label for="name" class="form-label text-dark">{{ __('messages.reviewformname') }}</label>
                     <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="mb-3">
@@ -86,12 +82,11 @@
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="mb-3">
-                    <label for="comments" class="form-label text-dark">Comments</label>
+                    <label for="comments" class="form-label text-dark">{{ __('messages.reviewformcomment') }}</label>
                     <textarea class="form-control" id="comments" name="comments" rows="2" maxlength="100" required></textarea>
 
                 </div>
-                <button type="submit" class="btn btn-dark text-light w-100">Submit
-                    Review</button>
+                <button type="submit" class="btn btn-dark text-light w-100">{{ __('messages.reviewsubmitbtn') }}</button>
             </form>
         </div>
     </section>

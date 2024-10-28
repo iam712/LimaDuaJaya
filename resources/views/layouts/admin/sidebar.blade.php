@@ -29,42 +29,42 @@
             <!-- Navigation Links -->
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->is('admin') ? 'active' : '' }}" href="/admin">
-                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                    <i class="fas fa-tachometer-alt"></i> {{ __('messages.sidebardashboard') }}
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->routeIs('workshops.index') ? 'active' : '' }}"
                     href="{{ route('workshops.index') }}">
-                    <i class="fas fa-cogs"></i> Manage Workshop
+                    <i class="fas fa-cogs"></i> {{ __('messages.sidebarmanageworkshop') }}
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->routeIs('projects.index') ? 'active' : '' }}"
                     href="{{ route('projects.index') }}">
-                    <i class="fas fa-project-diagram"></i> Manage Project
+                    <i class="fas fa-project-diagram"></i> {{ __('messages.sidebarmanageproject') }}
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->is('admin/users') ? 'active' : '' }}"
                     href="{{ route('admin.users.index') }}">
-                    <i class="fas fa-users"></i> Manage User
+                    <i class="fas fa-users"></i> {{ __('messages.sidebarmanageuser') }}
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->is('admin/reviews') ? 'active' : '' }}" href="/admin/reviews">
-                    <i class="fas fa-star"></i> Manage Review
+                    <i class="fas fa-star"></i> {{ __('messages.sidebarmanagereview') }}
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->routeIs('portfolio_projects.index') ? 'active' : '' }}"
                     href="{{ route('portfolio_projects.index') }}">
-                    <i class="fa-regular fa-folder-open"></i> Manage Project Portfolio
+                    <i class="fa-regular fa-folder-open"></i> {{ __('messages.sidebarmanageprojectportfolio') }}
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link {{ request()->is('portfolios.index') ? 'active' : '' }}"
                     href="{{ route('portfolios.index') }}">
-                    <i class="fa-solid fa-folder-open"></i> Manage Workshop Portfolio
+                    <i class="fa-solid fa-folder-open"></i> {{ __('messages.sidebarmanageworkshopportfolio') }}
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
@@ -78,7 +78,7 @@
                 </form>
                 <a class="nav-link" href="{{ route('logout') }}"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class="fas fa-sign-out-alt"></i> Logout
+                    <i class="fas fa-sign-out-alt"></i> {{ __('messages.sidebarlogout') }}
                 </a>
             </li>
         </ul>

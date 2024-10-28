@@ -31,6 +31,9 @@
             /* Memastikan gambar selalu memenuhi area */
             aspect-ratio: 1 / 1;
             /* Menjaga rasio 1:1 */
+
+
+            width: 100px; object-fit: cover; aspect-ratio: 1 / 1;
         }
 
         .parallax {

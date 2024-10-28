@@ -198,6 +198,10 @@ return [
 
     'formbtn' => 'Send',
 
+    // Detail
+
+    'detailportfolio' => 'Portfolio',
+
     // project
 
     'projecttitle' => 'Our Latest Projects',
@@ -248,8 +252,49 @@ return [
 
     'aboutreviewerr' => 'No review available at the moment',
 
+    // sign in
+
+    'signinemaillabel' => 'Enter Email',
+
+    'signinpasswordlabel' => 'Enter Password',
+
+    'signinsigninbtn' => 'Sign In',
+
+    // review
+
+    'reviewhead' => 'Your review is important for us!',
+
+    'reviewsubhead' => 'The standards provided by Lima Dua Jaya are the best.
+                        We focus on providing excellent service can be proud of.',
+
+    'reviewformtitle' => 'Submit Your Review',
+
+    'reviewformname' => 'Name',
+
+    'reviewformcomment' => 'Comment',
+
+    'reviewsubmitbtn' => 'Submit Review',
 
     // Admin
+
+        // Sidebar
+
+    'sidebardashboard' => 'Dashboard',
+
+    'sidebarmanageworkshop' => 'Manage Workshop',
+
+    'sidebarmanageproject' => 'Manage Project',
+
+    'sidebarmanageuser' => 'Manage User',
+
+    'sidebarmanagereview' => 'Manage Review',
+
+    'sidebarmanageprojectportfolio' => 'Manage Project Portfolio',
+
+    'sidebarmanageworkshopportfolio' => 'Manage Workshop Portfolio',
+
+    'sidebarlogout' => 'Logout',
+
 
         // Dashboard
 
@@ -403,4 +448,57 @@ return [
     'adminuseraddbtn' => 'Add New User',
 
     'adminuseraddmodaltitle' => 'Add New User',
+
+    'adminuseraddmodalcheckbox' => 'Is Admin?',
+
+    'adminuseraddmodalclosebtn' => 'Close',
+
+    'adminuseraddmodalsavebtn' => 'Save User',
+
+    'adminusereditmodaltitle' => 'Edit User',
+
+    'adminusereditmodalcheckbox' => 'Is Admin?',
+
+    'adminusereditmodalclosebtn' => 'Close',
+
+    'adminusereditmodalsavebtn' => 'Save Changes',
+
+    'adminuserdelmodaltitle' => 'Delete User',
+
+    'adminuserdelmodalconfirm' => 'Are you sure you want to delete this user?',
+
+    'adminuserdelmodalcancelbtn' => 'Cancel',
+
+    'adminuserdelmodaldelbtn' => 'Delete User',
+
+
+        // Manage Review
+
+    'adminreviewwelcome' => 'Welcome to Admin Review',
+
+    'adminreviewerrempty' => 'No reviews available at the moment',
+
+    'adminreviewcolname' => 'Name',
+
+    'adminreviewcolcomment' => 'Comment',
+
+    'adminreviewdelbtn' => 'Delete',
+
+    'adminreviewdelmodaltitle' => 'Delete Review',
+
+    'adminreviewdelmodalconfirm' => 'Are you sure you want to delete this review by',
+
+    'adminreviewdelmodalcancelbtn' => 'Cancel',
+
+    'adminreviewdelmodaldelbtn' => 'Delete Review',
+
+
+        // Manage Project Portfolio
+
+    'adminprojectportfoliowelcome' => 'Welcome to Admin Project Portfolio',
+
+    'adminprojectportfolioerrempty' => 'No project portfolio available at the moment',
+
+    'adminprojectportfoliocolimage' => 'Image',
+
 ];

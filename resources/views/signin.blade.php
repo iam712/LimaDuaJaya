@@ -255,7 +255,7 @@
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
                                                     <input type="email" id="email" name="email" class="form-control"
-                                                        placeholder="Enter Email" value="{{ old('email') }}" required>
+                                                        placeholder="{{ __('messages.signinemaillabel') }}" value="{{ old('email') }}" required>
                                                 </div>
                                             </div>
 
@@ -264,7 +264,7 @@
                                                 <div class="input-group" style="position: relative;">
                                                     <div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
                                                     <input type="password" id="password" name="password"
-                                                        class="form-control" placeholder="Enter Password" required>
+                                                        class="form-control" placeholder="{{ __('messages.signinpasswordlabel') }}" required>
                                                     <span id="togglePassword"
                                                         style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; z-index: 10;">
                                                         <i class="fa-solid fa-eye"></i>
@@ -273,7 +273,7 @@
                                             </div>
 
                                             <div class="col-12" style="z-index: 10;">
-                                                <button type="submit" class="btn btn-danger w-100 mt-3">Sign In</button>
+                                                <button type="submit" class="btn btn-danger w-100 mt-3">{{ __('messages.signinsigninbtn') }}</button>
                                             </div>
                                         </form>
 

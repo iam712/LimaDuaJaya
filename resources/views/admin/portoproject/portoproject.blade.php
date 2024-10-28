@@ -125,12 +125,12 @@
 
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
-            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Portfolio Project</h1>
+            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">{{ __('messages.adminprojectportfoliowelcome') }}</h1>
             <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
         @if ($portfolioProjects->isEmpty())
-            <h5 class="text-lg text-center text-dark p-5">No portfolio projects available at the moment</h5>
+            <h5 class="text-lg text-center text-dark p-5">{{ __('messages.adminprojectportfolioerrempty') }}</h5>
         @else
             <section>
                 <div class="container table-responsive py-5">
@@ -138,7 +138,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Image</th>
+                                <th scope="col">{{ __('messages.adminprojectportfoliocolimage') }}</th>
                                 <th scope="col">Project Id</th>
                                 <th scope="col">Project Name</th>
                                 <th scope="col">Actions</th>
