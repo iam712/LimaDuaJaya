@@ -505,4 +505,47 @@ return [
 
     'adminprojectportfoliocolimage' => 'Foto',
 
+    'adminprojectportfoliocolprojectid' => 'ID Proyek',
+
+    'adminprojectportfoliocolprojectname' => 'Nama Proyek',
+
+    'adminprojectportfoliodelbtn' => 'Hapus',
+
+    'adminprojectportfolioaddbtn' => 'Tambah Portofolio Proyek Baru',
+
+    'adminprojectportfolioeditmodaltitle' => 'Edit Portofolio Proyek',
+
+    'adminprojectportfolioeditmodalimage' => 'Foto',
+
+    'adminprojectportfolioeditmodalprojectname' => 'Nama Proyek',
+
+    'adminprojectportfolioeditmodalclosebtn' => 'Tutup',
+
+    'adminprojectportfolioeditmodalsavebtn' => 'Simpan Perubahan',
+
+    'adminprojectportfolioimagemodaltitle' => 'Foto Portofolio Proyek',
+
+    'adminprojectportfolioaddmodaltitle' => 'Tambah Portofolio Proyek Baru',
+
+    'adminprojectportfolioaddmodalimage' => 'Foto',
+
+    'adminprojectportfolioaddmodalprojectname' => 'Nama Proyek',
+
+    'adminprojectportfolioaddmodalclosebtn' => 'Tutup',
+
+    'adminprojectportfolioaddmodalsavebtn' => 'Simpan Portofolio Proyek',
+
+    'adminprojectportfoliodelmodaltitle' => 'Hapus Portofolio Proyek',
+
+    'adminprojectportfoliodelmodalconfirm' => 'Apakah anda yakin ingin menghapus portofolio proyek ini?',
+
+    'adminprojectportfoliodelmodalcancelbtn' => 'Batal',
+
+    'adminprojectportfoliodelmodaldelbtn' => 'Hapus Portofolio Proyek',
+
+
+        // Manage Workshop Portfolio
+
+    
+
 ];

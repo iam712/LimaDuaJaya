@@ -501,4 +501,47 @@ return [
 
     'adminprojectportfoliocolimage' => 'Image',
 
+    'adminprojectportfoliocolprojectid' => 'Project ID',
+
+    'adminprojectportfoliocolprojectname' => 'Project Name',
+
+    'adminprojectportfoliodelbtn' => 'Delete',
+
+    'adminprojectportfolioaddbtn' => 'Add New Project Portfolio',
+
+    'adminprojectportfolioeditmodaltitle' => 'Edit Project Portfolio',
+
+    'adminprojectportfolioeditmodalimage' => 'Image',
+
+    'adminprojectportfolioeditmodalprojectname' => 'Project Name',
+
+    'adminprojectportfolioeditmodalclosebtn' => 'Close',
+
+    'adminprojectportfolioeditmodalsavebtn' => 'Save Changes',
+
+    'adminprojectportfolioimagemodaltitle' => 'Project Portfolio Image',
+
+    'adminprojectportfolioaddmodaltitle' => 'Add New Project Portfolio',
+
+    'adminprojectportfolioaddmodalimage' => 'Image',
+
+    'adminprojectportfolioaddmodalprojectname' => 'Project Name',
+
+    'adminprojectportfolioaddmodalclosebtn' => 'Close',
+
+    'adminprojectportfolioaddmodalsavebtn' => 'Save Project Portfolio',
+
+    'adminprojectportfoliodelmodaltitle' => 'Delete Project Portfolio',
+
+    'adminprojectportfoliodelmodalconfirm' => 'Are you sure you want to delete this project portfolio?',
+
+    'adminprojectportfoliodelmodalcancelbtn' => 'Cancel',
+
+    'adminprojectportfoliodelmodaldelbtn' => 'Delete Project Portfolio',
+
+
+        // Manage Workshop Portfolio
+
+    
+
 ];

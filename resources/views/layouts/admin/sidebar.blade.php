@@ -7,8 +7,8 @@
             <!-- Language Switcher -->
             <li class="nav-item mb-2 mb-md-2 mb-lg-2 mt-5 mt-md-2 mt-lg-2">
                 <div class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         {{ app()->getLocale() == 'en' ? '🇺🇸 EN' : '🇮🇩 ID' }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
