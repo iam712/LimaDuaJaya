@@ -110,12 +110,12 @@
 
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
-            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Portofolio Workshop</h1>
+            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">{{ __('messages.adminworkshopportfoliowelcome') }}</h1>
             <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
         @if ($portfolios->isEmpty())
-            <h5 class="text-lg text-center text-dark p-5">No portfolio workshops available at the moment</h5>
+            <h5 class="text-lg text-center text-dark p-5">{{ __('messages.adminworkshopportfolioerrempty') }}</h5>
         @else
             <section>
                 <div class="container table-responsive py-5">
@@ -123,9 +123,9 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Workshop Id</th>
-                                <th scope="col">Workshop Name</th>
+                                <th scope="col">{{ __('messages.adminworkshopportfoliocolimage') }}</th>
+                                <th scope="col">{{ __('messages.adminworkshopportfoliocolworkshopid') }}</th>
+                                <th scope="col">{{ __('messages.adminworkshopportfoliocolworkshopname') }}</th>
                                 <th scope="col">Actions</th>
                                 <th scope="col">Actions</th>
                             </tr>
@@ -149,7 +149,7 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#deleteModal{{ $portfolio->id }}">Delete</button>
+                                            data-bs-target="#deleteModal{{ $portfolio->id }}">{{ __('messages.adminworkshopportfoliodelbtn') }}</button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -159,8 +159,7 @@
             </section>
         @endif
         <div class="text-end mt-3">
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Portofolio
-                Workshop</button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">{{ __('messages.adminworkshopportfolioaddbtn') }}</button>
         </div>
         <!-- Pagination Links -->
         <div class="d-flex justify-content-center">
@@ -229,19 +228,19 @@
                         @csrf
                         @method('PUT')
                         <div class="modal-header">
-                            <h5 class="modal-title" id="editModalLabel{{ $portfolio->id }}">Edit Portofolio Workshop</h5>
+                            <h5 class="modal-title" id="editModalLabel{{ $portfolio->id }}">{{ __('messages.adminworkshopportfolioeditmodaltitle') }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="editPortofolioWorkshopImage{{ $portfolio->id }}"
-                                    class="form-label">Image</label>
+                                    class="form-label">{{ __('messages.adminworkshopportfolioeditmodalimage') }}</label>
                                 <input type="file" class="form-control"
                                     id="editPortofolioWorkshopImage{{ $portfolio->id }}" name="image" accept="image/*"
                                     required>
                             </div>
                             <div class="mb-3">
-                                <label for="editWorkshopName{{ $portfolio->id }}" class="form-label">Workshop Name</label>
+                                <label for="editWorkshopName{{ $portfolio->id }}" class="form-label">{{ __('messages.adminworkshopportfolioeditmodalworkshopname') }}</label>
                                 <select class="form-control" id="editWorkshopName{{ $portfolio->id }}"
                                     name="id_workshop" required>
                                     <option value="" disabled selected>Select a workshop</option>
@@ -255,8 +254,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminworkshopportfolioeditmodalclosebtn') }}</button>
+                            <button type="submit" class="btn btn-primary">{{ __('messages.adminworkshopportfolioeditmodalsavebtn') }}</button>
                         </div>
                     </form>
                 </div>

@@ -542,6 +542,28 @@ return [
 
         // Manage Workshop Portfolio
 
-    
+    'adminworkshopportfoliowelcome' => 'Welcome to Admin Workshop Portfolio',
+
+    'adminworkshopportfolioerrempty' => 'No workshop portfolio available at the moment',
+
+    'adminworkshopportfoliocolimage' => 'Image',
+
+    'adminworkshopportfoliocolworkshopid' => 'Workshop ID',
+
+    'adminworkshopportfoliocolworkshopname' => 'Workshop Name',
+
+    'adminworkshopportfoliodelbtn' => 'Delete',
+
+    'adminworkshopportfolioaddbtn' => 'Add New Workshop Portfolio',
+
+    'adminworkshopportfolioeditmodaltitle' => 'Edit Workshop Portfolio',
+
+    'adminworkshopportfolioeditmodalimage' => 'Image',
+
+    'adminworkshopportfolioeditmodalworkshopname' => 'Workshop Name',
+
+    'adminworkshopportfolioeditmodalclosebtn' => 'Close',
+
+    'adminworkshopportfolioeditmodalsavebtn' => 'Save Changes',
 
 ];

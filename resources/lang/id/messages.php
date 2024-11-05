@@ -546,6 +546,28 @@ return [
 
         // Manage Workshop Portfolio
 
-    
+    'adminworkshopportfoliowelcome' => 'Selamat datang di Admin Portofolio Workshop',
+
+    'adminworkshopportfolioerrempty' => 'Portofolio workshop tidak tersedia saat ini',
+
+    'adminworkshopportfoliocolimage' => 'Foto',
+
+    'adminworkshopportfoliocolworkshopid' => 'ID Workshop',
+
+    'adminworkshopportfoliocolworkshopname' => 'Nama Workshop',
+
+    'adminworkshopportfoliodelbtn' => 'Hapus',
+
+    'adminworkshopportfolioaddbtn' => 'Tambah Portofolio Workshop Baru',
+
+    'adminworkshopportfolioeditmodaltitle' => 'Edit Portofolio Workshop',
+
+    'adminworkshopportfolioeditmodalimage' => 'Foto',
+
+    'adminworkshopportfolioeditmodalworkshopname' => 'Nama Workshop',
+
+    'adminworkshopportfolioeditmodalclosebtn' => 'Tutup',
+
+    'adminworkshopportfolioeditmodalsavebtn' => 'Simpan Perubahan',
 
 ];
