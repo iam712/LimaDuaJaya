@@ -21,7 +21,7 @@
             </form>
 
             @if ($project)
-                <h3>{{ $project->name }}</h3>
+                <h3 class="mt-2 mt-md-4 mt-lg-5">{{ $project->name }}</h3>
 
                 <div class="row">
                     @foreach ($currproject_portfolios as $portfolio)
