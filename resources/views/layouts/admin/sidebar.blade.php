@@ -62,9 +62,21 @@
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
-                <a class="nav-link {{ request()->is('portfolios.index') ? 'active' : '' }}"
+                <a class="nav-link {{ request()->routeIs('portfolios.index') ? 'active' : '' }}"
                     href="{{ route('portfolios.index') }}">
                     <i class="fa-solid fa-folder-open"></i> {{ __('messages.sidebarmanageworkshopportfolio') }}
+                </a>
+            </li>
+            <li class="nav-item mb-2 mb-md-2 mb-lg-2">
+                <a class="nav-link"
+                    href="{{ route('currprojects.index') }}">
+                    <i class="fa-solid fa-folder-open"></i> Manage Ongoing Project
+                </a>
+            </li>
+            <li class="nav-item mb-2 mb-md-2 mb-lg-2">
+                <a class="nav-link"
+                    href="{{ route('currproject_portfolios.index') }}">
+                    <i class="fa-solid fa-folder-open"></i> Manage Ongoing Project Portfolio
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CurrProjectController;
+use App\Http\Controllers\CurrProjectPortfolioController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorkshopController;
@@ -8,6 +10,8 @@ use App\Http\Controllers\ProjectLimaduajayaSurabayaController;
 use App\Http\Controllers\PortfolioProjectLimaduajayaSurabayaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Middleware\AdminMiddleware;
+use App\Models\CurrProject;
+use App\Models\CurrProjectPortfolio;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 
@@ -15,8 +19,8 @@ use Illuminate\Support\Facades\Session;
 // FOR USER
 
 // Switch Languange
-Route::get('lang/{locale}', function($locale) {
-    if(in_array($locale, ['en', 'id'])) {
+Route::get('lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'id'])) {
         Session::put('locale', $locale);
     }
     return redirect()->back();
@@ -27,7 +31,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/links', function(){
+Route::get('/links', function () {
     return view('link');
 });
 
@@ -61,6 +65,9 @@ Route::get('/login', function () {
 Route::post('/signin', [UserController::class, 'signin'])->name('signin');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
+Route::get('/track', [CurrProjectController::class, 'track'])->name('track');
+
+
 // FOR ADMIN
 Route::middleware(['auth', AdminMiddleware::class])->group(function () {
 
@@ -73,8 +80,13 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
 
     // Workshop Routes
     Route::resource('/admin/workshops', WorkshopController::class);
-
     Route::resource('/admin/portfolios', PortfolioController::class);
+
+    // Curr Project Routes
+    Route::resource('/admin/currprojects', CurrProjectController::class);
+    Route::resource('/admin/currproject_portfolios', CurrProjectPortfolioController::class);
+    // Route::resource('/admin/currprojects', CurrProjectPortfolio::class);
+
 
     // Project Routes
     Route::resource('/admin/projects', ProjectLimaduajayaSurabayaController::class);
