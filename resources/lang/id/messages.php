@@ -603,4 +603,36 @@ return [
 
     'adminworkshopportfoliodelmodaldelbtn' => 'Hapus Portofolio Workshop',
 
+        // Manage Ongoing Project
+
+    'adminongoingprojectwelcome' => 'Selamat datang di Admin Proyek Terkini',
+
+    'adminongoingprojecterrempty' => 'Proyek terkini tidak tersedia saat ini',
+
+    'adminongoingprojectcolname' => 'Nama',
+
+    'adminongoingprojectdelbtn' => 'Hapus',
+
+    'adminongoingprojectaddbtn' => 'Tambah Proyek Terkini Baru',
+
+    'adminongoingprojectaddmodaltitle' => 'Tambah Proyek Terkini Baru',
+
+    'adminongoingprojectaddmodalname' => 'Nama',
+
+    'adminongoingprojectaddmodalclosebtn' => 'Tutup',
+
+    'adminongoingprojectaddmodalsavebtn' => 'Simpan Proyek Terkini',
+
+    'adminongoingprojecteditmodaltitle' => 'Edit Proyek Terkini',
+
+    'adminongoingprojecteditmodalname' => 'Nama',
+
+    'adminongoingprojecteditmodalclosebtn' => 'Tutup',
+
+    'adminongoingprojecteditmodalsavebtn' => 'Simpan Perubahan',
+
+    'adminongoingprojectdelmodaltitle' => 'Hapus Proyek Terkini',
+
+    'adminongoingprojectdelmodalconfirm' => 'Apakah anda yakin ingin menghapus proyek terkini ini?',
+
 ];

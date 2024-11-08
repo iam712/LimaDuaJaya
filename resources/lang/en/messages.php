@@ -552,7 +552,6 @@ return [
 
     'adminprojectportfoliodelmodaldelbtn' => 'Delete Project Portfolio',
 
-
         // Manage Workshop Portfolio
 
     'adminworkshopportfoliowelcome' => 'Welcome to Admin Workshop Portfolio',
@@ -599,4 +598,35 @@ return [
 
     'adminworkshopportfoliodelmodaldelbtn' => 'Delete Workshop Portfolio',
 
+        // Manage Ongoing Project
+
+    'adminongoingprojectwelcome' => 'Welcome to Admin Ongoing Project',
+
+    'adminongoingprojecterrempty' => 'No ongoing projects available at the moment',
+
+    'adminongoingprojectcolname' => 'Name',
+
+    'adminongoingprojectdelbtn' => 'Delete',
+
+    'adminongoingprojectaddbtn' => 'Add New Ongoing Project',
+
+    'adminongoingprojectaddmodaltitle' => 'Add New Ongoing Project',
+
+    'adminongoingprojectaddmodalname' => 'Name',
+
+    'adminongoingprojectaddmodalclosebtn' => 'Close',
+
+    'adminongoingprojectaddmodalsavebtn' => 'Save Ongoing Project',
+
+    'adminongoingprojecteditmodaltitle' => 'Edit Ongoing Project',
+
+    'adminongoingprojecteditmodalname' => 'Name',
+
+    'adminongoingprojecteditmodalclosebtn' => 'Close',
+
+    'adminongoingprojecteditmodalsavebtn' => 'Save Changes',
+
+    'adminongoingprojectdelmodaltitle' => 'Delete Ongoing Project',
+
+    'adminongoingprojectdelmodalconfirm' => 'Are you sure you want to delete this ongoing project?',
 ];
