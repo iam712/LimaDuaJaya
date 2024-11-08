@@ -271,17 +271,17 @@
                         @csrf
                         @method('DELETE')
                         <div class="modal-header">
-                            <h5 class="modal-title" id="deleteModalLabel{{ $portfolio->id }}">Delete Portofolio Workshop
+                            <h5 class="modal-title" id="deleteModalLabel{{ $portfolio->id }}">{{ __('messages.adminworkshopportfoliodelmodaltitle') }}
                             </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Are you sure you want to delete this Portofolio Workshop?
+                           {{ __('messages.adminworkshopportfoliodelmodalconfirm') }}
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger">Delete Portofolio Workshop</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminworkshopportfoliodelmodalcancelbtn') }}</button>
+                            <button type="submit" class="btn btn-danger">{{ __('messages.adminworkshopportfoliodelmodaldelbtn') }}</button>
                         </div>
                     </form>
                 </div>
