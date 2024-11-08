@@ -12,15 +12,15 @@
 @section('content')
     <section class="container py-5 py-md-5 py-lg-5 mt-5 mt-md-5 mt-lg-5">
 
-        <h2 class="text-center mb-4 mb-md-5 mb-lg-5">Enter your Unique ID</h2>
+        <h2 class="text-center mb-4 mb-md-5 mb-lg-5">{{ __('messages.tracktitle') }}</h2>
 
         <form method="GET" action="{{ route('track') }}">
             <div class="input-group mt-4 mt-md-5 mt-lg-5">
-                <input type="text" name="unique_id" class="form-control" placeholder="Enter Unique ID"
+                <input type="text" name="unique_id" class="form-control" placeholder="{{ __('messages.trackph') }}"
                        value="{{ request('unique_id') }}"
                        style="background-color: rgba({{ $color1 }}); border: 2px solid rgba({{ $color2 }}); color: rgba({{ $color2 }});">
                 <button class="btn btn-primary" type="submit" style="background-color: rgba({{ $color4 }}); border-color: rgba({{ $color4 }}); color: rgba({{ $color1 }});">
-                    Search
+                    {{ __('messages.trackbtn') }}
                 </button>
             </div>
         </form>
@@ -46,7 +46,7 @@
             </div>
         @else
             @if (request('unique_id'))
-                <p class="text-danger">No project found with this Unique ID.</p>
+                <p class="text-danger">{{ __('messages.trackmatcherr') }}</p>
             @endif
         @endif
     </section>

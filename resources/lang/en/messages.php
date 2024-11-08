@@ -275,6 +275,16 @@ return [
 
     'reviewsubmitbtn' => 'Submit Review',
 
+    // tracking
+
+    'tracktitle' => 'Enter your Unique ID',
+
+    'trackph' => 'Enter Unique ID',
+
+    'trackbtn' => 'Search',
+
+    'trackmatcherr' => 'No project found with this Unique ID',
+
     // Admin
 
         // Sidebar

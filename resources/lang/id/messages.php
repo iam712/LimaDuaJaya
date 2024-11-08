@@ -279,6 +279,16 @@ return [
 
     'reviewsubmitbtn' => 'Kirim Ulasan',
 
+    // tracking
+
+    'tracktitle' => 'Masukkan Unique ID anda',
+
+    'trackph' => 'Masukkan Unique ID',
+
+    'trackbtn' => 'Cari',
+
+    'trackmatcherr' => 'Tidak ada proyek yang ditemukan dengan Unique ID ini',
+
     // Admin
 
         // Sidebar
@@ -592,7 +602,5 @@ return [
     'adminworkshopportfoliodelmodalcancelbtn' => 'Batal',
 
     'adminworkshopportfoliodelmodaldelbtn' => 'Hapus Portofolio Workshop',
-
-    
 
 ];
