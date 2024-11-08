@@ -65,6 +65,7 @@ Route::get('/login', function () {
 Route::post('/signin', [UserController::class, 'signin'])->name('signin');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
+// Tracking Routes
 Route::get('/track', [CurrProjectController::class, 'track'])->name('track');
 
 

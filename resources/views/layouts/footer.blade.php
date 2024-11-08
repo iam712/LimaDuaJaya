@@ -27,6 +27,9 @@
                     <p>
                         <a href="/links" class="text-light">Linktree</a>
                     </p>
+                    <p>
+                        <a href="/track" class="text-light">Track your project!</a>
+                    </p>
                 </div>
                 <!-- Grid column -->
 
@@ -44,8 +47,6 @@
                     <p class="text-light"><i class="fas fa-envelope mr-3"></i> limaduaadvertising@gmail.com</p>
                     <p class="text-light"><i class="fas fa-phone mr-3"></i>
                         +62 821 1598 3575</p>
-                    {{-- <p class="text-light"><i class="fas fa-print mr-3"></i>
-                        +01 234 567 89</p> --}}
                 </div>
                 <!-- Grid column -->
             </div>

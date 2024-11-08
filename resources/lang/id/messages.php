@@ -543,7 +543,6 @@ return [
 
     'adminprojectportfoliodelmodaldelbtn' => 'Hapus Portofolio Proyek',
 
-
         // Manage Workshop Portfolio
 
     'adminworkshopportfoliowelcome' => 'Selamat datang di Admin Portofolio Workshop',

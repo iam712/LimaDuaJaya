@@ -492,7 +492,6 @@ return [
 
     'adminreviewdelmodaldelbtn' => 'Delete Review',
 
-
         // Manage Project Portfolio
 
     'adminprojectportfoliowelcome' => 'Welcome to Admin Project Portfolio',
