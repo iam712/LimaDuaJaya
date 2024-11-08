@@ -12,7 +12,7 @@
 @section('content')
     <section class="container py-5 py-md-5 py-lg-5 mt-5 mt-md-5 mt-lg-5">
 
-        <h2 class="text-center mb-4 mb-md-5 mb-lg-5">Input your Unique ID</h2>
+        <h2 class="text-center mb-4 mb-md-5 mb-lg-5">Enter your Unique ID</h2>
 
         <form method="GET" action="{{ route('track') }}">
             <div class="input-group mt-4 mt-md-5 mt-lg-5">
@@ -24,9 +24,6 @@
                 </button>
             </div>
         </form>
-
-
-
 
         @if ($project)
 

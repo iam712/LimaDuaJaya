@@ -297,6 +297,10 @@ return [
 
     'sidebarmanageworkshopportfolio' => 'Kelola Portofolio Workshop',
 
+    'sidebarmanageongoingproject' => 'Kelola Proyek Terkini',
+
+    'sidebarmanageongoingprojectportfolio' => 'Kelola Portofolio Proyek Terkini',
+
     'sidebarlogout' => 'Keluar',
 
 
@@ -568,5 +572,25 @@ return [
     'adminworkshopportfolioeditmodalclosebtn' => 'Tutup',
 
     'adminworkshopportfolioeditmodalsavebtn' => 'Simpan Perubahan',
+
+    'adminworkshopportfolioimagemodaltitle' => 'Foto Portofolio Workshop',
+
+    'adminworkshopportfolioaddmodaltitle' => 'Tambah Portofolio Workshop Baru',
+
+    'adminworkshopportfolioaddmodalimage' => 'Foto',
+
+    'adminworkshopportfolioaddmodalworkshopname' => 'Nama Workshop',
+
+    'adminworkshopportfolioaddmodalclosebtn' => 'Tutup',
+
+    'adminworkshopportfolioaddmodalsavebtn' => 'Simpan Portofolio Workshop',
+
+    'adminworkshopportfoliodelmodaltitle' => 'Hapus Portofolio Workshop',
+
+    'adminworkshopportfoliodelmodalconfirm' => 'Apakah anda yakin ingin menghapus portofolio workshop ini?',
+
+    'adminworkshopportfoliodelmodalcancelbtn' => 'Batal',
+
+    'adminworkshopportfoliodelmodaldelbtn' => 'Hapus Portofolio Workshop',
 
 ];

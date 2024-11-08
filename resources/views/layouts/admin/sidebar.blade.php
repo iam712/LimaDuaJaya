@@ -70,13 +70,13 @@
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link"
                     href="{{ route('currprojects.index') }}">
-                    <i class="fa-solid fa-folder-open"></i> Manage Ongoing Project
+                    <i class="fa-solid fa-list-check"></i> {{ __('messages.sidebarmanageongoingproject') }}
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">
                 <a class="nav-link"
                     href="{{ route('currproject_portfolios.index') }}">
-                    <i class="fa-solid fa-folder-open"></i> Manage Ongoing Project Portfolio
+                    <i class="fa-solid fa-list-check"></i> {{ __('messages.sidebarmanageongoingprojectportfolio') }}
                 </a>
             </li>
             <li class="nav-item mb-2 mb-md-2 mb-lg-2">

@@ -293,6 +293,10 @@ return [
 
     'sidebarmanageworkshopportfolio' => 'Manage Workshop Portfolio',
 
+    'sidebarmanageongoingproject' => 'Manage Ongoing Project',
+
+    'sidebarmanageongoingprojectportfolio' => 'Manage Ongoing Project Portfolio',
+
     'sidebarlogout' => 'Logout',
 
 
@@ -564,5 +568,25 @@ return [
     'adminworkshopportfolioeditmodalclosebtn' => 'Close',
 
     'adminworkshopportfolioeditmodalsavebtn' => 'Save Changes',
+
+    'adminworkshopportfolioimagemodaltitle' => 'Workshop Portfolio Image',
+
+    'adminworkshopportfolioaddmodaltitle' => 'Add New Workshop Portfolio',
+
+    'adminworkshopportfolioaddmodalimage' => 'Image',
+
+    'adminworkshopportfolioaddmodalworkshopname' => 'Workshop Name',
+
+    'adminworkshopportfolioaddmodalclosebtn' => 'Close',
+
+    'adminworkshopportfolioaddmodalsavebtn' => 'Save Workshop Portfolio',
+
+    'adminworkshopportfoliodelmodaltitle' => 'Delete Workshop Portfolio',
+
+    'adminworkshopportfoliodelmodalconfirm' => 'Are you sure you want to delete this workshop portfolio?',
+
+    'adminworkshopportfoliodelmodalcancelbtn' => 'Cancel',
+
+    'adminworkshopportfoliodelmodaldelbtn' => 'Delete Workshop Portfolio',
 
 ];

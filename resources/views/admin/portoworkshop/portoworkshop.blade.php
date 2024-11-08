@@ -172,7 +172,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageViewModalLabel">Portfolio Workshop Image</h5>
+                    <h5 class="modal-title" id="imageViewModalLabel">{{ __('messages.adminworkshopportfolioimagemodaltitle') }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -189,17 +189,17 @@
                 <form action="{{ route('portfolios.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Add New Portofolio Workshop</h5>
+                        <h5 class="modal-title" id="addModalLabel">{{ __('messages.adminworkshopportfolioaddmodaltitle') }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="portofolioWorkshopImage" class="form-label">Image</label>
+                            <label for="portofolioWorkshopImage" class="form-label">{{ __('messages.adminworkshopportfolioaddmodalimage') }}</label>
                             <input type="file" class="form-control" id="portofolioWorkshopImage" name="image"
                                 accept="image/*" required>
                         </div>
                         <div class="mb-3">
-                            <label for="workshopName" class="form-label">Workshop Name</label>
+                            <label for="workshopName" class="form-label">{{ __('messages.adminworkshopportfolioaddmodalworkshopname') }}</label>
                             <select class="form-control" id="workshopName" name="id_workshop" required>
                                 <option value="" disabled selected>Select a workshop</option>
                                 @foreach ($workshops as $workshop)
@@ -209,8 +209,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save Portofolio Workshop</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminworkshopaddmodalclosebtn') }}</button>
+                        <button type="submit" class="btn btn-primary">{{ __('messages.adminworkshopportfolioaddmodalsavebtn') }}</button>
                     </div>
                 </form>
             </div>
