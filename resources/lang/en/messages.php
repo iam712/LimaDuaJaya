@@ -629,4 +629,8 @@ return [
     'adminongoingprojectdelmodaltitle' => 'Delete Ongoing Project',
 
     'adminongoingprojectdelmodalconfirm' => 'Are you sure you want to delete this ongoing project?',
+
+    'adminongoingprojectdelmodalcancelbtn' => 'Cancel',
+
+    'adminongoingprojectdelmodaldelbtn' => 'Delete Ongoing Project',
 ];

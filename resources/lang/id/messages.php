@@ -635,4 +635,8 @@ return [
 
     'adminongoingprojectdelmodalconfirm' => 'Apakah anda yakin ingin menghapus proyek terkini ini?',
 
+    'adminongoingprojectdelmodalcancelbtn' => 'Batal',
+
+    'adminongoingprojectdelmodaldelbtn' => 'Hapus Proyek Terkini',
+
 ];

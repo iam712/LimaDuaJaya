@@ -238,8 +238,8 @@
                             {{ __('messages.adminongoingprojectdelmodalconfirm') }}
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger">Delete current project</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminongoingprojectdelmodalcancelbtn') }}</button>
+                            <button type="submit" class="btn btn-danger">{{ __('messages.adminongoingprojectdelmodaldelbtn') }}</button>
                         </div>
                     </form>
                 </div>
