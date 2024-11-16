@@ -108,30 +108,31 @@
         }
 
         /* .btn-warning {
-                                            background-color: rgba({{ $color4 }}, 1);
-                                            color: rgba({{ $color1 }}, 1);
-                                        }
+                                                background-color: rgba({{ $color4 }}, 1);
+                                                color: rgba({{ $color1 }}, 1);
+                                            }
 
-                                        .btn-danger {
-                                            background-color: rgba({{ $color3 }}, 1);
-                                            color: rgba({{ $color1 }}, 1);
-                                        }
+                                            .btn-danger {
+                                                background-color: rgba({{ $color3 }}, 1);
+                                                color: rgba({{ $color1 }}, 1);
+                                            }
 
-                                        .btn-success {
-                                            background-color: rgba({{ $color7 }}, 1);
-                                            color: rgba({{ $color1 }}, 1);
-                                        } */
+                                            .btn-success {
+                                                background-color: rgba({{ $color7 }}, 1);
+                                                color: rgba({{ $color1 }}, 1);
+                                            } */
     </style>
 
     <div class="animated-bg">
         <section class="py-3 py-md-3 py-lg-2 mt-2 mt-md-3 mt-lg-2 ms-2 ms-md-2 ms-lg-2">
-            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">Welcome to Admin Current Project Portfolio
+            <h1 class="display-4" style="color: rgba({{ $color5 }}, 1);">
+                {{ __('messages.adminongoingprojectportfoliowelcome') }}
             </h1>
             <p class="lead" style="color: rgba({{ $color2 }}, 1);">{{ $greeting }}, <span class=""
                     style="color: rgba({{ $color2 }}, 1);">{{ Auth::user()->email }}</span>!</p>
         </section>
         @if ($currproject_portfolios->isEmpty())
-            <h5 class="text-lg text-center text-dark p-5">No Current Project Portfolio Available at the moment</h5>
+            <h5 class="text-lg text-center text-dark p-5">{{ __('messages.adminongoingprojectportfolioerrempty') }}</h5>
         @else
             <section>
                 <div class="container table-responsive py-5">
@@ -139,10 +140,12 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Current Project ID</th>
+                                <th scope="col">{{ __('messages.adminongoingprojectportfoliocolimage') }}</th>
+                                <th scope="col">{{ __('messages.adminongoingprojectportfoliocolongoingprojectid') }}
+                                </th>
                                 <th scope="col">Unique ID</th>
-                                <th scope="col">Current Project Name</th>
+                                <th scope="col">{{ __('messages.adminongoingprojectportfoliocolongoingprojectname') }}
+                                </th>
                                 <th scope="col">Status Detail</th>
                                 <th scope="col">Actions</th>
                                 <th scope="col">Actions</th>
@@ -168,7 +171,7 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#deleteModal{{ $currproject_portfolio->id }}">Delete</button>
+                                            data-bs-target="#deleteModal{{ $currproject_portfolio->id }}">{{ __('messages.adminongoingprojectportfoliodelbtn') }}</button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -178,8 +181,8 @@
             </section>
         @endif
         <div class="text-end mt-3">
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add New Current Project
-                Portfolio</button>
+            <button class="btn btn-success" data-bs-toggle="modal"
+                data-bs-target="#addModal">{{ __('messages.adminongoingprojectportfolioaddbtn') }}</button>
         </div>
         <!-- Pagination Links -->
         <div class="d-flex justify-content-center">
@@ -192,7 +195,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageViewModalLabel">Current Project Portfolio Image</h5>
+                    <h5 class="modal-title" id="imageViewModalLabel">
+                        {{ __('messages.adminongoingprojectportfolioimagemodaltitle') }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -209,17 +213,20 @@
                 <form action="{{ route('currproject_portfolios.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf <!-- CSRF token for form security -->
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Add New Current Project Portfolio</h5>
+                        <h5 class="modal-title" id="addModalLabel">
+                            {{ __('messages.adminongoingprojectportfolioaddmodaltitle') }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="portfolioProjectImage" class="form-label">Image</label>
+                            <label for="portfolioProjectImage"
+                                class="form-label">{{ __('messages.adminongoingprojectportfolioaddmodalimage') }}</label>
                             <input type="file" class="form-control" id="portfolioProjectImage" name="image"
                                 accept="image/*" required>
                         </div>
                         <div class="mb-3">
-                            <label for="currproject_id" class="form-label">Current Project Name</label>
+                            <label for="currproject_id"
+                                class="form-label">{{ __('messages.adminongoingprojectportfolioaddmodalongoingprojectname') }}</label>
                             <select class="form-control" id="currproject_id" name="currproject_id" required>
                                 <option value="" disabled selected>Select a project</option>
                                 @foreach ($currprojects as $currproject)
@@ -233,8 +240,10 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save Current Project Portfolio</button>
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">{{ __('messages.adminongoingprojectportfolioaddmodalclosebtn') }}</button>
+                        <button type="submit"
+                            class="btn btn-primary">{{ __('messages.adminongoingprojectportfolioaddmodalsavebtn') }}</button>
                     </div>
                 </form>
             </div>
@@ -252,8 +261,8 @@
                         @csrf
                         @method('PUT')
                         <div class="modal-header">
-                            <h5 class="modal-title" id="editModalLabel{{ $currproject_portfolio->id }}">Edit Current
-                                Project Portfolio
+                            <h5 class="modal-title" id="editModalLabel{{ $currproject_portfolio->id }}">
+                                {{ __('messages.adminongoingprojectportfolioeditmodaltitle') }}
                             </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
@@ -261,14 +270,13 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="editPortfolioProjectImage{{ $currproject_portfolio->id }}"
-                                    class="form-label">Image</label>
+                                    class="form-label">{{ __('messages.adminongoingprojectportfolioeditmodalimage') }}</label>
                                 <input type="file" class="form-control"
                                     id="editPortfolioProjectImage{{ $currproject_portfolio->id }}" name="image"
                                     accept="image/*" required>
                             </div>
                             <div class="mb-3">
-                                <label for="editProjectName{{ $currproject_portfolio->id }}" class="form-label">Current
-                                    Project Name</label>
+                                <label for="editProjectName{{ $currproject_portfolio->id }}" class="form-label">{{ __('messages.adminongoingprojectportfoliocolongoingprojectname') }}</label>
                                 <select class="form-control" id="editProjectName{{ $currproject_portfolio->id }}"
                                     name="currproject_id" required>
                                     <option value="" disabled selected>Select a project</option>
@@ -282,7 +290,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="status_detail" class="form-label">Status Detail</label>
-                                <input type="text" class="form-control" id="status_detail" name="status_detail" value="{{ $currproject_portfolio->status_detail }}" required>
+                                <input type="text" class="form-control" id="status_detail" name="status_detail"
+                                    value="{{ $currproject_portfolio->status_detail }}" required>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -304,17 +313,16 @@
                         @csrf
                         @method('DELETE')
                         <div class="modal-header">
-                            <h5 class="modal-title" id="deleteModalLabel{{ $currproject_portfolio->id }}">Delete Current
-                                Project Portfolio</h5>
+                            <h5 class="modal-title" id="deleteModalLabel{{ $currproject_portfolio->id }}">{{ __('messages.adminongoingprojectportfoliodelmodaltitle') }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Are you sure you want to delete this current project portfolio?
+                            {{ __('messages.adminongoingprojectportfoliodelmodalconfirm') }}
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger">Delete this current project portfolio</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.adminongoingprojectdelmodalcancelbtn') }}</button>
+                            <button type="submit" class="btn btn-danger">{{ __('messages.adminongoingprojectportfoliodelmodaldelbtn') }}</button>
                         </div>
                     </form>
                 </div>

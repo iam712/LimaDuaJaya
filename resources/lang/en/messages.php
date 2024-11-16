@@ -633,4 +633,44 @@ return [
     'adminongoingprojectdelmodalcancelbtn' => 'Cancel',
 
     'adminongoingprojectdelmodaldelbtn' => 'Delete Ongoing Project',
+
+
+        // Manage Ongoing Current Project Portfolio
+
+    'adminongoingprojectportfoliowelcome' => 'Welcome to Admin Ongoing Project Portfolio',
+
+    'adminongoingprojectportfolioerrempty' => 'No ongoing project portfolio available at the moment',
+
+    'adminongoingprojectportfoliocolimage' => 'Image',
+
+    'adminongoingprojectportfoliocolongoingprojectid' => 'Ongoing Project ID',
+
+    'adminongoingprojectportfoliocolongoingprojectname' => 'Ongoing Project Name',
+
+    'adminongoingprojectportfoliodelbtn' => 'Delete',
+
+    'adminongoingprojectportfolioaddbtn' => 'Add New Ongoing Project Portfolio',
+
+    'adminongoingprojectportfolioimagemodaltitle' => 'Ongoing Project Portfolio Image',
+
+    'adminongoingprojectportfolioaddmodaltitle' => 'Add New Ongoing Project Portfolio',
+
+    'adminongoingprojectportfolioaddmodalimage' => 'Image',
+
+    'adminongoingprojectportfolioaddmodalongoingprojectname' => 'Ongoing Project Nama',
+
+    'adminongoingprojectportfolioaddmodalclosebtn' => 'Close',
+
+    'adminongoingprojectportfolioaddmodalsavebtn' => 'Save Ongoing Project Portfolio',
+
+    'adminongoingprojectportfolioeditmodaltitle' => 'Edit Ongoing Project Portfolio',
+
+    'adminongoingprojectportfolioeditmodalimage' => 'Image',
+
+    'adminongoingprojectportfoliodelmodaltitle' => 'Delete Current Project Portfolio',
+
+    'adminongoingprojectportfoliodelmodalconfirm' => 'Are you sure you want to delete this current project portfolio?',
+
+    'adminongoingprojectportfoliodelmodaldelbtn' => 'Delete Ongoing Project Portfolio',
+
 ];

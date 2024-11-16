@@ -639,4 +639,43 @@ return [
 
     'adminongoingprojectdelmodaldelbtn' => 'Hapus Proyek Terkini',
 
+
+        // Manage Ongoing Current Project Portfolio
+
+    'adminongoingprojectportfoliowelcome' => 'Selamat datang di Admin Portofolio Proyek Terkini',
+
+    'adminongoingprojectportfolioerrempty' => 'Portofolio proyek terkini tidak tersedia saat ini',
+
+    'adminongoingprojectportfoliocolimage' => 'Foto',
+
+    'adminongoingprojectportfoliocolongoingprojectid' => 'ID Proyek Terkini',
+
+    'adminongoingprojectportfoliocolongoingprojectname' => 'Nama Proyek Terkini',
+
+    'adminongoingprojectportfoliodelbtn' => 'Hapus',
+
+    'adminongoingprojectportfolioaddbtn' => 'Tambah Portofolio Proyek Terkini',
+
+    'adminongoingprojectportfolioimagemodaltitle' => 'Foto Portofolio Proyek Terkini',
+
+    'adminongoingprojectportfolioaddmodaltitle' => 'Tambah Portofolio Proyek Terkini',
+
+    'adminongoingprojectportfolioaddmodalimage' => 'Foto',
+
+    'adminongoingprojectportfolioaddmodalongoingprojectname' => 'Nama Proyek Terkini',
+
+    'adminongoingprojectportfolioaddmodalclosebtn' => 'Tutup',
+
+    'adminongoingprojectportfolioaddmodalsavebtn' => 'Simpan Portofolio Proyek Terkini',
+
+    'adminongoingprojectportfolioeditmodaltitle' => 'Edit Portofolio Proyek Terkini',
+
+    'adminongoingprojectportfolioeditmodalimage' => 'Foto',
+
+    'adminongoingprojectportfoliodelmodaltitle' => 'Hapus Portofolio Proyek Terkini',
+
+    'adminongoingprojectportfoliodelmodalconfirm' => 'Apakah anda yakin ingin menghapus portofolio proyek ini?',
+
+    'adminongoingprojectportfoliodelmodaldelbtn' => 'Hapus Portofolio Proyek Terkini',
+
 ];
