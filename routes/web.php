@@ -14,9 +14,16 @@ use App\Models\CurrProject;
 use App\Models\CurrProjectPortfolio;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Artisan;
 
 
 // FOR USER
+
+// STORAGE LINK
+Route::get('/storage-link', function () {
+    Artisan::call('storage:link');
+    return 'Storage linked successfully.';
+});
 
 // Switch Languange
 Route::get('lang/{locale}', function ($locale) {
